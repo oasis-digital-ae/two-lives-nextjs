@@ -32,23 +32,26 @@ const steps = [
 
 export default function PathSteps() {
   return (
-    <section className="bg-off-white py-16 md:py-20">
+    <section className="bg-pattern-section bg-off-white py-16 md:py-20">
       <div className="mx-auto max-w-[1400px] px-5 lg:px-10">
-        <h2 className="mb-12 text-center font-heading text-3xl font-semibold text-carbon md:text-4xl">
+        <h2 className="text-shadow-soft mb-12 text-center font-heading text-[32px] font-semibold tracking-[-2px] text-carbon sm:text-[40px]">
           The Path Into Your Next Life
         </h2>
 
         <div className="mb-12 grid grid-cols-1 gap-10 md:grid-cols-3">
           {steps.map((s, i) => (
-            <div key={s.title} className="text-center">
-              <div className="relative mx-auto mb-6 flex h-24 w-24 items-center justify-center rounded-full bg-emerald">
-                <span className="font-heading text-2xl font-bold text-carbon">{i + 1}</span>
+            <div key={s.title} className="group text-center">
+              <div className="relative mx-auto mb-6 h-[100px] w-[100px] overflow-hidden rounded-full bg-[#2ebb79]">
+                <div className="absolute inset-0 rounded-full bg-[#262b35] opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
+                <span className="relative z-[1] flex h-full w-full items-center justify-center font-heading text-[28px] font-semibold text-white">
+                  {i + 1}
+                </span>
               </div>
-              <span className="mb-4 block font-heading text-xl font-bold text-carbon">
+              <span className="mb-5 block font-heading text-[22px] font-bold text-carbon">
                 {s.title}
               </span>
               {s.paragraphs.map((p) => (
-                <p key={p} className="mb-2 text-slate">
+                <p key={p} className="mb-2.5 text-carbon">
                   {p}
                 </p>
               ))}
@@ -58,10 +61,7 @@ export default function PathSteps() {
         </div>
 
         <div className="text-center">
-          <Link
-            href="/our-method"
-            className="inline-block rounded-full bg-carbon px-6 py-3 font-heading text-sm font-semibold text-white"
-          >
+          <Link href="/our-method" className="btn-three">
             Explore The Method
           </Link>
         </div>
