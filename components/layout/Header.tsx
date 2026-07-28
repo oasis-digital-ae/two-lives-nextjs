@@ -2,26 +2,63 @@
 
 import Image from "next/image";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
 import { aboutCards, exploreLinks, mentorCards } from "@/lib/nav";
 import MegaMenu from "./MegaMenu";
 
 type MenuKey = "about" | "mentor" | "explore" | null;
 
+// Thresholds mirror the original theme's headerHeight (~header's own
+// height, roughly 100px) and headerHeight+150 checkpoints.
+const STICKY_THRESHOLD = 100;
+const STICKY_ACTIVE_THRESHOLD = 250;
+
 export default function Header() {
-  const [scrolled, setScrolled] = useState(false);
+  const pathname = usePathname();
+  const isHome = pathname === "/";
+
+  const [sticky, setSticky] = useState(false);
+  const [stickyActive, setStickyActive] = useState(false);
+  const [desktopMenuOpen, setDesktopMenuOpen] = useState(false);
   const [openMenu, setOpenMenu] = useState<MenuKey>(null);
   const [mobileOpen, setMobileOpen] = useState(false);
   const [mobileSubmenu, setMobileSubmenu] = useState<MenuKey>(null);
 
   useEffect(() => {
-    const onScroll = () => setScrolled(window.scrollY > 40);
+    const onScroll = () => {
+      const y = window.scrollY;
+      setSticky(y >= STICKY_THRESHOLD);
+      setStickyActive(y >= STICKY_ACTIVE_THRESHOLD);
+    };
     onScroll();
-    window.addEventListener("scroll", onScroll);
+    window.addEventListener("scroll", onScroll, { passive: true });
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
-  const solid = scrolled || openMenu !== null || mobileOpen;
+  useEffect(() => {
+    const onResize = () => {
+      if (window.innerWidth < 1024) setDesktopMenuOpen(false);
+    };
+    window.addEventListener("resize", onResize);
+    return () => window.removeEventListener("resize", onResize);
+  }, []);
+
+  // On the home page, once the header becomes "sticky-active" (scrolled
+  // well past the hero), the persistent nav takes over regardless of any
+  // manually opened desktop toggle — matching the original's
+  // MutationObserver-driven reset, derived rather than synced back into
+  // state.
+  const desktopMenuEffectivelyOpen = desktopMenuOpen && !stickyActive;
+
+  // Home page: nav links + CTA stay hidden over the hero until the user
+  // scrolls past it or manually reveals them via the desktop toggler.
+  // Every other page: nav is always visible.
+  const showFullNav = !isHome || stickyActive || desktopMenuEffectivelyOpen;
+  const showDesktopToggler = isHome && !stickyActive;
+
+  const solid =
+    sticky || openMenu !== null || mobileOpen || desktopMenuEffectivelyOpen;
 
   return (
     <header className="fixed inset-x-0 top-0 z-50">
@@ -43,11 +80,12 @@ export default function Header() {
             />
           </Link>
 
-          <ul className="hidden items-center gap-8 lg:flex">
-            <li
-              className="relative"
-              onMouseEnter={() => setOpenMenu("about")}
-            >
+          <ul
+            className={`hidden items-center gap-8 transition-opacity duration-150 lg:flex ${
+              showFullNav ? "opacity-100" : "pointer-events-none opacity-0"
+            }`}
+          >
+            <li className="relative" onMouseEnter={() => setOpenMenu("about")}>
               <button className="flex items-center gap-1 font-heading text-sm font-medium text-white">
                 About <span className="text-xs">&#9662;</span>
               </button>
@@ -69,10 +107,23 @@ export default function Header() {
             </li>
           </ul>
 
-          <div className="hidden lg:block">
-            <Link href="/request-mentorship" className="btn-cta">
-              Request Mentorship
-            </Link>
+          <div className="hidden items-center lg:flex">
+            <div
+              className={`transition-opacity duration-150 ${
+                showFullNav ? "opacity-100" : "pointer-events-none opacity-0"
+              }`}
+            >
+              <Link href="/request-mentorship" className="btn-cta">
+                Request Mentorship
+              </Link>
+            </div>
+
+            {showDesktopToggler && (
+              <DesktopToggler
+                active={desktopMenuOpen}
+                onClick={() => setDesktopMenuOpen((v) => !v)}
+              />
+            )}
           </div>
 
           <button
@@ -95,7 +146,7 @@ export default function Header() {
         </div>
 
         {/* Desktop mega menu panel */}
-        {openMenu && (
+        {openMenu && showFullNav && (
           <div className="hidden border-t border-white/10 bg-carbon lg:block">
             <div className="mx-auto max-w-[1400px] px-10">
               {openMenu === "about" && <MegaMenu cards={aboutCards} />}
@@ -168,6 +219,37 @@ export default function Header() {
         </div>
       )}
     </header>
+  );
+}
+
+function DesktopToggler({ active, onClick }: { active: boolean; onClick: () => void }) {
+  return (
+    <button
+      aria-label="Toggle navigation"
+      onClick={onClick}
+      className="relative ml-4 h-5 w-[30px] shrink-0"
+    >
+      <span
+        className="absolute right-0 h-0.5 rounded-full bg-white transition-all duration-300"
+        style={{
+          top: active ? "8px" : "0px",
+          width: active ? "100%" : "60%",
+          transform: active ? "rotate(45deg)" : "none",
+        }}
+      />
+      <span
+        className="absolute left-0 top-[8px] h-0.5 w-full rounded-full bg-white transition-opacity duration-300"
+        style={{ opacity: active ? 0 : 1 }}
+      />
+      <span
+        className="absolute left-0 h-0.5 rounded-full bg-white transition-all duration-300"
+        style={{
+          top: active ? "8px" : "16px",
+          width: active ? "100%" : "60%",
+          transform: active ? "rotate(-45deg)" : "none",
+        }}
+      />
+    </button>
   );
 }
 
