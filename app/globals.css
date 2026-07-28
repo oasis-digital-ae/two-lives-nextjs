@@ -713,3 +713,73 @@ html {
   fill: #04e184;
   transform: translateY(-3px) scale(1.05);
 }
+
+/* Areas-of-Alignment tile: lift-on-hover card with a soft top highlight */
+.box-shad {
+  position: relative;
+  overflow: hidden;
+  transition: all 0.4s cubic-bezier(0.22, 1, 0.36, 1);
+  box-shadow:
+    0 6px 15px rgba(0, 0, 0, 0.04),
+    0 20px 40px rgba(0, 0, 0, 0.08),
+    0 60px 80px rgba(0, 0, 0, 0.1);
+}
+
+.box-shad::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  background: linear-gradient(to bottom, rgba(255, 255, 255, 0.25), rgba(255, 255, 255, 0.05) 30%, transparent 60%);
+  pointer-events: none;
+}
+
+.box-shad:hover {
+  transform: translateY(-10px) scale(1.01);
+  box-shadow:
+    0 12px 25px rgba(0, 0, 0, 0.06),
+    0 30px 60px rgba(0, 0, 0, 0.12),
+    0 80px 120px rgba(0, 0, 0, 0.18);
+}
+
+/* Title pill: always visible, nudges up slightly on hover */
+.alignment-title {
+  background: rgba(10, 15, 13, 0.75);
+  backdrop-filter: blur(6px);
+  transform: translateY(20px);
+  transition: transform 0.35s ease;
+}
+
+.box-shad:hover .alignment-title {
+  transform: translateY(0);
+}
+
+/* Description: hidden until the card is hovered, then expands in below the title */
+.alignment-desc {
+  background: rgba(10, 15, 13, 0.85);
+  opacity: 0;
+  transform: translateY(15px);
+  max-height: 0;
+  overflow: hidden;
+  transition: all 0.35s ease;
+}
+
+.box-shad:hover .alignment-desc {
+  opacity: 1;
+  transform: translateY(0);
+  max-height: 300px;
+}
+
+/* Rotating decorative badge in the corner of the Alignment section */
+.floating-circle-img img {
+  animation: rotateCircle 8s linear infinite;
+}
+
+@keyframes rotateCircle {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
