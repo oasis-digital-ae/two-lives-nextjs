@@ -1,5 +1,8 @@
+"use client";
+
 import Image from "next/image";
 import Link from "next/link";
+import { useEffect, useRef } from "react";
 import {
   ArrowRightIcon,
   AwardIcon,
@@ -19,7 +22,46 @@ const qualifications = [
   { Icon: DumbbellIcon, label: "Strength & Conditioning Coach" },
 ];
 
+// Mirrors the original's skrollr keyframes: data-top-bottom is the value
+// applied when the element first enters from below (its top touches the
+// viewport bottom); data-bottom-top is the value once it has fully
+// scrolled out above (its bottom touches the viewport top). Progress is
+// interpolated between those two points as the element travels through.
+function skrollrProgress(rect: DOMRect, viewportHeight: number) {
+  return Math.min(Math.max((viewportHeight - rect.top) / (viewportHeight + rect.height), 0), 1);
+}
+
+function lerp(start: number, end: number, progress: number) {
+  return start + (end - start) * progress;
+}
+
 export default function MeetBasim() {
+  const bannerRef = useRef<HTMLDivElement>(null);
+  const watermarkRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    const onScroll = () => {
+      const vh = window.innerHeight;
+
+      const banner = bannerRef.current;
+      if (banner) {
+        const progress = skrollrProgress(banner.getBoundingClientRect(), vh);
+        const y = lerp(50, -50, progress);
+        banner.style.transform = `translate(-50%, ${y}px)`;
+      }
+
+      const watermark = watermarkRef.current;
+      if (watermark) {
+        const progress = skrollrProgress(watermark.getBoundingClientRect(), vh);
+        const x = lerp(150, 50, progress);
+        watermark.style.transform = `translate3d(${x}px, 0, 0)`;
+      }
+    };
+    onScroll();
+    window.addEventListener("scroll", onScroll, { passive: true });
+    return () => window.removeEventListener("scroll", onScroll);
+  }, []);
+
   return (
     <section className="basim-preview-section relative overflow-hidden bg-pattern-section bg-off-white pt-12 pb-16 md:pt-16">
       <div className="corner-svg">
@@ -37,7 +79,7 @@ export default function MeetBasim() {
               className="basim-portrait h-auto w-full pe-3"
             />
 
-            <div className="founder-banner">
+            <div ref={bannerRef} className="founder-banner">
               <div className="founder-icon">
                 <Image src="/images/twoliveslogo.svg" alt="Two Lives Theory" width={64} height={64} />
               </div>
@@ -49,18 +91,18 @@ export default function MeetBasim() {
           </div>
 
           <div>
-            <p className="mb-[25px] w-[95%] text-carbon">
+            <p className="mb-[25px] w-[95%] text-slate">
               I guide high performers through expansion and transition. My
               clients include elite athletes, entrepreneurs, and business
               leaders operating at the next level.
             </p>
-            <p className="mb-[25px] w-[95%] text-carbon">
+            <p className="mb-[25px] w-[95%] text-slate">
               Backed by <b>12 years of experience</b> and{" "}
               <b>ICF PCC accreditation training</b>, this work is built on
               the Two Lives Theory &mdash; strengthening what you&apos;ve
               built while aligning you for what comes next.
             </p>
-            <p className="mb-[25px] w-[95%] text-carbon">
+            <p className="mb-[25px] w-[95%] text-slate">
               Having navigated major life transitions myself, I bring lived
               understanding alongside over twelve years of experience
               mentoring high performers. My focus is depth and integration,
@@ -94,6 +136,7 @@ export default function MeetBasim() {
       </div>
 
       <div
+        ref={watermarkRef}
         aria-hidden
         className="pointer-events-none absolute right-0 bottom-4 hidden -tracking-[5px] font-heading text-[160px] font-bold text-carbon/30 uppercase select-none md:block lg:text-[180px] xl:text-[120px]"
       >

@@ -29,7 +29,7 @@ export default function OverwhelmSolution() {
   const { emblaRef } = useCarousel({ align: "start" });
 
   return (
-    <section className="bg-pattern-section overflow-hidden bg-off-white pt-12 pb-8 text-carbon md:pt-20">
+    <section className="bg-pattern-section overflow-hidden bg-off-white pt-12 pb-8 md:pt-20">
       <div className="mx-auto max-w-[1400px] px-5 lg:px-10">
         <div className="mb-8 grid grid-cols-1 gap-10 lg:grid-cols-2 lg:items-center">
           <div className="text-center sm:text-left">
@@ -39,7 +39,7 @@ export default function OverwhelmSolution() {
               Operating at a High Level Can Feel{" "}
               <span className="highlighter-below">Overwhelming</span>
             </h2>
-            <p className="mx-auto w-4/5 sm:mx-0 md:w-full">
+            <p className="mx-auto w-4/5 text-slate sm:mx-0 md:w-full">
               Especially when the internal framework that got you here no
               longer supports where you&apos;re going.
             </p>
@@ -59,7 +59,7 @@ export default function OverwhelmSolution() {
               <span className="mb-1 block text-[14px] font-semibold uppercase tracking-[1px] text-carbon">
                 12 Years Experience
               </span>
-              <p className="w-full lg:w-full">
+              <p className="w-full text-slate lg:w-full">
                 Two Lives Theory supports high performers in strengthening
                 what they&apos;ve built and stepping into what&apos;s next.
               </p>
@@ -92,7 +92,7 @@ export default function OverwhelmSolution() {
             <h3 className="mb-[10px] w-4/5 text-shadow-soft font-heading text-[40px] font-semibold tracking-[-2px] text-carbon mx-auto lg:mx-0">
               How Two Lives Theory Helps
             </h3>
-            <p className="mb-5">
+            <p className="mb-5 text-slate">
               Two Lives Theory is private mentorship for high performers in
               transition. Not to fix you, but to realign you. So your focus
               sharpens, your decisions become clean, and you step into your

@@ -50,11 +50,11 @@ export default function QuoteBanner({
         }}
       />
 
-      <div className="relative mx-auto max-w-4xl px-6 text-center">
+      <div className="relative mx-auto max-w-[1140px] px-6 text-center">
         <h2 className="mb-0 font-heading text-[50px] font-semibold leading-[1.05] text-white sm:text-[70px] lg:text-[90px]">
           {title}
         </h2>
-        <div className="mx-auto mt-5 w-[90%] rounded-lg border-l-[5px] border-emerald px-3 py-2.5 text-center md:w-1/2">
+        <div className="mx-auto mt-5 w-[90%] rounded-lg border-l-[5px] border-emerald px-3 py-2.5 text-center lg:w-1/2">
           <p className="m-0 text-base font-semibold italic leading-[1.8] text-white sm:text-lg md:text-xl">
             &ldquo;{quote}&rdquo;
           </p>
