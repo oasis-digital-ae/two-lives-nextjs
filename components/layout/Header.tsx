@@ -70,10 +70,7 @@ export default function Header() {
           </ul>
 
           <div className="hidden lg:block">
-            <Link
-              href="/request-mentorship"
-              className="inline-block rounded-full bg-emerald px-6 py-3 font-heading text-sm font-semibold text-carbon transition-transform hover:scale-105"
-            >
+            <Link href="/request-mentorship" className="btn-cta">
               Request Mentorship
             </Link>
           </div>
@@ -165,10 +162,7 @@ export default function Header() {
             ))}
           </MobileSection>
 
-          <Link
-            href="/request-mentorship"
-            className="mt-6 block rounded-full bg-emerald px-6 py-3 text-center font-heading text-sm font-semibold text-carbon"
-          >
+          <Link href="/request-mentorship" className="btn-cta mt-6 block text-center">
             Request Mentorship
           </Link>
         </div>

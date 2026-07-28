@@ -54,8 +54,7 @@ export default function Hero() {
         {/* big name background */}
         <div
           ref={nameRef}
-          className="animate-hero-name absolute left-1/2 top-[55%] z-[2] -translate-x-1/2 -translate-y-1/2 whitespace-nowrap font-display text-[12vw] font-black tracking-wide"
-          style={{ color: "#f1f7f7" }}
+          className="hero-name-gradient animate-hero-name absolute left-1/2 top-[55%] z-[2] -translate-x-1/2 -translate-y-1/2 whitespace-nowrap font-display text-[12vw]"
         >
           Basim Yafai
         </div>
@@ -112,17 +111,18 @@ export default function Hero() {
         {/* content row, pinned to bottom */}
         <div className="animate-hero-content absolute inset-0 z-[5] flex items-end pb-16">
           <div className="mx-auto flex w-full max-w-[1400px] items-center justify-between gap-6 px-10">
-            <h4 className="max-w-md text-lg font-medium leading-snug text-white">
-              Private Mentorship led by <b>Basim Yafai</b>, Mindset & Growth
-              Mentor. Two Lives Theory is trusted by high performing leaders,
-              entrepreneurs &amp; elite athletes.
-            </h4>
-            <Link
-              href="/request-mentorship"
-              className="pointer-events-auto rounded-full bg-emerald px-8 py-4 font-heading text-sm font-semibold text-carbon transition-transform hover:scale-105"
-            >
-              Request Mentorship
-            </Link>
+            <div className="lg:w-5/12">
+              <h4 className="w-[80%] font-heading text-[18px] font-medium leading-[1.6] text-white">
+                Private Mentorship led by <b>Basim Yafai</b>, Mindset & Growth
+                Mentor. Two Lives Theory is trusted by high performing
+                leaders, entrepreneurs &amp; elite athletes.
+              </h4>
+            </div>
+            <div className="flex justify-center lg:w-5/12">
+              <Link href="/request-mentorship" className="btn-cta pointer-events-auto">
+                Request Mentorship
+              </Link>
+            </div>
           </div>
         </div>
       </section>

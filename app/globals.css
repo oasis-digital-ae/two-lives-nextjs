@@ -173,6 +173,99 @@ html {
   animation: marqueeMoveHalf 12s linear infinite;
 }
 
+/* Primary CTA button — replicates the original's .btn-primary
+   (rounded-rect, not a pill) including its two-bubble hover fill */
+.btn-cta {
+  display: inline-block;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+  font-family: var(--font-heading), sans-serif;
+  padding: 15px 20px 17px 20px;
+  font-size: 14px;
+  font-weight: 600;
+  color: #262b35;
+  cursor: pointer;
+  background: #00e184;
+  border-radius: 10px;
+  border: none;
+  box-shadow:
+    0 6px 20px rgba(0, 0, 0, 0.25),
+    inset 0 0 0 1px rgba(255, 255, 255, 0.04);
+  transition: all 0.2s ease-in;
+}
+
+.btn-cta::before,
+.btn-cta::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  border-radius: 50%;
+  display: block;
+  transition: all 0.5s 0.1s cubic-bezier(0.55, 0, 0.1, 1);
+  z-index: -1;
+}
+
+.btn-cta::before {
+  top: 100%;
+  width: 140%;
+  height: 180%;
+  background-color: rgba(0, 0, 0, 0.05);
+  transform: translateX(-50%) scaleY(1) scaleX(1.25);
+}
+
+.btn-cta::after {
+  left: 55%;
+  top: 180%;
+  width: 160%;
+  height: 190%;
+  background-color: #262b35;
+  transform: translateX(-50%) scaleY(1) scaleX(1.45);
+}
+
+.btn-cta:hover {
+  color: #ffffff;
+  border: 1px solid #262b35;
+  transform: translate3d(0, -2px, 0);
+}
+
+.btn-cta:hover::before {
+  top: -35%;
+  background-color: #262b35;
+  transform: translateX(-50%) scaleY(1.3) scaleX(0.8);
+}
+
+.btn-cta:hover::after {
+  top: -45%;
+  background-color: #262b35;
+  transform: translateX(-50%) scaleY(1.3) scaleX(0.8);
+}
+
+.btn-cta:active {
+  color: #262b35;
+  box-shadow:
+    inset 4px 4px 12px rgba(0, 0, 0, 0.15),
+    inset -4px -4px 12px rgba(255, 255, 255, 0.4);
+}
+
+/* Hero giant-name watermark — replicates .custom-font-mb's gradient
+   text-clip treatment (uppercase, white-to-transparent fade, fixed
+   2px letter-spacing, NOT the em-based spacing on .hero-name) */
+.hero-name-gradient {
+  text-transform: uppercase;
+  font-weight: 700;
+  letter-spacing: 2px;
+  background: linear-gradient(
+    to bottom,
+    rgba(255, 255, 255, 0.2) 0%,
+    rgba(255, 255, 255, 0.05) 100%
+  );
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+}
+
 @keyframes arrowBounce {
   0%,
   20%,
