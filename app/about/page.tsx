@@ -7,7 +7,7 @@ import MyApproach from "@/components/about/MyApproach";
 import SocialFollow from "@/components/about/SocialFollow";
 import ExperienceQualifications from "@/components/about/ExperienceQualifications";
 import DegreeBadges from "@/components/about/DegreeBadges";
-import WordMarquee from "@/components/about/WordMarquee";
+import WordMarquee from "@/components/shared/WordMarquee";
 import FinalCta from "@/components/home/FinalCta";
 
 export const metadata: Metadata = {
