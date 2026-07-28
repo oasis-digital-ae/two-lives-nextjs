@@ -27,6 +27,7 @@ export default function Home() {
         eyebrow="About Two Lives"
         title="Guided by Basim Yafai"
         quote="Real change happens when mind, body and emotions are strengthened together, not treated as separate parts."
+        image="/images/keynote-hero.png"
       />
       <MeetBasim />
       <ThreeStepTransition />
@@ -35,6 +36,7 @@ export default function Home() {
         eyebrow="Who I Mentor"
         title="Who I Mentor"
         quote="Different arenas. The same Inner Work."
+        image="/images/two-lives/mentor-hero.png"
       />
       <WhoIMentor />
       <CoachingVideo />

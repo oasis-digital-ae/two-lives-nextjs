@@ -524,3 +524,187 @@ html {
     transform: translate(-20%, -20%) scale(1.12);
   }
 }
+
+/* Tertiary CTA (.btn-secondary): transparent by default, same liquid-fill
+   hover mechanic as .btn-three/.btn-cta, used alongside a .btn-three button */
+.btn-secondary {
+  display: inline-block;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+  font-family: var(--font-heading), sans-serif;
+  padding: 15px 20px 17px 20px;
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--color-carbon);
+  cursor: pointer;
+  background: transparent;
+  border-radius: 10px;
+  backdrop-filter: blur(6px);
+  box-shadow:
+    0 6px 20px rgba(0, 0, 0, 0.25),
+    inset 0 0 0 1px rgba(255, 255, 255, 0.04);
+  transition:
+    transform 0.35s cubic-bezier(0.22, 1, 0.36, 1),
+    box-shadow 0.35s cubic-bezier(0.22, 1, 0.36, 1),
+    color 0.2s ease,
+    background-color 0.3s ease;
+}
+
+.btn-secondary:active {
+  box-shadow:
+    inset 4px 4px 12px rgba(0, 0, 0, 0.4),
+    inset -4px -4px 12px rgba(255, 255, 255, 0.05);
+}
+
+.btn-secondary::before,
+.btn-secondary::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  border-radius: 50%;
+  transition: all 0.5s 0.1s cubic-bezier(0.55, 0, 0.1, 1);
+  z-index: -1;
+}
+
+.btn-secondary::before {
+  top: 100%;
+  width: 140%;
+  height: 180%;
+  background-color: rgba(0, 225, 132, 0.08);
+  transform: translateX(-50%) scaleY(1) scaleX(1.25);
+}
+
+.btn-secondary::after {
+  left: 55%;
+  top: 180%;
+  width: 160%;
+  height: 190%;
+  background-color: #00e184;
+  transform: translateX(-50%) scaleY(1) scaleX(1.45);
+}
+
+.btn-secondary:hover {
+  color: #0e1412;
+  border: 1px solid #00e184;
+  transform: translateY(-2px);
+}
+
+.btn-secondary:hover::before {
+  top: -35%;
+  background-color: #00e184;
+  transform: translateX(-50%) scaleY(1.3) scaleX(0.8);
+}
+
+.btn-secondary:hover::after {
+  top: -45%;
+  background-color: #00e184;
+  transform: translateX(-50%) scaleY(1.3) scaleX(0.8);
+}
+
+/* Faded decorative watermark icon in the corner of the Meet Basim section */
+.corner-svg {
+  position: absolute;
+  top: -150px;
+  left: -40px;
+  z-index: 0;
+  pointer-events: none;
+  filter: brightness(0.1);
+}
+
+.corner-svg img {
+  width: 500px;
+  opacity: 0.9;
+}
+
+/* Basim's portrait photo: soft layered drop-shadow, no border-radius */
+.basim-portrait {
+  filter: drop-shadow(0 10px 15px rgba(0, 0, 0, 0.15)) drop-shadow(0 30px 40px rgba(0, 0, 0, 0.1))
+    drop-shadow(0 60px 80px rgba(0, 0, 0, 0.08));
+}
+
+/* Translucent glass banner overlapping the portrait's bottom-left corner */
+.founder-banner {
+  position: absolute;
+  bottom: 25px;
+  left: 20%;
+  transform: translateX(-50%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 16px;
+  padding: 18px 24px;
+  width: auto;
+  min-width: 360px;
+  max-width: 85%;
+  box-sizing: border-box;
+  z-index: 99;
+  background: hsla(160, 18%, 7%, 0.7);
+}
+
+@media (max-width: 768px) {
+  .founder-banner {
+    padding: 14px 18px;
+    min-width: 220px;
+    max-width: 88%;
+  }
+}
+
+@media (max-width: 480px) {
+  .founder-banner {
+    padding: 12px 16px;
+    min-width: 330px;
+    max-width: 92%;
+    left: 50%;
+  }
+}
+
+.founder-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 18px;
+  flex-shrink: 0;
+}
+
+.founder-icon img {
+  height: 64px;
+  width: 64px;
+}
+
+.founder-text {
+  display: flex;
+  flex-direction: column;
+}
+
+.founder-name {
+  font-size: 20px;
+  font-weight: 700;
+  color: #fff;
+  line-height: 1.2;
+}
+
+.founder-title {
+  font-size: 15px;
+  color: #eee;
+  font-style: italic;
+}
+
+/* Qualification icon: dark by default, brightens to emerald with a subtle
+   lift+scale when the surrounding card (not just the icon) is hovered */
+.icon-card i::before,
+.icon-card svg {
+  color: #002918;
+  fill: #002918;
+  transition:
+    color 0.25s ease,
+    fill 0.25s ease,
+    transform 0.25s ease;
+}
+
+.icon-card:hover i::before,
+.icon-card:hover svg {
+  color: #04e184;
+  fill: #04e184;
+  transform: translateY(-3px) scale(1.05);
+}
