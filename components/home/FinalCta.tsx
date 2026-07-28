@@ -7,9 +7,11 @@ export default function FinalCta({
       &rarr; Now Outgrow It
     </h4>
   ),
+  showMentorshipButton = true,
 }: {
   heading?: string;
   subheading?: React.ReactNode;
+  showMentorshipButton?: boolean;
 }) {
   return (
     <section
@@ -25,9 +27,11 @@ export default function FinalCta({
           {subheading}
         </div>
         <div className="flex flex-col gap-4">
-          <Link href="/request-mentorship" className="btn-cta">
-            Request Mentorship
-          </Link>
+          {showMentorshipButton && (
+            <Link href="/request-mentorship" className="btn-cta">
+              Request Mentorship
+            </Link>
+          )}
           <Link href="/explore-your-archetype" className="btn-archetype">
             Explore Your Archetype
           </Link>
