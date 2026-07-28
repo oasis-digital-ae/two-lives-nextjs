@@ -87,10 +87,10 @@ export default function Hero() {
             <Image
               src="/images/basim-hero-1.png"
               alt="Basim Yafai"
-              width={1728}
-              height={1852}
+              width={500}
+              height={536}
               priority
-              className="relative z-[2] max-h-[92vh] w-auto"
+              className="relative z-[2] block h-auto w-[500px] max-h-[720px]"
               style={{
                 filter:
                   "saturate(0.95) drop-shadow(0 35px 45px rgba(0,0,0,0.45)) drop-shadow(0 80px 90px rgba(0,0,0,0.25))",
