@@ -107,18 +107,21 @@ export default function Reviews() {
 
   return (
     <section className="bg-white py-16 md:py-20">
-      <div className="mx-auto max-w-[1400px] px-5 lg:px-10">
+      <div
+        className="mx-auto max-w-[1400px] bg-top bg-no-repeat px-5 lg:px-10"
+        style={{ backgroundImage: "url(/images/demo-it-business-testimonial-bg.png)" }}
+      >
         <div className="mb-10 text-center">
-          <h2 className="mb-2 font-heading text-3xl font-semibold text-carbon md:text-4xl">
+          <h2 className="text-shadow-soft mb-2 font-heading text-[32px] font-semibold tracking-[-2px] text-carbon sm:text-[40px]">
             Client Reviews
           </h2>
           <a
             href="https://www.trustpilot.com/review/www.twolivestheory.com"
             target="_blank"
             rel="noreferrer"
-            className="text-sea-green underline"
+            className="text-dark-green text-[18px] font-medium underline"
           >
-            Find us on <span className="font-bold italic">TrustPilot &rarr;</span>
+            Find us on <span className="font-black italic">TrustPilot &rarr;</span>
           </a>
         </div>
 
@@ -128,29 +131,36 @@ export default function Reviews() {
               <div key={r.name} className="min-w-0 flex-[0_0_100%]">
                 <div className="grid grid-cols-1 items-center gap-8 px-2 md:grid-cols-3">
                   <div className="text-center">
-                    <div className="relative mx-auto mb-3 h-28 w-28">
-                      <Image
-                        src={r.avatar}
-                        alt={r.name}
-                        fill
-                        className="rounded-full object-cover"
-                      />
+                    <div className="relative mx-auto mb-3 aspect-square w-[70%]">
+                      <div className="h-full w-full overflow-hidden rounded-full shadow-[0_8px_20px_rgba(0,0,0,0.12),0_2px_6px_rgba(0,0,0,0.08),0_0_0_2px_rgba(255,255,255,0.6)]">
+                        <Image
+                          src={r.avatar}
+                          alt={r.name}
+                          fill
+                          className="rounded-full object-cover"
+                        />
+                      </div>
+                      <div className="animate-float absolute top-[-6px] left-[-30px] flex h-[95px] w-[95px] items-center justify-center sm:h-[125px] sm:w-[125px]">
+                        <Image src="/images/twoliveslogo.svg" alt="" width={90} height={90} />
+                      </div>
                     </div>
-                    <p className="font-heading font-semibold text-carbon">{r.name}</p>
-                    <p className="text-sm text-slate">{r.role}</p>
-                    <p className="text-sm text-slate">
+                    <p className="mt-3 mb-1 font-heading text-[18px] font-semibold text-carbon">
+                      {r.name}
+                    </p>
+                    <p className="mb-0 text-[16px] text-carbon">{r.role}</p>
+                    <p className="mb-0 text-[16px] text-carbon">
                       IG:{" "}
-                      <a href={r.igHref} target="_blank" rel="noreferrer" className="underline">
+                      <a href={r.igHref} target="_blank" rel="noreferrer" className="text-carbon underline">
                         {r.ig}
                       </a>
                     </p>
                   </div>
                   <div className="md:col-span-2">
-                    <span className="mb-3 block font-heading text-xl font-semibold text-sea-green">
+                    <span className="text-dark-green mb-2 block text-center font-heading text-[20px] font-semibold tracking-[-2px] sm:text-left">
                       From Struggle to Clarity
                     </span>
                     {r.quotes.map((q, i) => (
-                      <p key={i} className="mb-2 text-carbon last:mb-0">
+                      <p key={i} className="mb-1 text-[18px] font-medium text-carbon last:mb-0">
                         {q}
                       </p>
                     ))}
@@ -161,11 +171,11 @@ export default function Reviews() {
           </div>
         </div>
 
-        <p className="mt-8 text-center font-semibold italic text-carbon">
+        <p className="mt-3 mb-3 text-center text-[18px] font-bold text-carbon italic sm:text-[16px]">
           &ldquo;Confidential by default. Shared by choice.&rdquo;
         </p>
 
-        <ArrowNav onPrev={scrollPrev} onNext={scrollNext} className="mt-4 justify-center" />
+        <ArrowNav onPrev={scrollPrev} onNext={scrollNext} className="justify-center" />
       </div>
     </section>
   );
