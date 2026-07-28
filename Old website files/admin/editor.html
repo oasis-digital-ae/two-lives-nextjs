@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Post Editor</title>
+
+  <!-- Fonts + Icons -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/remixicon/fonts/remixicon.css">
+  <link rel="stylesheet" href="/admin/editor.css">
+
+  <!-- Supabase -->
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="/js/admin/supabase.js"></script>
+
+  <!-- Auth -->
+  <script src="/js/admin/auth.js"></script>
+
+  <script>
+    requireLogin().then(ok => {
+      if (ok) {
+        document.addEventListener("DOMContentLoaded", () => {
+          document.body.classList.add("show");
+        });
+      }
+    });
+  </script>
+
+  <!-- TinyMCE -->
+  <script src="https://cdn.jsdelivr.net/npm/tinymce@6/tinymce.min.js"></script>
+</head>
+
+<body>
+
+<div class="editor-container">
+
+  <h1><i class="ri-edit-2-line"></i> Post Editor</h1>
+
+  <!-- MAIN HEADING (H1) -->
+  <label>Main Heading (H1)</label>
+  <input id="main_heading" placeholder="This will appear inside the blog content">
+
+  <!-- TITLE -->
+  <label>Title (SEO + Card Title)</label>
+  <input id="title" placeholder="Enter title">
+
+  <!-- SLUG -->
+  <label>Slug</label>
+  <input id="slug" placeholder="Slug (auto-filled)">
+
+  <!-- AUTHOR -->
+  <label>Author Name</label>
+  <input id="author_name" placeholder="e.g. Basim Shah">
+
+  <!-- TAG (SINGLE) -->
+  <label>Tag</label>
+  <input id="tag" placeholder="e.g. Wellbeing">
+
+  <!-- PUBLISH DATE -->
+  <label>Publish Date</label>
+  <input type="date" id="publish_date">
+
+  <!-- Short Summary -->
+  <label>Short Summary</label>
+  <textarea id="summary" rows="3"></textarea>
+
+  <!-- FEATURED IMAGE -->
+  <label>Featured Image</label>
+  <div class="featured-box">
+    <input type="file" id="featuredInput" accept="image/*">
+    <img id="featuredPreview" class="featured-preview" style="display:none;">
+    <button id="removeFeatured" class="btn btn-secondary" style="display:none;">Remove Image</button>
+  </div>
+
+  <!-- CONTENT -->
+  <h2 class="section-title">Blog Content</h2>
+  <textarea id="editor"></textarea>
+
+  <!-- SEO SETTINGS -->
+  <h2 class="section-title">SEO Settings</h2>
+
+  <label>SEO Title</label>
+  <input id="seo_title">
+
+  <label>SEO Description</label>
+  <textarea id="seo_description" rows="2"></textarea>
+
+  <label>SEO Keywords</label>
+  <input id="seo_keywords">
+
+  <label>Canonical URL</label>
+  <input id="seo_canonical">
+
+  <div class="btn-row">
+    <button class="btn btn-secondary" onclick="goBack()">
+      <i class="ri-arrow-left-line"></i> Back to Dashboard
+    </button>
+
+    <button class="btn btn-primary" id="saveBtn">
+      <i class="ri-save-3-line"></i> Save Post
+    </button>
+  </div>
+
+  <p id="msg"></p>
+
+</div>
+
+
+<!-- TinyMCE Config -->
+<script>
+function goBack() {
+  window.location.href = "/admin/dashboard.html";
+}
+
+document.addEventListener("DOMContentLoaded", () => {
+  tinymce.init({
+    selector: '#editor',
+    height: 600,
+    plugins: 'link lists table code media image autoresize preview anchor',
+    toolbar:
+      'undo redo | blocks | bold italic underline | alignleft aligncenter alignright | bullist numlist | link image media table | code preview',
+
+    block_formats:
+      "Paragraph=p; Heading 1=h1; Heading 2=h2; Heading 3=h3; Heading 4=h4; Heading 5=h5; Heading 6=h6",
+
+    images_upload_handler: async (blobInfo, success, failure) => {
+      try {
+        const file = blobInfo.blob();
+        const name = Date.now() + "-" + file.name;
+
+        const bucket = "blog-images";
+        const upload = await supabaseClient.storage
+          .from(bucket)
+          .upload(name, file);
+
+        if (upload.error) return failure(upload.error.message);
+
+        const { data } = supabaseClient.storage
+          .from(bucket)
+          .getPublicUrl(name);
+
+        success(data.publicUrl);
+
+      } catch (err) {
+        failure("Upload failed.");
+      }
+    }
+  });
+});
+</script>
+
+<!-- Editor Logic -->
+<script src="/js/admin/editor.js" defer></script>
+
+</body>
+</html>

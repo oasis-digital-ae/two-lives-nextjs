@@ -1,0 +1,93 @@
+/* Global */
+* { box-sizing: border-box; }
+
+/* Container */
+.editor-container {
+  max-width: 900px;
+  margin: auto;
+  background: #ffffff;
+  padding: 35px;
+  border-radius: 12px;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+}
+
+.section-title {
+  font-size: 20px;
+  margin: 30px 0 15px;
+  font-weight: 600;
+  color: #0f172a;
+}
+
+/* Inputs */
+label {
+  display: block;
+  font-weight: 500;
+  margin-bottom: 6px;
+  color: #1e293b;
+}
+
+input, textarea {
+  width: 100%;
+  padding: 13px;
+  border-radius: 8px;
+  border: 1px solid #d4d4d4;
+  background: #fafafa;
+  margin-bottom: 18px;
+  font-size: 15px;
+}
+
+/* Featured Image */
+.featured-box {
+  margin-bottom: 20px;
+}
+
+.featured-preview {
+  margin-top: 10px;
+  width: 100%;
+  max-height: 250px;
+  object-fit: cover;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+}
+
+/* Buttons */
+.btn-row {
+  display: flex;
+  gap: 12px;
+  margin-top: 25px;
+}
+
+.btn {
+  padding: 12px 22px;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  font-weight: 500;
+}
+
+.btn-primary {
+  background: #2563eb;
+  color: #fff;
+}
+.btn-primary:hover { background: #1e4fcf; }
+
+.btn-secondary {
+  background: #e2e8f0;
+  color: #1e293b;
+}
+.btn-secondary:hover { background: #cbd5e1; }
+
+/* Responsive */
+@media (max-width: 600px) {
+  .editor-container {
+    padding: 20px;
+  }
+
+  .btn-row {
+    flex-direction: column;
+  }
+
+  .btn {
+    width: 100%;
+  }
+}

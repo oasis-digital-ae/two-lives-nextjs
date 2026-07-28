@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Admin Dashboard</title>
+
+  <!-- Prevent flash -->
+  <style>
+    body { opacity: 0; transition: opacity .20s; }
+    body.show { opacity: 1; }
+  </style>
+
+  <!-- Styles -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/remixicon/fonts/remixicon.css">
+  <link rel="stylesheet" href="/admin/dashboard.css">
+  <link rel="shortcut icon" href="/images/favicon.svg">
+
+  <!-- 1️⃣ Supabase Core -->
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+
+  <!-- 2️⃣ Supabase Client (creates supabaseClient) -->
+  <script src="/js/admin/supabase.js"></script>
+
+  <!-- 3️⃣ Auth (uses supabaseClient → MUST load AFTER supabase.js) -->
+  <script src="/js/admin/auth.js"></script>
+
+  <!-- 4️⃣ Auth Gate -->
+  <script>
+    requireLogin().then(ok => {
+      if (ok) {
+        document.addEventListener("DOMContentLoaded", () => {
+          document.body.classList.add("show");
+        });
+      }
+    });
+  </script>
+
+</head>
+
+<body>
+
+<!-- SIDEBAR -->
+<aside class="sidebar">
+  <div class="brand">
+    <i class="ri-dashboard-line"></i>
+    <span>Admin Panel</span>
+  </div>
+
+  <nav>
+    <a class="active">
+      <i class="ri-file-list-line"></i> Posts
+    </a>
+
+    <a onclick="logout()">
+      <i class="ri-logout-box-r-line"></i> Logout
+    </a>
+  </nav>
+</aside>
+
+<!-- MAIN CONTENT -->
+<main class="content">
+
+  <div class="topbar">
+    <h1>Posts</h1>
+    <button class="btn-primary" onclick="window.location.href='editor.html'">
+      <i class="ri-add-line"></i> New Post
+    </button>
+  </div>
+
+  <div id="posts" class="posts-list"></div>
+
+</main>
+
+<!-- Dashboard Logic -->
+<script src="/js/admin/dashboard.js"></script>
+
+<script>
+  async function logout() {
+    await supabaseClient.auth.signOut();
+    window.location.replace("/admin/login.html");
+  }
+</script>
+
+</body>
+</html>
