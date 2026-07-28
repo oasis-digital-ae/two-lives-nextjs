@@ -13,7 +13,12 @@ export default function Hero() {
     const onScroll = () => {
       const y = window.scrollY;
       if (nameRef.current) {
-        nameRef.current.style.transform = `translate(-50%, calc(-50% + ${y * 0.18}px))`;
+        // Set the modern standalone `translate` property (what Tailwind's
+        // -translate-x/y utilities use in v4), not `transform` — the two
+        // compose additively, so setting `transform` here on top of the
+        // utility's `translate` would double the -50% horizontal offset
+        // the moment the page scrolls.
+        nameRef.current.style.translate = `-50% calc(-50% + ${y * 0.18}px)`;
       }
       if (basimRef.current) {
         basimRef.current.style.transform = `translateY(${y * 0.35}px)`;
@@ -54,7 +59,7 @@ export default function Hero() {
         {/* big name background */}
         <div
           ref={nameRef}
-          className="hero-name-gradient animate-hero-name absolute left-1/2 top-[55%] z-[2] -translate-x-1/2 -translate-y-1/2 whitespace-nowrap font-display text-[12vw]"
+          className="hero-name-gradient animate-hero-name absolute left-1/2 top-[55%] z-[2] -translate-x-1/2 -translate-y-1/2 whitespace-nowrap text-[12vw]"
         >
           Basim Yafai
         </div>
