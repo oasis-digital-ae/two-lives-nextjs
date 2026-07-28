@@ -139,9 +139,9 @@ export default function ThreeStepTransition() {
                 itemRefs.current[i] = el;
               }}
               style={{ zIndex: phases.length - i }}
-              className="static flex items-center py-12 xl:absolute xl:inset-0 xl:h-screen xl:overflow-hidden xl:bg-off-white xl:py-0"
+              className="static py-12 xl:absolute xl:inset-0 xl:flex xl:h-screen xl:overflow-hidden xl:bg-off-white xl:py-0"
             >
-              <div className="mx-auto grid w-full max-w-[1400px] grid-cols-1 items-center gap-8 px-5 xl:grid-cols-2 xl:px-10">
+              <div className="mx-auto grid w-full max-w-[1400px] grid-cols-1 items-center gap-8 px-5 xl:grid-cols-2 xl:items-stretch xl:px-10">
                 <div
                   className={`relative aspect-4/3 overflow-visible xl:order-1 xl:aspect-auto xl:h-full ${i % 2 === 1 ? "order-2" : "order-2 xl:order-1"}`}
                 >
@@ -156,7 +156,9 @@ export default function ThreeStepTransition() {
                   </div>
                 </div>
 
-                <div className={`bg-pattern-section text-center xl:order-2 xl:text-left ${i % 2 === 1 ? "order-1" : "order-1 xl:order-2"}`}>
+                <div
+                  className={`bg-pattern-section text-center xl:order-2 xl:self-center xl:text-left ${i % 2 === 1 ? "order-1" : "order-1 xl:order-2"}`}
+                >
                   <span className="text-dark-green mt-[30px] mb-[10px] block text-[18px] font-semibold uppercase">
                     {p.phase}
                   </span>
