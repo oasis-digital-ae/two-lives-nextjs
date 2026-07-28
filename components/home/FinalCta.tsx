@@ -8,15 +8,19 @@ export default function FinalCta({
     </h4>
   ),
   showMentorshipButton = true,
+  showArchetypeButton = true,
+  height = 600,
 }: {
   heading?: string;
   subheading?: React.ReactNode;
   showMentorshipButton?: boolean;
+  showArchetypeButton?: boolean;
+  height?: number;
 }) {
   return (
     <section
-      className="relative flex h-[600px] items-center justify-center bg-cover bg-center"
-      style={{ backgroundImage: "url('/images/cta-image.webp')" }}
+      className="relative flex items-center justify-center bg-cover bg-center"
+      style={{ backgroundImage: "url('/images/cta-image.webp')", height: `${height}px` }}
     >
       <div className="absolute inset-0 bg-black opacity-75" />
       <div className="relative z-10 mx-auto flex max-w-[1400px] flex-col items-center justify-between gap-8 px-5 text-center lg:flex-row lg:text-left">
@@ -32,9 +36,11 @@ export default function FinalCta({
               Request Mentorship
             </Link>
           )}
-          <Link href="/explore-your-archetype" className="btn-archetype">
-            Explore Your Archetype
-          </Link>
+          {showArchetypeButton && (
+            <Link href="/explore-your-archetype" className="btn-archetype">
+              Explore Your Archetype
+            </Link>
+          )}
         </div>
       </div>
     </section>
