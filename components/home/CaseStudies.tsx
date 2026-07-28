@@ -25,19 +25,27 @@ const cases = [
   },
 ];
 
-export default function CaseStudies() {
+export default function CaseStudies({
+  heading = "Real Client Transformations",
+  description = (
+    <p className="text-carbon">
+      A closer look at how Two Lives Theory unfolds over time. These are real
+      transitions, showing how clarity, alignment, and self-leadership create
+      sustainable success.
+    </p>
+  ),
+}: {
+  heading?: React.ReactNode;
+  description?: React.ReactNode | null;
+}) {
   return (
     <section className="bg-pattern-section bg-off-white py-16 md:py-24">
       <div className="mx-auto max-w-[1400px] px-5 lg:px-10">
         <div className="mx-auto mb-12 max-w-2xl text-center">
           <h2 className="text-shadow-soft mb-2.5 font-heading text-[30px] font-semibold tracking-[-1.5px] text-carbon sm:text-[40px]">
-            Real Client Transformations
+            {heading}
           </h2>
-          <p className="text-carbon">
-            A closer look at how Two Lives Theory unfolds over time. These
-            are real transitions, showing how clarity, alignment, and
-            self-leadership create sustainable success.
-          </p>
+          {description}
         </div>
 
         <div className="grid grid-cols-1 gap-[30px] sm:grid-cols-2 lg:grid-cols-3">
