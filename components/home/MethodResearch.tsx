@@ -29,27 +29,24 @@ export default function MethodResearch() {
   const { emblaRef, scrollPrev, scrollNext } = useCarousel();
 
   return (
-    <section className="bg-off-white py-16 md:py-20">
+    <section className="bg-pattern-section overflow-hidden bg-off-white py-16 md:py-20">
       <div className="mx-auto max-w-[1400px] px-5 lg:px-10">
         <div className="grid grid-cols-1 gap-6 lg:grid-cols-12">
-          <div className="flex flex-col justify-center rounded-2xl bg-white p-8 shadow-md lg:col-span-4">
-            <span className="mb-3 font-heading font-semibold italic text-carbon underline decoration-emerald underline-offset-4">
+          <div className="flex flex-col justify-center rounded-[10px] bg-off-white p-8 shadow-[0_0_25px_rgba(0,0,0,0.08)] lg:col-span-4">
+            <span className="mb-3 w-fit border-b-2 border-carbon font-heading text-[20px] font-bold text-carbon italic">
               Two Lives Theory Method
             </span>
-            <h2 className="mb-6 font-heading text-3xl font-semibold text-carbon">
+            <h2 className="text-shadow-soft mb-6 font-heading text-[32px] font-semibold tracking-[-2px] text-carbon sm:text-[40px]">
               Grounded in Evidence. Built for Real Change
             </h2>
-            <Link
-              href="/request-mentorship"
-              className="inline-block w-fit rounded-full bg-carbon px-6 py-3 font-heading text-sm font-semibold text-white"
-            >
+            <Link href="/request-mentorship" className="btn-three hidden w-fit lg:inline-flex">
               Request Mentorship
             </Link>
           </div>
 
-          <div className="relative rounded-2xl bg-white p-8 shadow-md lg:col-span-8 lg:p-12">
-            <span className="mb-8 flex items-center gap-3 font-heading text-lg font-semibold text-slate">
-              <span className="flex h-12 w-12 items-center justify-center rounded-full bg-emerald text-carbon">
+          <div className="relative rounded-[10px] bg-off-white p-8 shadow-[0_0_25px_rgba(0,0,0,0.08)] lg:col-span-8 lg:p-12">
+            <span className="mb-8 flex items-center gap-3 font-heading text-[18px] font-semibold tracking-[-0.5px] text-carbon sm:text-[20px]">
+              <span className="flex h-[60px] w-[60px] shrink-0 items-center justify-center rounded-full bg-radial text-white">
                 &darr;
               </span>
               Methods Supported by Research
@@ -58,20 +55,20 @@ export default function MethodResearch() {
             <Image
               src="/images/tl-circle.svg"
               alt=""
-              width={100}
-              height={100}
-              className="absolute right-8 top-8 hidden opacity-70 lg:block"
+              width={125}
+              height={125}
+              className="absolute top-8 right-8 hidden rotate-[5.5deg] opacity-70 lg:block"
             />
 
             <div className="overflow-hidden" ref={emblaRef}>
               <div className="flex">
                 {researchSlides.map((slide) => (
                   <div key={slide.title} className="min-w-0 flex-[0_0_100%]">
-                    <h3 className="mb-3 font-heading text-2xl font-bold text-carbon">
+                    <h3 className="mb-5 font-heading text-[32px] font-bold tracking-[-2px] text-carbon sm:text-[40px]">
                       {slide.title}
                     </h3>
-                    <p className="mb-3 max-w-xl text-slate">{slide.body}</p>
-                    <p className="text-sm italic text-slate">
+                    <p className="mb-3 w-[90%] font-normal text-carbon">{slide.body}</p>
+                    <p className="w-[80%] text-sm text-carbon italic">
                       <b>Source:</b>{" "}
                       <a href={slide.href} target="_blank" rel="noreferrer" className="underline">
                         {slide.source}
