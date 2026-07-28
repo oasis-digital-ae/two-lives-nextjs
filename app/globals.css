@@ -1,0 +1,75 @@
+@import "tailwindcss";
+
+:root {
+  --color-carbon: #0e1412;
+  --color-graphite: #1b2421;
+  --color-slate: #3a4a45;
+  --color-grey: #9fa8a3;
+  --color-mist: #e6ece9;
+  --color-white: #f1f7f7;
+  --color-emerald: #00e184;
+  --color-sea-green: #078861;
+  --color-off-white: #f9f9f7;
+}
+
+@theme inline {
+  --font-heading: var(--font-sora), sans-serif;
+  --font-body: var(--font-manrope), sans-serif;
+  --font-display: var(--font-gotham), sans-serif;
+
+  --color-carbon: var(--color-carbon);
+  --color-graphite: var(--color-graphite);
+  --color-slate: var(--color-slate);
+  --color-grey: var(--color-grey);
+  --color-mist: var(--color-mist);
+  --color-white: var(--color-white);
+  --color-emerald: var(--color-emerald);
+  --color-sea-green: var(--color-sea-green);
+  --color-off-white: var(--color-off-white);
+}
+
+body {
+  background: var(--color-white);
+  color: var(--color-carbon);
+  font-family: var(--font-body);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-heading);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+@keyframes marquee {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-marquee {
+  animation: marquee 30s linear infinite;
+}
+
+@keyframes float {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+.animate-float {
+  animation: float 4s ease-in-out infinite;
+}
