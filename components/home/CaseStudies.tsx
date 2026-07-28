@@ -27,38 +27,49 @@ const cases = [
 
 export default function CaseStudies() {
   return (
-    <section className="bg-off-white py-16 md:py-24">
+    <section className="bg-pattern-section bg-off-white py-16 md:py-24">
       <div className="mx-auto max-w-[1400px] px-5 lg:px-10">
-        <div className="mb-10 max-w-2xl">
-          <h2 className="mb-3 font-heading text-3xl font-semibold text-carbon md:text-4xl">
+        <div className="mx-auto mb-12 max-w-2xl text-center">
+          <h2 className="text-shadow-soft mb-2.5 font-heading text-[30px] font-semibold tracking-[-1.5px] text-carbon sm:text-[40px]">
             Real Client Transformations
           </h2>
-          <p className="text-slate">
+          <p className="text-carbon">
             A closer look at how Two Lives Theory unfolds over time. These
             are real transitions, showing how clarity, alignment, and
             self-leadership create sustainable success.
           </p>
         </div>
 
-        <div className="grid grid-cols-1 gap-8 md:grid-cols-3">
+        <div className="grid grid-cols-1 gap-[30px] sm:grid-cols-2 lg:grid-cols-3">
           {cases.map((c) => (
-            <Link key={c.href} href={c.href} className="group block">
-              <div className="relative mb-4 aspect-[4/3] overflow-hidden rounded-lg">
+            <Link
+              key={c.href}
+              href={c.href}
+              className="group block overflow-hidden rounded-[10px] border border-white/30 bg-white/20 shadow-[0_18px_45px_rgba(14,20,18,0.12)] backdrop-blur-xl transition-all duration-300 hover:-translate-y-1.5 hover:bg-white/25 hover:shadow-[0_24px_60px_rgba(14,20,18,0.16)]"
+            >
+              <div className="h-[240px] overflow-hidden">
                 <Image
                   src={c.image}
                   alt={c.title}
-                  fill
-                  className="object-cover transition-transform duration-500 group-hover:scale-110"
+                  width={800}
+                  height={600}
+                  className="h-full w-full object-cover object-top transition-transform duration-500 group-hover:scale-105"
                 />
               </div>
-              <p className="mb-1 text-sm font-semibold uppercase tracking-wide text-sea-green">
-                {c.role}
-              </p>
-              <h3 className="mb-2 font-heading text-xl font-bold text-carbon">{c.title}</h3>
-              <p className="mb-3 text-slate">{c.desc}</p>
-              <span className="font-heading text-sm font-semibold text-carbon group-hover:underline">
-                View Case Study &rarr;
-              </span>
+              <div className="flex flex-col bg-gradient-to-b from-white/8 to-white/2 p-7">
+                <p className="mb-1 text-sm font-medium text-carbon">{c.role}</p>
+                <h3 className="mb-3 font-heading text-[22px] font-bold text-carbon">{c.title}</h3>
+                <p className="text-sm leading-[1.7] text-carbon/85">{c.desc}</p>
+
+                <div className="mt-5 inline-block h-4 w-fit overflow-hidden">
+                  <span className="block text-xs font-semibold tracking-wide whitespace-nowrap text-carbon uppercase transition-transform duration-300 group-hover:-translate-y-full">
+                    View Case Study
+                  </span>
+                  <span className="block text-xs font-semibold tracking-wide whitespace-nowrap text-carbon uppercase underline transition-transform duration-300 group-hover:-translate-y-full">
+                    Read the full case study
+                  </span>
+                </div>
+              </div>
             </Link>
           ))}
         </div>
