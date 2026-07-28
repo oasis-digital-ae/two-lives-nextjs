@@ -1,6 +1,8 @@
 import Link from "next/link";
 
-const steps = [
+export type PathStep = { title: string; paragraphs: string[]; highlight?: string };
+
+const defaultSteps: PathStep[] = [
   {
     title: "Pause and Take Stock",
     paragraphs: [
@@ -30,12 +32,20 @@ const steps = [
   },
 ];
 
-export default function PathSteps() {
+export default function PathSteps({
+  heading = "The Path Into Your Next Life",
+  steps = defaultSteps,
+  cta = true,
+}: {
+  heading?: string;
+  steps?: PathStep[];
+  cta?: boolean;
+}) {
   return (
     <section className="bg-pattern-section bg-off-white py-16 md:py-20">
       <div className="mx-auto max-w-[1400px] px-5 lg:px-10">
         <h2 className="text-shadow-soft mb-12 text-center font-heading text-[32px] font-semibold tracking-[-2px] text-carbon sm:text-[40px]">
-          The Path Into Your Next Life
+          {heading}
         </h2>
 
         <div className="mb-12 grid grid-cols-1 gap-10 md:grid-cols-3">
@@ -55,16 +65,18 @@ export default function PathSteps() {
                   {p}
                 </p>
               ))}
-              <p className="font-bold text-carbon">{s.highlight}</p>
+              {s.highlight && <p className="font-bold text-carbon">{s.highlight}</p>}
             </div>
           ))}
         </div>
 
-        <div className="text-center">
-          <Link href="/our-method" className="btn-three">
-            Explore The Method
-          </Link>
-        </div>
+        {cta && (
+          <div className="text-center">
+            <Link href="/our-method" className="btn-three">
+              Explore The Method
+            </Link>
+          </div>
+        )}
       </div>
     </section>
   );

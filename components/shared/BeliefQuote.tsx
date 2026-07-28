@@ -2,7 +2,17 @@
 
 import { useEffect, useRef } from "react";
 
-export default function BeliefQuote() {
+export default function BeliefQuote({
+  image = "/images/keynote-hero.png",
+  preline = "My work is grounded in one core belief:",
+  quote = "Real change happens when mind, body and emotions are strengthened together, not treated as separate parts.",
+  eyebrow = "About Two lives",
+}: {
+  image?: string;
+  preline?: string | null;
+  quote?: string;
+  eyebrow?: string;
+}) {
   const sectionRef = useRef<HTMLElement>(null);
   const bgRef = useRef<HTMLDivElement>(null);
 
@@ -29,8 +39,7 @@ export default function BeliefQuote() {
         className="absolute inset-y-0 left-0 h-full"
         style={{
           width: "100%",
-          backgroundImage:
-            "linear-gradient(to right, rgba(14,20,18,1), rgba(14,20,18,0.75)), url(/images/keynote-hero.png)",
+          backgroundImage: `linear-gradient(to right, rgba(14,20,18,1), rgba(14,20,18,0.75)), url(${image})`,
           backgroundSize: "cover",
           backgroundPosition: "center 35%",
           backgroundRepeat: "no-repeat",
@@ -38,18 +47,19 @@ export default function BeliefQuote() {
       />
 
       <div className="relative mx-auto max-w-3xl px-6 text-center">
-        <p className="mb-5 font-heading text-base font-semibold text-emerald italic sm:text-lg">
-          My work is grounded in one core belief:
-        </p>
+        {preline && (
+          <p className="mb-5 font-heading text-base font-semibold text-emerald italic sm:text-lg">
+            {preline}
+          </p>
+        )}
         <h2 className="font-heading text-[24px] leading-[1.4] font-semibold text-white italic sm:text-[40px] sm:leading-tight">
-          &ldquo;Real change happens when mind, body and emotions are
-          strengthened together, not treated as separate parts.&rdquo;
+          &ldquo;{quote}&rdquo;
         </h2>
       </div>
 
       <div className="absolute top-0 left-0 hidden h-full w-32 items-center justify-center xl:flex">
         <span className="-rotate-90 text-sm font-medium whitespace-nowrap text-white">
-          About Two lives
+          {eyebrow}
         </span>
       </div>
     </section>

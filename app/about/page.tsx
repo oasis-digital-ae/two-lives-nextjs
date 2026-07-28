@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import PageHero from "@/components/layout/PageHero";
 import MeetFounder from "@/components/about/MeetFounder";
 import StatsCounters from "@/components/home/StatsCounters";
-import BeliefQuote from "@/components/about/BeliefQuote";
+import BeliefQuote from "@/components/shared/BeliefQuote";
 import MyApproach from "@/components/about/MyApproach";
 import SocialFollow from "@/components/about/SocialFollow";
 import ExperienceQualifications from "@/components/about/ExperienceQualifications";
