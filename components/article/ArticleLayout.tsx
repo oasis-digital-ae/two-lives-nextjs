@@ -9,7 +9,7 @@ export default function ArticleLayout({
   related,
   children,
 }: {
-  highlight: string;
+  highlight?: string;
   sidebarTitle: string;
   related: RelatedItem[];
   children: React.ReactNode;
@@ -17,11 +17,13 @@ export default function ArticleLayout({
   return (
     <section className="bg-pattern-section bg-off-white py-16 md:py-24">
       <div className="mx-auto max-w-[1400px] px-5 lg:px-10">
-        <div className="mx-auto mb-12 max-w-3xl text-center">
-          <h2 className="text-shadow-soft font-heading text-[28px] font-semibold tracking-[-2px] text-carbon sm:text-[40px]">
-            {highlight}
-          </h2>
-        </div>
+        {highlight && (
+          <div className="mx-auto mb-12 max-w-3xl text-center">
+            <h2 className="text-shadow-soft font-heading text-[28px] font-semibold tracking-[-2px] text-carbon sm:text-[40px]">
+              {highlight}
+            </h2>
+          </div>
+        )}
 
         <div className="grid grid-cols-1 gap-10 lg:grid-cols-12">
           <article className="lg:col-span-8">{children}</article>
