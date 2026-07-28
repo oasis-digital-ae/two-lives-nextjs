@@ -15,8 +15,8 @@ export default function Accordion({ items }: { items: AccordionItem[] }) {
             onClick={() => setOpen(open === i ? -1 : i)}
             className="flex w-full items-center gap-3 py-5 text-left"
           >
-            <span className="text-xl text-emerald">{open === i ? "−" : "+"}</span>
-            <span className="font-heading text-lg font-bold text-carbon">{item.question}</span>
+            <span className="text-xl text-carbon">{open === i ? "−" : "+"}</span>
+            <span className="font-heading text-[20px] font-bold text-carbon">{item.question}</span>
           </button>
           {open === i && (
             <div className="pb-5 pl-8">

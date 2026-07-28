@@ -81,23 +81,21 @@ export default function Faq() {
   const [active, setActive] = useState(0);
 
   return (
-    <section className="bg-off-white py-16 md:py-20">
+    <section className="bg-pattern-section bg-off-white py-16 md:py-20">
       <div className="mx-auto max-w-[1400px] px-5 lg:px-10">
         <div className="mb-10 flex flex-col items-center justify-between gap-4 md:flex-row">
-          <h2 className="text-center font-heading text-3xl font-semibold text-carbon md:text-left md:text-4xl">
-            Frequently Asked <span className="italic text-emerald">Questions</span>
+          <h2 className="text-shadow-soft text-center font-heading text-[32px] font-semibold tracking-[-2px] text-carbon sm:text-[40px] md:text-left">
+            Frequently Asked{" "}
+            <span className="border-b-2 border-carbon italic">Questions</span>
           </h2>
-          <Link
-            href="/request-mentorship"
-            className="hidden shrink-0 rounded-full bg-carbon px-6 py-3 font-heading text-sm font-semibold text-white md:inline-block"
-          >
+          <Link href="/request-mentorship" className="btn-three hidden shrink-0 md:inline-block">
             Request Mentorship
           </Link>
         </div>
 
-        <div className="grid grid-cols-1 gap-10 rounded-2xl bg-white p-6 shadow-sm lg:grid-cols-4 lg:p-10">
+        <div className="grid grid-cols-1 gap-10 rounded-[28px] border border-white/45 bg-white/25 p-6 shadow-[0_18px_50px_rgba(0,0,0,0.12)] backdrop-blur-2xl lg:grid-cols-4 lg:p-10">
           <div className="lg:col-span-1">
-            <span className="mb-4 block text-center font-heading font-semibold italic text-carbon lg:text-left">
+            <span className="mb-4 block text-center text-[20px] font-semibold text-carbon italic sm:text-[16px] lg:text-left">
               Find what you need clarity on...
             </span>
             <ul className="flex flex-col divide-y divide-carbon/10">
@@ -105,8 +103,8 @@ export default function Faq() {
                 <li key={cat.label}>
                   <button
                     onClick={() => setActive(i)}
-                    className={`w-full py-4 text-center font-heading font-bold transition-colors lg:text-left ${
-                      active === i ? "text-emerald" : "text-carbon/70"
+                    className={`w-full py-4 text-center font-heading text-[20px] font-semibold transition-colors lg:text-left ${
+                      active === i ? "font-bold text-emerald" : "text-carbon/70"
                     }`}
                   >
                     {cat.label}
@@ -122,18 +120,17 @@ export default function Faq() {
         </div>
 
         <div className="mt-10 text-center">
-          <span className="mb-2 block text-slate">Still have questions?</span>
+          <span className="mb-2.5 block text-[18px] font-medium text-carbon sm:text-base">
+            Still have questions?
+          </span>
           <Link
             href="/request-mentorship"
-            className="mb-6 inline-block font-heading text-xl font-semibold text-carbon"
+            className="text-shadow-soft mb-6 inline-block font-heading text-[26px] font-semibold text-carbon"
           >
             &rarr; Request mentorship and we&apos;ll walk through everything together.
           </Link>
           <div>
-            <Link
-              href="/request-mentorship"
-              className="inline-block rounded-full bg-carbon px-6 py-3 font-heading text-sm font-semibold text-white"
-            >
+            <Link href="/request-mentorship" className="btn-three">
               Request Mentorship
             </Link>
           </div>
