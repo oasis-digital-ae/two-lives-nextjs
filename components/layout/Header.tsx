@@ -63,7 +63,7 @@ export default function Header() {
   return (
     <header className="fixed inset-x-0 top-0 z-50">
       <nav
-        className={`transition-colors duration-300 ${
+        className={`relative transition-colors duration-300 ${
           solid ? "bg-carbon" : "bg-transparent"
         }`}
         onMouseLeave={() => setOpenMenu(null)}
@@ -104,6 +104,26 @@ export default function Header() {
               <button className="flex items-center gap-1 font-heading text-sm font-medium text-white">
                 Explore <span className="text-xs">&#9662;</span>
               </button>
+
+              {/* Simple dropdown (dropdown-with-icon-style02): a small
+                  260px anchored box, not a full-width mega panel */}
+              {openMenu === "explore" && showFullNav && (
+                <ul className="absolute left-0 top-full w-[260px] overflow-hidden rounded-md bg-[#f1f7f7] shadow-[0_0_35px_rgba(0,0,0,0.1)]">
+                  {exploreLinks.map((link, i) => (
+                    <li
+                      key={link.href}
+                      className={i < exploreLinks.length - 1 ? "border-b border-[#f6f3ef]" : ""}
+                    >
+                      <Link
+                        href={link.href}
+                        className="block px-5 py-4 font-body text-base font-medium text-[#1c211d] transition-colors hover:text-emerald"
+                      >
+                        {link.label}
+                      </Link>
+                    </li>
+                  ))}
+                </ul>
+              )}
             </li>
           </ul>
 
@@ -145,27 +165,13 @@ export default function Header() {
           </button>
         </div>
 
-        {/* Desktop mega menu panel */}
-        {openMenu && showFullNav && (
-          <div className="hidden border-t border-white/10 bg-carbon lg:block">
-            <div className="mx-auto max-w-[1400px] px-10">
-              {openMenu === "about" && <MegaMenu cards={aboutCards} />}
-              {openMenu === "mentor" && <MegaMenu cards={mentorCards} />}
-              {openMenu === "explore" && (
-                <ul className="grid grid-cols-2 gap-2 py-6 lg:grid-cols-5">
-                  {exploreLinks.map((link) => (
-                    <li key={link.href}>
-                      <Link
-                        href={link.href}
-                        className="block rounded-md px-4 py-3 font-heading text-sm text-white transition-colors hover:bg-white/10"
-                      >
-                        {link.label}
-                      </Link>
-                    </li>
-                  ))}
-                </ul>
-              )}
-            </div>
+        {/* Desktop mega menu panel — full viewport width, light backdrop,
+            matching the original's .mega-menu-dropdown (position:static
+            on the <li>, the dropdown itself spans 100vw) */}
+        {(openMenu === "about" || openMenu === "mentor") && showFullNav && (
+          <div className="absolute inset-x-0 top-full hidden bg-[#f1f7f7] shadow-[0_12px_40px_rgba(0,0,0,0.4)] lg:block">
+            {openMenu === "about" && <MegaMenu cards={aboutCards} />}
+            {openMenu === "mentor" && <MegaMenu cards={mentorCards} />}
           </div>
         )}
       </nav>

@@ -3,6 +3,8 @@ export type MegaCard = {
   title: string;
   description: string;
   image: string;
+  /** The original's first "About" card (bg-none) has no gradient scrim. */
+  noOverlay?: boolean;
 };
 
 export const aboutCards: MegaCard[] = [
@@ -11,6 +13,7 @@ export const aboutCards: MegaCard[] = [
     title: "Meet Basim",
     description: "The journey, the philosophy, the work.",
     image: "/images/two-lives/meet-basim.png",
+    noOverlay: true,
   },
   {
     href: "/our-method",
