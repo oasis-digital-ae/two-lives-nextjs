@@ -16,7 +16,7 @@ export default function Hero() {
         nameRef.current.style.transform = `translate(-50%, calc(-50% + ${y * 0.18}px))`;
       }
       if (basimRef.current) {
-        basimRef.current.style.transform = `translate(-50%, ${y * 0.35}px)`;
+        basimRef.current.style.transform = `translateY(${y * 0.35}px)`;
       }
       if (iconRef.current) {
         iconRef.current.style.transform = `scale(${1 + y * 0.0004})`;
@@ -71,39 +71,40 @@ export default function Hero() {
           />
         </div>
 
-        {/* basim image layer */}
-        <div
-          ref={basimRef}
-          className="animate-hero-basim pointer-events-none absolute bottom-0 left-1/2 z-[3] -translate-x-1/2"
-        >
-          {/* glow behind portrait */}
-          <div
-            className="absolute bottom-[10px] left-1/2 -z-10 h-[700px] w-[700px] -translate-x-1/2 rounded-full blur-[40px]"
-            style={{
-              background:
-                "radial-gradient(circle, rgba(255,255,255,0.4) 0%, rgba(255,255,255,0.2) 30%, rgba(255,255,255,0.1) 50%, rgba(255,255,255,0) 70%)",
-            }}
-          />
-          <Image
-            src="/images/basim-hero-1.png"
-            alt="Basim Yafai"
-            width={500}
-            height={720}
-            priority
-            className="relative z-[2] max-h-[92vh] w-auto"
-            style={{
-              filter:
-                "saturate(0.95) drop-shadow(0 35px 45px rgba(0,0,0,0.45)) drop-shadow(0 80px 90px rgba(0,0,0,0.25))",
-            }}
-          />
+        {/* basim image layer — outer wrapper centers via flex (avoids
+            percentage-transform conflicts between the entrance animation
+            and a translate-x-1/2 utility on a shrink-to-fit element) */}
+        <div className="pointer-events-none absolute inset-x-0 bottom-0 z-[3] flex justify-center">
+          <div ref={basimRef} className="animate-hero-basim relative">
+            {/* glow behind portrait */}
+            <div
+              className="absolute bottom-[10px] left-1/2 -z-10 h-[700px] w-[700px] -translate-x-1/2 rounded-full blur-[40px]"
+              style={{
+                background:
+                  "radial-gradient(circle, rgba(255,255,255,0.4) 0%, rgba(255,255,255,0.2) 30%, rgba(255,255,255,0.1) 50%, rgba(255,255,255,0) 70%)",
+              }}
+            />
+            <Image
+              src="/images/basim-hero-1.png"
+              alt="Basim Yafai"
+              width={1728}
+              height={1852}
+              priority
+              className="relative z-[2] max-h-[92vh] w-auto"
+              style={{
+                filter:
+                  "saturate(0.95) drop-shadow(0 35px 45px rgba(0,0,0,0.45)) drop-shadow(0 80px 90px rgba(0,0,0,0.25))",
+              }}
+            />
+          </div>
         </div>
 
         {/* headline */}
         <div className="pointer-events-none absolute left-1/2 top-[12%] z-[4] w-full -translate-x-1/2 text-center">
-          <h1 className="mb-4 font-heading text-5xl font-semibold text-white md:text-6xl">
+          <h1 className="mb-4 font-heading text-[4.375rem] font-semibold leading-[1.1] text-white">
             Step Into Your Next Life
           </h1>
-          <p className="text-xl italic text-white md:text-2xl">
+          <p className="font-heading text-2xl font-medium italic text-white">
             With Clarity, Strength, and Inner Alignment.
           </p>
         </div>
