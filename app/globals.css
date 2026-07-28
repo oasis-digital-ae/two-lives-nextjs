@@ -690,6 +690,11 @@ html {
   font-style: italic;
 }
 
+/* Brand dark-green used for eyebrows and watermark numbers throughout */
+.text-dark-green {
+  color: #002918;
+}
+
 /* Qualification icon: dark by default, brightens to emerald with a subtle
    lift+scale when the surrounding card (not just the icon) is hovered */
 .icon-card i::before,

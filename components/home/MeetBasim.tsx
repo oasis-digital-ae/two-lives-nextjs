@@ -121,9 +121,9 @@ export default function MeetBasim() {
             </div>
 
             <div className="flex flex-wrap gap-4">
-              <Link href="/about" className="btn-three">
+              <Link href="/about" className="btn-three group">
                 More About Basim
-                <span className="pl-[10px] text-carbon">
+                <span className="pl-[10px] text-white group-hover:text-carbon">
                   <ArrowRightIcon className="inline-block h-4 w-4" />
                 </span>
               </Link>
