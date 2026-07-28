@@ -177,3 +177,32 @@ export function CalendarIcon({ className }: IconProps) {
     </svg>
   );
 }
+
+export function ColumnsIcon({ className }: IconProps) {
+  return (
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" className={className}>
+      <rect x="3" y="4" width="18" height="16" rx="1.5" />
+      <path d="M9 4v16M15 4v16" />
+    </svg>
+  );
+}
+
+export function CompassIcon({ className }: IconProps) {
+  return (
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" className={className}>
+      <circle cx="12" cy="12" r="10" />
+      <path d="m14.5 9.5-2 5-5 2 2-5 5-2Z" strokeLinejoin="round" />
+    </svg>
+  );
+}
+
+export function PeopleIcon({ className }: IconProps) {
+  return (
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" className={className}>
+      <circle cx="9" cy="8" r="3" />
+      <path d="M2 20c0-3.3 3.1-6 7-6s7 2.7 7 6" />
+      <circle cx="17" cy="9" r="2.5" />
+      <path d="M16 14.3c2.9.5 5 2.5 5 5.7" />
+    </svg>
+  );
+}
