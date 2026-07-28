@@ -73,3 +73,122 @@ html {
 .animate-float {
   animation: float 4s ease-in-out infinite;
 }
+
+/* Hero entrance animations */
+@keyframes heroNameFade {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0.5;
+  }
+}
+
+@keyframes heroBasimReveal {
+  0% {
+    opacity: 0;
+    transform: translate(-50%, 40px);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(-50%, 0);
+  }
+}
+
+@keyframes heroContentReveal {
+  0% {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-hero-name {
+  opacity: 0;
+  animation: heroNameFade 2s ease forwards;
+  animation-delay: 0.3s;
+}
+
+.animate-hero-basim {
+  opacity: 0;
+  animation: heroBasimReveal 1.2s ease forwards;
+  animation-delay: 0.5s;
+}
+
+.animate-hero-content {
+  opacity: 0;
+  animation: heroContentReveal 1.2s ease forwards;
+  animation-delay: 0.9s;
+}
+
+/* Floating rail glow sweep */
+@keyframes floatingGlowMove {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(400%);
+  }
+}
+
+.animate-floating-glow {
+  animation: floatingGlowMove 6s linear infinite;
+}
+
+@keyframes mobileGlowWave {
+  0% {
+    transform: translate3d(-20%, 0, 0) scale(1);
+  }
+  25% {
+    transform: translate3d(80%, 8px, 0) scale(1.05);
+  }
+  50% {
+    transform: translate3d(180%, -8px, 0) scale(1);
+  }
+  75% {
+    transform: translate3d(280%, 6px, 0) scale(1.05);
+  }
+  100% {
+    transform: translate3d(380%, 0, 0) scale(1);
+  }
+}
+
+.animate-mobile-glow {
+  animation: mobileGlowWave 8s linear infinite;
+}
+
+@keyframes marqueeMoveHalf {
+  from {
+    transform: translate3d(0, 0, 0);
+  }
+  to {
+    transform: translate3d(-50%, 0, 0);
+  }
+}
+
+.animate-marquee-fast {
+  animation: marqueeMoveHalf 12s linear infinite;
+}
+
+@keyframes arrowBounce {
+  0%,
+  20%,
+  50%,
+  80%,
+  100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(12px);
+  }
+  60% {
+    transform: translateY(6px);
+  }
+}
+
+.animate-arrow-bounce {
+  animation: arrowBounce 1.6s infinite;
+}
