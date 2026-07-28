@@ -19,11 +19,11 @@ const socials = [
 
 export default function Footer() {
   return (
-    <footer className="bg-carbon pt-10">
+    <footer className="bg-carbon">
       <div className="mx-auto max-w-[1400px] px-5 lg:px-10">
         <div className="border-t border-white/10" />
 
-        <div className="grid grid-cols-1 gap-10 py-12 text-center lg:grid-cols-3 lg:text-left">
+        <div className="grid grid-cols-1 gap-10 py-[35px] text-center lg:grid-cols-3 lg:py-[50px] lg:text-left">
           <div>
             <Link href="/" className="inline-block">
               <Image
@@ -31,18 +31,24 @@ export default function Footer() {
                 alt="Two Lives Theory"
                 width={300}
                 height={70}
-                className="mx-auto h-auto w-48 lg:mx-0"
+                className="mx-auto h-9 w-auto lg:mx-0"
               />
             </Link>
           </div>
 
-          <div className="flex flex-wrap justify-center gap-3 lg:justify-start">
+          <div className="mt-[10px] flex flex-wrap justify-center gap-0 lg:justify-start">
             {badges.map((b) => (
               <div
                 key={b}
-                className="flex h-16 w-16 items-center justify-center rounded-full bg-white/5"
+                className="flex h-[60px] w-[60px] items-center justify-center rounded-full bg-white/5 transition-all duration-300 hover:-translate-y-1 hover:scale-105 hover:bg-white/[0.08]"
               >
-                <Image src={`/images/${b}`} alt="" width={48} height={48} />
+                <Image
+                  src={`/images/${b}`}
+                  alt=""
+                  width={50}
+                  height={50}
+                  className="h-auto max-w-[50px]"
+                />
               </div>
             ))}
           </div>
@@ -55,11 +61,17 @@ export default function Footer() {
             >
               basim@twolivestheory.com
             </a>
-            <ul className="mt-3 flex justify-center gap-4 text-white lg:justify-start">
+            <ul className="mt-[10px] flex justify-center gap-[10px] text-white lg:justify-start">
               {socials.map(({ label, href, Icon }) => (
                 <li key={label}>
-                  <a href={href} target="_blank" rel="noreferrer" aria-label={label}>
-                    <Icon className="h-5 w-5" />
+                  <a
+                    href={href}
+                    target="_blank"
+                    rel="noreferrer"
+                    aria-label={label}
+                    className="flex h-10 w-10 items-center justify-center"
+                  >
+                    <Icon className="h-[18px] w-[18px]" />
                   </a>
                 </li>
               ))}
@@ -69,11 +81,14 @@ export default function Footer() {
 
         <div className="border-t border-white/10" />
 
-        <div className="flex flex-col items-center justify-between gap-4 py-6 text-sm text-white/60 lg:flex-row">
+        <div
+          className="flex flex-col items-center justify-between gap-4 py-[25px] text-sm lg:flex-row"
+          style={{ color: "#768086" }}
+        >
           <ul className="flex flex-wrap justify-center gap-6">
             {footerLinks.map((l) => (
               <li key={l.href}>
-                <Link href={l.href} className="hover:text-white">
+                <Link href={l.href} className="transition-colors hover:text-emerald">
                   {l.label}
                 </Link>
               </li>

@@ -30,6 +30,8 @@ export default function Header() {
       const y = window.scrollY;
       setSticky(y >= STICKY_THRESHOLD);
       setStickyActive(y >= STICKY_ACTIVE_THRESHOLD);
+      // Original closes any open dropdown once you scroll past 200px.
+      if (y >= 200) setOpenMenu(null);
     };
     onScroll();
     window.addEventListener("scroll", onScroll, { passive: true });
@@ -108,15 +110,15 @@ export default function Header() {
               {/* Simple dropdown (dropdown-with-icon-style02): a small
                   260px anchored box, not a full-width mega panel */}
               {openMenu === "explore" && showFullNav && (
-                <ul className="absolute left-0 top-full w-[260px] overflow-hidden rounded-md bg-[#f1f7f7] shadow-[0_0_35px_rgba(0,0,0,0.1)]">
+                <ul className="absolute left-0 top-full w-[260px] overflow-hidden rounded-md bg-carbon shadow-[0_0_35px_rgba(0,0,0,0.3)]">
                   {exploreLinks.map((link, i) => (
                     <li
                       key={link.href}
-                      className={i < exploreLinks.length - 1 ? "border-b border-[#f6f3ef]" : ""}
+                      className={i < exploreLinks.length - 1 ? "border-b border-white/10" : ""}
                     >
                       <Link
                         href={link.href}
-                        className="block px-5 py-4 font-body text-base font-medium text-[#1c211d] transition-colors hover:text-emerald"
+                        className="block px-5 py-4 font-body text-base font-medium text-white transition-colors hover:bg-white/10 hover:text-[#0ea37f]"
                       >
                         {link.label}
                       </Link>
@@ -169,7 +171,7 @@ export default function Header() {
             matching the original's .mega-menu-dropdown (position:static
             on the <li>, the dropdown itself spans 100vw) */}
         {(openMenu === "about" || openMenu === "mentor") && showFullNav && (
-          <div className="absolute inset-x-0 top-full hidden bg-[#f1f7f7] shadow-[0_12px_40px_rgba(0,0,0,0.4)] lg:block">
+          <div className="absolute inset-x-0 top-full hidden bg-carbon shadow-[0_12px_40px_rgba(0,0,0,0.4)] lg:block">
             {openMenu === "about" && <MegaMenu cards={aboutCards} />}
             {openMenu === "mentor" && <MegaMenu cards={mentorCards} />}
           </div>
