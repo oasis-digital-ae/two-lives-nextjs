@@ -3,6 +3,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { useRef, useState } from "react";
+import Counter from "@/components/ui/Counter";
 
 const languages = [
   { code: "en", label: "EN", src: "/subtitles/EN.vtt" },
@@ -29,49 +30,60 @@ export default function CoachingVideo() {
   };
 
   return (
-    <section className="relative overflow-hidden bg-carbon py-16 md:py-20">
-      <div className="mx-auto max-w-[1400px] px-5 lg:px-10">
-        <div className="grid grid-cols-1 gap-10 lg:grid-cols-12 lg:items-center">
-          <div className="lg:col-span-3">
+    <section className="overflow-hidden bg-carbon">
+      <div className="mx-auto max-w-[1400px]">
+        <div className="grid grid-cols-1 lg:grid-cols-12">
+          {/* Logo panel - desktop only */}
+          <div className="hidden items-center justify-center border-r border-b border-white/10 p-10 lg:col-span-3 lg:flex">
             <Image
               src="/images/two-lives/logo-wht.svg"
               alt="Two Lives Theory"
               width={160}
               height={40}
-              className="mx-auto mb-6 h-10 w-auto animate-float lg:mx-0"
+              className="animate-float h-10 w-auto"
             />
-            <h2 className="mb-6 text-center font-heading text-2xl font-semibold text-white lg:text-left">
+          </div>
+
+          {/* Heading */}
+          <div className="order-1 flex items-center justify-center border-b border-white/10 px-5 py-10 lg:order-none lg:col-span-9 lg:justify-start lg:px-10">
+            <h2 className="text-shadow-soft text-center font-heading text-[32px] font-semibold tracking-[-2px] text-white sm:text-[40px] lg:text-left">
               The Transition to your Next Life Starts Here
             </h2>
+          </div>
 
-            <div className="mb-6 grid grid-cols-2 gap-4 text-center lg:text-left">
+          {/* Stats + text + CTA */}
+          <div className="order-3 p-5 lg:order-none lg:col-span-3 lg:p-10">
+            <div className="mb-10 grid grid-cols-2 gap-4 text-center lg:text-left">
               <div>
-                <span className="block font-heading text-3xl font-bold text-white">12+</span>
-                <p className="text-sm text-white/70">Years Experience</p>
+                <span className="block font-heading text-[50px] font-semibold text-white lg:text-[28px]">
+                  <Counter to={12} suffix="+" />
+                </span>
+                <p className="text-sm text-white">Years Experience</p>
               </div>
               <div>
-                <span className="block font-heading text-3xl font-bold text-white">50+</span>
-                <p className="text-sm text-white/70">Global Client Base</p>
+                <span className="block font-heading text-[50px] font-semibold text-white lg:text-[28px]">
+                  <Counter to={50} suffix="+" />
+                </span>
+                <p className="text-sm text-white">Global Client Base</p>
               </div>
             </div>
 
-            <p className="mb-6 text-center text-white/70 lg:text-left">
-              Create lasting change across every area of your life. This is
-              precise, personal mentorship with real accountability, direct
-              support, and honest conversations that move you forward.
+            <p className="mb-10 text-center text-white lg:text-left">
+              Create lasting change across every area of your life.
+              <br />
+              This is precise, personal mentorship with real accountability,
+              direct support, and honest conversations that move you forward.
             </p>
 
             <div className="text-center lg:text-left">
-              <Link
-                href="/request-mentorship"
-                className="inline-block rounded-full bg-emerald px-6 py-3 font-heading text-sm font-semibold text-carbon"
-              >
+              <Link href="/request-mentorship" className="btn-cta">
                 Request Mentorship
               </Link>
             </div>
           </div>
 
-          <div className="lg:col-span-9">
+          {/* Video */}
+          <div className="order-2 p-5 lg:order-none lg:col-span-9 lg:p-10">
             <div className="relative aspect-video overflow-hidden rounded-lg bg-black">
               {!playing && (
                 <Image
@@ -106,7 +118,7 @@ export default function CoachingVideo() {
                 ))}
               </video>
 
-              <div className="absolute right-4 top-4 z-10">
+              <div className="absolute top-4 right-4 z-10">
                 <select
                   value={lang}
                   onChange={(e) => setLang(e.target.value)}
