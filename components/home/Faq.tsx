@@ -77,21 +77,23 @@ const categories: { label: string; items: AccordionItem[] }[] = [
   },
 ];
 
-export default function Faq() {
+export default function Faq({ showHeading = true }: { showHeading?: boolean }) {
   const [active, setActive] = useState(0);
 
   return (
     <section className="bg-pattern-section bg-off-white py-16 md:py-20">
       <div className="mx-auto max-w-[1400px] px-5 lg:px-10">
-        <div className="mb-10 flex flex-col items-center justify-between gap-4 md:flex-row">
-          <h2 className="text-shadow-soft text-center font-heading text-[32px] font-semibold tracking-[-2px] text-carbon sm:text-[40px] md:text-left">
-            Frequently Asked{" "}
-            <span className="border-b-2 border-carbon italic">Questions</span>
-          </h2>
-          <Link href="/request-mentorship" className="btn-three hidden shrink-0 md:inline-block">
-            Request Mentorship
-          </Link>
-        </div>
+        {showHeading && (
+          <div className="mb-10 flex flex-col items-center justify-between gap-4 md:flex-row">
+            <h2 className="text-shadow-soft text-center font-heading text-[32px] font-semibold tracking-[-2px] text-carbon sm:text-[40px] md:text-left">
+              Frequently Asked{" "}
+              <span className="border-b-2 border-carbon italic">Questions</span>
+            </h2>
+            <Link href="/request-mentorship" className="btn-three hidden shrink-0 md:inline-block">
+              Request Mentorship
+            </Link>
+          </div>
+        )}
 
         <div className="grid grid-cols-1 gap-10 rounded-[28px] border border-white/45 bg-white/25 p-6 shadow-[0_18px_50px_rgba(0,0,0,0.12)] backdrop-blur-2xl lg:grid-cols-4 lg:p-10">
           <div className="lg:col-span-1">
