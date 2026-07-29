@@ -29,8 +29,8 @@ export default function ExperienceQualifications() {
         <div className="grid grid-cols-1 gap-12 lg:grid-cols-2 lg:items-center">
           <div className="relative mx-auto max-w-md text-center lg:mx-0">
             <div className="pointer-events-none absolute top-1/2 left-1/2 z-[2] -translate-x-1/2 -translate-y-1/2 text-center">
-              <span className="block font-heading text-[75px] leading-none font-extrabold tracking-[-5px] text-carbon/80 sm:text-[130px]">
-                12<sub className="text-[40px] font-extrabold sm:text-[70px]">+</sub>
+              <span className="block font-heading text-[75px] leading-none font-extrabold tracking-[-10px] text-carbon/80 sm:text-[130px] lg:text-[160px]">
+                12<sub className="text-[45px] font-extrabold sm:text-[75px]">+</sub>
               </span>
               <span className="mx-auto block w-4/5 text-[20px] font-medium text-carbon/80">
                 Years of Guidance

@@ -22,7 +22,7 @@ export default function MyApproach() {
             <h2 className="text-shadow-soft mb-3 font-heading text-[32px] font-semibold tracking-[-2px] text-carbon sm:text-[40px]">
               My <span className="highlighter-below animate">Approach</span>
             </h2>
-            <h3 className="text-shadow-soft mx-auto w-4/5 font-heading text-xl font-medium text-carbon lg:mx-0 lg:w-full">
+            <h3 className="text-shadow-soft mx-auto w-4/5 font-heading text-[24px] font-medium text-carbon lg:mx-0 lg:w-full">
               This is mentoring, not motivation and not quick fixes.
             </h3>
           </div>

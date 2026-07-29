@@ -41,13 +41,13 @@ export default function SocialFollow() {
                 fill
                 className="object-cover grayscale transition-transform duration-500 group-hover:-translate-y-2"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent" />
+              <div className="absolute inset-0 bg-gradient-to-t from-[rgba(32,35,41,0.8)] to-transparent" />
               <div className="absolute inset-0 flex items-end justify-between p-8">
-                <div className="translate-y-4 opacity-0 transition-all duration-500 group-hover:translate-y-0 group-hover:opacity-100">
-                  <span className="block text-lg font-medium text-white">{s.name}</span>
-                  <span className="block text-white/60">Follow Me</span>
+                <div>
+                  <span className="block text-[19px] font-medium text-white">{s.name}</span>
+                  <span className="block text-base leading-[26px] text-white">Follow Me</span>
                 </div>
-                <span className="flex h-[55px] w-[55px] shrink-0 translate-y-4 items-center justify-center rounded-full bg-emerald text-carbon opacity-0 transition-all duration-300 group-hover:translate-y-0 group-hover:opacity-100">
+                <span className="flex h-[55px] w-[55px] shrink-0 items-center justify-center text-emerald">
                   <s.Icon className="h-5 w-5" />
                 </span>
               </div>
