@@ -20,7 +20,7 @@ export default function Accordion({ items }: { items: AccordionItem[] }) {
           </button>
           {open === i && (
             <div className="pb-5 pl-8">
-              <p className="font-medium text-slate">{item.answer}</p>
+              <p className="font-medium text-carbon">{item.answer}</p>
             </div>
           )}
         </div>
