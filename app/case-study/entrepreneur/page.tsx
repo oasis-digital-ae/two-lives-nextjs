@@ -1,15 +1,18 @@
-import type { Metadata } from "next";
+import { buildMetadata } from "@/lib/seo";
 import ArticleHero from "@/components/article/ArticleHero";
 import ArticleLayout from "@/components/article/ArticleLayout";
 import { ArticleH2, ArticleP } from "@/components/article/ArticleContent";
 import WordMarquee from "@/components/shared/WordMarquee";
 import FinalCta from "@/components/home/FinalCta";
 
-export const metadata: Metadata = {
+export const metadata = buildMetadata({
   title: "Case Study: Entrepreneur – Grant Gardner | Two Lives Theory",
   description:
     "Discover how Grant Gardner overcame internal anxiety, emotional volatility, and feeling stuck through deep mentoring, achieving lasting clarity, emotional stability, and grounded performance.",
-};
+  path: "/case-study/entrepreneur",
+  image: "/images/grant-cs-hero.png",
+  type: "article",
+});
 
 export default function EntrepreneurCaseStudyPage() {
   return (

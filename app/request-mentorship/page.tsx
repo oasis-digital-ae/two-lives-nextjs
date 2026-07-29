@@ -1,13 +1,14 @@
-import type { Metadata } from "next";
+import { buildMetadata } from "@/lib/seo";
 import PageHero from "@/components/layout/PageHero";
 import CalendlySection from "@/components/mentorship/CalendlySection";
 import FinalCta from "@/components/home/FinalCta";
 
-export const metadata: Metadata = {
+export const metadata = buildMetadata({
   title: "Request Mentorship | Two Lives Theory",
   description:
     "Request private mentorship with Basim Yafai. Book a confidential call to gain clarity, sharpen decision-making, and step into your next level of performance and leadership.",
-};
+  path: "/request-mentorship",
+});
 
 export default function RequestMentorshipPage() {
   return (

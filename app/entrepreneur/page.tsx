@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import { buildMetadata } from "@/lib/seo";
 import PersonaHero from "@/components/persona/PersonaHero";
 import GrowthSplit from "@/components/persona/GrowthSplit";
 import ThemesGrid from "@/components/persona/ThemesGrid";
@@ -22,11 +22,12 @@ import {
   TrendingUpIcon,
 } from "@/components/ui/Icons";
 
-export const metadata: Metadata = {
+export const metadata = buildMetadata({
   title: "Entrepreneur Coaching | Mindset & Performance for Founders | Two Lives Theory",
   description:
     "Entrepreneur coaching designed for founders and high performers. Break limiting patterns, gain clarity, and make better decisions under pressure with the Two Lives Method.",
-};
+  path: "/entrepreneur",
+});
 
 export default function EntrepreneurPage() {
   return (

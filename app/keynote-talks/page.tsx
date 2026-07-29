@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import { buildMetadata } from "@/lib/seo";
 import PersonaHero from "@/components/persona/PersonaHero";
 import KeynoteIntro from "@/components/keynote/KeynoteIntro";
 import CredibilitySplit from "@/components/keynote/CredibilitySplit";
@@ -8,11 +8,12 @@ import WordMarquee from "@/components/shared/WordMarquee";
 import KeynoteThemesCarousel from "@/components/keynote/KeynoteThemesCarousel";
 import KeynoteCta from "@/components/keynote/KeynoteCta";
 
-export const metadata: Metadata = {
-  title: "Keynote Talks | Two Lives Theory",
+export const metadata = buildMetadata({
+  title: "Keynote Speaker Basim Yafai | Mindset & Performance Talks | Two Lives Theory",
   description:
-    "Keynote talks for high performers. Helping individuals and organisations lead with clarity in moments that matter.",
-};
+    "Book Basim Yafai for keynote talks on mindset, performance, and leadership. Inspiring high-performing teams to break limiting patterns, gain clarity, and operate at their next level.",
+  path: "/keynote-talks",
+});
 
 export default function KeynoteTalksPage() {
   return (

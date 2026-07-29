@@ -1,14 +1,16 @@
-import type { Metadata } from "next";
+import { buildMetadata } from "@/lib/seo";
 import PageHero from "@/components/layout/PageHero";
 import BlogCard from "@/components/blog/BlogCard";
 import WordMarquee from "@/components/shared/WordMarquee";
 import FinalCta from "@/components/home/FinalCta";
 import { blogPosts } from "@/data/blogs";
 
-export const metadata: Metadata = {
-  title: "Blogs | Two Lives Theory",
-  description: "A curated collection of reflections on mindset, self awareness, and conscious growth.",
-};
+export const metadata = buildMetadata({
+  title: "Mindset & Performance Blog | Two Lives Theory",
+  description:
+    "Explore insights on mindset, performance, clarity, and personal growth. The Two Lives Theory blog helps high performers break limiting patterns and step into their next level.",
+  path: "/blogs",
+});
 
 export default function BlogsPage() {
   const posts = [...blogPosts].sort((a, b) => (a.date < b.date ? 1 : -1));

@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import { buildMetadata } from "@/lib/seo";
 import PageHero from "@/components/layout/PageHero";
 import MethodIntro from "@/components/method/MethodIntro";
 import FoundationSplit from "@/components/method/FoundationSplit";
@@ -11,11 +11,12 @@ import PathSteps from "@/components/home/PathSteps";
 import WordMarquee from "@/components/shared/WordMarquee";
 import FinalCta from "@/components/home/FinalCta";
 
-export const metadata: Metadata = {
-  title: "Our Method | Two Lives Theory",
+export const metadata = buildMetadata({
+  title: "The Two Lives Method | A Framework for Clarity, Performance & Transformation",
   description:
-    "Two Lives Theory is an inner framework integrating subconscious rewiring, deep inner work, and real-world performance for lasting change.",
-};
+    "The Two Lives Method is a structured approach to breaking limiting patterns, gaining clarity, and operating at your highest level. Designed for high performers ready to step into their next life.",
+  path: "/our-method",
+});
 
 export default function OurMethodPage() {
   return (

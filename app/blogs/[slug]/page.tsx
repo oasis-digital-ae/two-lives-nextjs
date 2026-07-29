@@ -7,6 +7,7 @@ import ArticleRichContent from "@/components/article/ArticleRichContent";
 import WordMarquee from "@/components/shared/WordMarquee";
 import FinalCta from "@/components/home/FinalCta";
 import { blogPosts } from "@/data/blogs";
+import { buildMetadata } from "@/lib/seo";
 
 export function generateStaticParams() {
   return blogPosts.map((post) => ({ slug: post.slug }));
@@ -20,7 +21,13 @@ export async function generateMetadata({
   const { slug } = await params;
   const post = blogPosts.find((p) => p.slug === slug);
   if (!post) return {};
-  return { title: `${post.title} | Two Lives Theory`, description: post.description };
+  return buildMetadata({
+    title: post.title,
+    description: post.description,
+    path: `/blogs/${post.slug}`,
+    image: post.image,
+    type: "article",
+  });
 }
 
 function formatDate(iso: string) {

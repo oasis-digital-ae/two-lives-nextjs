@@ -1,15 +1,18 @@
-import type { Metadata } from "next";
+import { buildMetadata } from "@/lib/seo";
 import ArticleHero from "@/components/article/ArticleHero";
 import ArticleLayout from "@/components/article/ArticleLayout";
 import { ArticleH2, ArticleP } from "@/components/article/ArticleContent";
 import WordMarquee from "@/components/shared/WordMarquee";
 import FinalCta from "@/components/home/FinalCta";
 
-export const metadata: Metadata = {
+export const metadata = buildMetadata({
   title: "Case Study: Business Owner & CEO – Grounded Leadership | Two Lives Theory",
   description:
     "Successful CEO shifts from constant urgency and pressure to grounded decision-making, inner steadiness, clarity, and balanced leadership.",
-};
+  path: "/case-study/business-ceo",
+  image: "/images/exec-cs-hero.png",
+  type: "article",
+});
 
 export default function BusinessCeoCaseStudyPage() {
   return (

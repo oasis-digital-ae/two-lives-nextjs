@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import { buildMetadata } from "@/lib/seo";
 import PageHero from "@/components/layout/PageHero";
 import MeetFounder from "@/components/about/MeetFounder";
 import StatsCounters from "@/components/home/StatsCounters";
@@ -10,11 +10,12 @@ import DegreeBadges from "@/components/about/DegreeBadges";
 import WordMarquee from "@/components/shared/WordMarquee";
 import FinalCta from "@/components/home/FinalCta";
 
-export const metadata: Metadata = {
+export const metadata = buildMetadata({
   title: "About Basim Yafai | Mindset & Performance Coach | Two Lives Theory",
   description:
-    "Discover Basim Yafai's approach to mindset and performance coaching. Helping high performers break limiting patterns, gain clarity, and step into their next level of life with purpose and confidence.",
-};
+    "Discover Basim Yafai’s approach to mindset and performance coaching. Helping high performers break limiting patterns, gain clarity, and step into their next level of life with purpose and confidence.",
+  path: "/about",
+});
 
 export default function AboutPage() {
   return (

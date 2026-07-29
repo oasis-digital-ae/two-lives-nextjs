@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import { buildMetadata } from "@/lib/seo";
 import PersonaHero from "@/components/persona/PersonaHero";
 import GrowthSplit from "@/components/persona/GrowthSplit";
 import ThemesGrid from "@/components/persona/ThemesGrid";
@@ -22,11 +22,12 @@ import {
   TrendingUpIcon,
 } from "@/components/ui/Icons";
 
-export const metadata: Metadata = {
-  title: "Athlete Mindset Coaching | Mental Performance | Two Lives Theory",
+export const metadata = buildMetadata({
+  title: "Athlete Mentorship | Mindset, Performance & Mental Clarity | Two Lives Theory",
   description:
-    "Mindset coaching for athletes. Break limiting patterns, build emotional control, and perform at your best without losing yourself beyond sport.",
-};
+    "Mentorship for athletes seeking clarity, consistency, and peak performance. Two Lives Theory helps you manage pressure, strengthen mindset, and perform at your highest level without losing yourself.",
+  path: "/athlete",
+});
 
 export default function AthletePage() {
   return (

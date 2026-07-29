@@ -1,5 +1,11 @@
+import type { Metadata } from "next";
 import Link from "next/link";
 import FinalCta from "@/components/home/FinalCta";
+
+export const metadata: Metadata = {
+  title: "Page Not Found | Two Lives Theory",
+  robots: { index: false, follow: true },
+};
 
 export default function NotFound() {
   return (

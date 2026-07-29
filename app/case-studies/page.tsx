@@ -1,14 +1,15 @@
-import type { Metadata } from "next";
+import { buildMetadata } from "@/lib/seo";
 import PageHero from "@/components/layout/PageHero";
 import CaseStudies from "@/components/home/CaseStudies";
 import WordMarquee from "@/components/shared/WordMarquee";
 import FinalCta from "@/components/home/FinalCta";
 
-export const metadata: Metadata = {
-  title: "Case Studies | Two Lives Theory",
+export const metadata = buildMetadata({
+  title: "Case Studies | Real Client Transformations | Two Lives Theory",
   description:
-    "Inner transitions take time. These case studies show how clarity, balance, and self-leadership create sustainable success.",
-};
+    "Explore real case studies from Two Lives Theory. See how clients achieved greater clarity, performance, and transformation through structured mindset and mentorship work.",
+  path: "/case-studies",
+});
 
 export default function CaseStudiesPage() {
   return (

@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import { buildMetadata } from "@/lib/seo";
 import PersonaHero from "@/components/persona/PersonaHero";
 import GrowthSplit from "@/components/persona/GrowthSplit";
 import ThemesGrid from "@/components/persona/ThemesGrid";
@@ -22,11 +22,12 @@ import {
   TrendingUpIcon,
 } from "@/components/ui/Icons";
 
-export const metadata: Metadata = {
-  title: "Elite Competitor Mindset Coaching | Two Lives Theory",
+export const metadata = buildMetadata({
+  title: "Elite Competitor Mentorship | High Performance & Mental Mastery | Two Lives Theory",
   description:
-    "Mindset mentorship for poker players, traders, and strategic competitors. Perform under pressure without losing clarity or control.",
-};
+    "Mentorship for elite competitors operating under pressure. Two Lives Theory helps you build mental clarity, emotional control, and consistent high-level performance when it matters most.",
+  path: "/elite-competitors",
+});
 
 export default function EliteCompetitorsPage() {
   return (

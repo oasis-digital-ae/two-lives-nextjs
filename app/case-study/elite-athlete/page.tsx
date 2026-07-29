@@ -1,15 +1,18 @@
-import type { Metadata } from "next";
+import { buildMetadata } from "@/lib/seo";
 import ArticleHero from "@/components/article/ArticleHero";
 import ArticleLayout from "@/components/article/ArticleLayout";
 import { ArticleH2, ArticleP } from "@/components/article/ArticleContent";
 import WordMarquee from "@/components/shared/WordMarquee";
 import FinalCta from "@/components/home/FinalCta";
 
-export const metadata: Metadata = {
+export const metadata = buildMetadata({
   title: "Case Study: Elite Athlete – World Champion Journey | Two Lives Theory",
   description:
     "Elite athlete achieves World Championship through mindset integration, emotional resilience, focus, and life balance under extreme pressure and visibility.",
-};
+  path: "/case-study/elite-athlete",
+  image: "/images/athlete-cs-hero.png",
+  type: "article",
+});
 
 export default function EliteAthleteCaseStudyPage() {
   return (

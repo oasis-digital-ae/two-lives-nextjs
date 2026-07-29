@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import { buildMetadata } from "@/lib/seo";
 import PersonaHero from "@/components/persona/PersonaHero";
 import GrowthSplit from "@/components/persona/GrowthSplit";
 import ThemesGrid from "@/components/persona/ThemesGrid";
@@ -22,11 +22,12 @@ import {
   TrendingUpIcon,
 } from "@/components/ui/Icons";
 
-export const metadata: Metadata = {
-  title: "Executive & Leadership Mindset Coaching | Two Lives Theory",
+export const metadata = buildMetadata({
+  title: "Executive Leadership Mentorship | Clarity, Decision-Making & Performance | Two Lives Theory",
   description:
-    "Mindset mentorship for executives and leaders. Lead with clarity without carrying internal strain.",
-};
+    "Mentorship for executive leaders navigating pressure, responsibility, and complexity. Two Lives Theory helps you gain clarity, make better decisions, and lead with confidence and control.",
+  path: "/executive-leaders",
+});
 
 export default function ExecutiveLeadersPage() {
   return (

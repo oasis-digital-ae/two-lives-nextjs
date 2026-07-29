@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { Manrope, Sora } from "next/font/google";
 import localFont from "next/font/local";
 import "./globals.css";
@@ -7,6 +7,7 @@ import Footer from "@/components/layout/Footer";
 import WhatsAppWidget from "@/components/layout/WhatsAppWidget";
 import ScrollProgress from "@/components/layout/ScrollProgress";
 import CustomCursor from "@/components/layout/CustomCursor";
+import { buildMetadata, SITE_NAME, SITE_URL } from "@/lib/seo";
 
 const manrope = Manrope({
   subsets: ["latin"],
@@ -28,9 +29,22 @@ const gotham = localFont({
 });
 
 export const metadata: Metadata = {
-  title: "Two Lives Theory - Step Into Your Next Life",
-  description:
-    "Private Mentorship led by Basim Yafai, Mindset & Growth Mentor. Two Lives Theory is trusted by high performing leaders, entrepreneurs & elite athletes.",
+  metadataBase: new URL(SITE_URL),
+  authors: [{ name: "Basim Yafai" }],
+  applicationName: SITE_NAME,
+  icons: {
+    apple: "/images/favicon.svg",
+  },
+  ...buildMetadata({
+    title: "Two Lives Theory - Step Into Your Next Life",
+    description:
+      "Private Mentorship led by Basim Yafai, Mindset & Growth Mentor. Two Lives Theory is trusted by high performing leaders, entrepreneurs & elite athletes.",
+    path: "/",
+  }),
+};
+
+export const viewport: Viewport = {
+  themeColor: "#00E184",
 };
 
 export default function RootLayout({
