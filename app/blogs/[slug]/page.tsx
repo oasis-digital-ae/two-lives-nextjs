@@ -54,7 +54,7 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
         date={formatDate(post.date)}
       />
       <ArticleLayout sidebarTitle="Recent Posts" related={related}>
-        <div className="relative mb-10 aspect-video overflow-hidden rounded-[10px]">
+        <div className="relative mb-[50px] aspect-video overflow-hidden rounded-[5px]">
           <Image
             src={post.image}
             alt={post.title}
