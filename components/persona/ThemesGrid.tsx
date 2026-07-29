@@ -14,7 +14,7 @@ export default function ThemesGrid({
   return (
     <section className="bg-radial">
       <div className="mx-auto max-w-3xl px-5 pt-16 pb-10 text-center lg:px-10">
-        <h2 className="text-shadow-soft mb-3 font-heading text-2xl font-bold tracking-[-2px] text-white sm:text-[32px]">
+        <h2 className="text-shadow-soft mb-3 font-heading text-[28px] font-bold tracking-[-2px] text-white sm:text-[40px]">
           {heading}
         </h2>
         <p className="text-white/70">{paragraph}</p>
@@ -28,7 +28,7 @@ export default function ThemesGrid({
           >
             <div className="absolute inset-0 origin-bottom scale-y-0 bg-emerald transition-transform duration-500 group-hover:scale-y-100" />
             <div className="relative">
-              <Icon className="mx-auto mb-5 h-9 w-9 text-emerald group-hover:text-carbon" />
+              <Icon className="mx-auto mb-5 h-11 w-11 text-emerald group-hover:text-carbon" />
               <span className="mb-1 block font-heading text-lg font-medium text-white group-hover:text-carbon">
                 {label}
               </span>

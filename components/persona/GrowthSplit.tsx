@@ -35,7 +35,7 @@ export default function GrowthSplit({
         <div className="grid grid-cols-1 items-center gap-12 lg:grid-cols-12">
           <div className="relative mx-auto max-w-md lg:col-span-6 lg:ml-auto">
             <Image src={image} alt={imageAlt} width={800} height={900} className="w-full rounded-lg" />
-            <div className="animate-float absolute bottom-6 left-[-24px] w-[200px] rounded-[5px] bg-carbon pt-5 text-center shadow-2xl">
+            <div className="animate-float-drop absolute bottom-6 left-[-24px] w-[200px] rounded-[5px] bg-carbon pt-5 text-center shadow-2xl">
               <Image
                 src="/images/twoliveslogo.svg"
                 alt=""
@@ -63,10 +63,9 @@ export default function GrowthSplit({
                 {steps.map((step, i) => (
                   <div
                     key={step.title}
-                    className="min-w-0 flex-[0_0_100%] rounded-[10px] bg-[#F9F9F7] p-8 pl-[100px] sm:flex-[0_0_85%]"
-                    style={{ position: "relative" }}
+                    className="relative flex min-h-[240px] min-w-0 flex-[0_0_100%] flex-col justify-end rounded-[20px] bg-[#F9F9F7] py-8 pr-6 pl-[90px] text-right shadow-[0_20px_40px_rgba(0,0,0,0.08),0_4px_12px_rgba(0,0,0,0.05)] sm:min-h-[300px] sm:flex-[0_0_85%] sm:py-[50px] sm:pr-[30px] sm:pl-[120px]"
                   >
-                    <span className="text-dark-green absolute top-5 left-[30px] font-heading text-[60px] font-semibold opacity-30">
+                    <span className="absolute top-5 left-5 font-heading text-[45px] leading-none font-semibold text-black/80 sm:left-[30px] sm:text-[65px]">
                       {i + 1}
                     </span>
                     <p className="mb-3 font-heading text-lg font-semibold text-carbon">

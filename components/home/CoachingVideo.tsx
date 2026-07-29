@@ -40,7 +40,7 @@ export default function CoachingVideo() {
               alt="Two Lives Theory"
               width={160}
               height={40}
-              className="animate-float h-10 w-auto"
+              className="animate-float-drop h-10 w-auto"
             />
           </div>
 

@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { ArrowNav, useCarousel } from "@/components/ui/Carousel";
 
 export default function EnablesCarousel({
@@ -40,10 +41,12 @@ export default function EnablesCarousel({
             {cards.map((card, i) => (
               <div
                 key={i}
-                className="relative min-w-0 flex-[0_0_85%] overflow-hidden rounded-[6px] bg-white p-10 shadow-[0_10px_30px_rgba(0,0,0,0.06)] sm:flex-[0_0_45%] lg:flex-[0_0_31%]"
+                className="relative min-w-0 flex-[0_0_85%] overflow-hidden rounded-[6px] bg-white p-[30px] shadow-[0_10px_30px_rgba(0,0,0,0.06)] sm:flex-[0_0_45%] sm:p-[50px] lg:flex-[0_0_31%]"
               >
-                <span className="simple-card-icon" aria-hidden="true" />
-                <span className="relative z-[1] block font-heading text-xl font-semibold tracking-[-1px] text-carbon">
+                <div className="animate-zoom-icon pointer-events-none absolute right-0 bottom-0 z-0 h-[110px] w-[110px] translate-x-[30%] translate-y-[30%] opacity-50">
+                  <Image src="/img/bg-icon.svg" alt="" fill />
+                </div>
+                <span className="relative z-[1] block font-heading text-[24px] font-semibold tracking-[-1px] text-carbon">
                   {card}
                 </span>
               </div>

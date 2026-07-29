@@ -78,7 +78,7 @@ export default function WhoIMentor() {
               <div className="absolute bottom-[30px] left-[30px] flex items-center rounded-[4px] bg-[rgba(14,20,18,0.7)] px-[25px] py-[10px]">
                 <span className="text-[16px] text-white">{current.tag}</span>
               </div>
-              <div className="animate-float absolute -right-8 bottom-[90px] flex h-[125px] w-[125px] items-center justify-center rounded-full bg-[rgba(14,20,18,0.7)] p-3 shadow-lg">
+              <div className="animate-float-drop absolute -right-8 bottom-[90px] flex h-[125px] w-[125px] items-center justify-center rounded-full bg-[rgba(14,20,18,0.7)] p-3 shadow-lg">
                 <Image src="/images/twoliveslogo.svg" alt="" width={90} height={90} />
               </div>
             </div>

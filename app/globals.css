@@ -72,12 +72,47 @@ html {
     transform: translateY(0);
   }
   50% {
-    transform: translateY(-10px);
+    transform: translateY(-8px);
   }
 }
 
+/* Matches the original theme's .avatar-badge (testimonial floating logo) */
 .animate-float {
-  animation: float 4s ease-in-out infinite;
+  animation: float 3s ease-in-out infinite;
+}
+
+@keyframes floatDrop {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(15px);
+  }
+  100% {
+    transform: translateY(30px);
+  }
+}
+
+/* Matches the original theme's .animation-float (mentor-tab / coaching-video / persona-hero floating badges) */
+.animate-float-drop {
+  animation: floatDrop 2000ms linear 500ms infinite alternate both;
+}
+
+@keyframes zoomInOut {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+/* Matches the original theme's .animation-zoom (corner watermark icons) */
+.animate-zoom-icon {
+  animation: zoomInOut 2000ms linear 500ms infinite alternate both;
 }
 
 /* Hero entrance animations */

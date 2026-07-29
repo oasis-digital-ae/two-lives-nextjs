@@ -41,8 +41,8 @@ export default function PersonaReview({
               <div className="h-full w-full overflow-hidden rounded-full shadow-[0_8px_20px_rgba(0,0,0,0.12),0_2px_6px_rgba(0,0,0,0.08),0_0_0_2px_rgba(255,255,255,0.6)]">
                 <Image src={avatar} alt={name} fill className="rounded-full object-cover" />
               </div>
-              <div className="animate-float absolute top-[-6px] left-[-30px] flex h-[95px] w-[95px] items-center justify-center sm:h-[125px] sm:w-[125px]">
-                <Image src="/images/twoliveslogo.svg" alt="" width={90} height={90} />
+              <div className="animate-float absolute top-[-6px] left-[-30px] h-[70px] w-[70px] sm:h-[95px] sm:w-[95px] lg:h-[125px] lg:w-[125px]">
+                <Image src="/images/twoliveslogo.svg" alt="" fill className="object-contain" />
               </div>
             </div>
             <p className="mt-3 mb-1 font-heading text-[18px] font-semibold text-carbon">{name}</p>
