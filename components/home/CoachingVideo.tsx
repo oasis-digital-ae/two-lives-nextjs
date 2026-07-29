@@ -30,11 +30,20 @@ export default function CoachingVideo() {
   };
 
   return (
-    <section className="overflow-hidden bg-carbon">
+    <section
+      className="relative overflow-hidden"
+      style={{
+        background:
+          "radial-gradient(circle, rgba(0,41,24,1) 42%, rgba(14,20,18,1) 100%), url(\"data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.08'/%3E%3C/svg%3E\")",
+        backgroundBlendMode: "overlay",
+        WebkitMaskImage: "linear-gradient(to bottom, rgba(0,0,0,1) 97%, rgba(0,0,0,0) 100%)",
+        maskImage: "linear-gradient(to bottom, rgba(0,0,0,1) 97%, rgba(0,0,0,0) 100%)",
+      }}
+    >
       <div className="mx-auto max-w-[1400px]">
         <div className="grid grid-cols-1 lg:grid-cols-12">
           {/* Logo panel - desktop only */}
-          <div className="hidden items-center justify-center border-r border-b border-white/10 p-10 lg:col-span-3 lg:flex">
+          <div className="hidden items-center justify-center border-r border-b border-white/10 bg-carbon p-10 lg:col-span-3 lg:flex">
             <Image
               src="/images/two-lives/logo-wht.svg"
               alt="Two Lives Theory"
