@@ -3,7 +3,7 @@ import Script from "next/script";
 
 export default function CalendlySection() {
   return (
-    <section className="bg-pattern-section relative overflow-hidden bg-off-white py-10 sm:pt-20 sm:pb-[120px]">
+    <section className="bg-pattern-section relative bg-off-white py-12 max-md:pt-[20%] max-md:pb-[120px]">
       <link rel="stylesheet" href="https://assets.calendly.com/assets/external/widget.css" />
       <Script src="https://assets.calendly.com/assets/external/widget.js" strategy="lazyOnload" />
 
@@ -13,13 +13,15 @@ export default function CalendlySection() {
         style={{ minWidth: "320px", height: "100vh" }}
       />
 
-      <div className="absolute right-8 bottom-8 hidden opacity-40 lg:block">
+      <div className="pointer-events-none !absolute inset-x-0 bottom-0 !z-[2] h-[240px] bg-gradient-to-b from-[rgba(21,25,22,0)] from-70% via-[rgba(21,25,22,0.55)] via-90% to-[#151916]" />
+
+      <div className="pointer-events-none !absolute top-[-45px] right-[10%] !z-[5] md:top-[-65px]">
         <Image
           src="/images/tl-circle.svg"
           alt=""
-          width={80}
-          height={80}
-          className="animate-[rotateCircle_20s_linear_infinite]"
+          width={130}
+          height={130}
+          className="w-[80px] animate-[rotateCircle_18s_linear_infinite] md:w-[130px]"
         />
       </div>
     </section>
