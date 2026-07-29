@@ -39,7 +39,7 @@ export default function OrganisationGains() {
             <div key={s.title} className="text-center">
               <span className="font-heading text-2xl font-bold text-carbon">{i + 1}</span>
               <div className="relative my-4">
-                <span className="absolute top-1/2 left-0 h-px w-full -translate-y-1/2 bg-carbon/20" />
+                <span className="absolute top-1/2 left-0 h-px w-full -translate-y-1/2 bg-carbon" />
                 <span className="relative mx-auto flex h-[30px] w-[30px] items-center justify-center rounded-full bg-mist">
                   <span className="h-2 w-2 rounded-full bg-emerald" />
                 </span>

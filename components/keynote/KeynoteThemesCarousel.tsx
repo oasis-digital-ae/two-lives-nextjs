@@ -33,13 +33,19 @@ export default function KeynoteThemesCarousel() {
               >
                 <div className="relative aspect-[3/4]">
                   <Image src={t.image} alt="" fill className="object-cover" />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/10 to-transparent" />
+                  <div
+                    className="absolute inset-0"
+                    style={{
+                      background:
+                        "linear-gradient(0deg, rgba(10,23,30,0.95) 0%, rgba(10,23,30,0.8) 25%, rgba(10,23,30,0.55) 45%, rgba(10,23,30,0.25) 65%, rgba(10,23,30,0.08) 80%, rgba(10,23,30,0) 100%)",
+                    }}
+                  />
                 </div>
                 <div className="absolute inset-x-0 bottom-0 flex flex-col items-start p-6">
-                  <span className="mb-4 rounded-full bg-white px-4 py-1.5 text-xs font-bold tracking-wide text-carbon uppercase">
+                  <span className="mb-4 rounded-full bg-white px-[26px] py-[10px] text-xs font-bold tracking-wide text-carbon uppercase">
                     Keynote Theme
                   </span>
-                  <span className="font-heading text-2xl font-bold text-white">{t.title}</span>
+                  <span className="font-heading text-[32px] font-bold text-white">{t.title}</span>
                 </div>
               </div>
             ))}

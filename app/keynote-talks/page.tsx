@@ -26,7 +26,7 @@ export default function KeynoteTalksPage() {
 
       <section className="bg-pattern-section bg-off-white pt-16 pb-4 md:pt-20">
         <div className="mx-auto max-w-3xl px-5 text-center">
-          <h2 className="text-shadow-soft font-heading text-[28px] font-semibold tracking-[-1px] text-carbon sm:text-[40px]">
+          <h2 className="text-shadow-soft mx-auto max-w-4xl font-heading text-[32px] font-semibold tracking-[-2px] text-carbon sm:text-[50px]">
             Not motivation. Real shift.
           </h2>
         </div>

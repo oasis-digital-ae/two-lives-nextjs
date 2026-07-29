@@ -21,10 +21,10 @@ export default function PersonaHero({
       />
       <div className="relative z-10 mx-auto max-w-[1400px] px-5 lg:px-10">
         <div className="max-w-2xl">
-          <h1 className="mb-2.5 font-heading text-lg font-medium tracking-tight text-white">
+          <h1 className="mb-[30px] font-heading text-[28px] font-bold tracking-[-0.5px] text-white sm:text-[38px]">
             {eyebrow}
           </h1>
-          <h2 className="font-heading text-[28px] leading-tight font-bold tracking-[-2px] text-white sm:text-[40px]">
+          <h2 className="font-heading text-[32px] leading-tight font-medium tracking-[-0.5px] text-white sm:text-[48px]">
             {title}
           </h2>
         </div>

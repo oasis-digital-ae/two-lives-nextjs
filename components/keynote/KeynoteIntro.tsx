@@ -47,8 +47,8 @@ export default function KeynoteIntro() {
         <div className="mb-12 grid grid-cols-1 gap-10 sm:grid-cols-2 lg:grid-cols-4">
           {features.map(({ Icon, title, desc }) => (
             <div key={title} className="text-center lg:text-left">
-              <Icon className="mx-auto mb-5 h-10 w-10 text-sea-green lg:mx-0" />
-              <span className="mb-1 block font-heading text-[22px] font-bold tracking-tight text-carbon">
+              <Icon className="text-dark-green mx-auto mb-5 h-[42px] w-[42px] lg:mx-0" />
+              <span className="mb-1 block font-heading text-[22px] font-black tracking-[-0.5px] text-carbon">
                 {title}
               </span>
               <p className="text-slate">{desc}</p>
@@ -62,11 +62,13 @@ export default function KeynoteIntro() {
             strengthening how people think, decide, and perform.
           </p>
           <div className="inline-flex items-center gap-3">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" className="h-6 w-6 text-carbon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" className="h-7 w-7 text-carbon">
               <path d="m5 12 5 5L19 8" strokeLinecap="round" strokeLinejoin="round" />
               <circle cx="12" cy="12" r="10" />
             </svg>
-            <span className="font-heading text-lg font-medium text-carbon">Delivered to audiences worldwide.</span>
+            <span className="font-heading text-[20px] font-medium tracking-[-0.5px] text-carbon">
+              Delivered to audiences worldwide.
+            </span>
           </div>
         </div>
       </div>

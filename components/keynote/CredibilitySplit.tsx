@@ -14,9 +14,9 @@ export default function CredibilitySplit() {
               height={900}
               className="w-full rounded-[10px]"
             />
-            <div className="absolute bottom-6 left-6 rounded-[15px] bg-white px-6 py-4 shadow-[0_20px_45px_rgba(14,20,18,0.18)]">
-              <p className="text-carbon">
-                <span className="font-heading text-[50px] leading-none font-bold">12</span>{" "}
+            <div className="animate-float-drop absolute bottom-[90px] left-0 rounded-[15px] bg-white px-6 py-4 shadow-[0_20px_60px_rgba(0,0,0,0.08)]">
+              <p className="text-shadow-soft text-carbon">
+                <span className="font-heading text-[40px] leading-none font-bold sm:text-[70px]">12</span>{" "}
                 <span className="font-medium">Years of Guidance</span>
               </p>
             </div>
@@ -31,8 +31,8 @@ export default function CredibilitySplit() {
             </h2>
             <p className="mb-6 text-slate">Delivering keynote talks across corporate, wellbeing, and global events.</p>
 
-            <div className="mb-6 flex items-start gap-5 rounded-[6px] bg-white p-6 shadow-[0_20px_45px_rgba(14,20,18,0.1)]">
-              <PeopleIcon className="h-8 w-8 flex-none text-carbon" />
+            <div className="mb-6 flex items-start gap-5 rounded-[6px] bg-white p-6 shadow-[0_20px_60px_rgba(0,0,0,0.08)]">
+              <PeopleIcon className="h-[42px] w-[42px] flex-none text-carbon" />
               <div>
                 <span className="mb-1 block font-semibold text-carbon">Grounded in Real Experience</span>
                 <p className="text-sm text-slate">
@@ -42,7 +42,7 @@ export default function CredibilitySplit() {
               </div>
             </div>
 
-            <p className="text-shadow-soft mb-6 font-heading text-2xl font-semibold text-carbon">
+            <p className="text-shadow-soft mb-6 font-heading text-[26px] font-semibold tracking-[-1px] text-carbon">
               Calm. Insightful. Impactful.
             </p>
 
