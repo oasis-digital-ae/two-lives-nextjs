@@ -62,7 +62,7 @@ export default function QuoteBanner({
       </div>
 
       <div className="absolute left-0 top-0 hidden h-full w-32 items-center justify-center xl:flex">
-        <span className="-rotate-90 whitespace-nowrap text-sm font-medium text-white">
+        <span className="-rotate-90 whitespace-nowrap text-[18px] font-medium text-white">
           {eyebrow}
         </span>
       </div>

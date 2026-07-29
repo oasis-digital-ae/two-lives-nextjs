@@ -46,7 +46,7 @@ export default function AlignmentAreas() {
 
       <div className="mx-auto max-w-[1400px] px-5 lg:px-10">
         <div className="mb-10 max-w-2xl">
-          <h2 className="text-shadow-soft mb-2 font-heading text-[32px] font-semibold tracking-[-2px] text-carbon sm:text-[40px]">
+          <h2 className="text-shadow-soft mb-2 font-heading text-[40px] font-semibold tracking-[-2px] text-carbon">
             The Four Areas of Alignment
           </h2>
           <p className="text-[18px] font-medium tracking-[-1px] text-carbon sm:text-[30px]">

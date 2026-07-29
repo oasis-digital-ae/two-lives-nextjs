@@ -46,7 +46,7 @@ export default function CoachingVideo() {
 
           {/* Heading */}
           <div className="order-1 flex items-center justify-center border-b border-white/10 px-5 py-10 lg:order-none lg:col-span-9 lg:justify-start lg:px-10">
-            <h2 className="text-shadow-soft text-center font-heading text-[32px] font-semibold tracking-[-2px] text-white sm:text-[40px] lg:text-left">
+            <h2 className="text-shadow-soft text-center font-heading text-[40px] font-semibold tracking-[-2px] text-white lg:text-left">
               The Transition to your Next Life Starts Here
             </h2>
           </div>

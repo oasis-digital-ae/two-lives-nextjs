@@ -5,7 +5,7 @@ export default function Marquee() {
         {Array.from({ length: 6 }).map((_, i) => (
           <span
             key={i}
-            className="font-heading text-[80px] font-bold uppercase tracking-[-5px] text-carbon sm:text-[120px] lg:text-[160px]"
+            className="font-heading text-[100px] font-bold uppercase tracking-[-5px] text-carbon sm:text-[140px] lg:text-[180px]"
           >
             Two Lives Theory
           </span>

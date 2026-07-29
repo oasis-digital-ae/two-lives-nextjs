@@ -44,7 +44,7 @@ export default function PathSteps({
   return (
     <section className="bg-pattern-section bg-off-white py-16 md:py-20">
       <div className="mx-auto max-w-[1400px] px-5 lg:px-10">
-        <h2 className="text-shadow-soft mb-12 text-center font-heading text-[32px] font-semibold tracking-[-2px] text-carbon sm:text-[40px]">
+        <h2 className="text-shadow-soft mb-12 text-center font-heading text-[40px] font-semibold tracking-[-2px] text-carbon">
           {heading}
         </h2>
 

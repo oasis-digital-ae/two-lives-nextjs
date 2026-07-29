@@ -36,7 +36,7 @@ export default function MethodResearch() {
             <span className="mb-3 w-fit border-b-2 border-carbon font-heading text-[20px] font-bold text-carbon italic">
               Two Lives Theory Method
             </span>
-            <h2 className="text-shadow-soft mb-6 font-heading text-[32px] font-semibold tracking-[-2px] text-carbon sm:text-[40px]">
+            <h2 className="text-shadow-soft mb-6 font-heading text-[40px] font-semibold tracking-[-2px] text-carbon">
               Grounded in Evidence. Built for Real Change
             </h2>
             <Link href="/request-mentorship" className="btn-three hidden w-fit lg:inline-flex">
@@ -46,7 +46,7 @@ export default function MethodResearch() {
 
           <div className="relative rounded-[10px] bg-off-white p-8 shadow-[0_0_25px_rgba(0,0,0,0.08)] lg:col-span-8 lg:p-12">
             <span className="mb-8 flex items-center gap-3 font-heading text-[18px] font-semibold tracking-[-0.5px] text-carbon sm:text-[20px]">
-              <span className="flex h-[60px] w-[60px] shrink-0 items-center justify-center rounded-full bg-radial text-white">
+              <span className="flex h-[35px] w-[35px] shrink-0 items-center justify-center rounded-full bg-radial text-[18px] text-white sm:h-[45px] sm:w-[45px] sm:text-[24px] lg:h-[60px] lg:w-[60px] lg:text-[30px]">
                 &darr;
               </span>
               Methods Supported by Research
@@ -57,14 +57,14 @@ export default function MethodResearch() {
               alt=""
               width={125}
               height={125}
-              className="absolute top-8 right-8 hidden rotate-[5.5deg] opacity-70 lg:block"
+              className="absolute top-8 right-8 h-[80px] w-[80px] animate-[rotateCircle_18s_linear_infinite] lg:h-[125px] lg:w-[125px] lg:rotate-[5.5deg] lg:animate-none"
             />
 
             <div className="overflow-hidden" ref={emblaRef}>
               <div className="flex">
                 {researchSlides.map((slide) => (
                   <div key={slide.title} className="min-w-0 flex-[0_0_100%]">
-                    <h3 className="mb-5 font-heading text-[32px] font-bold tracking-[-2px] text-carbon sm:text-[40px]">
+                    <h3 className="mb-5 font-heading text-[40px] font-bold tracking-[-2px] text-carbon">
                       {slide.title}
                     </h3>
                     <p className="mb-3 w-[90%] font-normal text-carbon">{slide.body}</p>

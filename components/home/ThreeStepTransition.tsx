@@ -61,9 +61,20 @@ const phases: {
 
 // Recreates the original's jQuery scroll-driven "stack" wipe: each panel is
 // pinned full-viewport while its own 1/N slice of the scroll-through range
-// passes, then its height collapses from the bottom up to reveal the next
-// panel underneath. Desktop only (>1199px) — the original falls back to a
-// plain stacked layout below that width.
+// passes. Panel i+1 slides up (top 100% -> 0%) over its slice to fully
+// cover whatever is beneath, with z-index increasing per panel so later
+// panels stack on top. Sliding a fully-intact panel (rather than shrinking
+// the outgoing one's height to "reveal" the next) avoids any partial
+// overlap between two panels' text during the transition — each panel is
+// always shown as a clean, uncropped rectangle of its own content.
+// Animates the `top` offset rather than `transform`: a `transform` on an
+// absolutely-positioned child of a `position: sticky` ancestor hits a real
+// cross-browser layout quirk where the child's painted position drifts a
+// full panel-height from where getBoundingClientRect (and the eye) says it
+// should be, once the sticky ancestor is actually stuck. Plain `top` is a
+// normal layout property and isn't affected.
+// Desktop only (>1199px) — the original falls back to a plain stacked
+// layout below that width.
 function useStackAnimation(boxRef: RefObject<HTMLDivElement | null>, count: number) {
   const itemRefs = useRef<(HTMLDivElement | null)[]>([]);
 
@@ -72,9 +83,9 @@ function useStackAnimation(boxRef: RefObject<HTMLDivElement | null>, count: numb
       const box = boxRef.current;
       if (!box) return;
 
-      if (window.innerWidth <= 1199) {
+      if (window.innerWidth < 1280) {
         itemRefs.current.forEach((el) => {
-          if (el) el.style.height = "";
+          if (el) el.style.top = "";
         });
         return;
       }
@@ -82,18 +93,14 @@ function useStackAnimation(boxRef: RefObject<HTMLDivElement | null>, count: numb
       const scrollTop = window.scrollY;
       const boxTop = box.getBoundingClientRect().top + scrollTop;
       const boxHeight = box.offsetHeight;
+      const slot = boxHeight / count;
 
-      for (let i = 0; i < count - 1; i++) {
+      for (let i = 1; i < count; i++) {
         const el = itemRefs.current[i];
         if (!el) continue;
-        const stackBoxHeight = (boxHeight / count) * i;
-        if (scrollTop - boxTop > stackBoxHeight) {
-          let yMove = scrollTop - boxTop - stackBoxHeight;
-          if (yMove > boxHeight) yMove = boxHeight;
-          el.style.height = `calc(100vh - ${yMove}px)`;
-        } else {
-          el.style.height = "calc(100vh - 0px)";
-        }
+        const slotStart = slot * (i - 1);
+        const progress = Math.min(Math.max((scrollTop - boxTop - slotStart) / slot, 0), 1);
+        el.style.top = `${(1 - progress) * 100}%`;
       }
     };
 
@@ -119,7 +126,7 @@ export default function ThreeStepTransition() {
         <h2 className="text-dark-green mb-[15px] text-[30px] font-semibold tracking-[-2px]">
           The 3-Step Transition
         </h2>
-        <h2 className="text-shadow-soft mb-[25px] font-heading text-[32px] font-semibold tracking-[-2px] text-carbon sm:text-[40px]">
+        <h2 className="text-shadow-soft mb-[25px] font-heading text-[40px] font-semibold tracking-[-2px] text-carbon">
           The Transition From Your Old Life to Your Next Life
         </h2>
         <p className="mx-auto w-4/5 text-carbon md:w-full">
@@ -138,8 +145,10 @@ export default function ThreeStepTransition() {
               ref={(el) => {
                 itemRefs.current[i] = el;
               }}
-              style={{ zIndex: phases.length - i }}
-              className="static py-12 xl:absolute xl:inset-0 xl:flex xl:h-screen xl:overflow-hidden xl:bg-off-white xl:py-0"
+              style={{ zIndex: i + 1 }}
+              className={`static py-12 xl:absolute xl:inset-x-0 xl:top-0 xl:flex xl:h-screen xl:overflow-hidden xl:bg-off-white xl:py-0 ${
+                i > 0 ? "xl:top-full" : ""
+              }`}
             >
               <div className="mx-auto grid w-full max-w-[1400px] grid-cols-1 items-center gap-8 px-5 xl:grid-cols-2 xl:items-stretch xl:px-10">
                 <div
@@ -162,7 +171,7 @@ export default function ThreeStepTransition() {
                   <span className="text-dark-green mt-[30px] mb-[10px] block text-[18px] font-semibold uppercase">
                     {p.phase}
                   </span>
-                  <h2 className="text-shadow-soft mb-[25px] font-heading text-[32px] font-semibold tracking-[-2px] text-carbon sm:text-[40px]">
+                  <h2 className="text-shadow-soft mb-[25px] font-heading text-[40px] font-semibold tracking-[-2px] text-carbon">
                     {p.title}
                   </h2>
                   {p.paragraphs.map((para, idx) => (

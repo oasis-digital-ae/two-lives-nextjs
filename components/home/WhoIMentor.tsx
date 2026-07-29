@@ -121,7 +121,7 @@ export default function WhoIMentor() {
 function RotatingLearnMore({ id }: { id: number }) {
   const pathId = `mentor-circle-path-${id}`;
   return (
-    <span className="relative inline-flex h-[72px] w-[72px] shrink-0 items-center justify-center">
+    <span className="relative inline-flex h-16 w-16 shrink-0 items-center justify-center sm:h-[75px] sm:w-[75px]">
       <svg
         className="absolute inset-0 h-full w-full animate-[spin_12s_linear_infinite]"
         viewBox="0 0 100 100"

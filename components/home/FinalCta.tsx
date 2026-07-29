@@ -3,7 +3,7 @@ import Link from "next/link";
 export default function FinalCta({
   heading = "You've Reached a Level Few Ever Do",
   subheading = (
-    <h4 className="inline-block align-middle font-heading text-[24px] font-semibold text-emerald sm:text-[30px]">
+    <h4 className="inline-block align-middle font-heading text-[30px] font-semibold text-emerald">
       &rarr; Now Outgrow It
     </h4>
   ),
@@ -25,7 +25,7 @@ export default function FinalCta({
       <div className="absolute inset-0 bg-black opacity-75" />
       <div className="relative z-10 mx-auto flex max-w-[1400px] flex-col items-center justify-between gap-8 px-5 text-center lg:flex-row lg:text-left">
         <div>
-          <h3 className="mb-2 inline-block align-middle font-heading text-[32px] font-semibold text-white sm:text-[40px]">
+          <h3 className="mb-2 inline-block align-middle font-heading text-[40px] font-semibold text-white">
             {heading}
           </h3>
           {subheading}

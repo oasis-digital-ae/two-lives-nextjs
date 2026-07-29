@@ -112,7 +112,7 @@ export default function Reviews() {
         style={{ backgroundImage: "url(/images/demo-it-business-testimonial-bg.png)" }}
       >
         <div className="mb-10 text-center">
-          <h2 className="text-shadow-soft mb-2 font-heading text-[32px] font-semibold tracking-[-2px] text-carbon sm:text-[40px]">
+          <h2 className="text-shadow-soft mb-2 font-heading text-[40px] font-semibold tracking-[-2px] text-carbon">
             Client Reviews
           </h2>
           <a
@@ -140,7 +140,7 @@ export default function Reviews() {
                           className="rounded-full object-cover"
                         />
                       </div>
-                      <div className="animate-float absolute top-[-6px] left-[-30px] flex h-[95px] w-[95px] items-center justify-center sm:h-[125px] sm:w-[125px]">
+                      <div className="animate-float absolute top-[-6px] left-[-30px] flex h-[70px] w-[70px] items-center justify-center sm:h-[95px] sm:w-[95px] lg:h-[125px] lg:w-[125px]">
                         <Image src="/images/twoliveslogo.svg" alt="" width={90} height={90} />
                       </div>
                     </div>
@@ -171,7 +171,7 @@ export default function Reviews() {
           </div>
         </div>
 
-        <p className="mt-3 mb-3 text-center text-[18px] font-bold text-carbon italic sm:text-[16px]">
+        <p className="mt-3 mb-3 text-center text-[16px] font-bold text-carbon italic sm:text-[18px]">
           &ldquo;Confidential by default. Shared by choice.&rdquo;
         </p>
 

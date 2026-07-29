@@ -48,8 +48,8 @@ export default function OverwhelmSolution() {
           <div className="flex items-center gap-6">
             {/* Atropos badge: dark radial circle with a bouncing down-arrow */}
             <div className="shrink-0">
-              <span className="relative flex h-[150px] w-[150px] items-center justify-center rounded-full bg-radial sm:h-[170px] sm:w-[170px] lg:h-[210px] lg:w-[210px]">
-                <span className="animate-arrow-bounce text-[60px] leading-none text-white sm:text-[70px] lg:text-[90px]">
+              <span className="relative flex h-[120px] w-[120px] items-center justify-center rounded-full bg-radial sm:h-[170px] sm:w-[170px] lg:h-[210px] lg:w-[210px]">
+                <span className="animate-arrow-bounce text-[100px] leading-none text-white sm:text-[140px] lg:text-[180px]">
                   &darr;
                 </span>
               </span>
@@ -111,7 +111,6 @@ export default function OverwhelmSolution() {
                     key={text}
                     className="relative flex h-[300px] min-w-0 flex-[0_0_85%] items-end justify-end overflow-hidden rounded-[20px] bg-[#F9F9F7] p-[30px] shadow-[0_20px_40px_rgba(0,0,0,0.08),0_4px_12px_rgba(0,0,0,0.05)] sm:flex-[0_0_45%]"
                   >
-                    <span className="simple-card-icon" aria-hidden="true" />
                     <span className="absolute left-5 top-[5px] font-heading text-[75px] font-semibold tracking-[2px] text-black/80">
                       {i + 1}
                     </span>
