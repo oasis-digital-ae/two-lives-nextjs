@@ -18,7 +18,7 @@ export default function ArticleHero({
     >
       <div className="absolute inset-0 bg-gradient-to-b from-black/55 to-black/75" />
       <div className="relative z-10 mx-auto max-w-[1400px] px-5 lg:px-10">
-        <h1 className="max-w-4xl font-heading text-[32px] leading-tight font-semibold tracking-[-2px] text-white sm:text-[50px]">
+        <h1 className="max-w-4xl font-heading text-[26px] leading-tight font-semibold tracking-[-2px] text-white sm:text-[52px]">
           <span className="highlighter-below animate">{eyebrow}</span> {title}
         </h1>
         <div className="mt-4 flex items-center gap-3 text-sm text-white/80">

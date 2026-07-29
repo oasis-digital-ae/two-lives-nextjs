@@ -20,7 +20,11 @@ export default function CaseStudiesPage() {
         title="Studies"
         description="Inner transitions take time. These case studies show how clarity, balance, and self-leadership create sustainable success."
       />
-      <CaseStudies heading="Every result began with an internal shift." description={null} />
+      <CaseStudies
+        heading="Every result began with an internal shift."
+        description={null}
+        headingSize="large"
+      />
       <WordMarquee />
       <FinalCta />
     </>

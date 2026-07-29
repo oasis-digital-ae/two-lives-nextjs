@@ -34,15 +34,21 @@ export default function CaseStudies({
       sustainable success.
     </p>
   ),
+  headingSize = "default",
 }: {
   heading?: React.ReactNode;
   description?: React.ReactNode | null;
+  headingSize?: "default" | "large";
 }) {
   return (
     <section className="bg-pattern-section bg-off-white py-16 md:py-24">
       <div className="mx-auto max-w-[1400px] px-5 lg:px-10">
         <div className="mx-auto mb-12 max-w-2xl text-center">
-          <h2 className="text-shadow-soft mb-2.5 font-heading text-[30px] font-semibold tracking-[-1.5px] text-carbon sm:text-[40px]">
+          <h2
+            className={`text-shadow-soft mb-2.5 font-heading font-semibold tracking-[-2px] text-carbon ${
+              headingSize === "large" ? "text-[50px]" : "text-[30px] sm:text-[40px]"
+            }`}
+          >
             {heading}
           </h2>
           {description}
@@ -53,9 +59,9 @@ export default function CaseStudies({
             <Link
               key={c.href}
               href={c.href}
-              className="group block overflow-hidden rounded-[10px] border border-white/30 bg-white/20 shadow-[0_18px_45px_rgba(14,20,18,0.12)] backdrop-blur-xl transition-all duration-300 hover:-translate-y-1.5 hover:bg-white/25 hover:shadow-[0_24px_60px_rgba(14,20,18,0.16)]"
+              className="group flex h-full flex-col overflow-hidden rounded-[10px] border border-white/30 bg-white/20 shadow-[0_18px_45px_rgba(14,20,18,0.12)] backdrop-blur-[18px] transition-all duration-300 hover:-translate-y-1.5 hover:bg-white/25 hover:shadow-[0_24px_60px_rgba(14,20,18,0.16)]"
             >
-              <div className="h-[240px] overflow-hidden">
+              <div className="h-[240px] shrink-0 overflow-hidden">
                 <Image
                   src={c.image}
                   alt={c.title}
@@ -64,10 +70,10 @@ export default function CaseStudies({
                   className="h-full w-full object-cover object-top transition-transform duration-500 group-hover:scale-105"
                 />
               </div>
-              <div className="flex flex-col bg-gradient-to-b from-white/8 to-white/2 p-7">
+              <div className="flex flex-1 flex-col bg-gradient-to-b from-white/8 to-white/2 p-7">
                 <p className="mb-1 text-sm font-medium text-carbon">{c.role}</p>
                 <h3 className="mb-3 font-heading text-[22px] font-bold text-carbon">{c.title}</h3>
-                <p className="text-sm leading-[1.7] text-carbon/85">{c.desc}</p>
+                <p className="mb-auto text-sm leading-[1.7] text-carbon/85">{c.desc}</p>
 
                 <div className="mt-5 inline-block h-4 w-fit overflow-hidden">
                   <span className="block text-xs font-semibold tracking-wide whitespace-nowrap text-carbon uppercase transition-transform duration-300 group-hover:-translate-y-full">
