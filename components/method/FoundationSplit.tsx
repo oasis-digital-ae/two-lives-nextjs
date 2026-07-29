@@ -15,7 +15,7 @@ export default function FoundationSplit() {
             />
             <div className="absolute bottom-0 left-0 bg-white px-5 py-[35px] text-center">
               <span className="block font-heading text-[60px] leading-none font-bold tracking-[-2px] text-carbon sm:text-[90px]">
-                12<sub className="text-[30px] font-normal">+</sub>
+                12<sub className="text-[40px] font-normal">+</sub>
               </span>
               <span className="mx-auto block w-[200px] text-center text-[14px] font-semibold text-carbon uppercase">
                 Years of Guidance

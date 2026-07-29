@@ -7,7 +7,7 @@ export default function MethodIntro() {
             <h2 className="text-shadow-soft mb-5 font-heading text-[28px] font-semibold tracking-[-2px] text-carbon sm:text-[40px]">
               The Method for Conscious Life Transition
             </h2>
-            <p className="mx-auto w-4/5 sm:mx-0 md:w-full">
+            <p className="mx-auto w-4/5 text-base sm:mx-0 sm:text-lg md:w-full lg:text-xl">
               Two Lives Theory is an inner framework integrating subconscious
               rewiring, deep inner work, and real-world performance for
               lasting change.
@@ -16,8 +16,8 @@ export default function MethodIntro() {
 
           <div className="flex items-center gap-6">
             <div className="shrink-0">
-              <span className="relative flex h-[150px] w-[150px] items-center justify-center rounded-full bg-radial sm:h-[170px] sm:w-[170px] lg:h-[210px] lg:w-[210px]">
-                <span className="animate-arrow-bounce text-[60px] leading-none text-white sm:text-[70px] lg:text-[90px]">
+              <span className="relative flex h-[120px] w-[120px] items-center justify-center rounded-full bg-radial sm:h-[170px] sm:w-[170px] lg:h-[210px] lg:w-[210px]">
+                <span className="animate-arrow-bounce text-[100px] leading-none text-white sm:text-[140px] lg:text-[180px]">
                   &darr;
                 </span>
               </span>

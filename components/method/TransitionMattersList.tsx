@@ -12,7 +12,7 @@ export default function TransitionMattersList() {
           <div className="text-center lg:col-span-5 lg:text-left">
             <h2 className="text-shadow-soft font-heading text-[32px] font-semibold tracking-[-2px] text-carbon sm:text-[40px]">
               Why Transition Work{" "}
-              <span className="border-b-2 border-carbon">Matters:</span>
+              <span className="highlighter-below animate">Matters:</span>
             </h2>
           </div>
 
@@ -22,7 +22,7 @@ export default function TransitionMattersList() {
                 <span className="font-heading text-[32px] font-semibold text-carbon">
                   {i + 1}
                 </span>
-                <p className="text-lg font-medium text-carbon">{text}</p>
+                <p className="text-base font-medium text-carbon sm:text-lg lg:text-[20px]">{text}</p>
               </div>
             ))}
           </div>

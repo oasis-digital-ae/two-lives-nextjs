@@ -30,7 +30,7 @@ export default function MethodCards() {
       <div className="mx-auto max-w-[1400px] px-5 lg:px-10">
         <div className="grid grid-cols-1 items-center gap-10 lg:grid-cols-12">
           <div className="text-center lg:col-span-4 lg:text-left">
-            <h3 className="text-shadow-soft mb-4 font-heading text-2xl font-semibold text-carbon">
+            <h3 className="text-shadow-soft mb-4 font-heading text-[26px] font-semibold text-carbon">
               Our Approach
             </h3>
             <h2 className="text-shadow-soft mb-6 font-heading text-[28px] leading-tight font-medium tracking-[-2px] text-carbon sm:text-[40px]">
