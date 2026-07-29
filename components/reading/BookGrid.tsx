@@ -23,9 +23,19 @@ const books = [
 
 export default function BookGrid() {
   return (
-    <section className="bg-pattern-section bg-off-white py-16 md:py-20">
+    <section className="bg-pattern-section relative bg-off-white py-16 md:py-20">
+      <div className="pointer-events-none !absolute top-[-45px] right-[10%] !z-[5] md:top-[-65px]">
+        <Image
+          src="/images/tl-circle.svg"
+          alt=""
+          width={130}
+          height={130}
+          className="w-[80px] animate-[rotateCircle_18s_linear_infinite] md:w-[130px]"
+        />
+      </div>
+
       <div className="mx-auto max-w-3xl px-5 text-center">
-        <h2 className="text-shadow-soft mb-12 font-heading text-[28px] font-semibold tracking-[-1px] text-carbon sm:text-[40px]">
+        <h2 className="text-shadow-soft mb-12 font-heading text-[50px] font-semibold tracking-[-2px] text-carbon">
           Growth isn&rsquo;t only in doing. It&rsquo;s in understanding.
         </h2>
       </div>
@@ -41,7 +51,7 @@ export default function BookGrid() {
                 <Image src={b.image} alt={b.title} fill className="object-cover" />
               </div>
               <div className="flex flex-col px-6 py-6 text-left">
-                <span className="font-heading font-semibold tracking-[-0.5px] text-carbon">{b.title}</span>
+                <span className="font-heading font-semibold tracking-[-1px] text-carbon">{b.title}</span>
                 <span className="mb-4 text-sm font-bold text-slate">{b.author}</span>
                 <p className="mb-5 text-sm leading-relaxed text-carbon/85">{b.desc}</p>
                 <small className="text-xs text-slate italic">Available via Audible &amp; Paperback</small>
