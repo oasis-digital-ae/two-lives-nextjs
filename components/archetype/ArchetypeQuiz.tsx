@@ -97,15 +97,15 @@ export default function ArchetypeQuiz() {
   return (
     <section className="bg-carbon py-16 sm:py-20">
       <div className="mx-auto max-w-4xl px-5">
-        <div className="flex min-h-[60vh] flex-col justify-center rounded-[20px] bg-graphite/75 p-6 backdrop-blur-xl sm:p-12">
+        <div className="flex min-h-[60vh] flex-col justify-center rounded-[20px] bg-carbon/75 p-[15px] backdrop-blur-[20px] lg:p-12">
           {screen === "intro" ? (
             <div>
               <div className="mb-3 flex flex-wrap items-center justify-between gap-2">
-                <span className="inline-flex items-center gap-2 rounded-full border border-slate/60 bg-white/5 px-3 py-2 text-xs font-bold text-white">
+                <span className="inline-flex items-center gap-2 rounded-full border border-white/16 bg-[#121614] px-3 py-2 text-xs font-bold text-white">
                   <span className="inline-block h-2 w-2 rounded-full bg-emerald shadow-[0_0_0_6px_rgba(0,225,132,0.18)]" />
                   Reflective Quiz &bull; 6 questions
                 </span>
-                <span className="rounded-full border border-slate/60 bg-white/5 px-3 py-2 text-xs font-bold text-white">
+                <span className="rounded-full border border-white/16 bg-[#121614] px-3 py-2 text-xs font-bold text-white">
                   Progress 0%
                 </span>
               </div>
@@ -137,18 +137,18 @@ export default function ArchetypeQuiz() {
           ) : (
             <div>
               <div className="mb-3 flex flex-wrap items-center justify-between gap-2">
-                <span className="inline-flex items-center gap-2 rounded-full border border-slate/60 bg-white/5 px-3 py-2 text-xs font-bold text-white">
+                <span className="inline-flex items-center gap-2 rounded-full border border-white/16 bg-[#121614] px-3 py-2 text-xs font-bold text-white">
                   <span className="inline-block h-2 w-2 rounded-full bg-emerald shadow-[0_0_0_6px_rgba(0,225,132,0.18)]" />
                   Question {index + 1} of {QUESTIONS.length}
                 </span>
                 <div className="flex min-w-[220px] items-center gap-2">
-                  <div className="h-2 flex-grow overflow-hidden rounded-full border border-slate/60 bg-black/35">
+                  <div className="h-2 flex-grow overflow-hidden rounded-full border border-white/16 bg-black/35">
                     <div
-                      className="h-full bg-emerald transition-[width] duration-300"
+                      className="h-full bg-emerald transition-[width] duration-[350ms]"
                       style={{ width: `${progressPercent}%` }}
                     />
                   </div>
-                  <span className="rounded-full border border-slate/60 bg-white/5 px-3 py-2 text-xs font-bold whitespace-nowrap text-white">
+                  <span className="rounded-full border border-white/16 bg-[#121614] px-3 py-2 text-xs font-bold whitespace-nowrap text-white">
                     {progressPercent}%
                   </span>
                 </div>
@@ -168,13 +168,13 @@ export default function ArchetypeQuiz() {
                       type="button"
                       onClick={() => selectAnswer(opt.key)}
                       aria-pressed={selected}
-                      className={`flex items-start gap-3 rounded-xl border px-4 py-3.5 text-left transition ${
+                      className={`flex items-start gap-3 rounded-xl border px-[15px] py-[15px] text-left transition ${
                         selected
                           ? "border-emerald/70 bg-emerald/10 shadow-[0_0_0_3px_rgba(0,225,132,0.14)]"
-                          : "border-slate/60 bg-white/5 hover:border-slate"
+                          : "border-white/16 bg-[#121614] hover:border-white/24 hover:bg-[#121614]/90"
                       }`}
                     >
-                      <span className="grid h-7 w-7 flex-none place-items-center rounded-[0.65rem] border border-slate/60 bg-black/25 font-black text-white">
+                      <span className="grid h-7 w-7 flex-none place-items-center rounded-[0.65rem] border border-white/16 bg-black/25 font-black text-white">
                         {opt.key}
                       </span>
                       <span className="text-white">{opt.text}</span>
@@ -187,13 +187,13 @@ export default function ArchetypeQuiz() {
                 <button
                   onClick={() => index > 0 && setIndex(index - 1)}
                   disabled={index === 0}
-                  className="rounded-full border border-white/25 px-5 py-2 text-sm font-semibold text-white transition hover:border-emerald hover:text-emerald disabled:pointer-events-none disabled:opacity-30"
+                  className="rounded-full border border-white/24 px-5 py-2 text-sm font-semibold text-white transition hover:border-emerald/55 hover:bg-white/[0.06] disabled:pointer-events-none disabled:opacity-30"
                 >
                   Back
                 </button>
                 <button
                   onClick={resetAll}
-                  className="rounded-full border border-white/25 px-5 py-2 text-sm font-semibold text-white transition hover:border-emerald hover:text-emerald"
+                  className="rounded-full border border-white/24 px-5 py-2 text-sm font-semibold text-white transition hover:border-emerald/55 hover:bg-white/[0.06]"
                 >
                   Restart
                 </button>
@@ -215,7 +215,7 @@ export default function ArchetypeQuiz() {
               resetAll();
             }}
           />
-          <div className="relative z-10 my-[8vh] max-h-[90vh] w-[92%] max-w-[1000px] overflow-y-auto rounded-[20px] border border-emerald/40 bg-carbon p-6 text-white sm:p-10">
+          <div className="relative z-10 my-[8vh] max-h-[90vh] w-[92%] max-w-[1000px] overflow-y-auto rounded-[20px] border border-emerald bg-[#121614] p-6 text-white sm:p-10">
             <button
               onClick={() => {
                 setShowModal(false);
