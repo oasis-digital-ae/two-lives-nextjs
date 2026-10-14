@@ -10,6 +10,7 @@ import fs from "node:fs";
 import os from "node:os";
 import path from "node:path";
 import { execFileSync } from "node:child_process";
+import * as parse5 from "parse5";
 
 const [, , mode, base, dir] = process.argv;
 if (!mode || !base || !dir) { console.error("usage: snapshot-html.mjs save|diff <base url> <dir>"); process.exit(1); }
@@ -40,8 +41,9 @@ const EXPECTED = [
   /class="mega-card"|two-lives\/(exec-h1|poker-h1)\.webp|Elite Competitors|Executives|Execute consistently|Align mindset|explore-your-archetype|Explore Your Archetype|^[+-]<\/?(li|a)>$/, // 404: older menu
   /class="footer-logo"/, /badge-[124]\.webp/,                                   // footer images: dimensions, lazy
   /whatsapp-icon\.svg/,                                                         // WhatsApp button: plain svg
-  /^[+-]<a href="\/journal"( class="nav-link")?>(Personal )?Journal$/,         // nav label drift on the legal pages
-  /bi-geo-alt|^[+-]<\/i>Location $|Earth — Global clients welcomed|class="w-80 xs-w-100|col-lg-4  col-sm-6|mb-5px fs-18|^[+-]<\/?(span|p|div)>$/, // 404: old footer had a location column
+  /^[+-](Personal )?Journal$/,                                                  // nav label drift on the legal pages
+  /property="og:image:(secure_url|type)"|name="twitter:image:alt"|property="og:image:alt"/, // post metadata now follows the template exactly
+  /bi-geo-alt|^[+-]Location$|Earth — Global clients welcomed|class="w-80 xs-w-100|last-paragraph-no-margin xs-mb-30px">$|mb-5px fs-18|^[+-]<\/?(span|p|div|i)>$/, // 404: old footer had a location column
   /srcSet=|sizes=|loading="lazy"|alt="(Meet Basim|method|Entrepreneurs|Athletes|Elite Competitors|Executives &amp; Leaders)"\/>$/, // mega-menu images: responsive everywhere, as on the homepage
   // journal/blog data now rendered on the server (the static site filled these containers in the browser)
   /^\+/, // additions only; the lines below name the vocabulary so a removal is still caught
@@ -50,11 +52,33 @@ const EXPECTED = [
   /class="col-lg-4 col-sm-6 text-center text-lg-start last-paragraph-no-margin|icon-circle|class="col-lg-3|footer-badges|bi-envelope|Contact:|mailto:/, // 404: older footer columns
 ];
 
-const split = (html) => html.replace(/</g, "\n<").split("\n");
+// Both sides are parsed (parse5, as a browser would) and compared as DOM tokens: one line
+// per element start/end with attributes sorted, one per collapsed text node. Whitespace
+// between tags, attribute order and attribute quoting therefore never count as changes,
+// only what a browser would actually build does.
+function tokens(html) {
+  const out = [];
+  // equivalent spellings: inline style formatting, JSON-LD whitespace, typographic apostrophes
+  const attrValue = (name, v) => (name === "style" ? v.replace(/\s*([:;])\s*/g, "$1").replace(/;$/, "") : v.replace(/\s+/g, " ").trim());
+  const walk = (n, inLd) => {
+    if (n.nodeName === "#comment") return;
+    if (n.nodeName === "#text") {
+      let t = n.value.replace(/[ \t\n\r\f]+/g, " ").trim().replace(/[‘’]/g, "'").replace(/[“”]/g, '"');
+      if (inLd) { try { t = JSON.stringify(JSON.parse(n.value)); } catch { /* keep as is */ } }
+      if (t) out.push(t); return;
+    }
+    if (n.attrs) out.push(`<${n.nodeName}${n.attrs.map((a) => ` ${a.name}="${attrValue(a.name, a.value)}"`).sort().join("")}>`);
+    const ld = n.nodeName === "script" && n.attrs?.some((a) => a.name === "type" && a.value === "application/ld+json");
+    for (const c of n.childNodes || []) walk(c, ld);
+    if (n.attrs) out.push(`</${n.nodeName}>`);
+  };
+  walk(parse5.parse(html), false);
+  return out;
+}
 function hunks(a, b) {
-  // line diff (tags one per line) via git, which is fast and good enough here
+  // line diff via git, which is fast and good enough here
   const ta = path.join(os.tmpdir(), "snap-a.html"), tb = path.join(os.tmpdir(), "snap-b.html");
-  fs.writeFileSync(ta, split(a).join("\n")); fs.writeFileSync(tb, split(b).join("\n"));
+  fs.writeFileSync(ta, tokens(a).join("\n")); fs.writeFileSync(tb, tokens(b).join("\n"));
   const out = execFileSync("git", ["diff", "--no-index", "-U0", "--no-color", ta, tb], { encoding: "utf8", maxBuffer: 1 << 26 }).toString();
   return out.split(/^@@.*@@.*$/m).slice(1).map((h) => h.split("\n").filter((l) => /^[+-]/.test(l) && !/^(\+\+\+|---)/.test(l)));
 }

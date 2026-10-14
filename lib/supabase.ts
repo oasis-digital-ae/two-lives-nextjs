@@ -37,7 +37,7 @@ const SOURCE: Record<Section, { table: string; filter: string }> = {
   blog: { table: "odai_blogs", filter: "&status=eq.published" },
 };
 
-async function rest<T>(path: string, init?: RequestInit): Promise<{ data: T; count: number | null }> {
+export async function rest<T>(path: string, init?: RequestInit): Promise<{ data: T; count: number | null }> {
   const res = await fetch(`${URL}/rest/v1/${path}`, {
     ...init,
     headers: { apikey: KEY, Authorization: `Bearer ${KEY}`, Prefer: "count=exact", ...(init?.headers || {}) },

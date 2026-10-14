@@ -1,24 +1,23 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
-import { posts } from "@/content/blog";
+import { PostPage } from "@/components/site/PostPage";
+import { getPost, getPostSlugs, postMetadata } from "@/lib/posts";
 
-/* One static page per ODAI blog post; markup in content/blog/<slug>.tsx. */
-export const dynamicParams = false;
-
-export function generateStaticParams() {
-  return Object.keys(posts).map((slug) => ({ slug }));
+/* One page per blog post, rendered from its Supabase row (see lib/posts.ts). All
+   current slugs are prerendered; a slug published later renders on first request
+   and is cached, with the layout's revalidate window keeping it fresh. */
+export async function generateStaticParams() {
+  return (await getPostSlugs("blog")).map((slug) => ({ slug }));
 }
 
 export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> {
   const { slug } = await params;
-  const load = posts[slug];
-  return load ? (await load()).metadata : {};
+  const post = await getPost("blog", slug);
+  return post ? postMetadata(post, "blog") : {};
 }
 
-export default async function BlogPost({ params }: { params: Promise<{ slug: string }> }) {
+export default async function Page({ params }: { params: Promise<{ slug: string }> }) {
   const { slug } = await params;
-  const load = posts[slug];
-  if (!load) notFound();
-  const { default: Post } = await load();
-  return <Post />;
+  if (!(await getPost("blog", slug))) notFound();
+  return <PostPage section="blog" slug={slug} />;
 }
