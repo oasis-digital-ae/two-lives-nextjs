@@ -1,66 +1,64 @@
-import type { Metadata, Viewport } from "next";
-import { Manrope, Sora } from "next/font/google";
-import localFont from "next/font/local";
-import "./globals.css";
-import Header from "@/components/layout/Header";
-import Footer from "@/components/layout/Footer";
-import WhatsAppWidget from "@/components/layout/WhatsAppWidget";
-import ScrollProgress from "@/components/layout/ScrollProgress";
-import CustomCursor from "@/components/layout/CustomCursor";
-import { buildMetadata, SITE_NAME, SITE_URL } from "@/lib/seo";
+import type { Metadata } from "next";
+import Script from "next/script";
 
-const manrope = Manrope({
-  subsets: ["latin"],
-  weight: ["400", "500", "600", "700", "800"],
-  variable: "--font-manrope",
-});
+/*
+ * Root layout for the ported theme.
+ *
+ * The static site's design is owned by one compiled stylesheet (css/site.min.css) and
+ * the theme's jQuery stack (js/site.js). Both are shipped as-is from /public so every
+ * page renders pixel-for-pixel like the HTML version. The stylesheet is a plain
+ * render-blocking <link>, exactly like the static page, rather than a CSS import
+ * that Next would re-process.
+ */
 
-const sora = Sora({
-  subsets: ["latin"],
-  weight: ["400", "500", "600", "700"],
-  variable: "--font-sora",
-});
-
-const gotham = localFont({
-  src: "./fonts/Gotham-Black.woff2",
-  weight: "900",
-  variable: "--font-gotham",
-  display: "swap",
-});
+const GTM_ID = "GTM-THX6LFQ9";
 
 export const metadata: Metadata = {
-  metadataBase: new URL(SITE_URL),
+  metadataBase: new URL("https://twolivestheory.com"),
   authors: [{ name: "Basim Yafai" }],
-  applicationName: SITE_NAME,
   icons: {
-    apple: "/images/favicon.svg",
+    icon: "/images/favicon.svg",
+    shortcut: "/images/favicon.svg",
+    apple: [
+      { url: "/images/favicon.svg" },
+      { url: "/images/favicon.svg", sizes: "72x72" },
+      { url: "/images/favicon.svg", sizes: "114x114" },
+    ],
   },
-  ...buildMetadata({
-    title: "Two Lives Theory - Step Into Your Next Life",
-    description:
-      "Private Mentorship led by Basim Yafai, Mindset & Growth Mentor. Two Lives Theory is trusted by high performing leaders, entrepreneurs & elite athletes.",
-    path: "/",
-  }),
 };
 
-export const viewport: Viewport = {
+export const viewport = {
   themeColor: "#00E184",
 };
 
-export default function RootLayout({
-  children,
-}: Readonly<{
-  children: React.ReactNode;
-}>) {
+export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
   return (
-    <html lang="en" className={`${manrope.variable} ${sora.variable} ${gotham.variable}`}>
-      <body className="flex min-h-screen flex-col bg-white text-carbon">
-        <CustomCursor />
-        <Header />
-        <main className="flex-1">{children}</main>
-        <Footer />
-        <WhatsAppWidget />
-        <ScrollProgress />
+    <html lang="en">
+      <head>
+        <link rel="preload" href="/fonts/manrope-latin.woff2" as="font" type="font/woff2" crossOrigin="" />
+        <link rel="preload" href="/fonts/sora-latin.woff2" as="font" type="font/woff2" crossOrigin="" />
+        <link rel="stylesheet" href="/css/site.min.css" />
+        {/* Google Tag Manager. On the static site Netlify injected this at the hosting layer;
+            server-rendered pages do not get that injection, so it lives here. */}
+        <Script id="gtm" strategy="afterInteractive">{`(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','${GTM_ID}');`}</Script>
+      </head>
+      <body data-mobile-nav-style="classic" className="custom-cursor index-page">
+        <noscript>
+          <iframe
+            src={`https://www.googletagmanager.com/ns.html?id=${GTM_ID}`}
+            height="0"
+            width="0"
+            style={{ display: "none", visibility: "hidden" }}
+          />
+        </noscript>
+        {children}
+        {/* jQuery + theme vendors + main + app, concatenated. Runs after hydration;
+            the bundle replays the DOMContentLoaded/load handlers it registers. */}
+        <Script src="/js/site.js" strategy="afterInteractive" />
       </body>
     </html>
   );
