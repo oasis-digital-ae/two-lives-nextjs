@@ -14,6 +14,7 @@
 // publishable key cannot update rows.
 import fs from "node:fs";
 import path from "node:path";
+import { execFileSync } from "node:child_process";
 import * as parse5 from "parse5";
 
 const STATIC = process.argv[2];
@@ -52,12 +53,23 @@ function readPage(file) {
   return { title, description, h1, article: article.trim() };
 }
 
-let changes = 0;
+/** When the committed page was last changed, from the static repo's history. */
+function pageChangedAt(file) {
+  try { return new Date(execFileSync("git", ["-C", STATIC, "log", "-1", "--format=%cI", "--", path.relative(STATIC, file)], { encoding: "utf8" }).trim()); }
+  catch { return null; }
+}
+
+let changes = 0, skipped = 0;
 for (const [section, table] of Object.entries(SECTIONS)) {
-  const rows = await rest(`${table}?select=slug,title,main_heading,seo_title,seo_description,html_content`);
+  const rows = await rest(`${table}?select=slug,title,main_heading,seo_title,seo_description,html_content,updated_at`);
   for (const row of rows) {
     const file = path.join(STATIC, section, `${row.slug}.html`);
     if (!fs.existsSync(file)) { console.log(`${section}/${row.slug}: no committed page, skipped`); continue; }
+    // the row was edited after the page was last committed: the row is the newer copy, leave it
+    const changedAt = pageChangedAt(file);
+    if (changedAt && row.updated_at && new Date(row.updated_at) > changedAt && !process.argv.includes("--force")) {
+      skipped++; console.log(`${section}/${row.slug}: row updated ${row.updated_at.slice(0, 10)}, after the page (${changedAt.toISOString().slice(0, 10)}); skipped, review by hand`); continue;
+    }
     const page = readPage(file);
     const patch = {};
     if (page.title !== norm(row.seo_title || row.title)) patch.seo_title = page.title;
@@ -75,4 +87,4 @@ for (const [section, table] of Object.entries(SECTIONS)) {
     if (apply) await rest(`${table}?slug=eq.${encodeURIComponent(row.slug)}`, { method: "PATCH", body: JSON.stringify(patch) });
   }
 }
-console.log(`${changes} post(s) ${apply ? "updated" : "would change (dry run; add --apply)"}`);
+console.log(`${changes} post(s) ${apply ? "updated" : "would change (dry run; add --apply)"}${skipped ? `, ${skipped} skipped because the row is newer than the page` : ""}`);
