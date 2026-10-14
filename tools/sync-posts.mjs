@@ -65,11 +65,6 @@ for (const [section, table] of Object.entries(SECTIONS)) {
   for (const row of rows) {
     const file = path.join(STATIC, section, `${row.slug}.html`);
     if (!fs.existsSync(file)) { console.log(`${section}/${row.slug}: no committed page, skipped`); continue; }
-    // the row was edited after the page was last committed: the row is the newer copy, leave it
-    const changedAt = pageChangedAt(file);
-    if (changedAt && row.updated_at && new Date(row.updated_at) > changedAt && !process.argv.includes("--force")) {
-      skipped++; console.log(`${section}/${row.slug}: row updated ${row.updated_at.slice(0, 10)}, after the page (${changedAt.toISOString().slice(0, 10)}); skipped, review by hand`); continue;
-    }
     const page = readPage(file);
     const patch = {};
     if (page.title !== norm(row.seo_title || row.title)) patch.seo_title = page.title;
@@ -79,7 +74,14 @@ for (const [section, table] of Object.entries(SECTIONS)) {
     let body = page.article;
     if (/^\s*<h1[\s>]/i.test(row.html_content || "")) body = body.replace(/<h2(\s|>)/i, "<h1$1").replace(/<\/h2>/i, "</h1>");
     const same = (a, b) => norm(a).replace(/>\s+</g, "><") === norm(b).replace(/>\s+</g, "><");
-    if (!same(body, row.html_content)) patch.html_content = body;
+    if (!same(body, row.html_content)) {
+      // ODAI owns the blog posts' HTML and has republished some since the pages were
+      // committed (newer markup in the row), so their body is never overwritten here:
+      // the difference is reported for a manual decision. Journal bodies come from the
+      // admin editor, and the page's later copy edits are the intended version.
+      if (section === "blog" && !process.argv.includes("--force")) { skipped++; console.log(`${section}/${row.slug}: body differs (page ${pageChangedAt(file)?.toISOString().slice(0, 10)}, row updated ${(row.updated_at || "").slice(0, 10)}); not written, review by hand`); }
+      else patch.html_content = body;
+    }
     if (!Object.keys(patch).length) continue;
     changes++;
     console.log(`${section}/${row.slug}: ${Object.keys(patch).join(", ")}`);
