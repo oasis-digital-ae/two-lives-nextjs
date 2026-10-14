@@ -18,6 +18,14 @@
     if (t === "load" && loaded) { load.push(fn); return; }
     return origWin.call(window, t, fn, o);
   };
+  // Inline onclick="..." attributes from the static pages are emitted as data-onclick by the
+  // converter (server components cannot carry string handlers). Run them on click with the
+  // element as `this` and the event as `event`, which is what an inline handler sees.
+  document.addEventListener("click", function (event) {
+    var el = event.target && event.target.closest ? event.target.closest("[data-onclick]") : null;
+    if (!el) return;
+    try { new Function("event", el.getAttribute("data-onclick")).call(el, event); } catch (err) { console.error(err); }
+  });
   window.__tltReplayEvents = function () {
     document.addEventListener = origDoc; window.addEventListener = origWin;
     var e1 = new Event("DOMContentLoaded"), e2 = new Event("load");

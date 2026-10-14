@@ -1,6 +1,5 @@
 // GENERATED from the static site by convert.mjs. The markup is kept identical to the
 // HTML page on purpose: the theme's compiled CSS and jQuery scripts drive the design.
-/* eslint-disable @next/next/no-img-element */
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -34,7 +33,7 @@ export const metadata: Metadata = {
   }
 };
 
-export default function HomePage() {
+export default function IndexPage() {
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: "{\n  \"@context\": \"https://schema.org\",\n  \"@graph\": [\n    {\n      \"@type\": \"Organization\",\n      \"@id\": \"https://twolivestheory.com/#organization\",\n      \"name\": \"Two Lives Theory\",\n      \"url\": \"https://twolivestheory.com/\",\n      \"logo\": {\n        \"@type\": \"ImageObject\",\n        \"url\": \"https://twolivestheory.com/images/tl-green-logo.svg\"\n      },\n      \"email\": \"basim@twolivestheory.com\",\n      \"sameAs\": [\n        \"https://www.facebook.com/BasimYafai\",\n        \"https://www.instagram.com/basim.yafai/\",\n        \"https://www.linkedin.com/in/basimyafai/\"\n      ],\n      \"founder\": {\n        \"@id\": \"https://twolivestheory.com/#basim\"\n      }\n    },\n    {\n      \"@type\": \"Person\",\n      \"@id\": \"https://twolivestheory.com/#basim\",\n      \"name\": \"Basim Yafai\",\n      \"url\": \"https://twolivestheory.com/about\",\n      \"jobTitle\": \"Mindset & Growth Mentor\",\n      \"worksFor\": {\n        \"@id\": \"https://twolivestheory.com/#organization\"\n      },\n      \"email\": \"basim@twolivestheory.com\",\n      \"sameAs\": [\n        \"https://www.facebook.com/BasimYafai\",\n        \"https://www.instagram.com/basim.yafai/\",\n        \"https://www.linkedin.com/in/basimyafai/\"\n      ],\n      \"hasCredential\": [\n        {\n          \"@type\": \"EducationalOccupationalCredential\",\n          \"credentialCategory\": \"certification\",\n          \"name\": \"Certified Master of Neuro-Linguistic Programming (MNLP)\",\n          \"recognizedBy\": {\n            \"@type\": \"Organization\",\n            \"name\": \"INLP Center\"\n          }\n        },\n        {\n          \"@type\": \"EducationalOccupationalCredential\",\n          \"credentialCategory\": \"certification\",\n          \"name\": \"Certified Master Life Coach (MLC)\",\n          \"recognizedBy\": {\n            \"@type\": \"Organization\",\n            \"name\": \"INLP Center\"\n          }\n        },\n        {\n          \"@type\": \"EducationalOccupationalCredential\",\n          \"credentialCategory\": \"certification\",\n          \"name\": \"Certified Hypnosis Practitioner (CHP)\",\n          \"recognizedBy\": {\n            \"@type\": \"Organization\",\n            \"name\": \"INLP Center\"\n          }\n        }\n      ]\n    },\n    {\n      \"@type\": \"WebSite\",\n      \"@id\": \"https://twolivestheory.com/#website\",\n      \"url\": \"https://twolivestheory.com/\",\n      \"name\": \"Two Lives Theory\",\n      \"publisher\": {\n        \"@id\": \"https://twolivestheory.com/#organization\"\n      }\n    }\n  ]\n}" }} />

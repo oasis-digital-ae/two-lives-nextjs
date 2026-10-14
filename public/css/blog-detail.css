@@ -1,0 +1,495 @@
+@charset "UTF-8";
+/* ==================================================================
+   BLOG / JOURNAL DETAIL - CONTENT SECTION ONLY
+   ------------------------------------------------------------------
+   Scope: <section class="blog-detail-page ..."> on journal/*.html and
+   blog/*.html. Everything here is nested under .blog-detail-page on
+   purpose so nothing leaks into the rest of the site.
+
+   This file exists because the section's own classes had no CSS in the
+   bundle at all: .blog-detail-page, .pt-220px, .pb-120px, .md-pt-180px,
+   .md-pb-80px, .sm-pt-140px, .blog-featured-image and .auto-content were
+   all unmatched, so the section rendered with no vertical padding.
+
+   Shared classes used by the same markup (.bg-pattern-section,
+   .icon-rotator, .blog-sidebar, article.blog-content) stay where they
+   already live in demos/lawyer/twolives.css - they are used by the case
+   study pages too. Only blog-detail-specific rules belong here.
+
+   Breakpoints match the theme: md = max-width 991px, sm = max-width 767px.
+
+   Edit this file, then run:  npm run minify
+   ================================================================== */
+
+/* ---------- section shell ---------------------------------------- */
+
+.blog-detail-page {
+  padding-top: 220px;
+  padding-bottom: 120px;
+}
+
+/* the utility classes on the section, scoped so they only resolve here */
+.blog-detail-page.pt-220px { padding-top: 200px; }
+.blog-detail-page.pb-120px { padding-bottom: 120px; }
+
+/* ---------- featured image --------------------------------------- */
+
+.blog-detail-page .blog-featured-image {
+  margin-bottom: 50px;
+}
+
+.blog-detail-page .blog-featured-image img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+  border-radius: 5px;
+}
+
+/* ---------- article body ----------------------------------------- */
+
+.blog-detail-page .auto-content {
+  max-width: 100%;
+}
+
+/* long words / pasted URLs must not push the column wide */
+.blog-detail-page .blog-content {
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+}
+
+.blog-detail-page .blog-content > *:last-child {
+  margin-bottom: 0;
+}
+
+/* embedded media stays inside the column */
+.blog-detail-page .blog-content img,
+.blog-detail-page .blog-content iframe,
+.blog-detail-page .blog-content video {
+  max-width: 100%;
+  height: auto;
+  border-radius: 5px;
+}
+
+/* content tables are authored with inline styles and a min-width, so
+   they need a scroll container rather than being allowed to overflow */
+.blog-detail-page .blog-content table {
+  max-width: 100%;
+}
+
+/* ---------- responsive ------------------------------------------- */
+
+@media (max-width: 991px) {
+  .blog-detail-page,
+  .blog-detail-page.pt-220px {
+    padding-top: 140px;
+  }
+
+  .blog-detail-page,
+  .blog-detail-page.pb-120px {
+    padding-bottom: 80px;
+  }
+
+  .blog-detail-page .blog-featured-image {
+    margin-bottom: 40px;
+  }
+}
+
+@media (max-width: 767px) {
+  .blog-detail-page,
+  .blog-detail-page.pt-220px {
+    padding-top: 80px;
+  }
+
+  .blog-detail-page,
+  .blog-detail-page.pb-120px {
+    padding-bottom: 60px;
+  }
+
+  .blog-detail-page .blog-featured-image {
+    margin-bottom: 30px;
+  }
+}
+
+/* ---------- list markers ------------------------------------------
+   Moved out of css/style.css (was a global `.blog-content ul li` rule)
+   and scoped to this section. The global `ul li { list-style: none }`
+   in style.css still needs overriding here.
+   ------------------------------------------------------------------ */
+
+.blog-detail-page .blog-content ul li {
+  list-style: disc;
+  padding-left: 1.25rem;
+}
+
+/* ==================================================================
+   CONTENT COMPONENTS
+   Reusable blocks for journal/blog article bodies. These replace the
+   inline `style="..."` + generic theme classes the posts used to carry
+   (.bg-very-light-gray + hardcoded padding/borders), so every post
+   picks up the same look and one edit here updates all of them.
+   ================================================================== */
+
+/* ---------- callout box ------------------------------------------
+   Was: class="bg-very-light-gray border-radius-10px mt-30px mb-35px"
+        style="padding: 26px 30px; border-left: 4px solid var(--base-color);"
+   Now: class="blog-callout"
+   ------------------------------------------------------------------ */
+
+.blog-detail-page .blog-callout {
+  background: #fff;
+  border-left: 4px solid var(--base-color);
+  border-radius: 10px;
+  padding: 26px 30px;
+  margin-top: 30px;
+  margin-bottom: 35px;
+}
+
+.blog-detail-page .blog-callout > *:last-child {
+  margin-bottom: 0;
+}
+
+/* `is-plain` used to drop the green bar, which left a plain box that read as
+   a second, competing style. There is now ONE box in an article - this one -
+   so the modifier is kept only so existing markup keeps working, and renders
+   identically to the default. */
+.blog-detail-page .blog-callout.is-plain {
+  border-left: 4px solid var(--base-color);
+}
+
+/* roomier variant - closing / call-to-action block. Same green highlight,
+   more room; it is the same box, not a different one. */
+.blog-detail-page .blog-callout.is-lg {
+  padding: 32px 34px;
+  margin-top: 60px;
+}
+
+/* ---------- pull quote -------------------------------------------
+   Rules top and bottom, centred - no background.
+   Was: class="mt-40px mb-45px text-center" style="padding: 30px 20px; border-top/bottom..."
+   Now: class="blog-pullquote"
+   ------------------------------------------------------------------ */
+
+.blog-detail-page .blog-pullquote {
+  text-align: center;
+  padding: 30px 20px;
+  margin-top: 40px;
+  margin-bottom: 45px;
+  border-top: 1px solid var(--extra-medium-gray);
+  border-bottom: 1px solid var(--extra-medium-gray);
+}
+
+.blog-detail-page .blog-pullquote > *:last-child {
+  margin-bottom: 0;
+}
+
+/* the quote itself - styled here so the body copy needs no classes or
+   inline styles (the auto-styler wipes <p> classes anyway) */
+.blog-detail-page .blog-pullquote p {
+  font-family: var(--alt-font);
+  font-weight: 600;
+  font-size: 23px;
+  line-height: 1.55;
+  color: var(--tl-carbon);
+  margin-bottom: 10px;
+}
+
+.blog-detail-page .blog-pullquote p:last-child {
+  margin-bottom: 0;
+}
+
+@media (max-width: 767px) {
+  .blog-detail-page .blog-pullquote p {
+    font-size: 19px;
+  }
+}
+
+
+/* ---------- numbered reflection list -----------------------------
+   The "A Moment to Reflect" block. No card, no white box - just the
+   numbers against the questions, so the only boxed thing in an article
+   is the green-highlight callout.
+
+   The numbers are generated by CSS (1, 2, 3 - not 01, 02), so whatever
+   the markup happens to contain is ignored and the numbering can never
+   drift out of order. The authored <span> is hidden but kept, because
+   existing posts already carry one.
+
+   Markup: <div class="blog-reflect">
+             <div class="blog-reflect-item"><span></span><strong>..</strong></div>
+           </div>
+   ------------------------------------------------------------------ */
+
+.blog-detail-page .blog-reflect {
+  margin-top: 30px;
+  margin-bottom: 40px;
+  counter-reset: blog-reflect;
+}
+
+.blog-detail-page .blog-reflect-item {
+  position: relative;
+  counter-increment: blog-reflect;
+  padding-left: 34px;
+  margin-bottom: 18px;
+}
+
+.blog-detail-page .blog-reflect-item:last-child {
+  margin-bottom: 0;
+}
+
+.blog-detail-page .blog-reflect-item::before {
+  content: counter(blog-reflect) ".";
+  position: absolute;
+  left: 0;
+  top: 0;
+  font-family: var(--alt-font);
+  font-weight: 700;
+  color: var(--base-color);
+  line-height: 1.6;
+}
+
+/* the hand-written "01" in existing posts - superseded by the counter */
+.blog-detail-page .blog-reflect-item span {
+  display: none;
+}
+
+.blog-detail-page .blog-reflect-item strong {
+  color: var(--tl-carbon);
+  font-weight: 600;
+  line-height: 1.6;
+}
+
+/* ---------- section divider --------------------------------------
+   Markup: <div class="blog-divider"></div>
+   ------------------------------------------------------------------ */
+
+.blog-detail-page .blog-divider {
+  height: 1px;
+  margin: 60px 0;
+  background: var(--extra-medium-gray);
+}
+
+
+/* ---------- tables ------------------------------------------------
+   Editorial data table in the Two Lives palette: carbon header capped
+   with a Transformation Green rule, hairline row separators, quiet
+   zebra striping and a green indicator that tracks the hovered row.
+
+   .blog-table-wrap is the rounded, shadowed frame and the horizontal
+   scroller - on narrow screens the table scrolls INSIDE it so the
+   article column never breaks. Cells carry no inline styles.
+
+   Markup:
+     <div class="blog-table-wrap">
+       <table class="blog-table">
+         <thead><tr><th>..</th><th>..</th></tr></thead>
+         <tbody><tr><td>..</td><td>..</td></tr></tbody>
+       </table>
+     </div>
+   ------------------------------------------------------------------ */
+
+.blog-detail-page .blog-table-wrap {
+  width: 100%;
+  margin-top: 40px;
+  margin-bottom: 45px;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  background: #fff;
+  border: 1px solid var(--tl-mist);
+  border-radius: 14px;
+  box-shadow: 0 18px 40px -26px rgba(14, 20, 18, 0.3);
+}
+
+/* thin, unobtrusive scrollbar when the table does overflow */
+.blog-detail-page .blog-table-wrap::-webkit-scrollbar {
+  height: 6px;
+}
+
+.blog-detail-page .blog-table-wrap::-webkit-scrollbar-track {
+  background: var(--tl-mist);
+  border-radius: 0 0 14px 14px;
+}
+
+.blog-detail-page .blog-table-wrap::-webkit-scrollbar-thumb {
+  background: var(--tl-slate);
+  border-radius: 3px;
+}
+
+.blog-detail-page .blog-table {
+  width: 100%;
+  min-width: 560px;
+  margin: 0;
+  border-collapse: collapse;
+  background: #fff;
+  font-size: 16px;
+  line-height: 1.65;
+}
+
+/* ---- header ---- */
+
+.blog-detail-page .blog-table thead th {
+  background: var(--tl-carbon);
+  color: #fff;
+  font-family: var(--alt-font);
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 1.5;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+  text-align: left;
+  vertical-align: middle;
+  padding: 19px 26px;
+  /* Transformation Green cap across the top of the header */
+  border-top: 3px solid var(--base-color);
+  white-space: nowrap;
+}
+
+.blog-detail-page .blog-table thead th + th {
+  border-left: 1px solid rgba(255, 255, 255, 0.09);
+}
+
+/* ---- body ---- */
+
+.blog-detail-page .blog-table tbody td {
+  padding: 20px 26px;
+  text-align: left;
+  vertical-align: top;
+  color: #4c5551;
+  border-top: 1px solid var(--tl-mist);
+}
+
+.blog-detail-page .blog-table tbody td + td {
+  border-left: 1px solid var(--tl-mist);
+}
+
+/* first row sits flush under the header */
+.blog-detail-page .blog-table tbody tr:first-child td {
+  border-top: 0;
+}
+
+/* quiet zebra striping */
+.blog-detail-page .blog-table tbody tr:nth-child(even) td {
+  background: #fafbfa;
+}
+
+/* the left-hand cell reads as the row's heading */
+.blog-detail-page .blog-table tbody td:first-child {
+  width: 38%;
+  color: var(--tl-carbon);
+  font-weight: 600;
+  /* rail that fills with green on hover */
+  box-shadow: inset 3px 0 0 transparent;
+  transition: box-shadow 0.25s ease;
+}
+
+.blog-detail-page .blog-table tbody td strong {
+  color: var(--tl-carbon);
+  font-weight: 600;
+}
+
+/* ---- hover ---- */
+
+.blog-detail-page .blog-table tbody tr:hover td {
+  background: rgba(0, 225, 132, 0.06);
+}
+
+.blog-detail-page .blog-table tbody tr:hover td:first-child {
+  box-shadow: inset 3px 0 0 var(--base-color);
+}
+
+/* ---- responsive ---- */
+
+@media (max-width: 991px) {
+  .blog-detail-page .blog-table {
+    font-size: 15px;
+  }
+
+  .blog-detail-page .blog-table thead th {
+    padding: 17px 22px;
+  }
+
+  .blog-detail-page .blog-table tbody td {
+    padding: 17px 22px;
+  }
+}
+
+@media (max-width: 767px) {
+  .blog-detail-page .blog-callout {
+    padding: 22px 22px;
+  }
+
+  .blog-detail-page .blog-callout.is-lg {
+    padding: 26px 22px;
+  }
+
+  .blog-detail-page .blog-pullquote {
+    padding: 26px 10px;
+  }
+
+  .blog-detail-page .blog-table-wrap {
+    margin-top: 32px;
+    margin-bottom: 35px;
+    border-radius: 12px;
+  }
+
+  .blog-detail-page .blog-table {
+    font-size: 14.5px;
+  }
+
+  .blog-detail-page .blog-table thead th {
+    font-size: 11px;
+    padding: 15px 18px;
+  }
+
+  .blog-detail-page .blog-table tbody td {
+    padding: 15px 18px;
+  }
+
+  /* touch devices have no hover - keep the rail permanently on */
+  .blog-detail-page .blog-table tbody td:first-child {
+    box-shadow: inset 3px 0 0 var(--base-color);
+  }
+}
+
+@media (max-width: 767px) {
+  .blog-detail-page .blog-reflect-item {
+    padding: 17px 18px;
+    gap: 14px;
+  }
+
+  .blog-detail-page .blog-divider {
+    margin: 45px 0;
+  }
+}
+
+/* ---------- related reading (static internal links) --------------- */
+
+.blog-detail-page .related-reading {
+  margin-top: 56px;
+  padding-top: 32px;
+  border-top: 1px solid rgba(0, 0, 0, 0.12);
+}
+
+.blog-detail-page .related-reading h2 {
+  font-size: 1.5rem;
+  margin-bottom: 16px;
+}
+
+.blog-detail-page .related-reading ul {
+  list-style: none;
+  margin: 0 0 20px;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.blog-detail-page .related-reading li a {
+  font-weight: 600;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.blog-detail-page .related-reading .related-service {
+  margin: 0;
+}

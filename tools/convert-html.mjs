@@ -71,7 +71,8 @@ function splitDecls(style) {
   return out;
 }
 function styleObject(style, where) {
-  const props = [];
+  const props = new Map(); // the last declaration of a property wins, as in CSS
+  let custom = false;
   for (const decl of splitDecls(style)) {
     const i = decl.indexOf(":"); if (i < 0) continue;
     let prop = decl.slice(0, i).trim(); let val = decl.slice(i + 1).trim();
@@ -79,13 +80,16 @@ function styleObject(style, where) {
     if (/!important/i.test(val)) { report.important.push({ where, prop, val }); val = val.replace(/\s*!important/i, ""); }
     val = val.replace(/url\((["']?)(images|img|fonts)\//g, (m, qq, p) => `url(${qq}/${p}/`);
     let key;
-    if (prop.startsWith("--")) key = JSON.stringify(prop);
+    if (prop.startsWith("--")) { key = JSON.stringify(prop); custom = true; }
     else if (prop.startsWith("-ms-")) key = "ms" + camel(prop.slice(4)).replace(/^[a-z]/, (c) => c.toUpperCase());
     else if (prop.startsWith("-")) key = camel(prop.slice(1)).replace(/^[a-z]/, (c) => c.toUpperCase());
     else key = camel(prop);
-    props.push(`${key}: ${JSON.stringify(val)}`);
+    props.delete(key);
+    props.set(key, JSON.stringify(val));
   }
-  return `{{ ${props.join(", ")} }}`;
+  const body = [...props].map(([k, v]) => `${k}: ${v}`).join(", ");
+  // React's CSSProperties type has no index signature for custom properties
+  return custom ? `{{ ${body} } as CSSProperties}` : `{{ ${body} }}`;
 }
 function jsxString(v) {
   if (!/["\n\r\\]/.test(v)) return `"${v}"`;
@@ -97,6 +101,10 @@ function attrs(node, inSvg, where) {
     const raw = a.prefix ? `${a.prefix}:${a.name}` : a.name;
     let v = a.value;
     if (raw === "style") { if (v.trim()) s += ` style=${styleObject(v, where)}`; continue; }
+    // Inline handlers cannot be strings in React, and these pages are server components.
+    // The theme bundle delegates clicks on [data-onclick] and runs the code (tools/theme-shim.js).
+    if (raw === "onclick") { s += ` data-onclick=${jsxString(v)}`; continue; }
+    if (/^on[a-z]+$/.test(raw)) { report.warnings.push(`${raw} handler dropped at ${where}`); continue; }
     const name = attrName(raw, inSvg);
     if (BOOL.has(raw) && v === "") { s += ` ${name}`; continue; }
     if (URL_ATTRS.has(raw)) v = rewriteUrl(v);
@@ -122,8 +130,10 @@ function walk(node, inSvg, depth, where) {
   if (name === "#comment") return "";
   if (name === "#text") {
     const parentPre = where.endsWith("pre") || where.endsWith("textarea");
-    let t = parentPre ? node.value : node.value.replace(/\s+/g, " ");
-    if (t.trim() === "") {
+    // Only ASCII whitespace collapses. A non-breaking space (&nbsp;) is content: the
+    // editor's "<p>&nbsp;</p>" spacer paragraphs rely on it to keep their line height.
+    let t = parentPre ? node.value : node.value.replace(/[ \t\n\r\f]+/g, " ");
+    if (t.replace(/[ \t\n\r\f]/g, "") === "") {
       const sib = node.parentNode.childNodes; const i = sib.indexOf(node);
       const prev = sib.slice(0, i).reverse().find((x) => x.nodeName !== "#comment");
       const next = sib.slice(i + 1).find((x) => x.nodeName !== "#comment");
@@ -172,6 +182,8 @@ for (const n of head.childNodes) {
   if (n.nodeName === "link") report.links.push(Object.fromEntries(n.attrs.map((a) => [a.name, a.value])));
   if (n.nodeName === "script") walk(n, false, 0, "head");
 }
+// A <style> in the head is page CSS; emit it at the top of the body fragment (still global).
+const headStyles = head.childNodes.filter((n) => n.nodeName === "style").map((n) => walk(n, false, 3, "head")).join("");
 const bodyJsx = body.childNodes.map((c) => walk(c, false, 3, "body")).filter(Boolean).join("");
 
 // Next metadata from the page <head>. Absolute site URLs become paths so the
@@ -197,15 +209,14 @@ const metadata = {
 const ldjson = report.ldjson.length ? report.ldjson.map((j) => `      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: ${JSON.stringify(j)} }} />\n`).join("") : "";
 const tsx = `// GENERATED from the static site by convert.mjs. The markup is kept identical to the
 // HTML page on purpose: the theme's compiled CSS and jQuery scripts drive the design.
-/* eslint-disable @next/next/no-img-element */
 import type { Metadata } from "next";
-
+${/as CSSProperties/.test(ldjson + headStyles + bodyJsx) ? 'import type { CSSProperties } from "react";\n' : ""}
 export const metadata: Metadata = ${JSON.stringify(metadata, null, 2).replace(/\n/g, "\n")};
 
 export default function ${componentName}() {
   return (
     <>
-${ldjson}${bodyJsx}    </>
+${ldjson}${headStyles}${bodyJsx}    </>
   );
 }
 `;

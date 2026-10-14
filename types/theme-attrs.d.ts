@@ -10,6 +10,7 @@ declare module "react" {
   interface HTMLAttributes<T> {
     staggervalue?: string;
     easing?: string;
+    el?: string;
   }
   interface SVGAttributes<T> {
     side?: string;
