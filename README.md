@@ -33,6 +33,31 @@ leaves differences (implicit tag closing, a leading BOM, `selected` on
 `<option>`) that show up as hydration mismatches. Parsing the way a browser
 does avoids that.
 
+## Shared components
+
+The blocks that repeat across pages are components in `components/site/`, and
+the converter swaps them in automatically (`tools/site-components.mjs` holds the
+matchers; a block is only replaced when its structure is exactly what the
+component reproduces, otherwise it stays inline):
+
+| Component | Content lives in | Used on |
+|---|---|---|
+| `Header` (+ `variant="home"`, `ctaOnclick`) | `lib/site-nav.ts` (menus, mega-menu cards, button) | all 62 pages |
+| `Footer` | `lib/site-nav.ts` (badges, contact, socials, footer menu, copyright) | 61 |
+| `PageHero` | props per page (lead word, title, subtitle, date/author) | 50 |
+| `Cta` | props per page (title, subtitle, buttons; layout classes travel too) | 24 |
+| `LogoMarquee` (+ `variant="persona"`) | `marqueeWords` in the component | 54 |
+| `PostCta`, `WhatsAppWidget` (+ `show`), `ScrollTop`, `CursorPageInner` | static | posts / all |
+
+Change a menu label in `lib/site-nav.ts` and every page follows. The static site
+had drifted a little between pages (older header/footer image attributes on 12
+pages, "Journal" vs "Personal Journal" on the legal pages, an outdated menu and
+footer on the 404); the components use the newest variant everywhere.
+
+To prove a refactor kept the markup, snapshot the rendered HTML before and diff
+after (`tools/snapshot-html.mjs save|diff`); known normalisations are listed in
+that file so only real regressions are reported.
+
 ## The theme bundle, and what was cut
 
 `vendors.js` on the static site carries 24 libraries; the pages use 12. The
