@@ -95,7 +95,7 @@ for (const r of refs) {
   fs.mkdirSync(path.dirname(dst), { recursive: true });
   fs.copyFileSync(src, dst); copied++;
 }
-for (const f of ["css/site.min.css", "css/blog-detail.css", "robots.txt", "sitemap.xml", "js/recent-posts.js", "js/blog-recent-posts.js", "js/blog-metro.js", "js/blogs-metro.js"]) {
+for (const f of ["css/site.min.css", "css/blog-detail.css", "robots.txt", "sitemap.xml"]) {
   fs.mkdirSync(path.dirname(path.join(ROOT, "public", f)), { recursive: true });
   fs.copyFileSync(path.join(STATIC, f), path.join(ROOT, "public", f));
 }

@@ -41,7 +41,31 @@ function soleText(n) {
 
 const simple = (name, test) => ({ name, from: FROM, match: (n) => (test(n) ? {} : null) });
 
+const sectionOf = (path) => (path.startsWith("/journal") ? "journal" : path.startsWith("/blog") ? "blog" : null);
+
+/* Matchers with `deep: true` are tried on every element, not only the top-level body
+   children. They get the page's path as context. */
 export const matchers = [
+  {
+    name: "RecentPosts", from: FROM, deep: true,
+    match: (n, ctx) => {
+      if (!is(n, "div") || attr(n, "id") !== "recent-posts") return null;
+      const section = sectionOf(ctx.path); const slug = ctx.path.split("/").pop();
+      return section && slug ? { section, currentSlug: slug } : null;
+    },
+  },
+  {
+    name: "PostListing", from: FROM, deep: true,
+    match: (n, ctx) => {
+      if (!is(n, "div") || cls(n) !== "container-fluid") return null;
+      const [grid, pager, ...rest] = kids(n);
+      if (rest.length || !is(grid, "div") || attr(grid, "id") !== "custom-blog-grid" || !is(pager, "div")) return null;
+      const [ul] = kids(pager);
+      if (!is(ul, "ul") || attr(ul, "id") !== "custom-blog-pagination") return null;
+      const section = sectionOf(ctx.path);
+      return section ? { section } : null;
+    },
+  },
   {
     name: "Header", from: FROM,
     match: (n) => {

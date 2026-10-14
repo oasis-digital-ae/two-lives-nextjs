@@ -7,3 +7,5 @@ export { Cta } from "./Cta";
 export { LogoMarquee } from "./LogoMarquee";
 export { PostCta } from "./PostCta";
 export { WhatsAppWidget, ScrollTop, CursorPageInner } from "./Widgets";
+export { RecentPosts } from "./RecentPosts";
+export { PostListing } from "./PostListing";

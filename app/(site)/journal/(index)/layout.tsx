@@ -1,11 +1,9 @@
-import SupabaseScript from "@/components/SupabaseScript";
+import { REVALIDATE } from "@/lib/supabase";
 
-/* /journal listing: the grid and pagination are filled from Supabase in the browser. */
-export default function JournalIndexLayout({ children }: Readonly<{ children: React.ReactNode }>) {
-  return (
-    <>
-      {children}
-      <SupabaseScript src="/js/blogs-metro.js" />
-    </>
-  );
+/* The listing is rendered from Supabase on the server and regenerated every
+   REVALIDATE seconds, so a newly published post shows up without a deploy. */
+export const revalidate = REVALIDATE;
+
+export default function ListingLayout({ children }: Readonly<{ children: React.ReactNode }>) {
+  return children;
 }

@@ -1,7 +1,7 @@
 // GENERATED from the static site by tools/convert-html.mjs. The markup is kept identical to the
 // HTML page on purpose: the theme's compiled CSS and jQuery scripts drive the design.
 import type { Metadata } from "next";
-import { Cta, CursorPageInner, Footer, Header, LogoMarquee, PageHero, ScrollTop, WhatsAppWidget } from "@/components/site";
+import { Cta, CursorPageInner, Footer, Header, LogoMarquee, PageHero, PostListing, ScrollTop, WhatsAppWidget } from "@/components/site";
 
 export const metadata: Metadata = {
   "title": "Blog | Mindset & Performance Insights | Two Lives Theory",
@@ -42,12 +42,7 @@ export default function BlogPage() {
       <Header />
       <PageHero style={{"backgroundImage":"url('/.netlify/images?url=/images/hero-bg-11.webp&w=1920&fm=webp&q=70')","backgroundSize":"cover","backgroundRepeat":"no-repeat","backgroundPosition":"center"}} className="page-title-separate-breadcrumbs bg-carbon position-relative text-white pt-18 md-pt-20 sm-pt-30 pb-4 sm-pb-20" leftClass="col-lg-6 position-relative page-title-extra-large md-mb-30px sm-mb-10px z-index-9" h1Class="text-white fw-600 ls-minus-2px mb-0 alt-font highlight-separator-small" lead="Insights" title=" Mindset, Wellbeing & Performance " leadFirst={false} rightClass="col-lg-6 text-white z-index-9" pClass="fs-20 md-fs-18 sm-fs-16 lh-32 text-white force-white w-90 lg-w-100 md-w-80 mb-0" subtitle=" Practical insights on mindset, performance, identity and wellbeing for high performers navigating pressure, growth and change. " />
       <section className="custom-blog-section py-10 pb-5 md-pb-20 bg-pattern-section relative ps-4 pe-4 xl-ps-2 xl-pe-2 lg-px-0">
-        <div className="container-fluid">
-          <div className="row g-4" id="custom-blog-grid"></div>
-          <div className="d-flex justify-content-center mt-5">
-            <ul id="custom-blog-pagination" className="pagination"></ul>
-          </div>
-        </div>
+        <PostListing section="blog" />
         <div className="icon-rotator">
           <img src="/images/tl-circle.svg" alt="rotator" />
         </div>

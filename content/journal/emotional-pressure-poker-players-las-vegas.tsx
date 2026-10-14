@@ -1,7 +1,7 @@
 // GENERATED from the static site by tools/convert-html.mjs. The markup is kept identical to the
 // HTML page on purpose: the theme's compiled CSS and jQuery scripts drive the design.
 import type { Metadata } from "next";
-import { Footer, Header, LogoMarquee, PageHero, PostCta, ScrollTop, WhatsAppWidget } from "@/components/site";
+import { Footer, Header, LogoMarquee, PageHero, PostCta, RecentPosts, ScrollTop, WhatsAppWidget } from "@/components/site";
 
 export const metadata: Metadata = {
   "title": "The Hidden Mental Pressure of Poker Players",
@@ -223,7 +223,7 @@ export default function EmotionalPressurePokerPlayersLasVegas() {
               <aside className="blog-sidebar ps-40px lg-ps-0 md-mt-30px sticky-sidebar-column">
                 <div className="sidebar-widget">
                   <h6 className="alt-font text-shadow-soft fw-600 text-dark-gray mb-25px">{" Recent Posts "}</h6>
-                  <div id="recent-posts"></div>
+                  <RecentPosts section="journal" currentSlug="emotional-pressure-poker-players-las-vegas" />
                 </div>
               </aside>
             </div>

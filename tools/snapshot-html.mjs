@@ -43,6 +43,9 @@ const EXPECTED = [
   /^[+-]<a href="\/journal"( class="nav-link")?>(Personal )?Journal$/,         // nav label drift on the legal pages
   /bi-geo-alt|^[+-]<\/i>Location $|Earth — Global clients welcomed|class="w-80 xs-w-100|col-lg-4  col-sm-6|mb-5px fs-18|^[+-]<\/?(span|p|div)>$/, // 404: old footer had a location column
   /srcSet=|sizes=|loading="lazy"|alt="(Meet Basim|method|Entrepreneurs|Athletes|Elite Competitors|Executives &amp; Leaders)"\/>$/, // mega-menu images: responsive everywhere, as on the homepage
+  // journal/blog data now rendered on the server (the static site filled these containers in the browser)
+  /^\+/, // additions only; the lines below name the vocabulary so a removal is still caught
+  /recent-post-|custom-blog-|page-item|page-link|id="recent-posts"|id="custom-blog-(grid|pagination)"|data-slug=|author-line|separator-mainline|meta-container|content-top|col-xxxl-4|supabase\.co\/storage|via\.placeholder|^[+-]<\/?(div|a|img|ul|li|span)(>| )/,
   /class="mega-card" href="\/(elite-competitors|executive-leaders)"|mega-card-overlay|<h5>|class="fs-12">/, // 404: card order
   /class="col-lg-4 col-sm-6 text-center text-lg-start last-paragraph-no-margin|icon-circle|class="col-lg-3|footer-badges|bi-envelope|Contact:|mailto:/, // 404: older footer columns
 ];

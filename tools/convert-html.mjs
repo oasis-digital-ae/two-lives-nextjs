@@ -67,8 +67,16 @@ export const jsxString = (v) => (!/["\n\r\\]/.test(v) ? `"${v}"` : `{${JSON.stri
 const textJsx = (t) => (!/[{}<>&"'\\ ]/.test(t) && !/^\s|\s$/.test(t) ? t : `{${JSON.stringify(t)}}`);
 const isInlineish = (n) => !!n && (n.nodeName === "#text" ? n.value.trim() !== "" : INLINE.has(n.nodeName));
 
-export function createConverter() {
+export function createConverter({ matchers = [], ctx = {} } = {}) {
   const report = { title: null, metas: [], links: [], ldjson: [], inlineScripts: [], externalScripts: [], inlineStyles: [], important: [], htmlAttrs: {}, bodyAttrs: {}, warnings: [], components: [] };
+  const imports = new Map(); // import path -> Set of component names
+  const deep = matchers.filter((m) => m.deep);
+  function useComponent(m, props, pad) {
+    if (!imports.has(m.from)) imports.set(m.from, new Set());
+    imports.get(m.from).add(m.name);
+    report.components.push(m.name);
+    return `${pad}<${m.name}${propsToJsx(props)} />\n`;
+  }
   function styleObject(style, where) {
     const props = new Map(); let custom = false;
     for (const decl of splitDecls(style)) {
@@ -133,6 +141,7 @@ export function createConverter() {
     }
     if (name === "style") { const body = node.childNodes.map((c) => c.value || "").join(""); report.inlineStyles.push(body); return `${pad}<style dangerouslySetInnerHTML={{ __html: ${JSON.stringify(body)} }} />\n`; }
     if (name === "template") { report.warnings.push("template element skipped"); return ""; }
+    for (const m of deep) { const props = m.match(node, ctx); if (props) return useComponent(m, props, pad); }
     const svg = inSvg || name === "svg";
     const here = `${where}>${name}`;
     let a = attrs(node, svg, here);
@@ -152,7 +161,7 @@ export function createConverter() {
     if (inlineOnly) return `${pad}<${name}${a}>${out.join("")}</${name}>\n`;
     return `${pad}<${name}${a}>\n${out.map((k) => (k.includes("\n") ? k : pad + "  " + k + "\n")).join("")}${pad}</${name}>\n`;
   }
-  return { report, walk };
+  return { report, walk, imports, useComponent };
 }
 
 /** JSX for one DOM node (used to seed shared components from a canonical page). */
@@ -180,7 +189,9 @@ export function propsToJsx(props) {
 
 export function convertPage({ html, componentName = "Page", matchers = [] }) {
   const { htmlEl, head, body } = parseHtml(html);
-  const { report, walk } = createConverter();
+  const canonicalHref = head.childNodes.find((n) => n.nodeName === "link" && attr(n, "rel") === "canonical");
+  const ctx = { path: canonicalHref ? rewriteUrl(attr(canonicalHref, "href")) : "/" };
+  const { report, walk, imports, useComponent } = createConverter({ matchers, ctx });
   for (const a of htmlEl.attrs) report.htmlAttrs[a.name] = a.value;
   for (const a of body.attrs) report.bodyAttrs[a.name] = a.value;
   for (const n of head.childNodes) {
@@ -192,17 +203,12 @@ export function convertPage({ html, componentName = "Page", matchers = [] }) {
   // A <style> in the head is page CSS; emit it at the top of the body fragment (still global).
   const headStyles = head.childNodes.filter((n) => n.nodeName === "style").map((n) => walk(n, false, 3, "head")).join("");
 
-  const imports = new Map(); // import path -> Set of names
   const bodyJsx = body.childNodes.map((c) => {
     if (c.nodeName !== "#text" && c.nodeName !== "#comment") {
       for (const m of matchers) {
-        const props = m.match(c);
-        if (props) {
-          if (!imports.has(m.from)) imports.set(m.from, new Set());
-          imports.get(m.from).add(m.name);
-          report.components.push(m.name);
-          return `      <${m.name}${propsToJsx(props)} />\n`;
-        }
+        if (m.deep) continue; // tried inside walk()
+        const props = m.match(c, ctx);
+        if (props) return useComponent(m, props, "      ");
       }
     }
     return walk(c, false, 3, "body");

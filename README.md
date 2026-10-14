@@ -18,7 +18,7 @@ ported and checked against production with `tools/compare-pages.mjs`.
 | journal / blog posts | `content/journal/<slug>.tsx`, `content/blog/<slug>.tsx`, rendered by `app/(site)/{journal,blog}/[slug]` (static params from the slug map) |
 | `/.netlify/images?url=...` image URLs | unchanged. Netlify's Image CDN answers them in production; anywhere else a rewrite in `next.config.ts` serves the original file |
 | GTM | the static site had it injected by Netlify; here it is in `ThemeLayout` |
-| Supabase "Recent Posts" / listing grids | same browser scripts, loaded by `components/SupabaseScript.tsx` after supabase-js |
+| Supabase "Recent Posts" / listing grids | rendered on the server from Supabase's REST API (`lib/supabase.ts`, `components/site/RecentPosts.tsx`, `PostListing.tsx`); pages revalidate every 10 minutes (ISR), so a new post appears without a deploy and visitors no longer download supabase-js |
 | netlify.toml redirects | `redirects()` in `next.config.ts` |
 
 **Why the bundle replays events.** The theme registers dozens of
@@ -48,6 +48,8 @@ component reproduces, otherwise it stays inline):
 | `Cta` | props per page (title, subtitle, buttons; layout classes travel too) | 24 |
 | `LogoMarquee` (+ `variant="persona"`) | `marqueeWords` in the component | 54 |
 | `PostCta`, `WhatsAppWidget` (+ `show`), `ScrollTop`, `CursorPageInner` | static | posts / all |
+| `RecentPosts` | Supabase, server-side (six newest, excluding the current post) | 41 posts |
+| `PostListing` → `PostGrid` | Supabase, server-side; paging and the whole-card click stay client-side as before | `/journal`, `/blog` |
 
 Change a menu label in `lib/site-nav.ts` and every page follows. The static site
 had drifted a little between pages (older header/footer image attributes on 12

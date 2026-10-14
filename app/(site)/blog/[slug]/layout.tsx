@@ -1,12 +1,15 @@
 import { BlogDetailStylesheet } from "@/components/ThemeLayout";
-import SupabaseScript from "@/components/SupabaseScript";
+import { REVALIDATE } from "@/lib/supabase";
 
-export default function BlogPostLayout({ children }: Readonly<{ children: React.ReactNode }>) {
+/* Posts add the article stylesheet. The sidebar's recent posts come from Supabase on
+   the server; the page is regenerated every REVALIDATE seconds so new posts appear. */
+export const revalidate = REVALIDATE;
+
+export default function PostLayout({ children }: Readonly<{ children: React.ReactNode }>) {
   return (
     <>
       <BlogDetailStylesheet />
       {children}
-      <SupabaseScript src="/js/blog-recent-posts.js" />
     </>
   );
 }
