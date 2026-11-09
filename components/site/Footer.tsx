@@ -19,7 +19,7 @@ export function Footer({ variant = "current" }: { variant?: "current" | "legacy"
         <div className="row pt-50px pb-50px md-pt-35px md-pb-35px">
           <div className="col-lg-4 text-center text-lg-start last-paragraph-no-margin mb-sm-4 mb-0">
             <a href="/" className=" d-inline-block">
-              <img className="footer-logo" src="/.netlify/images?url=/images/two-lives/logo.svg" width="300" height="63" alt="Two Lives Theory" />
+              <img loading="lazy" className="footer-logo" src="/.netlify/images?url=/images/two-lives/logo.svg" width="300" height="63" alt="Two Lives Theory" />
             </a>
           </div>
           {legacy ? (

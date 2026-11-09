@@ -13,7 +13,7 @@ export async function RecentPosts({ section, currentSlug }: { section: Section; 
       {posts.map((post) => (
         <a key={post.slug} href={`/${section}/${post.slug}`} className="recent-post-item">
           <div className="recent-post-thumb">
-            <img src={post.thumbnail || fallback} alt="" />
+            <img loading="lazy" src={post.thumbnail || fallback} alt="" />
           </div>
           <div className="recent-post-content">
             <div className="recent-post-title">{post.main_heading || post.title}</div>

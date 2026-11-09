@@ -20,15 +20,28 @@ const nextConfig: NextConfig = {
       { source: "/blogs", destination: "/journal", permanent: true },
       { source: "/blogs/:slug*", destination: "/journal/:slug*", permanent: true },
       { source: "/index.html", destination: "/", permanent: true },
-      { source: "/:path(.*)\\.html", destination: "/:path", permanent: true },
+      // /admin is plain HTML in /public and its pages link to each other by .html.
+      { source: "/:path((?!admin/).*)\\.html", destination: "/:path", permanent: true },
+      // The Netlify subdomain must not serve a crawlable copy of the site.
+      {
+        source: "/:path*",
+        has: [{ type: "host", value: "two-lives-theory.netlify.app" }],
+        destination: "https://twolivestheory.com/:path*",
+        permanent: true,
+      },
     ];
   },
   async rewrites() {
-    if (onNetlify) return [];
+    const admin = [
+      { source: "/admin", destination: "/admin/login.html" },
+      { source: "/admin/:page((?!.*\\.).+)", destination: "/admin/:page.html" },
+    ];
+    if (onNetlify) return admin;
     // Netlify's Image CDN answers /.netlify/images at the edge in production, so
     // Next never sees those requests. Serve the original file from /public instead
     // (unresized, which is fine for layout work).
     return [
+      ...admin,
       {
         source: "/.netlify/images",
         // the url param is root-relative ("/images/x.webp"); capture it without the

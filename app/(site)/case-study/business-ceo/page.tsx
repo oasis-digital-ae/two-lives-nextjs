@@ -107,7 +107,7 @@ export default function BusinessCeoCaseStudy() {
                   <div id="recent-posts">
                     <a href="/case-study/entrepreneur" className="recent-post-item">
                       <div className="recent-post-thumb">
-                        <img src="/.netlify/images?url=/images/dan-moores.webp&w=800&fm=webp&q=70" alt="entrepreneur" />
+                        <img loading="lazy" src="/.netlify/images?url=/images/dan-moores.webp&w=800&fm=webp&q=70" alt="entrepreneur" />
                       </div>
                       <div className="recent-post-content">
                         <div className="recent-post-title">Entrepreneur – Daniel Moores</div>
@@ -116,7 +116,7 @@ export default function BusinessCeoCaseStudy() {
                     {" "}
                     <a href="/case-study/elite-athlete" className="recent-post-item">
                       <div className="recent-post-thumb">
-                        <img src="/.netlify/images?url=/images/two-lives/athlete-case-study.webp&w=800&fm=webp&q=70" alt="athlete" />
+                        <img loading="lazy" src="/.netlify/images?url=/images/two-lives/athlete-case-study.webp&w=800&fm=webp&q=70" alt="athlete" />
                       </div>
                       <div className="recent-post-content">
                         <div className="recent-post-title">Elite Athlete – World Champion Journey</div>
@@ -129,7 +129,7 @@ export default function BusinessCeoCaseStudy() {
           </div>
         </div>
         <div className="icon-rotator">
-          <img src="/images/tl-circle.svg" alt="rotator" />
+          <img loading="lazy" src="/images/tl-circle.svg" alt="rotator" />
         </div>
       </section>
       <LogoMarquee />

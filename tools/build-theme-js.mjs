@@ -8,7 +8,7 @@
 //   tools/theme-shim.js   captures DOMContentLoaded/load handlers (see the file)
 //   js/jquery.js
 //   js/vendors.js         only the libraries a page actually uses (KEEP below), minified here
-//   js/main.js            the theme's init code, minified here (one patch, see PATCHES)
+//   js/main.js            the theme's init code, minified here (patches, see PATCHES)
 //   js/app.js             site-specific code, minified here
 //   tools/inline-home.js  the homepage's former inline <script>
 //   tools/inline-post.js  the journal/blog posts' former inline <script>
@@ -71,6 +71,21 @@ const PATCHES = [
     file: "main.js",
     find: 'if (typeof gsap !== "undefined") {\n            gsap.ticker.add(updatePosition);\n        }',
     replace: 'if (typeof gsap !== "undefined") {\n            gsap.ticker.add(updatePosition);\n        } else {\n            (function tick() { updatePosition(); requestAnimationFrame(tick); })();\n        }',
+  },
+  // Sliders waited for imagesLoaded before starting, which never finishes while a
+  // loading="lazy" slide is off screen. Slide sizes come from the container, not the images.
+  {
+    file: "main.js",
+    find: "_this.imagesLoaded(function () {\n                        var swiperObj = new Swiper(swiperItem, sliderOptions);\n                        swiperObjs.push(swiperObj);\n                    });",
+    // Still deferred, as imagesLoaded was: one slider throwing must not stop the rest.
+    replace: "setTimeout(function () { swiperObjs.push(new Swiper(swiperItem, sliderOptions)); }, 0);",
+  },
+  // The homepage scroll film keeps the first-frame header until the film has finished.
+  // A hidden section (phones) has no height, so the normal threshold applies there.
+  {
+    file: "main.js",
+    find: "var headerHeight = navHeight + miniHeaderHeight;\n        if (!$('header').hasClass('no-sticky')) {",
+    replace: "var headerHeight = navHeight + miniHeaderHeight;\n        var heldHero = document.querySelector('[data-hold-header]');\n        if (heldHero && heldHero.offsetHeight) { headerHeight += heldHero.offsetHeight - window.innerHeight; }\n        if (!$('header').hasClass('no-sticky')) {",
   },
 ];
 

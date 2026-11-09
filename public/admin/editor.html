@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <!-- Admin UI - keep out of search results. Note: deliberately NOT blocked in
+       robots.txt, because a crawler must be able to fetch the page to see this. -->
+  <meta name="robots" content="noindex, nofollow">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#0e1412">
+  <title>Post Editor</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&family=Sora:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/remixicon/fonts/remixicon.css">
+  <link rel="stylesheet" href="/admin/admin-theme.css">
+  <link rel="stylesheet" href="/admin/editor.css">
+  <link rel="shortcut icon" href="/images/favicon.svg">
+
+  <!-- Supabase -->
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="/js/admin/supabase.js"></script>
+
+  <!-- Auth -->
+  <script src="/js/admin/auth.js"></script>
+
+  <!-- Content types (Journal / Blogs) - read by editor.js -->
+  <script src="/js/admin/content-types.js"></script>
+
+  <script>
+    requireLogin().then(ok => {
+      if (ok) {
+        document.addEventListener("DOMContentLoaded", () => {
+          document.body.classList.add("show");
+        });
+      }
+    });
+  </script>
+
+  <!-- TinyMCE -->
+  <script src="https://cdn.jsdelivr.net/npm/tinymce@6/tinymce.min.js"></script>
+</head>
+
+<body class="gated editor-page">
+
+<!-- Sticky top bar: back, title, actions -->
+<header class="editor-bar">
+  <div class="editor-bar-inner">
+    <a class="back" onclick="goBack()">
+      <i class="ri-arrow-left-line"></i><span>Back to list</span>
+    </a>
+
+    <div class="title">
+      <img src="/images/favicon.svg" alt="">
+      <h1 id="editor-title">Post Editor</h1>
+    </div>
+
+    <div class="actions">
+      <!-- Saves first, then opens the rendered page in a new tab. Saving first is
+           the point: the preview reads from the database, so previewing without
+           saving would show the previous version and quietly mislead. -->
+      <button class="btn btn-ghost" id="previewBtn">
+        <i class="ri-eye-line"></i> Save &amp; Preview
+      </button>
+
+      <button class="btn btn-primary" id="saveBtn">
+        <i class="ri-save-3-line"></i> Save
+      </button>
+
+      <!-- The only control that writes to the live site. -->
+      <button class="btn btn-accent" id="publishBtn">
+        <i class="ri-rocket-line"></i> Push Live
+      </button>
+    </div>
+  </div>
+</header>
+
+<div class="editor-layout">
+
+  <!-- ===================== MAIN COLUMN ===================== -->
+  <div class="editor-main">
+
+    <div class="card">
+      <div class="card-body">
+
+        <!-- MAIN HEADING (H1) -->
+        <div class="field field-hero">
+          <label for="main_heading">Main heading (H1)</label>
+          <input id="main_heading" placeholder="The headline readers see on the page">
+        </div>
+
+        <!-- TITLE -->
+        <div class="field">
+          <label for="title">Title (SEO + card title)</label>
+          <input id="title" placeholder="Enter title">
+        </div>
+
+        <!-- SLUG -->
+        <div class="field field-slug">
+          <label for="slug">Slug</label>
+          <div class="slug-wrap">
+            <span class="prefix" id="slug-prefix">/journal/</span>
+            <input id="slug" placeholder="auto-filled-from-title">
+          </div>
+          <p class="hint">Lowercase letters, numbers and hyphens. Renaming a live post moves its URL.</p>
+        </div>
+
+        <!-- Short Summary -->
+        <div class="field" style="margin-bottom:0;">
+          <label for="summary">Short summary</label>
+          <textarea id="summary" rows="3" placeholder="One or two sentences shown on the listing card"></textarea>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- CONTENT -->
+    <div class="card content-card">
+      <div class="card-head">
+        <h2>Content</h2>
+        <span class="hint" style="font-size:12.5px;color:var(--ink-3);">Paste HTML via the <code>&lt;&gt;</code> source button</span>
+      </div>
+      <div class="card-body">
+        <textarea id="editor"></textarea>
+      </div>
+    </div>
+
+    <!-- SEO SETTINGS -->
+    <div class="card">
+      <div class="card-head"><h2>SEO</h2></div>
+      <div class="card-body">
+        <div class="field">
+          <label for="seo_title">SEO title</label>
+          <input id="seo_title" placeholder="Title tag shown in search results">
+        </div>
+
+        <div class="field">
+          <label for="seo_description">SEO description <span class="counter" id="seo_description_count">0 / 160</span></label>
+          <textarea id="seo_description" rows="2" placeholder="150–160 characters. Never leave blank."
+                    oninput="const n=this.value.length,c=document.getElementById('seo_description_count');c.textContent=n+' / 160';c.className='counter'+(n>160?' over':n>=150?' good':'');"></textarea>
+        </div>
+
+        <div class="field">
+          <label for="seo_keywords">SEO keywords</label>
+          <input id="seo_keywords" placeholder="comma, separated, keywords">
+        </div>
+
+        <div class="field" style="margin-bottom:0;">
+          <label for="seo_canonical">Canonical URL</label>
+          <input id="seo_canonical" placeholder="Leave blank — filled automatically">
+        </div>
+      </div>
+    </div>
+
+    <p id="msg" class="msg" aria-live="polite"></p>
+
+  </div>
+
+  <!-- ===================== SIDE COLUMN ===================== -->
+  <aside class="editor-side">
+
+    <!-- STATUS -->
+    <div class="card status-card">
+      <div class="card-body">
+        <div class="status-line">
+          <span class="badge badge-draft" id="status-badge">Draft</span>
+        </div>
+        <p id="status-note"></p>
+      </div>
+    </div>
+
+    <!-- META -->
+    <div class="card">
+      <div class="card-head"><h2>Details</h2></div>
+      <div class="card-body">
+        <div class="field">
+          <label for="author_name">Author</label>
+          <input id="author_name" placeholder="Basim Yafai">
+        </div>
+
+        <div class="two-col">
+          <div class="field">
+            <label for="tag">Tag</label>
+            <input id="tag" placeholder="Wellbeing">
+          </div>
+          <div class="field">
+            <label for="publish_date">Publish date</label>
+            <input type="date" id="publish_date">
+          </div>
+        </div>
+
+        <!-- FEATURED IMAGE -->
+        <div class="field" style="margin-bottom:0;">
+          <label>Featured image</label>
+          <div class="featured-box">
+            <label class="dropzone" for="featuredInput">
+              <i class="ri-image-add-line"></i>
+              <span><strong>Upload image</strong></span>
+              <span>Landscape, about 1200×675, under 500 KB</span>
+              <input type="file" id="featuredInput" accept="image/*">
+            </label>
+            <img id="featuredPreview" class="featured-preview" style="display:none;" alt="">
+            <button id="removeFeatured" class="btn btn-danger btn-sm" type="button" style="display:none;">
+              <i class="ri-delete-bin-line"></i> Remove image
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </aside>
+
+</div>
+
+<!-- Mobile: the same three actions, fixed to the bottom of the screen.
+     They forward to the real buttons so there is a single code path. -->
+<div class="mobile-actions">
+  <button class="btn btn-ghost" type="button" onclick="document.getElementById('previewBtn').click()">
+    <i class="ri-eye-line"></i> Preview
+  </button>
+  <button class="btn btn-primary" type="button" onclick="document.getElementById('saveBtn').click()">
+    <i class="ri-save-3-line"></i> Save
+  </button>
+  <button class="btn btn-accent" type="button" onclick="document.getElementById('publishBtn').click()">
+    <i class="ri-rocket-line"></i> Push Live
+  </button>
+</div>
+
+
+<!-- TinyMCE Config -->
+<script>
+// goBack() lives in /js/admin/editor.js - it keeps the ?type= so a blog
+// editor returns to the Blogs list, not the Journal one.
+
+document.addEventListener("DOMContentLoaded", () => {
+  tinymce.init({
+    selector: '#editor',
+    height: 600,
+    menubar: false,
+    branding: false,
+    content_style: "body{font-family:Manrope,system-ui,sans-serif;font-size:16px;line-height:1.65;color:#101614;padding:8px 6px} h1,h2,h3,h4{font-family:Sora,system-ui,sans-serif;letter-spacing:-.01em}",
+    plugins: 'link lists table code media image autoresize preview anchor',
+    toolbar:
+      'undo redo | blocks | bold italic underline | alignleft aligncenter alignright | bullist numlist | link image media table | code preview',
+
+    block_formats:
+      "Paragraph=p; Heading 1=h1; Heading 2=h2; Heading 3=h3; Heading 4=h4; Heading 5=h5; Heading 6=h6",
+
+    images_upload_handler: async (blobInfo, success, failure) => {
+      try {
+        const file = blobInfo.blob();
+        const name = Date.now() + "-" + file.name;
+
+        const bucket = "blog-images";
+        const upload = await supabaseClient.storage
+          .from(bucket)
+          .upload(name, file);
+
+        if (upload.error) return failure(upload.error.message);
+
+        const { data } = supabaseClient.storage
+          .from(bucket)
+          .getPublicUrl(name);
+
+        success(data.publicUrl);
+
+      } catch (err) {
+        failure("Upload failed.");
+      }
+    }
+  });
+});
+</script>
+
+<!-- Editor Logic -->
+<script src="/js/admin/editor.js" defer></script>
+
+</body>
+</html>

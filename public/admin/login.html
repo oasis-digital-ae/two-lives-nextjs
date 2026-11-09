@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <!-- Admin UI - keep out of search results. Note: deliberately NOT blocked in
+       robots.txt, because a crawler must be able to fetch the page to see this. -->
+  <meta name="robots" content="noindex, nofollow">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#0e1412">
+
+  <title>Sign in · Two Lives Theory</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&family=Sora:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/remixicon/fonts/remixicon.css">
+  <link rel="stylesheet" href="/admin/admin-theme.css">
+  <link rel="stylesheet" href="/admin/admin.css">
+  <link rel="shortcut icon" href="/images/favicon.svg">
+
+  <!-- Supabase -->
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="/js/admin/supabase.js"></script>
+</head>
+
+<body>
+
+<div class="login-wrapper">
+
+  <div class="login-box">
+
+    <div class="login-header">
+      <img class="logo" src="/images/two-lives/logo-wht.svg" alt="Two Lives Theory">
+      <h2>Admin sign in</h2>
+      <p>Journal &amp; blog publishing</p>
+    </div>
+
+    <form id="loginForm" novalidate>
+      <div class="form-group">
+        <label for="email">Email address</label>
+        <div class="input-with-icon">
+          <i class="ri-mail-line"></i>
+          <input id="email" type="email" autocomplete="username" placeholder="you@twolivestheory.com">
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label for="password">Password</label>
+        <div class="input-with-icon">
+          <i class="ri-lock-2-line"></i>
+          <input id="password" type="password" autocomplete="current-password" placeholder="Enter password">
+          <i id="togglePass" class="ri-eye-off-line toggle-icon" role="button" aria-label="Show password"></i>
+        </div>
+      </div>
+
+      <p class="forgot-link"><a href="/admin/reset-password">Forgot your password?</a></p>
+
+      <button id="loginBtn" class="login-btn" type="submit">Sign in</button>
+      <p id="msg" class="msg" aria-live="polite"></p>
+    </form>
+
+    <p class="login-foot">Two Lives Theory &middot; Admin</p>
+
+  </div>
+
+</div>
+
+<script>
+document.getElementById("togglePass").onclick = function () {
+  const pass = document.getElementById("password");
+  pass.type = pass.type === "password" ? "text" : "password";
+  this.classList.toggle("ri-eye-line");
+  this.classList.toggle("ri-eye-off-line");
+};
+
+document.getElementById("loginForm").onsubmit = async function (e) {
+  e.preventDefault();
+
+  const email = document.getElementById("email").value.trim();
+  const password = document.getElementById("password").value.trim();
+  const msg = document.getElementById("msg");
+  const btn = document.getElementById("loginBtn");
+
+  msg.innerText = "";
+
+  if (!email || !password) {
+    msg.innerText = "Email and password are required.";
+    return;
+  }
+
+  btn.disabled = true;
+  btn.innerText = "Signing in…";
+
+  const { error } = await supabaseClient.auth.signInWithPassword({ email, password });
+
+  if (error) {
+    btn.disabled = false;
+    btn.innerText = "Sign in";
+    msg.innerText = "Invalid email or password.";
+    return;
+  }
+
+  window.location.href = "/admin/dashboard.html";
+};
+</script>
+
+</body>
+</html>

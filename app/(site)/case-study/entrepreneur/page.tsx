@@ -67,7 +67,7 @@ export default function EntrepreneurCaseStudy() {
       </section>
       <section className="blog-detail-page bg-pattern-section position-relative pt-220px pb-120px md-pt-180px md-pb-80px sm-pt-60px sm-pb-60px" style={{ paddingTop: "100px" }}>
         <div className="icon-rotator">
-          <img src="/images/tl-circle.svg" alt="rotator" />
+          <img loading="lazy" src="/images/tl-circle.svg" alt="rotator" />
         </div>
         <div className="container">
           <div className="row">
@@ -117,7 +117,7 @@ export default function EntrepreneurCaseStudy() {
                   <div id="recent-posts">
                     <a href="/case-study/business-ceo" className="recent-post-item">
                       <div className="recent-post-thumb">
-                        <img src="/.netlify/images?url=/images/CEO-case-study.webp&w=800&fm=webp&q=70" alt="ceo" />
+                        <img loading="lazy" src="/.netlify/images?url=/images/CEO-case-study.webp&w=800&fm=webp&q=70" alt="ceo" />
                       </div>
                       <div className="recent-post-content">
                         <div className="recent-post-title">{"Business Owner & CEO – Grounded Leadership"}</div>
@@ -125,7 +125,7 @@ export default function EntrepreneurCaseStudy() {
                     </a>
                     <a href="/case-study/elite-athlete" className="recent-post-item">
                       <div className="recent-post-thumb">
-                        <img src="/.netlify/images?url=/images/two-lives/athlete-case-study.webp&w=800&fm=webp&q=70" alt="athlete" />
+                        <img loading="lazy" src="/.netlify/images?url=/images/two-lives/athlete-case-study.webp&w=800&fm=webp&q=70" alt="athlete" />
                       </div>
                       <div className="recent-post-content">
                         <div className="recent-post-title">Elite Athlete – World Champion Journey</div>

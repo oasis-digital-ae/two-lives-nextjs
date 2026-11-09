@@ -60,7 +60,7 @@ export default function KeynoteTalksPage() {
           </div>
         </div>
         <div className="icon-rotator ">
-          <img src="/.netlify/images?url=/images/tl-circle.svg&w=240&fm=webp&q=70" srcSet="/.netlify/images?url=/images/tl-circle.svg&w=120&fm=webp&q=70 120w, /.netlify/images?url=/images/tl-circle.svg&w=240&fm=webp&q=70 240w, /.netlify/images?url=/images/tl-circle.svg&w=360&fm=webp&q=70 360w" sizes="240px" alt="rotator" />
+          <img loading="lazy" src="/.netlify/images?url=/images/tl-circle.svg&w=240&fm=webp&q=70" srcSet="/.netlify/images?url=/images/tl-circle.svg&w=120&fm=webp&q=70 120w, /.netlify/images?url=/images/tl-circle.svg&w=240&fm=webp&q=70 240w, /.netlify/images?url=/images/tl-circle.svg&w=360&fm=webp&q=70 360w" sizes="240px" alt="rotator" />
         </div>
       </div>
       <section className="pt-3 bg-pattern-section pb-0">
@@ -145,7 +145,7 @@ export default function KeynoteTalksPage() {
                   <div className="row align-items-center justify-content-center g-lg-0">
                     <div className="col-lg-6 col-md-11 offset-lg-0 offset-md-1 position-relative md-mb-20px" data-anime={"{ \"effect\": \"slide\", \"color\": \"#000000\", \"direction\":\"lr\", \"easing\": \"easeOutQuad\", \"delay\":50}"}>
                       <figure className="position-relative m-0 text-center">
-                        <img src="/.netlify/images?url=/images/keynote-intro.webp&w=1200&fm=webp&" srcSet="/.netlify/images?url=/images/keynote-intro.webp&w=600&fm=webp& 600w, /.netlify/images?url=/images/keynote-intro.webp&w=1200&fm=webp 1200w, /.netlify/images?url=/images/keynote-intro.webp&w=1600&fm=webp 1600w" sizes="(max-width: 992px) 100vw, 1200px" className="w-100" alt="An empty lectern on stage in front of a seated audience" />
+                        <img loading="lazy" src="/.netlify/images?url=/images/keynote-intro.webp&w=1200&fm=webp&" srcSet="/.netlify/images?url=/images/keynote-intro.webp&w=600&fm=webp& 600w, /.netlify/images?url=/images/keynote-intro.webp&w=1200&fm=webp 1200w, /.netlify/images?url=/images/keynote-intro.webp&w=1600&fm=webp 1600w" sizes="(max-width: 992px) 100vw, 1200px" className="w-100" alt="An empty lectern on stage in front of a seated audience" />
                         <figcaption className="position-absolute mobile-adj bg-white py-4 px-5 animation-float box-shadow-quadruple-large border-radius-15px bottom-90px left-0px" data-anime={"{ \"translateY\": [-50, 0], \"opacity\": [0,1], \"duration\": 800, \"delay\": 1000, \"staggervalue\": 300, \"easing\": \"easeOutQuad\" }"}>
                           <p className="alt-font mb-0 text-carbon text-shadow-soft">
                             <span className="fs-70 fs-sm-40 fw-700">12</span>
@@ -190,47 +190,47 @@ export default function KeynoteTalksPage() {
               <div className="swiper-wrapper marquee-slide">
                 <div className="swiper-slide">
                   <a href="#">
-                    <img src="/.netlify/images?url=/images/logo-2.webp&w=400&fm=webp&q=70" className="h-100px xs-h-100px border-radius-100px" alt="University of Worcester" />
+                    <img loading="lazy" src="/.netlify/images?url=/images/logo-2.webp&w=400&fm=webp&q=70" className="h-100px xs-h-100px border-radius-100px" alt="University of Worcester" />
                   </a>
                 </div>
                 <div className="swiper-slide">
                   <a href="#">
-                    <img src="/.netlify/images?url=/images/logo-1.webp&w=400&fm=webp&q=70" className="h-100px xs-h-100px border-radius-100px" alt="Soul Revolution Festival" />
+                    <img loading="lazy" src="/.netlify/images?url=/images/logo-1.webp&w=400&fm=webp&q=70" className="h-100px xs-h-100px border-radius-100px" alt="Soul Revolution Festival" />
                   </a>
                 </div>
                 <div className="swiper-slide">
                   <a href="#">
-                    <img src="/.netlify/images?url=/images/logo-3.webp&w=400&fm=webp&q=70" className="h-100px xs-h-100px border-radius-100px" alt="NatWest" />
+                    <img loading="lazy" src="/.netlify/images?url=/images/logo-3.webp&w=400&fm=webp&q=70" className="h-100px xs-h-100px border-radius-100px" alt="NatWest" />
                   </a>
                 </div>
                 <div className="swiper-slide">
                   <a href="#">
-                    <img src="/.netlify/images?url=/images/logo-2.webp&w=400&fm=webp&q=70" className="h-100px xs-h-100px border-radius-100px" alt="University of Worcester" />
+                    <img loading="lazy" src="/.netlify/images?url=/images/logo-2.webp&w=400&fm=webp&q=70" className="h-100px xs-h-100px border-radius-100px" alt="University of Worcester" />
                   </a>
                 </div>
                 <div className="swiper-slide">
                   <a href="#">
-                    <img src="/.netlify/images?url=/images/logo-1.webp&w=400&fm=webp&q=70" className="h-100px xs-h-100px border-radius-100px" alt="Soul Revolution Festival" />
+                    <img loading="lazy" src="/.netlify/images?url=/images/logo-1.webp&w=400&fm=webp&q=70" className="h-100px xs-h-100px border-radius-100px" alt="Soul Revolution Festival" />
                   </a>
                 </div>
                 <div className="swiper-slide">
                   <a href="#">
-                    <img src="/.netlify/images?url=/images/logo-3.webp&w=400&fm=webp&q=70" className="h-100px xs-h-100px border-radius-100px" alt="NatWest" />
+                    <img loading="lazy" src="/.netlify/images?url=/images/logo-3.webp&w=400&fm=webp&q=70" className="h-100px xs-h-100px border-radius-100px" alt="NatWest" />
                   </a>
                 </div>
                 <div className="swiper-slide">
                   <a href="#">
-                    <img src="/.netlify/images?url=/images/logo-2.webp&w=400&fm=webp&q=70" className="h-100px xs-h-100px border-radius-100px" alt="University of Worcester" />
+                    <img loading="lazy" src="/.netlify/images?url=/images/logo-2.webp&w=400&fm=webp&q=70" className="h-100px xs-h-100px border-radius-100px" alt="University of Worcester" />
                   </a>
                 </div>
                 <div className="swiper-slide">
                   <a href="#">
-                    <img src="/.netlify/images?url=/images/logo-1.webp&w=400&fm=webp&q=70" className="h-100px xs-h-100px border-radius-100px" alt="Soul Revolution Festival" />
+                    <img loading="lazy" src="/.netlify/images?url=/images/logo-1.webp&w=400&fm=webp&q=70" className="h-100px xs-h-100px border-radius-100px" alt="Soul Revolution Festival" />
                   </a>
                 </div>
                 <div className="swiper-slide">
                   <a href="#">
-                    <img src="/.netlify/images?url=/images/logo-3.webp&w=400&fm=webp&q=70" className="h-100px xs-h-100px border-radius-100px" alt="NatWest" />
+                    <img loading="lazy" src="/.netlify/images?url=/images/logo-3.webp&w=400&fm=webp&q=70" className="h-100px xs-h-100px border-radius-100px" alt="NatWest" />
                   </a>
                 </div>
               </div>

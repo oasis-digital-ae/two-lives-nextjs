@@ -243,9 +243,9 @@ export default function AboutPage() {
                 {" "}
                 <span className="d-block mx-auto fs-20 fw-500 lh-26 w-70 text-center text-dark-gray xs-w-100">Years of Guidance</span>
               </div>
-              <img src="/.netlify/images?url=/images/as-1.webp&w=800&fm=webp&q=70" alt="" />
+              <img loading="lazy" src="/.netlify/images?url=/images/as-1.webp&w=800&fm=webp&q=70" alt="" />
               {" "}
-              <img src="/.netlify/images?url=/images/tl-circle.svg" className="position-absolute pcc-logo-img top-0px xl-top-minus-10px w-170px right-20px md-right-40px xs-w-40" data-bottom-top="transform: translateY(-50px)" data-top-bottom="transform: translateY(50px)" style={{ filter: "brightness(0)" }} alt="" />
+              <img loading="lazy" src="/.netlify/images?url=/images/tl-circle.svg" className="position-absolute pcc-logo-img top-0px xl-top-minus-10px w-170px right-20px md-right-40px xs-w-40" data-bottom-top="transform: translateY(-50px)" data-top-bottom="transform: translateY(50px)" style={{ filter: "brightness(0)" }} alt="" />
             </div>
             <div className="col-lg-6 md-mt-8 sm-text-center order-1 order-lg-2" data-anime={"{ \"el\": \"childs\", \"opacity\": [0, 1], \"translateY\": [30, 0], \"duration\": 600, \"delay\": 100, \"staggervalue\": 300, \"easing\": \"easeOutQuad\" }"}>
               <h2 className="text-carbon alt-font text-shadow-soft sm-text-center fs-40 fw-600 ls-minus-2px alt-font mb-20px">{"Experience & Foundation"}</h2>
@@ -271,39 +271,39 @@ export default function AboutPage() {
             <h2 className="text-carbon alt-font text-align-left text-shadow-soft fs-40 fw-600 ls-minus-2px alt-font pt-40px pb-3">Qualifications</h2>
             <div className="col-lg-2 col-md-4 col-6 mb-4 sm-mb-7 icon-card">
               <i className="bi bi-lightbulb-fill fs-40 mb-3 d-inline-block bi-hover-green"></i>
-              <h6 className="fw-600 fs-14 lh-16 text-carbon mb-0">
+              <p className="alt-font fw-600 fs-14 lh-16 text-carbon mb-0">
                 {" Master NLP Practitioner"}
                 <br />
                 {"& Life Coach "}
-              </h6>
+              </p>
             </div>
             <div className="col-lg-2 col-md-4 col-6 mb-4 sm-mb-7 icon-card">
               <i className="bi bi-mortarboard-fill fs-40 mb-3 d-inline-block bi-hover-green"></i>
-              <h6 className="fw-600 fs-14 lh-16 text-carbon mb-0">
+              <p className="alt-font fw-600 fs-14 lh-16 text-carbon mb-0">
                 {" BSc Honours Sports"}
                 <br />
                 {"Coaching Science "}
-              </h6>
+              </p>
             </div>
             <div className="col-lg-2 col-md-4 col-6 mb-4 sm-mb-7 icon-card">
               <i className="bi bi-eye-fill fs-40 mb-3 d-inline-block bi-hover-green"></i>
-              <h6 className="fw-600 fs-14 lh-16 text-carbon mb-0">
+              <p className="alt-font fw-600 fs-14 lh-16 text-carbon mb-0">
                 {" Hypnosis"}
                 <br />
                 {"Practitioner "}
-              </h6>
+              </p>
             </div>
             <div className="col-lg-2 col-md-4 col-6 mb-4 icon-card">
               <i className="bi bi-lightning-charge-fill fs-40  mb-3 d-inline-block bi-hover-green"></i>
-              <h6 className="fw-600 fs-14 lh-16 text-carbon mb-0">{" Former Professional Rugby Player "}</h6>
+              <p className="alt-font fw-600 fs-14 lh-16 text-carbon mb-0">{" Former Professional Rugby Player "}</p>
             </div>
             <div className="col-lg-2 col-md-4 col-6 mb-4 sm-mb-7 icon-card">
               <i className="bi bi-award-fill fs-40 mb-3 d-inline-block bi-hover-green"></i>
-              <h6 className="fw-600 fs-14 lh-16 text-carbon mb-0">
+              <p className="alt-font fw-600 fs-14 lh-16 text-carbon mb-0">
                 {" Worldwide"}
                 <br />
                 {"Accreditation "}
-              </h6>
+              </p>
             </div>
             <div className="col-lg-2 col-md-4 col-6 mb-4 sm-mb-7 icon-card">
               <i className="fs-40 mb-3 d-inline-block bi-hover-green"></i>
@@ -311,11 +311,11 @@ export default function AboutPage() {
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640">
                 <path d="M96 176C96 149.5 117.5 128 144 128C170.5 128 192 149.5 192 176L192 288L448 288L448 176C448 149.5 469.5 128 496 128C522.5 128 544 149.5 544 176L544 192L560 192C586.5 192 608 213.5 608 240L608 288C625.7 288 640 302.3 640 320C640 337.7 625.7 352 608 352L608 400C608 426.5 586.5 448 560 448L544 448L544 464C544 490.5 522.5 512 496 512C469.5 512 448 490.5 448 464L448 352L192 352L192 464C192 490.5 170.5 512 144 512C117.5 512 96 490.5 96 464L96 448L80 448C53.5 448 32 426.5 32 400L32 352C14.3 352 0 337.7 0 320C0 302.3 14.3 288 32 288L32 240C32 213.5 53.5 192 80 192L96 192L96 176z"></path>
               </svg>
-              <h6 className="fw-600 fs-14 lh-16 text-carbon mb-0">
+              <p className="alt-font fw-600 fs-14 lh-16 text-carbon mb-0">
                 {" Strength & "}
                 <br />
                 {"Conditioning Coach "}
-              </h6>
+              </p>
             </div>
           </div>
           <div className="row row-cols-2 row-cols-lg-4 row-cols-sm-2 d-flex sm-py-5 align-items-center mx-auto justify-content-center w-80 mt-0 text-center icon-with-style-2 g-4">

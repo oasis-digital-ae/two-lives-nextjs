@@ -70,12 +70,10 @@ export default function OurMethodPage() {
                     <div className="atropos-scale">
                       <div className="atropos-rotate">
                         <div className="atropos-inner text-center">
-                          <div data-atropos-offset="-5" className="position-relative left-0px right-0px top-40px lg-top-30px md-top-40px xs-top-20px">
-                            <span className="fs-180 lg-fs-130 md-fs-150 xs-fs-80 text-white alt-font fw-700 position-absolute left-0px w-100 ls-minus-3px">
-                              <i className="bi bi-arrow-down-short arrow-bounce fs-190 lg-fs-150 md-fs-180 xs-fs-90 text-white"></i>
-                            </span>
+                          <div data-atropos-offset="-5" className="position-absolute top-0 start-0 w-100 h-100 d-flex align-items-center justify-content-center z-index-1">
+                            <svg className="arrow-bounce fs-190 lg-fs-150 md-fs-180 xs-fs-90 text-white" width="1em" height="1em" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M8 4a.5.5 0 0 1 .5.5v5.793l2.146-2.147a.5.5 0 0 1 .708.708l-3 3a.5.5 0 0 1-.708 0l-3-3a.5.5 0 1 1 .708-.708L7.5 10.293V4.5A.5.5 0 0 1 8 4z" /></svg>
                           </div>
-                          <span className="w-210px h-210px lg-w-150px lg-h-150px md-w-170px md-h-170px sm-w-120px sm-h-120px xs-w-100px xs-h-100px rounded-circle d-inline-block bg-radial"></span>
+                          <span className="w-210px h-210px lg-w-150px lg-h-150px md-w-170px md-h-170px sm-w-120px sm-h-120px xs-w-100px xs-h-100px rounded-circle d-block bg-radial"></span>
                         </div>
                       </div>
                     </div>
@@ -98,7 +96,7 @@ export default function OurMethodPage() {
           <div className="row pb-8 align-items-center">
             <div className="col-lg-6 md-mb-50px sm-mb-30px">
               <figure className="position-relative mb-0 overflow-hidden">
-                <img src="/.netlify/images?url=/images/method-intro.webp&w=800&fm=webp&q=70" className="w-100 border-radius-10px" alt="A man in a shirt looking out of a window with a coffee" />
+                <img loading="lazy" src="/.netlify/images?url=/images/method-intro.webp&w=800&fm=webp&q=70" className="w-100 border-radius-10px" alt="A man in a shirt looking out of a window with a coffee" />
                 <figcaption className="position-absolute text-center left-0px bottom-0px pt-35px pb-35px ps-15px pe-15px bg-white">
                   <span className="fs-90 md-fs-70 sm-fs-60 lh-85 text-dark-gray ls-minus-2px position-relative fw-700 mb-5px d-block alt-font">
                     12
@@ -180,7 +178,7 @@ export default function OurMethodPage() {
                 <span className="highlight-separator mb-0 pb-0" data-shadow-animation="true" data-animation-delay="500">
                   {" Matters"}
                   <span>
-                    <img src="/.netlify/images?url=/images/demo-digital-agency-highlight-separator.webp&w=800&fm=webp&q=70" alt="" style={{ bottom: "-6px" }} />
+                    <img loading="lazy" src="/.netlify/images?url=/images/demo-digital-agency-highlight-separator.webp&w=800&fm=webp&q=70" alt="" style={{ bottom: "-6px" }} />
                   </span>
                 </span>
               </h2>
@@ -249,7 +247,7 @@ export default function OurMethodPage() {
                         <div className="position-relative box-shadow-large border-radius-6px">
                           <figure className="m-0 position-relative">
                             <div className="bg-gradient-gray-light-dark-transparent position-absolute w-100 h-100 z-index-1"></div>
-                            <img src="/.netlify/images?url=/images/method-1.webp&w=800&fm=webp&q=70" className="w-100" style={{ height: "400px", objectFit: "cover" }} alt="Mental clarity" />
+                            <img loading="lazy" src="/.netlify/images?url=/images/method-1.webp&w=800&fm=webp&q=70" className="w-100" style={{ height: "400px", objectFit: "cover" }} alt="Mental clarity" />
                             <figcaption className="d-flex flex-column w-100 h-100 p-20px z-index-1 position-absolute top-0 ">
                               <div className="alignment-overlay mt-auto">
                                 <div className="alignment-title d-flex justify-content-between align-items-center gap-2">
@@ -271,7 +269,7 @@ export default function OurMethodPage() {
                         <div className="position-relative box-shadow-large border-radius-6px">
                           <figure className="m-0 position-relative">
                             <div className="bg-gradient-gray-light-dark-transparent position-absolute w-100 h-100 z-index-1"></div>
-                            <img src="/.netlify/images?url=/images/method-2.webp&w=800&fm=webp&q=70" className="w-100" style={{ height: "400px", objectFit: "cover" }} alt="Physical" />
+                            <img loading="lazy" src="/.netlify/images?url=/images/method-2.webp&w=800&fm=webp&q=70" className="w-100" style={{ height: "400px", objectFit: "cover" }} alt="Physical" />
                             <figcaption className="d-flex flex-column w-100 h-100 p-20px z-index-1 position-absolute top-0">
                               <div className="alignment-overlay mt-auto">
                                 <div className="alignment-title d-flex justify-content-between align-items-center gap-2">
@@ -293,7 +291,7 @@ export default function OurMethodPage() {
                         <div className="position-relative box-shadow-large border-radius-6px">
                           <figure className="m-0 position-relative">
                             <div className="bg-gradient-gray-light-dark-transparent position-absolute w-100 h-100 z-index-1"></div>
-                            <img src="/.netlify/images?url=/images/method-3.webp&w=800&fm=webp&q=70" className="w-100" style={{ height: "400px", objectFit: "cover" }} alt="Relationships" />
+                            <img loading="lazy" src="/.netlify/images?url=/images/method-3.webp&w=800&fm=webp&q=70" className="w-100" style={{ height: "400px", objectFit: "cover" }} alt="Relationships" />
                             <figcaption className="d-flex flex-column w-100 h-100 p-20px z-index-1 position-absolute top-0">
                               <div className="alignment-overlay mt-auto">
                                 <div className="alignment-title d-flex justify-content-between align-items-center gap-2">
@@ -315,7 +313,7 @@ export default function OurMethodPage() {
                         <div className="position-relative box-shadow-large border-radius-6px">
                           <figure className="m-0 position-relative">
                             <div className="bg-gradient-gray-light-dark-transparent position-absolute w-100 h-100 z-index-1"></div>
-                            <img src="/.netlify/images?url=/images/method-1.webp&w=800&fm=webp&q=70" className="w-100" style={{ height: "400px", objectFit: "cover" }} alt="Mental clarity" />
+                            <img loading="lazy" src="/.netlify/images?url=/images/method-1.webp&w=800&fm=webp&q=70" className="w-100" style={{ height: "400px", objectFit: "cover" }} alt="Mental clarity" />
                             <figcaption className="d-flex flex-column w-100 h-100 p-20px z-index-1 position-absolute top-0">
                               <div className="alignment-overlay mt-auto">
                                 <div className="alignment-title d-flex justify-content-between align-items-center gap-2">
@@ -337,7 +335,7 @@ export default function OurMethodPage() {
                         <div className="position-relative box-shadow-large border-radius-6px">
                           <figure className="m-0 position-relative">
                             <div className="bg-gradient-gray-light-dark-transparent position-absolute w-100 h-100 z-index-1"></div>
-                            <img src="/.netlify/images?url=/images/method-2.webp&w=800&fm=webp&q=70" className="w-100" style={{ height: "400px", objectFit: "cover" }} alt="Physical" />
+                            <img loading="lazy" src="/.netlify/images?url=/images/method-2.webp&w=800&fm=webp&q=70" className="w-100" style={{ height: "400px", objectFit: "cover" }} alt="Physical" />
                             <figcaption className="d-flex flex-column w-100 h-100 p-20px z-index-1 position-absolute top-0">
                               <div className="alignment-overlay mt-auto">
                                 <div className="alignment-title d-flex justify-content-between align-items-center gap-2">
@@ -359,7 +357,7 @@ export default function OurMethodPage() {
                         <div className="position-relative box-shadow-large border-radius-6px">
                           <figure className="m-0 position-relative">
                             <div className="bg-gradient-gray-light-dark-transparent position-absolute w-100 h-100 z-index-1"></div>
-                            <img src="/.netlify/images?url=/images/method-3.webp&w=800&fm=webp&q=70" className="w-100" style={{ height: "400px", objectFit: "cover" }} alt="Relationships" />
+                            <img loading="lazy" src="/.netlify/images?url=/images/method-3.webp&w=800&fm=webp&q=70" className="w-100" style={{ height: "400px", objectFit: "cover" }} alt="Relationships" />
                             <figcaption className="d-flex flex-column w-100 h-100 p-20px z-index-1 position-absolute top-0">
                               <div className="alignment-overlay mt-auto">
                                 <div className="alignment-title d-flex justify-content-between align-items-center gap-2">
@@ -423,61 +421,78 @@ export default function OurMethodPage() {
               <p className="w-80 md-w-100 mx-auto text-carbon">Real change begins with understanding yourself. These five elements form the foundation of my mentoring approach, supporting greater awareness, personal growth and alignment between your inner world and everyday life.</p>
             </div>
           </div>
-          <div className="row row-cols-1 row-cols-md-2 row-cols-lg-3 justify-content-center mb-3 sm-p-5">
-            <div className="col text-center last-paragraph-no-margin hover-box process-step-style-09 mb-40px">
-              <div className="process-step-icon-box position-relative mb-25px">
-                <div className="process-step-icon d-flex justify-content-center align-items-center mx-auto rounded-circle h-100px w-100px fs-28 bg-green text-white alt-font">
-                  <span className="number position-relative z-index-1 alt-font fw-600">1</span>
-                  <div className="box-overlay bg-slate-blue rounded-circle"></div>
+          <div className="position-relative mb-4 sm-p-5">
+            <div className="swiper slider-three-slide magic-cursor drag-cursor pb-20px" data-slider-options={"{ \"slidesPerView\": 1, \"spaceBetween\": 25, \"loop\": true, \"speed\": 800, \"autoplay\": { \"delay\": 8500, \"disableOnInteraction\": false }, \"navigation\": { \"nextEl\": \".elements-slide-next\", \"prevEl\": \".elements-slide-prev\" }, \"keyboard\": { \"enabled\": true, \"onlyInViewport\": true }, \"breakpoints\": { \"1200\": { \"slidesPerView\": 3 }, \"992\": { \"slidesPerView\": 3 }, \"768\": { \"slidesPerView\": 2 }, \"320\": { \"slidesPerView\": 1 } }, \"effect\": \"slide\" }"}>
+              <div className="swiper-wrapper">
+                <div className="swiper-slide h-auto">
+                  <div className="simple-card card-has-number" style={{ height: "100%", minHeight: "430px", marginBottom: 0, paddingLeft: "30px" }}>
+                    <div className="card-number-1 alt-font text-dark-green opacity-3 fw-600">1</div>
+                    <div className="card-title">
+                      <p className="alt-font fs-20 fw-600 mb-15px">Awareness</p>
+                    </div>
+                    <div className="card-text">
+                      <p className="fs-16 mb-10px">Understanding what shapes your experience.</p>
+                      <p className="fs-16" style={{ fontWeight: 400 }}>Begin recognising the patterns, pressures and expectations influencing how you think, feel and respond. Awareness creates the space to understand yourself without immediately needing to change anything.</p>
+                    </div>
+                  </div>
+                </div>
+                <div className="swiper-slide h-auto">
+                  <div className="simple-card card-has-number" style={{ height: "100%", minHeight: "430px", marginBottom: 0, paddingLeft: "30px" }}>
+                    <div className="card-number-1 alt-font text-dark-green opacity-3 fw-600">2</div>
+                    <div className="card-title">
+                      <p className="alt-font fs-20 fw-600 mb-15px">Identity</p>
+                    </div>
+                    <div className="card-text">
+                      <p className="fs-16 mb-10px">Discovering who you are beyond what you do.</p>
+                      <p className="fs-16" style={{ fontWeight: 400 }}>Explore your relationship with achievement, responsibility and the roles you’ve taken on. Understand what genuinely matters to you and reconnect with the person behind everything you’ve built.</p>
+                    </div>
+                  </div>
+                </div>
+                <div className="swiper-slide h-auto">
+                  <div className="simple-card card-has-number" style={{ height: "100%", minHeight: "430px", marginBottom: 0, paddingLeft: "30px" }}>
+                    <div className="card-number-1 alt-font text-dark-green opacity-3 fw-600">3</div>
+                    <div className="card-title">
+                      <p className="alt-font fs-20 fw-600 mb-15px">Release</p>
+                    </div>
+                    <div className="card-text">
+                      <p className="fs-16 mb-10px">Making space for what matters now.</p>
+                      <p className="fs-16" style={{ fontWeight: 400 }}>Recognise the beliefs, habits and emotional weight that might no longer support you. Not everything needs to be left behind, but some things no longer need to be carried in the same way.</p>
+                    </div>
+                  </div>
+                </div>
+                <div className="swiper-slide h-auto">
+                  <div className="simple-card card-has-number" style={{ height: "100%", minHeight: "430px", marginBottom: 0, paddingLeft: "30px" }}>
+                    <div className="card-number-1 alt-font text-dark-green opacity-3 fw-600">4</div>
+                    <div className="card-title">
+                      <p className="alt-font fs-20 fw-600 mb-15px">Realignment</p>
+                    </div>
+                    <div className="card-text">
+                      <p className="fs-16 mb-10px">Bringing your inner and outer worlds together.</p>
+                      <p className="fs-16" style={{ fontWeight: 400 }}>Begin making choices that reflect what matters most to you. Strengthen the connection between your ambitions, wellbeing, relationships and the life you want to experience.</p>
+                    </div>
+                  </div>
+                </div>
+                <div className="swiper-slide h-auto">
+                  <div className="simple-card card-has-number" style={{ height: "100%", minHeight: "430px", marginBottom: 0, paddingLeft: "30px" }}>
+                    <div className="card-number-1 alt-font text-dark-green opacity-3 fw-600">5</div>
+                    <div className="card-title">
+                      <p className="alt-font fs-20 fw-600 mb-15px">Integration</p>
+                    </div>
+                    <div className="card-text">
+                      <p className="fs-16 mb-10px">Living what you’ve come to understand.</p>
+                      <p className="fs-16" style={{ fontWeight: 400 }}>Bring that awareness into everyday moments, conversations, decisions and relationships. Growth becomes something you practise and experience in your life, not simply something you’re working towards.</p>
+                    </div>
+                  </div>
                 </div>
               </div>
-              <span className="d-inline-block fw-700 text-carbon alt-font fs-22 mb-20px">Awareness</span>
-              <p className="w-90 lg-w-100 sm-w-90 d-inline-block text-carbon fw-600 mb-10px">Understanding what shapes your experience.</p>
-              <p className="w-90 lg-w-100 sm-w-90 d-inline-block text-carbon mb-10px">Begin recognising the patterns, pressures and expectations influencing how you think, feel and respond. Awareness creates the space to understand yourself without immediately needing to change anything.</p>
             </div>
-            <div className="col text-center last-paragraph-no-margin hover-box process-step-style-09 mb-40px">
-              <div className="process-step-icon-box position-relative mb-25px">
-                <div className="process-step-icon d-flex justify-content-center align-items-center mx-auto rounded-circle h-100px w-100px fs-28 bg-green text-white alt-font">
-                  <span className="number position-relative z-index-1 alt-font fw-600">2</span>
-                  <div className="box-overlay bg-slate-blue rounded-circle"></div>
-                </div>
+            <div className="d-flex justify-content-center gap-2 mt-4">
+              <div className="elements-slide-prev swiper-button-prev slider-navigation-style-04" tabIndex={0} role="button" aria-label="Previous slide">
+                <i className="bi bi-arrow-left-short icon-very-medium text-carbon"></i>
               </div>
-              <span className="d-inline-block fw-700 text-carbon alt-font fs-22 mb-20px">Identity</span>
-              <p className="w-90 lg-w-100 sm-w-90 d-inline-block text-carbon fw-600 mb-10px">Discovering who you are beyond what you do.</p>
-              <p className="w-90 lg-w-100 sm-w-90 d-inline-block text-carbon mb-10px">Explore your relationship with achievement, responsibility and the roles you’ve taken on. Understand what genuinely matters to you and reconnect with the person behind everything you’ve built.</p>
-            </div>
-            <div className="col text-center last-paragraph-no-margin hover-box process-step-style-09 mb-40px">
-              <div className="process-step-icon-box position-relative mb-25px">
-                <div className="process-step-icon d-flex justify-content-center align-items-center mx-auto rounded-circle h-100px w-100px fs-28 bg-green text-white alt-font">
-                  <span className="number position-relative z-index-1 alt-font fw-600">3</span>
-                  <div className="box-overlay bg-slate-blue rounded-circle"></div>
-                </div>
+              <div className="elements-slide-next swiper-button-next slider-navigation-style-04" tabIndex={0} role="button" aria-label="Next slide">
+                <i className="bi bi-arrow-right-short icon-very-medium text-carbon"></i>
               </div>
-              <span className="d-inline-block fw-700 text-carbon alt-font fs-22 mb-20px">Release</span>
-              <p className="w-90 lg-w-100 sm-w-90 d-inline-block text-carbon fw-600 mb-10px">Making space for what matters now.</p>
-              <p className="w-90 lg-w-100 sm-w-90 d-inline-block text-carbon mb-10px">Recognise the beliefs, habits and emotional weight that might no longer support you. Not everything needs to be left behind, but some things no longer need to be carried in the same way.</p>
-            </div>
-            <div className="col text-center last-paragraph-no-margin hover-box process-step-style-09 mb-40px">
-              <div className="process-step-icon-box position-relative mb-25px">
-                <div className="process-step-icon d-flex justify-content-center align-items-center mx-auto rounded-circle h-100px w-100px fs-28 bg-green text-white alt-font">
-                  <span className="number position-relative z-index-1 alt-font fw-600">4</span>
-                  <div className="box-overlay bg-slate-blue rounded-circle"></div>
-                </div>
-              </div>
-              <span className="d-inline-block fw-700 text-carbon alt-font fs-22 mb-20px">Realignment</span>
-              <p className="w-90 lg-w-100 sm-w-90 d-inline-block text-carbon fw-600 mb-10px">Bringing your inner and outer worlds together.</p>
-              <p className="w-90 lg-w-100 sm-w-90 d-inline-block text-carbon mb-10px">Begin making choices that reflect what matters most to you. Strengthen the connection between your ambitions, wellbeing, relationships and the life you want to experience.</p>
-            </div>
-            <div className="col text-center last-paragraph-no-margin hover-box process-step-style-09 mb-40px">
-              <div className="process-step-icon-box position-relative mb-25px">
-                <div className="process-step-icon d-flex justify-content-center align-items-center mx-auto rounded-circle h-100px w-100px fs-28 bg-green text-white alt-font">
-                  <span className="number position-relative z-index-1 alt-font fw-600">5</span>
-                  <div className="box-overlay bg-slate-blue rounded-circle"></div>
-                </div>
-              </div>
-              <span className="d-inline-block fw-700 text-carbon alt-font fs-22 mb-20px">Integration</span>
-              <p className="w-90 lg-w-100 sm-w-90 d-inline-block text-carbon fw-600 mb-10px">Living what you’ve come to understand.</p>
-              <p className="w-90 lg-w-100 sm-w-90 d-inline-block text-carbon mb-10px">Bring that awareness into everyday moments, conversations, decisions and relationships. Growth becomes something you practise and experience in your life, not simply something you’re working towards.</p>
             </div>
           </div>
         </div>

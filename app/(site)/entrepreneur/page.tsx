@@ -68,12 +68,12 @@ export default function EntrepreneurPage() {
           <div className="row align-items-center justify-content-md-center">
             <div className="col-lg-6 col-md-10 text-end md-mb-50px" data-anime={"{ \"effect\": \"slide\", \"color\": \"#0e1412\", \"direction\":\"lr\", \"easing\": \"easeOutQuad\", \"delay\":50}"}>
               <figure className="position-relative m-0">
-                <img className="lg-w-90 w-100 border-radius-8px" src="/.netlify/images?url=/images/enterpreneur-success.webp&w=800&fm=webp&q=70" alt="success" />
+                <img loading="lazy" className="lg-w-90 w-100 border-radius-8px" src="/.netlify/images?url=/images/enterpreneur-success.webp&w=800&fm=webp&q=70" alt="success" />
                 <figcaption className="position-absolute animation-float mobile-box bg-carbon box-shadow-double-large border-radius-5px overflow-hidden bottom-50px lg-bottom-25px sm-bottom-15px left-minus-30px lg-left-minus-20px sm-left-0 w-200px sm-w-200px pt-20px sm-pt-15px text-center last-paragraph-no-margin" data-bottom-top="transform: translateY(-50px)" data-top-bottom="transform: translateY(50px)">
                   <div className="icon-with-text-style-03">
                     <div className="feature-box overflow-hidden">
                       <div className="mb-20px sm-mb-15px">
-                        <img src="/.netlify/images?url=/images/twoliveslogo.svg&w=300&fm=webp&q=80" srcSet="/.netlify/images?url=/images/twoliveslogo.svg&w=150&fm=webp&q=80 150w, /.netlify/images?url=/images/twoliveslogo.svg&w=300&fm=webp&q=80 300w" sizes="150px" className="h-150px sm-h-100px" alt="" />
+                        <img loading="lazy" src="/.netlify/images?url=/images/twoliveslogo.svg&w=300&fm=webp&q=80" srcSet="/.netlify/images?url=/images/twoliveslogo.svg&w=150&fm=webp&q=80 150w, /.netlify/images?url=/images/twoliveslogo.svg&w=300&fm=webp&q=80 300w" sizes="150px" className="h-150px sm-h-100px" alt="" />
                       </div>
                       <div className="feature-box-content last-paragraph-no-margin">
                         <a href="/request-mentorship" className="btn btn-large text-carbon fs-20 sm-fs-16 fw-700 text-uppercase btn-base-color d-block btn-box-shadow">
@@ -142,7 +142,7 @@ export default function EntrepreneurPage() {
           </div>
         </div>
         <div className="icon-rotator ">
-          <img src="/.netlify/images?url=/images/tl-circle.svg&w=256&fm=webp&q=80" srcSet="/.netlify/images?url=/images/tl-circle.svg&w=128&fm=webp&q=80 128w, /.netlify/images?url=/images/tl-circle.svg&w=256&fm=webp&q=80 256w" sizes="128px" alt="rotator" />
+          <img loading="lazy" src="/.netlify/images?url=/images/tl-circle.svg&w=256&fm=webp&q=80" srcSet="/.netlify/images?url=/images/tl-circle.svg&w=128&fm=webp&q=80 128w, /.netlify/images?url=/images/tl-circle.svg&w=256&fm=webp&q=80 256w" sizes="128px" alt="rotator" />
         </div>
         <div className="blend-bottom"></div>
       </section>
@@ -348,35 +348,35 @@ export default function EntrepreneurPage() {
                 <div className="position-relative marketing-card overflow-hidden h-100 p-50px lg-p-30px border-radius-6px">
                   <span className="d-block text-carbon fw-600 fs-24 mb-25px position-relative z-index-1 ls-minus-1px w-90 xl-w-100 text-center text-sm-start">Making difficult decisions without replaying them in your mind all evening.</span>
                   {" "}
-                  <img src="/img/bg-icon.svg" srcSet="/img/bg-icon.svg 1x, /img/bg-icon.svg 2x" alt="bg icon" className="position-absolute animation-zoom swiper-icon bottom-0 end-0 opacity-50 z-index-0 animation-zoom" style={{ width: "110px", transform: "translate(30%, 30%)", pointerEvents: "none" }} />
+                  <img loading="lazy" src="/img/bg-icon.svg" srcSet="/img/bg-icon.svg 1x, /img/bg-icon.svg 2x" alt="bg icon" className="position-absolute animation-zoom swiper-icon bottom-0 end-0 opacity-50 z-index-0 animation-zoom" style={{ width: "110px", transform: "translate(30%, 30%)", pointerEvents: "none" }} />
                 </div>
               </div>
               <div className="swiper-slide">
                 <div className="position-relative marketing-card overflow-hidden h-100 p-50px lg-p-30px border-radius-6px">
                   <span className="d-block text-carbon fw-600 fs-24 mb-25px position-relative z-index-1 ls-minus-1px w-90 xl-w-100 text-center text-sm-start">Being fully present when you spend time with the people you love.</span>
                   {" "}
-                  <img src="/img/bg-icon.svg" srcSet="/img/bg-icon.svg 1x, /img/bg-icon.svg 2x" alt="bg icon" className="position-absolute swiper-icon bottom-0 end-0 opacity-50 z-index-0 animation-zoom" style={{ width: "110px", transform: "translate(30%, 30%)", pointerEvents: "none" }} />
+                  <img loading="lazy" src="/img/bg-icon.svg" srcSet="/img/bg-icon.svg 1x, /img/bg-icon.svg 2x" alt="bg icon" className="position-absolute swiper-icon bottom-0 end-0 opacity-50 z-index-0 animation-zoom" style={{ width: "110px", transform: "translate(30%, 30%)", pointerEvents: "none" }} />
                 </div>
               </div>
               <div className="swiper-slide">
                 <div className="position-relative marketing-card overflow-hidden h-100 p-50px lg-p-30px border-radius-6px">
                   <span className="d-block text-carbon fw-600 fs-24 mb-25px position-relative z-index-1 ls-minus-1px w-90 xl-w-100 text-center text-sm-start">Stepping away from work without feeling everything will fall apart.</span>
                   {" "}
-                  <img src="/img/bg-icon.svg" srcSet="/img/bg-icon.svg 1x, /img/bg-icon.svg 2x" alt="bg icon" className="position-absolute swiper-icon bottom-0 end-0 opacity-50 z-index-0 animation-zoom" style={{ width: "110px", transform: "translate(30%, 30%)", pointerEvents: "none" }} />
+                  <img loading="lazy" src="/img/bg-icon.svg" srcSet="/img/bg-icon.svg 1x, /img/bg-icon.svg 2x" alt="bg icon" className="position-absolute swiper-icon bottom-0 end-0 opacity-50 z-index-0 animation-zoom" style={{ width: "110px", transform: "translate(30%, 30%)", pointerEvents: "none" }} />
                 </div>
               </div>
               <div className="swiper-slide">
                 <div className="position-relative marketing-card overflow-hidden h-100 p-50px lg-p-30px border-radius-6px">
                   <span className="d-block text-carbon fw-600 fs-24 mb-25px position-relative z-index-1 ls-minus-1px w-90 xl-w-100 text-center text-sm-start">Continuing to grow without measuring your worth by the next milestone.</span>
                   {" "}
-                  <img src="/img/bg-icon.svg" srcSet="/img/bg-icon.svg 1x, /img/bg-icon.svg 2x" alt="bg icon" className="position-absolute swiper-icon bottom-0 end-0 opacity-50 z-index-0 animation-zoom" style={{ width: "110px", transform: "translate(30%, 30%)", pointerEvents: "none" }} />
+                  <img loading="lazy" src="/img/bg-icon.svg" srcSet="/img/bg-icon.svg 1x, /img/bg-icon.svg 2x" alt="bg icon" className="position-absolute swiper-icon bottom-0 end-0 opacity-50 z-index-0 animation-zoom" style={{ width: "110px", transform: "translate(30%, 30%)", pointerEvents: "none" }} />
                 </div>
               </div>
               <div className="swiper-slide">
                 <div className="position-relative marketing-card overflow-hidden h-100 p-50px lg-p-30px border-radius-6px">
                   <span className="d-block text-carbon fw-600 fs-24 mb-25px position-relative z-index-1 ls-minus-1px w-90 xl-w-100 text-center text-sm-start">Feeling proud of what you’ve built and making time to actually enjoy it.</span>
                   {" "}
-                  <img src="/img/bg-icon.svg" srcSet="/img/bg-icon.svg 1x, /img/bg-icon.svg 2x" alt="bg icon" className="position-absolute swiper-icon bottom-0 end-0 opacity-50 z-index-0 animation-zoom" style={{ width: "110px", transform: "translate(30%, 30%)", pointerEvents: "none" }} />
+                  <img loading="lazy" src="/img/bg-icon.svg" srcSet="/img/bg-icon.svg 1x, /img/bg-icon.svg 2x" alt="bg icon" className="position-absolute swiper-icon bottom-0 end-0 opacity-50 z-index-0 animation-zoom" style={{ width: "110px", transform: "translate(30%, 30%)", pointerEvents: "none" }} />
                 </div>
               </div>
             </div>
@@ -442,10 +442,10 @@ export default function EntrepreneurPage() {
                       <div className="col-8 col-md-4 col-sm-6 text-center md-mb-30px">
                         <div className="review-avatar-wrapper mx-auto mb-3">
                           <div className="review-avatar">
-                            <img alt="Cattaleeya" src="/.netlify/images?url=/images/Cattaleeya.webp&w=640&fm=webp&q=80" srcSet="/.netlify/images?url=/images/Cattaleeya.webp&w=320&fm=webp&q=80 320w, /.netlify/images?url=/images/Cattaleeya.webp&w=640&fm=webp&q=80 640w, /.netlify/images?url=/images/Cattaleeya.webp&w=960&fm=webp&q=80 960w" sizes="(max-width: 768px) 100vw, 40vw" data-no-retina="" />
+                            <img loading="lazy" alt="Cattaleeya" src="/.netlify/images?url=/images/Cattaleeya.webp&w=640&fm=webp&q=80" srcSet="/.netlify/images?url=/images/Cattaleeya.webp&w=320&fm=webp&q=80 320w, /.netlify/images?url=/images/Cattaleeya.webp&w=640&fm=webp&q=80 640w, /.netlify/images?url=/images/Cattaleeya.webp&w=960&fm=webp&q=80 960w" sizes="(max-width: 768px) 100vw, 40vw" data-no-retina="" />
                           </div>
                           <div className="avatar-badge">
-                            <img alt="Two-Lives-Logo" src="/.netlify/images?url=/images/twoliveslogo.svg&w=250&fm=webp&q=80" srcSet="/.netlify/images?url=/images/twoliveslogo.svg&w=125&fm=webp&q=80 125w, /.netlify/images?url=/images/twoliveslogo.svg&w=250&fm=webp&q=80 250w" sizes="125px" height="125px" width="125px" className="skrollable skrollable-between" data-bottom-top="transform: rotate(-30deg)" data-top-bottom="transform:rotate(10deg)" style={{ transform: "rotate(3.57143deg)" }} data-no-retina="" />
+                            <img loading="lazy" alt="Two-Lives-Logo" src="/.netlify/images?url=/images/twoliveslogo.svg&w=250&fm=webp&q=80" srcSet="/.netlify/images?url=/images/twoliveslogo.svg&w=125&fm=webp&q=80 125w, /.netlify/images?url=/images/twoliveslogo.svg&w=250&fm=webp&q=80 250w" sizes="125px" height="125px" width="125px" className="skrollable skrollable-between" data-bottom-top="transform: rotate(-30deg)" data-top-bottom="transform:rotate(10deg)" style={{ transform: "rotate(3.57143deg)" }} data-no-retina="" />
                           </div>
                         </div>
                         <p className="fs-18 fw-600 text-carbon alt-font mt-3 mb-1">Cattaleeya Schulze</p>

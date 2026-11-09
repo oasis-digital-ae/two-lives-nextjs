@@ -2,6 +2,11 @@
 // HTML page on purpose: the theme's compiled CSS and jQuery scripts drive the design.
 import type { Metadata } from "next";
 import { CursorPageInner, Header } from "@/components/site";
+import { LegacyHomeHero } from "@/components/site/LegacyHomeHero";
+import { ScrollHero } from "@/components/hero/ScrollHero";
+
+/* Set NEXT_PUBLIC_SCROLL_HERO=off and rebuild to put the previous hero back for everyone. */
+const scrollHeroOn = process.env.NEXT_PUBLIC_SCROLL_HERO !== "off";
 
 export const metadata: Metadata = {
   "title": "Private Mentorship for High Performers | Two Lives Theory",
@@ -40,36 +45,7 @@ export default function IndexPage() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: "{\n  \"@context\": \"https://schema.org\",\n  \"@graph\": [\n    {\n      \"@type\": \"Organization\",\n      \"@id\": \"https://twolivestheory.com/#organization\",\n      \"name\": \"Two Lives Theory\",\n      \"url\": \"https://twolivestheory.com/\",\n      \"logo\": {\n        \"@type\": \"ImageObject\",\n        \"url\": \"https://twolivestheory.com/images/tl-green-logo.svg\"\n      },\n      \"email\": \"basim@twolivestheory.com\",\n      \"sameAs\": [\n        \"https://www.facebook.com/BasimYafai\",\n        \"https://www.instagram.com/basim.yafai/\",\n        \"https://www.linkedin.com/in/basimyafai/\"\n      ],\n      \"founder\": {\n        \"@id\": \"https://twolivestheory.com/#basim\"\n      }\n    },\n    {\n      \"@type\": \"Person\",\n      \"@id\": \"https://twolivestheory.com/#basim\",\n      \"name\": \"Basim Yafai\",\n      \"url\": \"https://twolivestheory.com/about\",\n      \"jobTitle\": \"Mindset & Growth Mentor\",\n      \"worksFor\": {\n        \"@id\": \"https://twolivestheory.com/#organization\"\n      },\n      \"email\": \"basim@twolivestheory.com\",\n      \"sameAs\": [\n        \"https://www.facebook.com/BasimYafai\",\n        \"https://www.instagram.com/basim.yafai/\",\n        \"https://www.linkedin.com/in/basimyafai/\"\n      ],\n      \"hasCredential\": [\n        {\n          \"@type\": \"EducationalOccupationalCredential\",\n          \"credentialCategory\": \"certification\",\n          \"name\": \"Certified Master of Neuro-Linguistic Programming (MNLP)\",\n          \"recognizedBy\": {\n            \"@type\": \"Organization\",\n            \"name\": \"INLP Center\"\n          }\n        },\n        {\n          \"@type\": \"EducationalOccupationalCredential\",\n          \"credentialCategory\": \"certification\",\n          \"name\": \"Certified Master Life Coach (MLC)\",\n          \"recognizedBy\": {\n            \"@type\": \"Organization\",\n            \"name\": \"INLP Center\"\n          }\n        },\n        {\n          \"@type\": \"EducationalOccupationalCredential\",\n          \"credentialCategory\": \"certification\",\n          \"name\": \"Certified Hypnosis Practitioner (CHP)\",\n          \"recognizedBy\": {\n            \"@type\": \"Organization\",\n            \"name\": \"INLP Center\"\n          }\n        }\n      ]\n    },\n    {\n      \"@type\": \"WebSite\",\n      \"@id\": \"https://twolivestheory.com/#website\",\n      \"url\": \"https://twolivestheory.com/\",\n      \"name\": \"Two Lives Theory\",\n      \"publisher\": {\n        \"@id\": \"https://twolivestheory.com/#organization\"\n      }\n    }\n  ]\n}" }} />
       <CursorPageInner />
       <Header variant="home" />
-      <section className="basim-hero position-relative overflow-hidden d-none d-md-block">
-        <div className="hero-background"></div>
-        <div className="hero-gradient"></div>
-        <div className="hero-name custom-font-mb">{" Basim Yafai "}</div>
-        <div className="hero-icon-layer">
-          <img src="/img/bg-icon.svg" className="hero-bg-icon" id="heroIcon" alt="" />
-        </div>
-        <div className="hero-basim-layer">
-          <img src="/.netlify/images?url=/images/basim-hero-1.webp&w=1200&fm=webp&q=90" srcSet="/.netlify/images?url=/images/basim-hero-1.webp&w=600&fm=webp&q=90 600w, /.netlify/images?url=/images/basim-hero-1.webp&w=1200&fm=webp&q=90 1200w, /.netlify/images?url=/images/basim-hero-1.webp&w=1600&fm=webp&q=90 1600w" sizes="500px" alt="Basim" className="hero-basim" width="500" height="535" fetchPriority="high" style={{ filter: "saturate(0.95)" }} />
-        </div>
-        <div className="hero-headline text-center fs-28 fw-600 alt-font text-white">
-          <div className="h1 hero-slogan mb-15px md-fs-55">Step Into Your Next Life</div>
-          <p className="text-center fs-24 md-fs-22 sm-fs-20 fw-500 alt-font font-style-italic text-white pt-0">With Clarity, Strength and Inner Alignment.</p>
-        </div>
-        <div className="container hero-content pt-0 pb-0 mt-0 mb-0">
-          <div className="row w-100 pb-11 align-items-center justify-content-between gap-4 gap-lg-0">
-            <div className="col-lg-5 hero-left-content text-white d-flex align-items-center mobile-only">
-              <div className="hero-lede text-white alt-font lh-16 w-80 fs-18 fw-500 mb-0">
-                <h1>Private Mentorship for High Performers.</h1>
-                {" Led by "}
-                <b>Basim Yafai</b>
-                {", Mindset & Growth Mentor. Trusted by leaders, entrepreneurs & elite athletes. "}
-              </div>
-            </div>
-            <div className="col-lg-5 hero-right-content text-white text-center d-flex align-items-center justify-content-center">
-              <a href="/request-mentorship" className="btn-primary active btn-box-shadow fw-600 hero-btn">{" Request Mentorship "}</a>
-            </div>
-          </div>
-        </div>
-      </section>
+      {scrollHeroOn ? <ScrollHero fallback={<LegacyHomeHero />} /> : <LegacyHomeHero />}
       <section className="basim-hero-mobile d-block d-md-none">
         <div className="mobile-hero-bg"></div>
         <div className="mobile-hero-content text-center text-white">
@@ -85,7 +61,7 @@ export default function IndexPage() {
         </div>
       </section>
       <div className="transition-floating-wrapper">
-        <div className="bottom-shadow-soft-hero move"></div>
+        {!scrollHeroOn && <div className="bottom-shadow-soft-hero move"></div>}
         <div className="transition-floating">
           <div className="floating-rail">
             <div className="floating-step fw-900">
@@ -177,12 +153,10 @@ export default function IndexPage() {
                     <div className="atropos-scale">
                       <div className="atropos-rotate">
                         <div className="atropos-inner text-center">
-                          <div data-atropos-offset="-5" className="position-relative left-0px right-0px top-40px lg-top-30px md-top-40px xs-top-20px">
-                            <span className="fs-180 lg-fs-130 md-fs-150 xs-fs-80 text-white alt-font fw-700 position-absolute left-0px w-100 ls-minus-3px">
-                              <i className="bi bi-arrow-down-short z-index-9 arrow-bounce fs-190 lg-fs-150 md-fs-180 xs-fs-90 text-white"></i>
-                            </span>
+                          <div data-atropos-offset="-5" className="position-absolute top-0 start-0 w-100 h-100 d-flex align-items-center justify-content-center z-index-1">
+                            <svg className="z-index-9 arrow-bounce fs-190 lg-fs-150 md-fs-180 xs-fs-90 text-white" width="1em" height="1em" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M8 4a.5.5 0 0 1 .5.5v5.793l2.146-2.147a.5.5 0 0 1 .708.708l-3 3a.5.5 0 0 1-.708 0l-3-3a.5.5 0 1 1 .708-.708L7.5 10.293V4.5A.5.5 0 0 1 8 4z" /></svg>
                           </div>
-                          <span className="w-210px h-210px lg-w-150px lg-h-150px md-w-170px md-h-170px sm-w-120px sm-h-120px xs-w-100px xs-h-100px rounded-circle d-inline-block bg-radial"></span>
+                          <span className="w-210px h-210px lg-w-150px lg-h-150px md-w-170px md-h-170px sm-w-120px sm-h-120px xs-w-100px xs-h-100px rounded-circle d-block bg-radial"></span>
                         </div>
                       </div>
                     </div>
@@ -313,7 +287,7 @@ export default function IndexPage() {
       </section>
       <section className="basim-preview-section sm-pb-8 pt-3 bg-pattern-section overflow-hidden">
         <div className="corner-svg">
-          <img src="/img/bg-icon.svg" alt="" width="500" height="500" />
+          <img loading="lazy" src="/img/bg-icon.svg" alt="" width="500" height="500" />
         </div>
         <div className="container">
           <div className="row align-items-center">
@@ -323,7 +297,7 @@ export default function IndexPage() {
               </div>
               <div className="founder-banner" data-animation-delay="100" data-shadow-animation="true" data-bottom-top="transform: translate(-50%, -50px)" data-top-bottom="transform: translate(-50%, 50px)" data-anime={"{ \"opacity\": [0,1], \"duration\": 600, \"delay\": 100, \"staggervalue\": 300, \"easing\": \"easeOutQuad\" }"}>
                 <div className="founder-icon">
-                  <img src="/.netlify/images?url=/images/twoliveslogo.svg" alt="Two Lives Theory" />
+                  <img loading="lazy" src="/.netlify/images?url=/images/twoliveslogo.svg" alt="Two Lives Theory" />
                 </div>
                 <div className="founder-text">
                   <span className="founder-name">Basim Yafai</span>
@@ -343,39 +317,39 @@ export default function IndexPage() {
               <div className="row text-center mt-4 sm-mt-40px sm-mb-30px">
                 <div className="col-lg-4 col-md-6 col-6 mb-4 sm-mb-8 icon-card">
                   <i className="bi bi-lightbulb-fill fs-40 bi-hover-green mb-3 d-inline-block"></i>
-                  <h6 className="fw-600 fs-14 lh-16 text-carbon mb-0">
+                  <p className="alt-font fw-600 fs-14 lh-16 text-carbon mb-0">
                     {" Master NLP Practitioner"}
                     <br />
                     {"& Life Coach "}
-                  </h6>
+                  </p>
                 </div>
                 <div className="col-lg-4 col-md-6 col-6 mb-4 sm-mb-8 icon-card">
                   <i className="bi bi-mortarboard-fill fs-40 bi-hover-green mb-3 d-inline-block"></i>
-                  <h6 className="fw-600 fs-14 lh-16 text-carbon mb-0">
+                  <p className="alt-font fw-600 fs-14 lh-16 text-carbon mb-0">
                     {" BSc Honours Sports"}
                     <br />
                     {"Coaching Science "}
-                  </h6>
+                  </p>
                 </div>
                 <div className="col-lg-4 col-md-6 col-6 mb-4 sm-mb-8 icon-card">
                   <i className="bi bi-eye-fill fs-40 bi-hover-green mb-3 d-inline-block"></i>
-                  <h6 className="fw-600 fs-14 lh-16 text-carbon mb-0">
+                  <p className="alt-font fw-600 fs-14 lh-16 text-carbon mb-0">
                     {" Hypnosis"}
                     <br />
                     {"Practitioner "}
-                  </h6>
+                  </p>
                 </div>
                 <div className="col-lg-4 col-md-6 col-6 mb-4 sm-mb-8 icon-card">
                   <i className="bi bi-lightning-charge-fill fs-40 bi-hover-green mb-3 d-inline-block"></i>
-                  <h6 className="fw-600 fs-14 lh-16 text-carbon mb-0">{" Former Professional Rugby Player "}</h6>
+                  <p className="alt-font fw-600 fs-14 lh-16 text-carbon mb-0">{" Former Professional Rugby Player "}</p>
                 </div>
                 <div className="col-lg-4 col-md-6 col-6 mb-4 sm-mb-8 icon-card">
                   <i className="bi bi-award-fill fs-40 bi-hover-green mb-3 d-inline-block"></i>
-                  <h6 className="fw-600 fs-14 lh-16 text-carbon mb-0">
+                  <p className="alt-font fw-600 fs-14 lh-16 text-carbon mb-0">
                     {" Worldwide"}
                     <br />
                     {"Accreditation "}
-                  </h6>
+                  </p>
                 </div>
                 <div className="col-lg-4 col-md-6 col-6 mb-4 sm-mb-8 icon-card">
                   <i className="fs-40 bi-hover-green mb-3 d-inline-block"></i>
@@ -383,11 +357,11 @@ export default function IndexPage() {
                   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640">
                     <path d="M96 176C96 149.5 117.5 128 144 128C170.5 128 192 149.5 192 176L192 288L448 288L448 176C448 149.5 469.5 128 496 128C522.5 128 544 149.5 544 176L544 192L560 192C586.5 192 608 213.5 608 240L608 288C625.7 288 640 302.3 640 320C640 337.7 625.7 352 608 352L608 400C608 426.5 586.5 448 560 448L544 448L544 464C544 490.5 522.5 512 496 512C469.5 512 448 490.5 448 464L448 352L192 352L192 464C192 490.5 170.5 512 144 512C117.5 512 96 490.5 96 464L96 448L80 448C53.5 448 32 426.5 32 400L32 352C14.3 352 0 337.7 0 320C0 302.3 14.3 288 32 288L32 240C32 213.5 53.5 192 80 192L96 192L96 176z"></path>
                   </svg>
-                  <h6 className="fw-600 fs-14 lh-16 text-carbon mb-0">
+                  <p className="alt-font fw-600 fs-14 lh-16 text-carbon mb-0">
                     {" Strength & "}
                     <br />
                     {"Conditioning Coach "}
-                  </h6>
+                  </p>
                 </div>
               </div>
               <div className="btn-wrapper">
@@ -509,7 +483,7 @@ export default function IndexPage() {
         <div className="container-fluid px-5">
           <div className="floating-circle">
             <div className="floating-circle-img">
-              <img src="/images/tl-circle.svg" className="skrollable skrollable-between" data-bottom-top="transform: rotate(-30deg)" data-top-bottom="transform:rotate(10deg)" style={{ transform: "rotate(5.52297deg)" }} data-no-retina="" alt="circle text" />
+              <img loading="lazy" src="/images/tl-circle.svg" className="skrollable skrollable-between" data-bottom-top="transform: rotate(-30deg)" data-top-bottom="transform:rotate(10deg)" style={{ transform: "rotate(5.52297deg)" }} data-no-retina="" alt="circle text" />
             </div>
           </div>
           <div className="col-lg-10">
@@ -525,7 +499,7 @@ export default function IndexPage() {
                   <figcaption className="d-flex flex-column w-100 h-100 p-10px lg-p-25px z-index-1">
                     <div className="alignment-overlay mt-auto">
                       <div className="alignment-title d-flex align-items-center">
-                        <img src="/images/tl-icon-01.svg" height="60" width="60" className="me-2" alt="" />
+                        <img loading="lazy" src="/images/tl-icon-01.svg" height="60" width="60" className="me-2" alt="" />
                         {" "}
                         <span>
                           {"Mental &"}
@@ -547,7 +521,7 @@ export default function IndexPage() {
                   <figcaption className="d-flex flex-column w-100 h-100 p-10px lg-p-25px z-index-1">
                     <div className="alignment-overlay mt-auto">
                       <div className="alignment-title d-flex align-items-center">
-                        <img src="/images/tl-icon-02.svg" height="60" width="60" className="me-2" alt="" />
+                        <img loading="lazy" src="/images/tl-icon-02.svg" height="60" width="60" className="me-2" alt="" />
                         {" "}
                         <span>
                           {"Body &"}
@@ -569,7 +543,7 @@ export default function IndexPage() {
                   <figcaption className="d-flex flex-column w-100 h-100 p-10px lg-p-25px z-index-1">
                     <div className="alignment-overlay mt-auto">
                       <div className="alignment-title d-flex align-items-center">
-                        <img src="/images/tl-icon-03.svg" height="60" width="60" className="me-2" alt="" />
+                        <img loading="lazy" src="/images/tl-icon-03.svg" height="60" width="60" className="me-2" alt="" />
                         {" "}
                         <span>
                           Relational
@@ -591,7 +565,7 @@ export default function IndexPage() {
                   <figcaption className="d-flex flex-column w-100 h-100 p-10px lg-p-25px z-index-1">
                     <div className="alignment-overlay mt-auto">
                       <div className="alignment-title d-flex align-items-center">
-                        <img src="/images/tl-icon-04.svg" height="60" width="60" className="me-2" alt="" />
+                        <img loading="lazy" src="/images/tl-icon-04.svg" height="60" width="60" className="me-2" alt="" />
                         {" "}
                         <span>
                           {"Direction &"}
@@ -644,10 +618,10 @@ export default function IndexPage() {
                         <div className="position-relative overflow-hidden border-radius-6px last-paragraph-no-margin">
                           <figure className="m-0 position-relative">
                             <div className="bg-gradient-gray-light-dark-transparent position-absolute top-0px left-0px w-100 h-100 z-index-1"></div>
-                            <img src="/.netlify/images?url=/images/mental-clarity.webp&w=800&fm=webp&q=70" alt="Mental clarity" className="w-100" style={{ height: "400px", objectFit: "cover" }} />
+                            <img loading="lazy" src="/.netlify/images?url=/images/mental-clarity.webp&w=800&fm=webp&q=70" alt="Mental clarity" className="w-100" style={{ height: "400px", objectFit: "cover" }} />
                             <figcaption className="d-flex flex-column w-100 h-100 p-10px lg-p-25px z-index-1 position-absolute top-0px left-0px">
                               <div className="position-absolute top-15px left-15px z-index-2">
-                                <img src="/images/tl-icon-01.svg" height="50" width="50" alt="" />
+                                <img loading="lazy" src="/images/tl-icon-01.svg" height="50" width="50" alt="" />
                               </div>
                               <div className="alignment-overlay mt-auto">
                                 <div className="alignment-title d-flex align-items-center justify-content-between gap-2">
@@ -669,10 +643,10 @@ export default function IndexPage() {
                         <div className="position-relative overflow-hidden border-radius-6px last-paragraph-no-margin">
                           <figure className="m-0 position-relative">
                             <div className="bg-gradient-gray-light-dark-transparent position-absolute top-0px left-0px w-100 h-100 z-index-1"></div>
-                            <img src="/.netlify/images?url=/images/physical.webp&w=800&fm=webp&q=70" alt="Physical health" className="w-100" style={{ height: "400px", objectFit: "cover" }} />
+                            <img loading="lazy" src="/.netlify/images?url=/images/physical.webp&w=800&fm=webp&q=70" alt="Physical health" className="w-100" style={{ height: "400px", objectFit: "cover" }} />
                             <figcaption className="d-flex flex-column w-100 h-100 p-10px lg-p-25px z-index-1 position-absolute top-0px left-0px">
                               <div className="position-absolute top-15px left-15px z-index-2">
-                                <img src="/images/tl-icon-02.svg" height="50" width="50" alt="" />
+                                <img loading="lazy" src="/images/tl-icon-02.svg" height="50" width="50" alt="" />
                               </div>
                               <div className="alignment-overlay mt-auto">
                                 <div className="alignment-title d-flex align-items-center justify-content-between gap-2">
@@ -694,10 +668,10 @@ export default function IndexPage() {
                         <div className="position-relative overflow-hidden border-radius-6px last-paragraph-no-margin">
                           <figure className="m-0 position-relative">
                             <div className="bg-gradient-gray-light-dark-transparent position-absolute top-0px left-0px w-100 h-100 z-index-1"></div>
-                            <img src="/.netlify/images?url=/images/relationships.webp&w=800&fm=webp&q=70" alt="Relationships" className="w-100" style={{ height: "400px", objectFit: "cover" }} />
+                            <img loading="lazy" src="/.netlify/images?url=/images/relationships.webp&w=800&fm=webp&q=70" alt="Relationships" className="w-100" style={{ height: "400px", objectFit: "cover" }} />
                             <figcaption className="d-flex flex-column w-100 h-100 p-10px lg-p-25px z-index-1 position-absolute top-0px left-0px">
                               <div className="position-absolute top-15px left-15px z-index-2">
-                                <img src="/images/tl-icon-03.svg" height="50" width="50" alt="" />
+                                <img loading="lazy" src="/images/tl-icon-03.svg" height="50" width="50" alt="" />
                               </div>
                               <div className="alignment-overlay mt-auto">
                                 <div className="alignment-title d-flex align-items-center justify-content-between gap-2">
@@ -719,10 +693,10 @@ export default function IndexPage() {
                         <div className="position-relative overflow-hidden border-radius-6px last-paragraph-no-margin">
                           <figure className="m-0 position-relative">
                             <div className="bg-gradient-gray-light-dark-transparent position-absolute top-0px left-0px w-100 h-100 z-index-1"></div>
-                            <img src="/.netlify/images?url=/images/leadership.webp&w=800&fm=webp&q=70" alt="Leadership" className="w-100" style={{ height: "400px", objectFit: "cover" }} />
+                            <img loading="lazy" src="/.netlify/images?url=/images/leadership.webp&w=800&fm=webp&q=70" alt="Leadership" className="w-100" style={{ height: "400px", objectFit: "cover" }} />
                             <figcaption className="d-flex flex-column w-100 h-100 p-10px lg-p-25px z-index-1 position-absolute top-0px left-0px">
                               <div className="position-absolute top-15px left-15px z-index-2">
-                                <img src="/images/tl-icon-04.svg" height="50" width="50" alt="" />
+                                <img loading="lazy" src="/images/tl-icon-04.svg" height="50" width="50" alt="" />
                               </div>
                               <div className="alignment-overlay mt-auto">
                                 <div className="alignment-title d-flex align-items-center justify-content-between gap-2">
@@ -806,12 +780,12 @@ export default function IndexPage() {
                   <div className="row align-items-center justify-content-center g-lg-0">
                     <div className="col-md-6 sm-mb-30px position-relative" data-anime={"{ \"effect\": \"slide\", \"color\": \"#000\", \"direction\":\"lr\", \"easing\": \"easeOutQuad\", \"delay\":50}"}>
                       <figure className="mb-0 position-relative">
-                        <img src="/.netlify/images?url=/images/two-lives/entreprenuer.webp&w=800&fm=webp&q=70" srcSet="/.netlify/images?url=/images/two-lives/entreprenuer.webp&w=400&fm=webp&q=70 400w, /.netlify/images?url=/images/two-lives/entreprenuer.webp&w=800&fm=webp&q=70 800w, /.netlify/images?url=/images/two-lives/entreprenuer.webp&w=1200&fm=webp&q=70 1200w" sizes="(max-width:768px) 100vw, 800px" alt="Entrepreneur" className="w-100 border-radius-6px box-shad" />
+                        <img loading="lazy" src="/.netlify/images?url=/images/two-lives/entreprenuer.webp&w=800&fm=webp&q=70" srcSet="/.netlify/images?url=/images/two-lives/entreprenuer.webp&w=400&fm=webp&q=70 400w, /.netlify/images?url=/images/two-lives/entreprenuer.webp&w=800&fm=webp&q=70 800w, /.netlify/images?url=/images/two-lives/entreprenuer.webp&w=1200&fm=webp&q=70 1200w" sizes="(max-width:768px) 100vw, 800px" alt="Entrepreneur" className="w-100 border-radius-6px box-shad" />
                         <div className="bg-carbon-opacity position-absolute pt-10px pb-10px ps-25px pe-25px border-radius-4px bottom-30px left-30px box-shadow-large d-flex align-items-center sm-bottom-0" data-anime={"{ \"translateY\": [0, 0], \"opacity\": [0,1], \"duration\": 1200, \"delay\": 800, \"staggervalue\": 500, \"easing\": \"easeOutQuad\" }"}>
                           <span className="text-white fs-16 d-inline-block">Founders · Business Owners · Investors</span>
                         </div>
                         <figcaption className="position-absolute bottom-90px right-minus-50px xs-bottom-auto xs-top-10px sm-right-minus-20px xs-right-auto xs-left-10px xs-w-140px">
-                          <img src="/images/twoliveslogo.svg" width="125px" height="125px" className="animation-float bg-carbon-opacity p-3 border-radius-100px box-shadow-large md-w-100px md-h-100px sm-w-100px sm-h-100px xs-w-80px xs-h-80px" alt="" />
+                          <img loading="lazy" src="/images/twoliveslogo.svg" width="125px" height="125px" className="animation-float bg-carbon-opacity p-3 border-radius-100px box-shadow-large md-w-100px md-h-100px sm-w-100px sm-h-100px xs-w-80px xs-h-80px" alt="" />
                         </figcaption>
                       </figure>
                     </div>
@@ -831,12 +805,12 @@ export default function IndexPage() {
                   <div className="row align-items-center justify-content-center g-lg-0">
                     <div className="col-md-6 sm-mb-30px position-relative">
                       <figure className="mb-0 position-relative">
-                        <img src="/.netlify/images?url=/images/two-lives/athlete.webp&w=800&fm=webp&q=70" srcSet="/.netlify/images?url=/images/two-lives/athlete.webp&w=400&fm=webp&q=70 400w, /.netlify/images?url=/images/two-lives/athlete.webp&w=800&fm=webp&q=70 800w, /.netlify/images?url=/images/two-lives/athlete.webp&w=1200&fm=webp&q=70 1200w" sizes="(max-width:768px) 100vw, 800px" alt="Athlete" className="w-100 border-radius-4px box-shad" />
+                        <img loading="lazy" src="/.netlify/images?url=/images/two-lives/athlete.webp&w=800&fm=webp&q=70" srcSet="/.netlify/images?url=/images/two-lives/athlete.webp&w=400&fm=webp&q=70 400w, /.netlify/images?url=/images/two-lives/athlete.webp&w=800&fm=webp&q=70 800w, /.netlify/images?url=/images/two-lives/athlete.webp&w=1200&fm=webp&q=70 1200w" sizes="(max-width:768px) 100vw, 800px" alt="Athlete" className="w-100 border-radius-4px box-shad" />
                         <div className="bg-carbon-opacity position-absolute pt-10px pb-10px ps-25px pe-25px border-radius-4px bottom-30px left-30px box-shadow-large d-flex align-items-center sm-bottom-0" data-anime={"{ \"translateY\": [0, 0], \"opacity\": [0,1], \"duration\": 1200, \"delay\": 800, \"staggervalue\": 500, \"easing\": \"easeOutQuad\" }"}>
                           <span className="text-white fs-16 d-inline-block">Professional · Competitive · Aspiring Athletes</span>
                         </div>
                         <figcaption className="position-absolute bottom-90px right-minus-50px xs-bottom-auto xs-top-10px sm-right-minus-20px xs-right-auto xs-left-10px xs-w-140px">
-                          <img src="/images/twoliveslogo.svg" width="125px" height="125px" className="animation-float bg-carbon-opacity p-3 border-radius-100px box-shadow-large md-w-100px md-h-100px sm-w-100px sm-h-100px xs-w-80px xs-h-80px" alt="" />
+                          <img loading="lazy" src="/images/twoliveslogo.svg" width="125px" height="125px" className="animation-float bg-carbon-opacity p-3 border-radius-100px box-shadow-large md-w-100px md-h-100px sm-w-100px sm-h-100px xs-w-80px xs-h-80px" alt="" />
                         </figcaption>
                       </figure>
                     </div>
@@ -856,12 +830,12 @@ export default function IndexPage() {
                   <div className="row align-items-center justify-content-center g-lg-0">
                     <div className="col-md-6 sm-mb-30px position-relative">
                       <figure className="mb-0 position-relative">
-                        <img src="/.netlify/images?url=/images/two-lives/poker-player.webp&w=800&fm=webp&q=70" srcSet="/.netlify/images?url=/images/two-lives/poker-player.webp&w=400&fm=webp&q=70 400w, /.netlify/images?url=/images/two-lives/poker-player.webp&w=800&fm=webp&q=70 800w, /.netlify/images?url=/images/two-lives/poker-player.webp&w=1200&fm=webp&q=70 1200w" sizes="(max-width:768px) 100vw, 800px" alt="Poker player" className="w-100 border-radius-4px box-shad" />
+                        <img loading="lazy" src="/.netlify/images?url=/images/two-lives/poker-player.webp&w=800&fm=webp&q=70" srcSet="/.netlify/images?url=/images/two-lives/poker-player.webp&w=400&fm=webp&q=70 400w, /.netlify/images?url=/images/two-lives/poker-player.webp&w=800&fm=webp&q=70 800w, /.netlify/images?url=/images/two-lives/poker-player.webp&w=1200&fm=webp&q=70 1200w" sizes="(max-width:768px) 100vw, 800px" alt="Poker player" className="w-100 border-radius-4px box-shad" />
                         <div className="bg-carbon-opacity position-absolute pt-10px pb-10px ps-25px pe-25px border-radius-4px bottom-30px left-30px box-shadow-large d-flex align-items-center sm-bottom-0" data-anime={"{ \"translateY\": [0, 0], \"opacity\": [0,1], \"duration\": 1200, \"delay\": 800, \"staggervalue\": 500, \"easing\": \"easeOutQuad\" }"}>
                           <span className="text-white fs-16 d-inline-block">Poker Players · Traders · Strategic Competitors</span>
                         </div>
                         <figcaption className="position-absolute bottom-90px right-minus-50px xs-bottom-auto xs-top-10px sm-right-minus-20px xs-right-auto xs-left-10px xs-w-140px">
-                          <img src="/images/twoliveslogo.svg" width="125px" height="125px" className="animation-float bg-carbon-opacity p-3 border-radius-100px box-shadow-large md-w-100px md-h-100px sm-w-100px sm-h-100px xs-w-80px xs-h-80px" alt="" />
+                          <img loading="lazy" src="/images/twoliveslogo.svg" width="125px" height="125px" className="animation-float bg-carbon-opacity p-3 border-radius-100px box-shadow-large md-w-100px md-h-100px sm-w-100px sm-h-100px xs-w-80px xs-h-80px" alt="" />
                         </figcaption>
                       </figure>
                     </div>
@@ -881,12 +855,12 @@ export default function IndexPage() {
                   <div className="row align-items-center justify-content-center g-lg-0">
                     <div className="col-md-6 sm-mb-30px position-relative">
                       <figure className="mb-0 position-relative">
-                        <img src="/.netlify/images?url=/images/two-lives/exec-leader.webp&w=800&fm=webp&q=70" srcSet="/.netlify/images?url=/images/two-lives/exec-leader.webp&w=400&fm=webp&q=70 400w, /.netlify/images?url=/images/two-lives/exec-leader.webp&w=800&fm=webp&q=70 800w, /.netlify/images?url=/images/two-lives/exec-leader.webp&w=1200&fm=webp&q=70 1200w" sizes="(max-width:768px) 100vw, 800px" alt="Executive leader" className="w-100 border-radius-4px box-shad" />
+                        <img loading="lazy" src="/.netlify/images?url=/images/two-lives/exec-leader.webp&w=800&fm=webp&q=70" srcSet="/.netlify/images?url=/images/two-lives/exec-leader.webp&w=400&fm=webp&q=70 400w, /.netlify/images?url=/images/two-lives/exec-leader.webp&w=800&fm=webp&q=70 800w, /.netlify/images?url=/images/two-lives/exec-leader.webp&w=1200&fm=webp&q=70 1200w" sizes="(max-width:768px) 100vw, 800px" alt="Executive leader" className="w-100 border-radius-4px box-shad" />
                         <div className="bg-carbon-opacity position-absolute pt-10px pb-10px ps-25px pe-25px border-radius-4px bottom-30px left-30px box-shadow-large d-flex align-items-center sm-bottom-0" data-anime={"{ \"translateY\": [0, 0], \"opacity\": [0,1], \"duration\": 1200, \"delay\": 800, \"staggervalue\": 500, \"easing\": \"easeOutQuad\" }"}>
                           <span className="text-white fs-16 d-inline-block">C-Suite · Senior Leaders · Decision Makers</span>
                         </div>
                         <figcaption className="position-absolute bottom-90px right-minus-50px xs-bottom-auto xs-top-10px sm-right-minus-20px xs-right-auto xs-left-10px xs-w-140px">
-                          <img src="/images/twoliveslogo.svg" width="125px" height="125px" className="animation-float bg-carbon-opacity p-3 border-radius-100px box-shadow-large md-w-100px md-h-100px sm-w-100px sm-h-100px xs-w-80px xs-h-80px" alt="" />
+                          <img loading="lazy" src="/images/twoliveslogo.svg" width="125px" height="125px" className="animation-float bg-carbon-opacity p-3 border-radius-100px box-shadow-large md-w-100px md-h-100px sm-w-100px sm-h-100px xs-w-80px xs-h-80px" alt="" />
                         </figcaption>
                       </figure>
                     </div>
@@ -915,7 +889,7 @@ export default function IndexPage() {
                 <div className="position-relative overflow-hidden border-radius-6px last-paragraph-no-margin box-shad skrollable skrollable-between" data-bottom-top="transform: translateY(-20px)" data-top-bottom="transform: translateY(20px)">
                   <figure className="m-0 alignment-image-wrap position-relative">
                     <div className="image-overlay-bottom position-absolute top-0px left-0px w-100 h-100 z-index-1"></div>
-                    <img src="/.netlify/images?url=/images/two-lives/entreprenuer.webp&w=800&fm=webp&q=70" alt="Entrepreneurs" className="w-100" />
+                    <img loading="lazy" src="/.netlify/images?url=/images/two-lives/entreprenuer.webp&w=800&fm=webp&q=70" alt="" className="w-100" />
                     <figcaption className="alignment-overlay-bottom">
                       <div className="alignment-inner d-flex justify-content-between align-items-center">
                         <span className="alignment-label alt-font text-shadow-soft fs-26 text-white">{" Entrepreneurs "}</span>
@@ -944,7 +918,7 @@ export default function IndexPage() {
                 <div className="position-relative overflow-hidden border-radius-6px last-paragraph-no-margin box-shad skrollable skrollable-between" data-bottom-top="transform: translateY(20px)" data-top-bottom="transform: translateY(-20px)">
                   <figure className="m-0 alignment-image-wrap">
                     <div className="image-overlay-bottom position-absolute top-0px left-0px w-100 h-100 z-index-1"></div>
-                    <img src="/.netlify/images?url=/images/two-lives/athlete.webp&w=800&fm=webp&q=70" alt="Athletes" className="w-100" />
+                    <img loading="lazy" src="/.netlify/images?url=/images/two-lives/athlete.webp&w=800&fm=webp&q=70" alt="" className="w-100" />
                     <figcaption className="alignment-overlay-bottom">
                       <div className="alignment-inner d-flex justify-content-between align-items-center">
                         <span className="alignment-label alt-font text-shadow-soft fs-26 text-white">{" Athletes "}</span>
@@ -973,7 +947,7 @@ export default function IndexPage() {
                 <div className="position-relative overflow-hidden border-radius-6px last-paragraph-no-margin box-shad skrollable skrollable-between" data-bottom-top="transform: translateY(-20px)" data-top-bottom="transform: translateY(20px)">
                   <figure className="m-0 alignment-image-wrap">
                     <div className="image-overlay-bottom position-absolute top-0px left-0px w-100 h-100 z-index-1"></div>
-                    <img src="/.netlify/images?url=/images/two-lives/poker-player.webp&w=800&fm=webp&q=70" alt="Elite Competitors" className="w-100" />
+                    <img loading="lazy" src="/.netlify/images?url=/images/two-lives/poker-player.webp&w=800&fm=webp&q=70" alt="" className="w-100" />
                     <figcaption className="alignment-overlay-bottom">
                       <div className="alignment-inner d-flex justify-content-between align-items-center">
                         <span className="alignment-label alt-font text-shadow-soft fs-26 text-white">{" Elite Competitors "}</span>
@@ -1002,7 +976,7 @@ export default function IndexPage() {
                 <div className="position-relative overflow-hidden border-radius-6px last-paragraph-no-margin box-shad skrollable skrollable-between" data-bottom-top="transform: translateY(20px)" data-top-bottom="transform: translateY(-20px)">
                   <figure className="m-0 alignment-image-wrap">
                     <div className="image-overlay-bottom position-absolute top-0px left-0px w-100 h-100 z-index-1"></div>
-                    <img src="/.netlify/images?url=/images/two-lives/exec-leader.webp&w=800&fm=webp&q=70" alt="Executives & Leadership" className="w-100" />
+                    <img loading="lazy" src="/.netlify/images?url=/images/two-lives/exec-leader.webp&w=800&fm=webp&q=70" alt="Executives & Leadership" className="w-100" />
                     <figcaption className="alignment-overlay-bottom">
                       <div className="alignment-inner d-flex justify-content-between align-items-center">
                         <span className="alignment-label alt-font text-shadow-soft fs-26 text-white">{" Executives & Leaders "}</span>
@@ -1036,7 +1010,7 @@ export default function IndexPage() {
               <div className="col-12 col-lg-3 d-flex align-items-center justify-content-center text-center border-bottom-right desktop-only" style={{ background: "#0E1412" }}>
                 <div className="p-5">
                   <span className="d-block fw-bold text-uppercase text-white small d-flex align-items-center" style={{ letterSpacing: "4px", fontSize: "0.95rem", gap: "8px" }}>
-                    <img src="/images/two-lives/logo-wht.svg" alt="Two Lives Theory Logo" style={{ height: "40px", width: "auto" }} className="animation-float" />
+                    <img loading="lazy" src="/images/two-lives/logo-wht.svg" alt="Two Lives Theory Logo" style={{ height: "40px", width: "auto" }} className="animation-float" />
                   </span>
                 </div>
               </div>
@@ -1184,10 +1158,10 @@ export default function IndexPage() {
                       <div className="col-8 col-md-4 col-sm-6 text-center md-mb-30px">
                         <div className="review-avatar-wrapper mx-auto mb-3">
                           <div className="review-avatar">
-                            <img alt="Cattaleeya" src="/.netlify/images?url=/images/Cattaleeya.webp&w=800&fm=webp&q=70" />
+                            <img loading="lazy" alt="Cattaleeya" src="/.netlify/images?url=/images/Cattaleeya.webp&w=320&fm=webp&q=70" />
                           </div>
                           <div className="avatar-badge">
-                            <img alt="Two-Lives-Logo" src="/.netlify/images?url=/images/twoliveslogo.svg" height="125px" width="125px" className="skrollable skrollable-between" data-bottom-top="transform: rotate(-30deg)" data-top-bottom="transform:rotate(10deg)" style={{ transform: "rotate(5.52297deg)" }} data-no-retina="" />
+                            <img loading="lazy" alt="Two-Lives-Logo" src="/.netlify/images?url=/images/twoliveslogo.svg" height="125px" width="125px" className="skrollable skrollable-between" data-bottom-top="transform: rotate(-30deg)" data-top-bottom="transform:rotate(10deg)" style={{ transform: "rotate(5.52297deg)" }} data-no-retina="" />
                           </div>
                         </div>
                         <p className="fs-18 fw-600 text-carbon alt-font sm-mt-20px  mt-3 mb-1">Cattaleeya Schulze</p>
@@ -1210,10 +1184,10 @@ export default function IndexPage() {
                       <div className="col-8 col-md-4 col-sm-6 text-center md-mb-30px">
                         <div className="review-avatar-wrapper mx-auto mb-3">
                           <div className="review-avatar">
-                            <img alt="Punnat Punsri" src="/.netlify/images?url=/images/punnat.webp&w=800&fm=webp&q=70" />
+                            <img loading="lazy" alt="Punnat Punsri" src="/.netlify/images?url=/images/punnat.webp&w=320&fm=webp&q=70" />
                           </div>
                           <div className="avatar-badge">
-                            <img alt="Two-Lives-Logo" src="/.netlify/images?url=/images/twoliveslogo.svg" height="125px" width="125px" className="skrollable skrollable-between" data-bottom-top="transform: rotate(-30deg)" data-top-bottom="transform:rotate(10deg)" style={{ transform: "rotate(5.52297deg)" }} data-no-retina="" />
+                            <img loading="lazy" alt="Two-Lives-Logo" src="/.netlify/images?url=/images/twoliveslogo.svg" height="125px" width="125px" className="skrollable skrollable-between" data-bottom-top="transform: rotate(-30deg)" data-top-bottom="transform:rotate(10deg)" style={{ transform: "rotate(5.52297deg)" }} data-no-retina="" />
                           </div>
                         </div>
                         <p className="fs-18 fw-600 text-carbon mt-3 sm-mt-20px alt-font mb-1">Punnat Punsri</p>
@@ -1236,10 +1210,10 @@ export default function IndexPage() {
                       <div className="col-8 col-md-4 col-sm-6 text-center md-mb-30px">
                         <div className="review-avatar-wrapper mx-auto mb-3">
                           <div className="review-avatar">
-                            <img alt="DAN MOORES" src="/.netlify/images?url=/images/dan-moores.webp&w=800&fm=webp&q=70" />
+                            <img loading="lazy" alt="DAN MOORES" src="/.netlify/images?url=/images/dan-moores.webp&w=320&fm=webp&q=70" />
                           </div>
                           <div className="avatar-badge">
-                            <img alt="Two-Lives-Logo" src="/.netlify/images?url=/images/twoliveslogo.svg" height="125px" width="125px" className="skrollable skrollable-between" data-bottom-top="transform: rotate(-30deg)" data-top-bottom="transform:rotate(10deg)" style={{ transform: "rotate(5.52297deg)" }} data-no-retina="" />
+                            <img loading="lazy" alt="Two-Lives-Logo" src="/.netlify/images?url=/images/twoliveslogo.svg" height="125px" width="125px" className="skrollable skrollable-between" data-bottom-top="transform: rotate(-30deg)" data-top-bottom="transform:rotate(10deg)" style={{ transform: "rotate(5.52297deg)" }} data-no-retina="" />
                           </div>
                         </div>
                         <p className="fs-18 fw-600 text-carbon alt-font sm-mt-20px mt-3 mb-1">Dan Moores</p>
@@ -1262,10 +1236,10 @@ export default function IndexPage() {
                       <div className="col-8 col-md-4 col-sm-6 text-center md-mb-30px">
                         <div className="review-avatar-wrapper mx-auto mb-3">
                           <div className="review-avatar">
-                            <img alt="LAURI ENN" src="/.netlify/images?url=/images/lauri-enn.webp&w=800&fm=webp&q=70" />
+                            <img loading="lazy" alt="LAURI ENN" src="/.netlify/images?url=/images/lauri-enn.webp&w=320&fm=webp&q=70" />
                           </div>
                           <div className="avatar-badge">
-                            <img alt="Two-Lives-Logo" src="/.netlify/images?url=/images/twoliveslogo.svg" height="125px" width="125px" className="skrollable skrollable-between" data-bottom-top="transform: rotate(-30deg)" data-top-bottom="transform:rotate(10deg)" style={{ transform: "rotate(5.52297deg)" }} data-no-retina="" />
+                            <img loading="lazy" alt="Two-Lives-Logo" src="/.netlify/images?url=/images/twoliveslogo.svg" height="125px" width="125px" className="skrollable skrollable-between" data-bottom-top="transform: rotate(-30deg)" data-top-bottom="transform:rotate(10deg)" style={{ transform: "rotate(5.52297deg)" }} data-no-retina="" />
                           </div>
                         </div>
                         <p className="fs-18 fw-600 text-carbon alt-font sm-mt-20px  mt-3 mb-1">Lauri Enn</p>
@@ -1287,10 +1261,10 @@ export default function IndexPage() {
                       <div className="col-8 col-md-4 col-sm-6 text-center md-mb-30px">
                         <div className="review-avatar-wrapper mx-auto mb-3">
                           <div className="review-avatar">
-                            <img alt="ELLIE JACKSON" src="/.netlify/images?url=/images/ellie-jackson.png&w=800&fm=webp&q=70" />
+                            <img loading="lazy" alt="ELLIE JACKSON" src="/.netlify/images?url=/images/ellie-jackson.png&w=320&fm=webp&q=70" />
                           </div>
                           <div className="avatar-badge">
-                            <img alt="Two-Lives-Logo" src="/.netlify/images?url=/images/twoliveslogo.svg" height="125px" width="125px" className="skrollable skrollable-between" data-bottom-top="transform: rotate(-30deg)" data-top-bottom="transform:rotate(10deg)" style={{ transform: "rotate(5.52297deg)" }} data-no-retina="" />
+                            <img loading="lazy" alt="Two-Lives-Logo" src="/.netlify/images?url=/images/twoliveslogo.svg" height="125px" width="125px" className="skrollable skrollable-between" data-bottom-top="transform: rotate(-30deg)" data-top-bottom="transform:rotate(10deg)" style={{ transform: "rotate(5.52297deg)" }} data-no-retina="" />
                           </div>
                         </div>
                         <p className="fs-18 fw-600 text-carbon alt-font sm-mt-20px  mt-3 mb-1">Ellie Jackson</p>
@@ -1313,10 +1287,10 @@ export default function IndexPage() {
                       <div className="col-8 col-md-4 col-sm-6 text-center md-mb-30px">
                         <div className="review-avatar-wrapper mx-auto mb-3">
                           <div className="review-avatar">
-                            <img alt="BRAYDEN CLARKE" src="/.netlify/images?url=/images/brayden-clarke.webp&w=800&fm=webp&q=70" />
+                            <img loading="lazy" alt="BRAYDEN CLARKE" src="/.netlify/images?url=/images/brayden-clarke.webp&w=320&fm=webp&q=70" />
                           </div>
                           <div className="avatar-badge">
-                            <img alt="Two-Lives-Logo" src="/.netlify/images?url=/images/twoliveslogo.svg" height="125px" width="125px" className="skrollable skrollable-between" data-bottom-top="transform: rotate(-30deg)" data-top-bottom="transform:rotate(10deg)" style={{ transform: "rotate(5.52297deg)" }} data-no-retina="" />
+                            <img loading="lazy" alt="Two-Lives-Logo" src="/.netlify/images?url=/images/twoliveslogo.svg" height="125px" width="125px" className="skrollable skrollable-between" data-bottom-top="transform: rotate(-30deg)" data-top-bottom="transform:rotate(10deg)" style={{ transform: "rotate(5.52297deg)" }} data-no-retina="" />
                           </div>
                         </div>
                         <p className="fs-18 fw-600 text-carbon alt-font sm-mt-20px  mt-3 mb-1">Brayden Clarke</p>
@@ -1339,10 +1313,10 @@ export default function IndexPage() {
                       <div className="col-8 col-md-4 col-sm-6 text-center md-mb-30px">
                         <div className="review-avatar-wrapper mx-auto mb-3">
                           <div className="review-avatar">
-                            <img alt="TOM RUSSELL" src="/.netlify/images?url=/images/tom-russell.webp&w=800&fm=webp&q=70" />
+                            <img loading="lazy" alt="TOM RUSSELL" src="/.netlify/images?url=/images/tom-russell.webp&w=320&fm=webp&q=70" />
                           </div>
                           <div className="avatar-badge">
-                            <img alt="Two-Lives-Logo" src="/.netlify/images?url=/images/twoliveslogo.svg" height="125px" width="125px" className="skrollable skrollable-between" data-bottom-top="transform: rotate(-30deg)" data-top-bottom="transform:rotate(10deg)" style={{ transform: "rotate(5.52297deg)" }} data-no-retina="" />
+                            <img loading="lazy" alt="Two-Lives-Logo" src="/.netlify/images?url=/images/twoliveslogo.svg" height="125px" width="125px" className="skrollable skrollable-between" data-bottom-top="transform: rotate(-30deg)" data-top-bottom="transform:rotate(10deg)" style={{ transform: "rotate(5.52297deg)" }} data-no-retina="" />
                           </div>
                         </div>
                         <p className="fs-18 fw-600 text-carbon mt-3 sm-mt-20px alt-font mb-1">Tom Russell</p>
@@ -1420,10 +1394,10 @@ export default function IndexPage() {
             </div>
           </div>
           <div className="position-relative mb-4 sm-p-5">
-            <div className="swiper slider-three-slide magic-cursor drag-cursor" data-slider-options={"{ \"slidesPerView\": 1, \"spaceBetween\": 25, \"loop\": true, \"speed\": 800, \"autoplay\": { \"delay\": 8500, \"disableOnInteraction\": false }, \"navigation\": { \"nextEl\": \".path-slide-next\", \"prevEl\": \".path-slide-prev\" }, \"keyboard\": { \"enabled\": true, \"onlyInViewport\": true }, \"breakpoints\": { \"1200\": { \"slidesPerView\": 3 }, \"992\": { \"slidesPerView\": 3 }, \"768\": { \"slidesPerView\": 2 }, \"320\": { \"slidesPerView\": 1 } }, \"effect\": \"slide\" }"}>
+            <div className="swiper slider-three-slide magic-cursor drag-cursor" data-slider-options={"{ \"slidesPerView\": 1, \"spaceBetween\": 25, \"loop\": true, \"speed\": 800, \"autoplay\": { \"delay\": 8500, \"disableOnInteraction\": false }, \"navigation\": { \"nextEl\": \".path-slide-next\", \"prevEl\": \".path-slide-prev\" }, \"keyboard\": { \"enabled\": true, \"onlyInViewport\": true }, \"breakpoints\": { \"1200\": { \"slidesPerView\": 3 }, \"992\": { \"slidesPerView\": 2 }, \"768\": { \"slidesPerView\": 2 }, \"320\": { \"slidesPerView\": 1 } }, \"effect\": \"slide\" }"}>
               <div className="swiper-wrapper">
                 <div className="swiper-slide">
-                  <div className="simple-card card-has-number">
+                  <div className="simple-card card-has-number" style={{ height: 320, paddingTop: 30, paddingLeft: "clamp(75px, 6.2vw, 90px)" }}>
                     <div className="card-number-1 alt-font text-dark-green opacity-3 fw-600">1</div>
                     <div className="card-title">
                       <p className="alt-font fs-20 fw-600 mb-15px">Awareness</p>
@@ -1434,7 +1408,7 @@ export default function IndexPage() {
                   </div>
                 </div>
                 <div className="swiper-slide">
-                  <div className="simple-card card-has-number">
+                  <div className="simple-card card-has-number" style={{ height: 320, paddingTop: 30, paddingLeft: "clamp(75px, 6.2vw, 90px)" }}>
                     <div className="card-number-1 alt-font text-dark-green opacity-3 fw-600">2</div>
                     <div className="card-title">
                       <p className="alt-font fs-20 fw-600 mb-15px">Identity</p>
@@ -1445,7 +1419,7 @@ export default function IndexPage() {
                   </div>
                 </div>
                 <div className="swiper-slide">
-                  <div className="simple-card card-has-number">
+                  <div className="simple-card card-has-number" style={{ height: 320, paddingTop: 30, paddingLeft: "clamp(75px, 6.2vw, 90px)" }}>
                     <div className="card-number-1 alt-font text-dark-green opacity-3 fw-600">3</div>
                     <div className="card-title">
                       <p className="alt-font fs-20 fw-600 mb-15px">Release</p>
@@ -1456,7 +1430,7 @@ export default function IndexPage() {
                   </div>
                 </div>
                 <div className="swiper-slide">
-                  <div className="simple-card card-has-number">
+                  <div className="simple-card card-has-number" style={{ height: 320, paddingTop: 30, paddingLeft: "clamp(75px, 6.2vw, 90px)" }}>
                     <div className="card-number-1 alt-font text-dark-green opacity-3 fw-600">4</div>
                     <div className="card-title">
                       <p className="alt-font fs-20 fw-600 mb-15px">Realignment</p>
@@ -1467,7 +1441,7 @@ export default function IndexPage() {
                   </div>
                 </div>
                 <div className="swiper-slide">
-                  <div className="simple-card card-has-number">
+                  <div className="simple-card card-has-number" style={{ height: 320, paddingTop: 30, paddingLeft: "clamp(75px, 6.2vw, 90px)" }}>
                     <div className="card-number-1 alt-font text-dark-green opacity-3 fw-600">5</div>
                     <div className="card-title">
                       <p className="alt-font fs-20 fw-600 mb-15px">Integration</p>
@@ -1527,7 +1501,7 @@ export default function IndexPage() {
             </div>
             <div className="row align-items-stretch divider-row sm-p-5">
               <div className="col-12 col-lg-4 d-flex bg-off-white p-3 sm-mb-4 box-shadow-large border-radius-10px position-relative overflow-hidden">
-                <img src="/images/tl-circle.svg" width="80" height="80" className="method-badge d-lg-none" alt="" />
+                <img loading="lazy" src="/images/tl-circle.svg" width="80" height="80" className="method-badge d-lg-none" alt="" />
                 <div className="w-100 d-flex flex-column justify-content-center h-100 overflow-hidden">
                   <span className="fw-700 fs-20 font-style-italic  text-decoration-line-bottom-medium text-carbon method-underline">Two Lives Theory® Method</span>
                   <h2 className="fw-600 pt-3 fs-40 ls-minus-2px alt-font text-shadow-soft text-carbon w-90 sm-w-90 method-heading">Grounded in Evidence. Built for Real Change</h2>
@@ -1545,7 +1519,7 @@ export default function IndexPage() {
                     {" Methods Supported by Research "}
                   </span>
                   <figcaption className="mid-logo mid-logo-01">
-                    <img src="/images/tl-circle.svg" width="125" height="125" className="skrollable skrollable-between d-none d-lg-block" data-bottom-top="transform: rotate(-30deg)" data-top-bottom="transform:rotate(10deg)" style={{ transform: "rotate(5.52297deg)" }} data-no-retina="" alt="" />
+                    <img loading="lazy" src="/images/tl-circle.svg" width="125" height="125" className="skrollable skrollable-between d-none d-lg-block" data-bottom-top="transform: rotate(-30deg)" data-top-bottom="transform:rotate(10deg)" style={{ transform: "rotate(5.52297deg)" }} data-no-retina="" alt="" />
                   </figcaption>
                   <div className="swiper slider-one-slide text-slider-style-01 flex-fill d-flex flex-column w-100">
                     <div className="swiper-wrapper">
@@ -1952,7 +1926,7 @@ export default function IndexPage() {
             <div className="row pt-50px pb-50px md-pt-35px md-pb-35px">
               <div className="col-lg-4 text-center text-lg-start last-paragraph-no-margin mb-sm-4 mb-0">
                 <a href="/" className=" d-inline-block">
-                  <img className="footer-logo" src="/.netlify/images?url=/images/two-lives/logo.svg" width="300" height="63" alt="Two Lives Theory" />
+                  <img loading="lazy" className="footer-logo" src="/.netlify/images?url=/images/two-lives/logo.svg" width="300" height="63" alt="Two Lives Theory" />
                 </a>
               </div>
               <div className="col-lg-4 col-sm-6 text-center text-lg-start last-paragraph-no-margin xs-mb-30px sm-mt-30px">
@@ -2044,7 +2018,7 @@ export default function IndexPage() {
           </div>
         </footer>
         <a href="https://wa.me/447988720640" className="whatsapp-widget" target="_blank" aria-label="Chat on WhatsApp">
-          <img src="/.netlify/images?url=/images/two-lives/whatsapp-icon.svg" alt="WhatsApp" width="56" height="56" />
+          <img loading="lazy" src="/.netlify/images?url=/images/two-lives/whatsapp-icon.svg" alt="WhatsApp" width="56" height="56" />
         </a>
         <div className="scroll-progress d-none d-xxl-block">
           <a href="#" className="scroll-top" aria-label="scroll">

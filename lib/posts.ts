@@ -52,6 +52,12 @@ export async function getPostSlugs(section: Section): Promise<string[]> {
   return data.map((r) => r.slug);
 }
 
+export async function getPostSitemap(section: Section): Promise<{ slug: string; lastModified?: string }[]> {
+  const { table, filter } = TABLE[section];
+  const { data } = await rest<{ slug: string; updated_at: string | null; publish_date: string | null }[]>(`${table}?select=slug,updated_at,publish_date${filter}`);
+  return data.map((r) => ({ slug: r.slug, lastModified: r.updated_at || r.publish_date || undefined }));
+}
+
 export const postUrl = (section: Section, slug: string) => `${SITE}/${section}/${slug}`;
 
 /** seo_canonical is typed by hand in the editor; trust it only when it is already this post's URL. */

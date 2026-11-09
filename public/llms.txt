@@ -1,0 +1,77 @@
+# Two Lives Theory
+
+> Private mentorship for high performers, led by Basim Yafai — a Mindset & Growth Mentor certified as a Master NLP Practitioner, Master Life Coach and Hypnosis Practitioner. Two Lives Theory works with entrepreneurs, executive leaders, athletes and elite competitors who have achieved external success but feel misaligned, under sustained pressure, or unable to find the path into their next chapter. The work is realignment, not repair.
+
+Engagements are private and one-to-one, delivered remotely and in person, and begin with a confidential introductory call rather than a public booking flow. The methodology is published as the Two Lives Method. Contact: basim@twolivestheory.com
+
+## Core pages
+
+- [Two Lives Theory](https://twolivestheory.com/): Private mentorship for high performers, led by Basim Yafai.
+- [About Basim Yafai](https://twolivestheory.com/about): Background, credentials and approach of the mentor behind Two Lives Theory.
+- [The Two Lives Method](https://twolivestheory.com/our-method): The structured framework used across every mentorship engagement.
+- [Case Studies](https://twolivestheory.com/case-studies): Documented client outcomes across business, sport and leadership.
+- [Journal](https://twolivestheory.com/journal): Long-form writing on mindset, performance and identity for high performers.
+- [Blog](https://twolivestheory.com/blog): Shorter, regularly published pieces on mindset and performance.
+
+## Who the mentorship is for
+
+- [Entrepreneurs & Founders](https://twolivestheory.com/entrepreneur): Mentorship for founders navigating pressure, growth and decision-making.
+- [Executive Leaders](https://twolivestheory.com/executive-leaders): Mentorship for senior leaders carrying responsibility and complexity.
+- [Athletes](https://twolivestheory.com/athlete): Mentorship for athletes managing pressure, consistency and identity.
+- [Elite Competitors](https://twolivestheory.com/elite-competitors): Mentorship for competitors operating at the highest level of their field.
+
+## Working together
+
+- [Request Mentorship](https://twolivestheory.com/request-mentorship): Apply for private mentorship via a confidential introductory call.
+- [Archetype Test](https://twolivestheory.com/explore-your-archetype): A short assessment identifying how you think and perform under pressure.
+- [Keynote Talks](https://twolivestheory.com/keynote-talks): Booking information for keynote speaking on mindset and performance.
+- [FAQ](https://twolivestheory.com/faq): Common questions about the mentorship process, fit and format.
+- [Recommended Reading](https://twolivestheory.com/recommended-reading): Curated books on mindset, performance and personal growth.
+
+## Case studies
+
+- [Case Study: Entrepreneur](https://twolivestheory.com/case-study/entrepreneur)
+- [Case Study: Business Owner & CEO](https://twolivestheory.com/case-study/business-ceo)
+- [Case Study: Elite Athlete](https://twolivestheory.com/case-study/elite-athlete)
+
+## Journal
+
+Long-form essays.
+
+- [The Life You Never Planned](https://twolivestheory.com/journal/the-life-you-never-planned)
+- [When Achievement Becomes Your Identity](https://twolivestheory.com/journal/when-achievement-becomes-your-identity)
+- [Why Peace Feels Uncomfortable](https://twolivestheory.com/journal/why-peace-can-feel-so-uncomfortable)
+- [The Hidden Grief of Success](https://twolivestheory.com/journal/the-hidden-grief-of-success)
+- [Why We Wait for Permission to Live](https://twolivestheory.com/journal/why-we-wait-for-permission-to-live)
+- [Why We Find It So Difficult to Let Go](https://twolivestheory.com/journal/why-we-find-it-so-difficult-to-let-go)
+- [The Loneliness of High Performance](https://twolivestheory.com/journal/the-loneliness-of-high-performance)
+- [When Success Becomes Your Identity](https://twolivestheory.com/journal/when-success-becomes-your-identity)
+- [The Hidden Pressure of Always Being the Strong One](https://twolivestheory.com/journal/pressure-of-being-the-strong-one)
+- [Why High Performers Struggle to Slow Down](https://twolivestheory.com/journal/fear-of-slowing-down-high-performers)
+- [Why High Performers Stop Trusting Themselves](https://twolivestheory.com/journal/why-high-performers-dont-trust-themselves)
+- [Why Success Never Feels Like Enough](https://twolivestheory.com/journal/why-high-performers-struggle-to-feel-enough)
+- [The Success Trap](https://twolivestheory.com/journal/success-trap-high-performers-work-life-balance)
+- [Why High Performers Get Stuck at the Next Level](https://twolivestheory.com/journal/identity-high-performers-next-level-growth)
+- [Why Entrepreneurs Burn Out Despite Success](https://twolivestheory.com/journal/entrepreneur-burnout-high-performance)
+- [The Hidden Mental Pressure of Poker Players](https://twolivestheory.com/journal/emotional-pressure-poker-players-las-vegas)
+- [Why High Performers Feel Lost After Success](https://twolivestheory.com/journal/high-performers-london-feel-disconnected-after-success)
+- [High Performer Pressure & Mental Wellbeing](https://twolivestheory.com/journal/high-performer-pressure-success-expectation-wellbeing)
+- [Mental Health After Elite Sport & Fame](https://twolivestheory.com/journal/mental-health-transition-elite-athletes-retirement)
+- [Why Elite Athletes Lose Their Edge](https://twolivestheory.com/journal/high-performing-athletes-lose-edge-uk)
+- [Entrepreneur Burnout & Life Transition Dubai](https://twolivestheory.com/journal/entrepreneur-life-transition-dubai-success-feels-off)
+- [Burnout Signs High Performers in London Ignore](https://twolivestheory.com/journal/hidden-burnout-signs-high-performers-london)
+- [Mental Health for High Performers: Break Free](https://twolivestheory.com/journal/mental-health-high-performers-anxiety-depression-trauma)
+
+## Blog
+
+Shorter, regularly published pieces.
+
+- [Top Mindset Strategies for Athletes Preparing for Fall Competitions](https://twolivestheory.com/blog/top-mindset-strategies-for-athletes-preparing-for-fall-competitions)
+
+## Notes
+
+- Two separate article sections: `/journal/` holds the long-form essays, `/blog/` holds shorter
+  regularly published pieces. Both are current; neither is an archive of the other.
+- The older `/blogs/` path is legacy and redirects to `/journal/`.
+- Basim Yafai is the sole mentor; Two Lives Theory is not an agency or a group programme.
+- Two Lives Theory is a registered trade mark.

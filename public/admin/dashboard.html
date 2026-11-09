@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <!-- Admin UI - keep out of search results. Note: deliberately NOT blocked in
+       robots.txt, because a crawler must be able to fetch the page to see this. -->
+  <meta name="robots" content="noindex, nofollow">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#0e1412">
+  <title>Admin Dashboard</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&family=Sora:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/remixicon/fonts/remixicon.css">
+  <link rel="stylesheet" href="/admin/admin-theme.css">
+  <link rel="stylesheet" href="/admin/dashboard.css">
+  <link rel="shortcut icon" href="/images/favicon.svg">
+
+  <!-- 1️⃣ Supabase Core -->
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+
+  <!-- 2️⃣ Supabase Client (creates supabaseClient) -->
+  <script src="/js/admin/supabase.js"></script>
+
+  <!-- 3️⃣ Auth (uses supabaseClient → MUST load AFTER supabase.js) -->
+  <script src="/js/admin/auth.js"></script>
+
+  <!-- 4️⃣ Content types (Journal / Blogs) - read by dashboard.js -->
+  <script src="/js/admin/content-types.js"></script>
+
+  <!-- 5️⃣ Auth Gate -->
+  <script>
+    requireLogin().then(ok => {
+      if (ok) {
+        document.addEventListener("DOMContentLoaded", () => {
+          document.body.classList.add("show");
+        });
+      }
+    });
+  </script>
+
+</head>
+
+<body class="gated">
+
+<!-- Mobile top bar -->
+<header class="mobile-bar">
+  <img src="/images/two-lives/logo-wht.svg" alt="Two Lives Theory">
+  <button type="button" aria-label="Open menu" onclick="document.body.classList.toggle('nav-open')">
+    <i class="ri-menu-line"></i>
+  </button>
+</header>
+<div class="scrim" onclick="document.body.classList.remove('nav-open')"></div>
+
+<div class="shell">
+
+  <!-- SIDEBAR -->
+  <aside class="sidebar">
+    <a class="brand" href="/admin/dashboard.html">
+      <img src="/images/two-lives/logo-wht.svg" alt="Two Lives Theory">
+      <span>Admin</span>
+    </a>
+
+    <!-- Journal and Blogs are the same screen over different tables; the
+         ?type= parameter picks which (see /js/admin/content-types.js). -->
+    <nav>
+      <div class="nav-label">Content</div>
+
+      <a href="/admin/dashboard.html" data-type-link="journal">
+        <i class="ri-book-open-line"></i> Journal
+      </a>
+
+      <a href="/admin/dashboard.html?type=blog" data-type-link="blog">
+        <i class="ri-article-line"></i> Blogs
+      </a>
+
+      <div class="nav-label" style="margin-top:14px;">Account</div>
+
+      <a onclick="logout()">
+        <i class="ri-logout-box-r-line"></i> Log out
+      </a>
+    </nav>
+
+    <div class="spacer"></div>
+
+    <a class="site-link" href="https://twolivestheory.com" target="_blank" rel="noopener">
+      <i class="ri-external-link-line"></i> Open live site
+    </a>
+  </aside>
+
+  <!-- MAIN CONTENT -->
+  <main class="content">
+    <div class="content-inner">
+
+      <div class="topbar">
+        <div>
+          <div class="eyebrow">Two Lives Theory</div>
+          <h1 id="page-title">Journal</h1>
+          <p class="sub" id="page-sub">Draft, preview, then push live.</p>
+        </div>
+        <button class="btn btn-accent" id="new-post-btn">
+          <i class="ri-add-line"></i> New Post
+        </button>
+      </div>
+
+      <!-- Stats -->
+      <div class="stats">
+        <div class="stat">
+          <span class="stat-label">Total</span>
+          <span class="stat-value" id="stat-all">–</span>
+        </div>
+        <div class="stat">
+          <span class="stat-label">Live</span>
+          <span class="stat-value stat-live" id="stat-live">–</span>
+        </div>
+        <div class="stat">
+          <span class="stat-label">Drafts</span>
+          <span class="stat-value stat-draft" id="stat-draft">–</span>
+        </div>
+        <div class="stat">
+          <span class="stat-label">Unpushed edits</span>
+          <span class="stat-value stat-edited" id="stat-edited">–</span>
+        </div>
+      </div>
+
+      <!-- Toolbar: search · filter · sort -->
+      <div class="toolbar">
+        <div class="search">
+          <i class="ri-search-line"></i>
+          <input id="search" type="search" placeholder="Search…" autocomplete="off">
+          <kbd>/</kbd>
+        </div>
+
+        <div class="chips" role="tablist" aria-label="Filter by status">
+          <button class="chip active" data-filter="all">All <span class="chip-count">0</span></button>
+          <button class="chip" data-filter="live">Live <span class="chip-count">0</span></button>
+          <button class="chip" data-filter="edited">Edited <span class="chip-count">0</span></button>
+          <button class="chip" data-filter="draft">Drafts <span class="chip-count">0</span></button>
+        </div>
+
+        <label class="sort">
+          <i class="ri-arrow-up-down-line"></i>
+          <select id="sort" aria-label="Sort">
+            <option value="newest">Newest first</option>
+            <option value="oldest">Oldest first</option>
+            <option value="title">Title A–Z</option>
+          </select>
+        </label>
+      </div>
+
+      <div class="posts-list">
+        <div class="list-head">
+          <span id="list-count">All posts</span>
+          <span>Actions</span>
+        </div>
+        <div id="posts"></div>
+      </div>
+
+    </div>
+  </main>
+
+</div>
+
+<!-- Dashboard Logic -->
+<script src="/js/admin/dashboard.js"></script>
+
+<script>
+  async function logout() {
+    await supabaseClient.auth.signOut();
+    window.location.replace("/admin/login.html");
+  }
+</script>
+
+</body>
+</html>
