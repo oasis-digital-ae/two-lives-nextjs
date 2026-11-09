@@ -48,7 +48,10 @@ export default function EliteCompetitorsPage() {
           <div className="row align-items-center extra-small-screen">
             <div className="col-7 col-xl-7 col-sm-6 z-index-9 position-relative page-title-extra-small" data-anime={"{ \"el\": \"childs\", \"opacity\": [0, 1], \"translateX\": [-50, 0], \"duration\": 800, \"delay\": 0, \"staggervalue\": 150, \"easing\": \"easeOutQuad\" }"}>
               <h1 className="mb-20px alt-font text-white fw-500 ls-minus-05px">For Elite Competitors</h1>
-              <h2 className=" fw-700 text-white mb-0 ls-minus-2px sm-ls-minus-1px">Perform under pressure without losing clarity or control.</h2>
+              <h2 className=" fw-700 text-white mb-0 ls-minus-2px sm-ls-minus-1px">The Stakes Are High. Your Life Is Bigger Than the Result.</h2>
+              <div className="mt-30px">
+                <a href="/request-mentorship" className="btn-primary active btn-box-shadow fw-600 text-carbon d-inline-block">Request Mentorship</a>
+              </div>
             </div>
           </div>
         </div>
@@ -58,7 +61,7 @@ export default function EliteCompetitorsPage() {
           <div className="mentor-words-row pb-5 pt-0">
             <div className="row justify-content-center">
               <div className="col-lg-10 text-center">
-                <h2 className="text-carbon alt-font text-shadow-soft fs-50 fw-600 sm-pt-0px ls-minus-2px mentor-animate-words">{" Every decision carries weight. There’s no room to switch off. "}</h2>
+                <h2 className="text-carbon alt-font text-shadow-soft fs-50 fw-600 sm-pt-0px ls-minus-2px mentor-animate-words">The Game Matters. So Does What Happens Away From It.</h2>
               </div>
             </div>
           </div>
@@ -84,8 +87,8 @@ export default function EliteCompetitorsPage() {
               </figure>
             </div>
             <div className="col-md-10 col-xl-5 offset-xl-1 col-lg-6" data-anime={"{ \"el\": \"childs\", \"translateY\": [50, 0], \"opacity\": [0,1], \"duration\": 1200, \"delay\": 0, \"staggervalue\": 150, \"easing\": \"easeOutQuad\" }"}>
-              <h2 className="text-carbon alt-font text-shadow-soft fs-40 fw-600 ls-minus-2px">Perform under pressure without losing control.</h2>
-              <p className="w-85 lg-w-100 mb-30px">Elite competition demands precision, focus, and emotional control in environments where pressure is constant and margins are small.</p>
+              <p className="w-85 lg-w-100 mb-15px">When you compete at a high level, every decision can feel important. You’ve spent years developing your skills, trusting your judgement and learning to deal with uncertainty.</p>
+              <p className="w-85 lg-w-100 mb-30px">But even when you make the right decisions, the results won’t always go your way. And sometimes what happens during competition stays with you long after it’s finished. Two Lives Theory® helps you understand that experience more deeply, strengthening your relationship with pressure, yourself and the life you’re living beyond competition.</p>
               <div className="row align-items-center justify-content-center align-items-center pt-3 overflow-hidden sm-pt-15px">
                 <div className="col-md-12 position-relative" data-anime={"{ \"translateX\": [150, 0], \"opacity\": [0,1], \"duration\": 1200, \"delay\": 100, \"staggervalue\": 150, \"easing\": \"easeOutQuad\" }"}>
                   <div className="outside-box-right-30 sm-outside-box-right-0">
@@ -95,10 +98,10 @@ export default function EliteCompetitorsPage() {
                           <div className="simple-card card-has-number">
                             <div className="card-number-1 alt-font text-dark-green opacity-3 fw-600">1</div>
                             <div className="card-title">
-                              <p className="alt-font fs-20 fw-600 mb-15px">Pressure Is Constant</p>
+                              <p className="alt-font fs-20 fw-600 mb-15px">The Decisions You Carry</p>
                             </div>
                             <div className="card-text">
-                              <p className="fs-16">Whether in poker or high-stakes performance, the challenge is rarely skill alone but how you experience pressure.</p>
+                              <p className="fs-16">You can make a well-considered decision and still question yourself afterwards, especially when the outcome isn’t what you hoped for.</p>
                             </div>
                           </div>
                         </div>
@@ -106,10 +109,10 @@ export default function EliteCompetitorsPage() {
                           <div className="simple-card card-has-number">
                             <div className="card-number-1 alt-font text-dark-green opacity-3 fw-600">2</div>
                             <div className="card-title">
-                              <p className="alt-font fs-20 fw-600 mb-15px">Internal Experience Defines Longevity</p>
+                              <p className="alt-font fs-20 fw-600 mb-15px">Living With Uncertainty</p>
                             </div>
                             <div className="card-text">
-                              <p className="fs-16">Decision-making, identity, and emotional control shape how long you can sustain performance.</p>
+                              <p className="fs-16">You understand that not everything is within your control. But knowing that doesn’t always make the emotional side of uncertainty easier.</p>
                             </div>
                           </div>
                         </div>
@@ -117,10 +120,10 @@ export default function EliteCompetitorsPage() {
                           <div className="simple-card card-has-number">
                             <div className="card-number-1 alt-font text-dark-green opacity-3 fw-600">3</div>
                             <div className="card-title">
-                              <p className="alt-font fs-20 fw-600 mb-15px">This Is Where Change Begins</p>
+                              <p className="alt-font fs-20 fw-600 mb-15px">When Competition Follows You Home</p>
                             </div>
                             <div className="card-text">
-                              <p className="fs-16">Two Lives Theory® becomes relevant when balance becomes harder to maintain under competition.</p>
+                              <p className="fs-16">Sometimes your mind is still replaying decisions and outcomes when you’re supposed to be enjoying time away from the game.</p>
                             </div>
                           </div>
                         </div>
@@ -134,7 +137,7 @@ export default function EliteCompetitorsPage() {
               </div>
             </div>
             <div className="col-12 text-center pt-5 pb-5 sm-pb-120px sm-pt-20px">
-              <p style={{ lineHeight: "1.5" }} className="alt-font text-carbon text-shadow-soft w-80 mx-auto d-inline-flex align-items-center fs-26 md-fs-24 sm-fs-18 fw-600 position-relative">{" My mentoring supports elite competitors in strengthening inner stability so performance, focus, and life remain aligned under pressure. "}</p>
+              <p style={{ lineHeight: "1.5" }} className="alt-font text-carbon text-shadow-soft w-80 mx-auto d-inline-flex align-items-center fs-26 md-fs-24 sm-fs-18 fw-600 position-relative">My mentoring looks beyond your results, helping you strengthen the person making the decisions whilst staying connected to what matters outside competition.</p>
             </div>
           </div>
         </div>
@@ -147,8 +150,8 @@ export default function EliteCompetitorsPage() {
         <div className="container overlap-gap-section pt-5">
           <div className="row justify-content-center mb-2 sm-pt-30px sm-pb-25px">
             <div className="col-lg-8 text-center" data-anime={"{ \"translateY\": [50, 0], \"opacity\": [0,1], \"duration\": 1200, \"delay\": 0, \"staggervalue\": 150, \"easing\": \"easeOutQuad\" }"}>
-              <h2 className="fw-700 text-white ls-minus-2px sm-ls-minus-05px alt-font text-shadow-soft">Common themes I support elite competitors with:</h2>
-              <p className="mx-auto text-center text-white">This work is not about mindset hacks or performance tricks. It is about building internal steadiness where it matters most.</p>
+              <h2 className="fw-700 text-white ls-minus-2px sm-ls-minus-05px alt-font text-shadow-soft">Common Themes I Support Elite Competitors With</h2>
+              <p className="mx-auto text-center text-white">Some of the most demanding moments happen away from the table, the screen or the competitive environment itself. How you experience uncertainty, setbacks and success can influence much more than your next decision.</p>
             </div>
           </div>
         </div>
@@ -162,8 +165,8 @@ export default function EliteCompetitorsPage() {
                       <i className="bi bi-arrow-down-up icon-extra-large text-base-color mb-20px justify-content-center"></i>
                     </div>
                     <div className="feature-box-content">
-                      <span className="d-inline-block alt-font text-white fs-20 fw-500 mb-5px">High-stakes decisions</span>
-                      <p className="text-visible text-light-opacity">Decision-making under constant pressure.</p>
+                      <span className="d-inline-block alt-font text-white fs-20 fw-500 mb-5px">High-Stakes Decisions</span>
+                      <p className="text-visible text-light-opacity">Carrying the responsibility of important decisions where the outcome isn’t always within your control.</p>
                     </div>
                     <div className="feature-box-overlay bg-base-color"></div>
                   </div>
@@ -176,8 +179,8 @@ export default function EliteCompetitorsPage() {
                       <i className="bi bi-hourglass-split icon-extra-large text-base-color mb-20px justify-content-center"></i>
                     </div>
                     <div className="feature-box-content">
-                      <span className="d-inline-block alt-font text-white fs-20 fw-500 mb-5px">Emotional swings</span>
-                      <p className="text-visible text-light-opacity">Emotional swings linked to outcomes, variance, or form.</p>
+                      <span className="d-inline-block alt-font text-white fs-20 fw-500 mb-5px">{"Variance & Uncertainty"}</span>
+                      <p className="text-visible text-light-opacity">Dealing with periods when good decisions don’t necessarily lead to the results you expect.</p>
                     </div>
                     <div className="feature-box-overlay bg-base-color"></div>
                   </div>
@@ -190,8 +193,8 @@ export default function EliteCompetitorsPage() {
                       <i className="bi bi-activity icon-extra-large text-base-color mb-20px justify-content-center"></i>
                     </div>
                     <div className="feature-box-content">
-                      <span className="d-inline-block alt-font text-white fs-20 fw-500 mb-5px">Switching off</span>
-                      <p className="text-visible text-light-opacity">Difficulty switching off from competitive mode.</p>
+                      <span className="d-inline-block alt-font text-white fs-20 fw-500 mb-5px">Emotional Momentum</span>
+                      <p className="text-visible text-light-opacity">Recognising how frustration, disappointment or excitement can influence your mindset and the decisions that follow.</p>
                     </div>
                     <div className="feature-box-overlay bg-base-color"></div>
                   </div>
@@ -204,8 +207,8 @@ export default function EliteCompetitorsPage() {
                       <i className="bi bi-slash-circle icon-extra-large text-base-color mb-20px justify-content-center"></i>
                     </div>
                     <div className="feature-box-content">
-                      <span className="d-inline-block alt-font text-white fs-20 fw-500 mb-5px">Identity pressure</span>
-                      <p className="text-visible text-light-opacity">Identity tied closely to results and performance.</p>
+                      <span className="d-inline-block alt-font text-white fs-20 fw-500 mb-5px">Switching Off</span>
+                      <p className="text-visible text-light-opacity">Finding it difficult to leave competition behind when the session, tournament or working day is over.</p>
                     </div>
                     <div className="feature-box-overlay bg-base-color"></div>
                   </div>
@@ -218,8 +221,8 @@ export default function EliteCompetitorsPage() {
                       <i className="bi bi-speedometer2 icon-extra-large text-base-color mb-20px justify-content-center"></i>
                     </div>
                     <div className="feature-box-content">
-                      <span className="d-inline-block alt-font text-white fs-20 fw-500 mb-5px">Balance</span>
-                      <p className="text-visible text-light-opacity">The challenge of balancing competition with life beyond it.</p>
+                      <span className="d-inline-block alt-font text-white fs-20 fw-500 mb-5px">{"Identity & Self-Worth"}</span>
+                      <p className="text-visible text-light-opacity">When wins, losses, rankings or financial results begin to influence how you feel about yourself.</p>
                     </div>
                     <div className="feature-box-overlay bg-base-color"></div>
                   </div>
@@ -232,8 +235,8 @@ export default function EliteCompetitorsPage() {
                       <i className="bi bi-sliders icon-extra-large text-base-color mb-20px justify-content-center"></i>
                     </div>
                     <div className="feature-box-content">
-                      <span className="d-inline-block alt-font text-white fs-20 fw-500 mb-5px">Variance stress</span>
-                      <p className="text-visible text-light-opacity">Struggling with uncertainty, variance, and outcomes outside of control despite strong performance.</p>
+                      <span className="d-inline-block alt-font text-white fs-20 fw-500 mb-5px">{"Connection & Balance"}</span>
+                      <p className="text-visible text-light-opacity">Making room for relationships, personal wellbeing and experiences that matter beyond competing.</p>
                     </div>
                     <div className="feature-box-overlay bg-base-color"></div>
                   </div>
@@ -246,9 +249,9 @@ export default function EliteCompetitorsPage() {
           <div className="container overlap-gap-section">
             <div className="row justify-content-center mb-4">
               <div className="col-lg-8 text-center" data-anime={"{ \"translateY\": [50, 0], \"opacity\": [0,1], \"duration\": 1200, \"delay\": 0, \"staggervalue\": 150, \"easing\": \"easeOutQuad\" }"}>
-                <h2 className="fw-700 text-white ls-minus-2px sm-ls-minus-05px alt-font text-shadow-soft">How this work strengthens you</h2>
-                <p className="mx-auto text-center text-white">Elite competitive environments place unique demands on the nervous system, attention, and emotional regulation. Over time, even highly disciplined individuals can experience internal friction, decision fatigue, or loss of perspective.</p>
-                <p className="mx-auto fs-26 fw-700 text-center text-white">The work supports elite competitors in:</p>
+                <h2 className="fw-700 text-white ls-minus-2px sm-ls-minus-05px alt-font text-shadow-soft">How This Work Strengthens You</h2>
+                <p className="mx-auto text-center text-white">You can understand probabilities, prepare thoroughly and make good decisions without getting the outcome you wanted.</p>
+                <p className="mx-auto text-center text-white">The deeper work is about how you experience those moments. Understanding your emotional responses, developing greater trust in yourself and recognising when competition is beginning to take up more space in your life than you’d like.</p>
               </div>
             </div>
             <div className="row row-cols-1 row-cols-lg-4 row-cols-sm-2" data-anime={"{ \"el\": \"childs\", \"translateX\": [-50, 0], \"opacity\": [0,1], \"duration\": 600, \"delay\": 0, \"staggervalue\": 100, \"easing\": \"easeOutQuad\" }"}>
@@ -263,8 +266,8 @@ export default function EliteCompetitorsPage() {
                     </span>
                   </div>
                 </div>
-                <span className="d-inline-block fs-19 sm-fs-22 text-white mb-5px fw-600 ls-minus-05px">Composure Under Pressure</span>
-                <p className="w-75 lg-w-95 text-light-gray mx-auto">Control and clarity in high-stakes moments without losing your edge.</p>
+                <span className="d-inline-block fs-19 sm-fs-22 text-white mb-5px fw-600 ls-minus-05px">Clarity Under Pressure</span>
+                <p className="w-75 lg-w-95 text-light-gray mx-auto">Approach important decisions with greater awareness of your thoughts and emotions, without allowing urgency to take over.</p>
               </div>
               <div className="col process-step-style-03 text-center last-paragraph-no-margin hover-box md-mb-50px">
                 <div className="process-step-icon-box position-relative mb-25px">
@@ -277,8 +280,8 @@ export default function EliteCompetitorsPage() {
                     </span>
                   </div>
                 </div>
-                <span className="d-inline-block fs-19 sm-fs-22 text-white mb-5px fw-600 ls-minus-05px">Narrative Control</span>
-                <p className="w-75 text-light-gray lg-w-95 mx-auto">Detaching from outcome-driven thinking and unhelpful internal stories.</p>
+                <span className="d-inline-block fs-19 sm-fs-22 text-white mb-5px fw-600 ls-minus-05px">Perspective on Outcomes</span>
+                <p className="w-75 text-light-gray lg-w-95 mx-auto">Develop a healthier relationship with results, recognising the difference between the quality of your decisions and what happens afterwards.</p>
               </div>
               <div className="col process-step-style-03 text-center last-paragraph-no-margin hover-box xs-mb-50px">
                 <div className="process-step-icon-box position-relative mb-25px">
@@ -292,7 +295,7 @@ export default function EliteCompetitorsPage() {
                   </div>
                 </div>
                 <span className="d-inline-block fs-19 sm-fs-22 text-white mb-5px fw-600 ls-minus-05px">Self-Trust</span>
-                <p className="w-75 text-light-gray lg-w-95 mx-auto">Confidence that remains stable, independent of results or variance.</p>
+                <p className="w-75 text-light-gray lg-w-95 mx-auto">Strengthen confidence in your judgement without needing every result to confirm your ability or worth.</p>
               </div>
               <div className="col process-step-style-03 text-center last-paragraph-no-margin hover-box">
                 <div className="process-step-icon-box position-relative mb-25px">
@@ -304,8 +307,8 @@ export default function EliteCompetitorsPage() {
                     </span>
                   </div>
                 </div>
-                <span className="d-inline-block fs-19 sm-fs-22 text-white mb-5px fw-600 ls-minus-05px">Balance</span>
-                <p className="w-75 text-light-gray lg-w-95 mx-auto">Aligning competition with life beyond it, without losing intensity.</p>
+                <span className="d-inline-block fs-19 sm-fs-22 text-white mb-5px fw-600 ls-minus-05px">Life Beyond Competition</span>
+                <p className="w-75 text-light-gray lg-w-95 mx-auto">Create more room for the people you love, your wellbeing and the experiences that make life meaningful outside the game.</p>
               </div>
             </div>
           </div>
@@ -316,64 +319,62 @@ export default function EliteCompetitorsPage() {
           <div className="row justify-content-center g-0">
             <div className="col-auto text-center last-paragraph-no-margin pt-20px pb-20px ps-60px pe-60px sm-ps-50px sm-pe-40px bg-white box-shadow-large border-radius-100px xs-border-radius-30px">
               <div className="fs-19 ls-minus-05px">
-                <span className="fw-600 text-carbon">This work supports performance without consuming the person.</span>
+                <span className="fw-600 text-carbon">You can be deeply committed to competing without allowing every result to determine how you experience the rest of your life.</span>
               </div>
             </div>
           </div>
         </div>
       </section>
-      <LogoMarquee variant="persona" />
+      <LogoMarquee variant="persona" words={["Clarity.", "Composure.", "Perspective.", "Self-Trust.", "Connection.", "Presence."]} />
       <section className="bg-pattern-section pt-1 pb-0">
         <div className="container">
           <div className="row justify-content-center align-items-end mb-6">
             <div className="col-xl-6 col-lg-7 text-center text-lg-start appear anime-child anime-complete" data-anime={"{ \"el\": \"childs\", \"translateY\": [30, 0], \"opacity\": [0,1], \"duration\": 800, \"delay\": 0, \"staggervalue\": 150, \"easing\": \"easeOutQuad\" }"}>
-              <h2 className="text-carbon alt-font text-shadow-soft fs-40 fw-600 ls-minus-2px sm-mb-20px mb-0 w-90 md-w-100" el="childs" staggervalue="150" easing="easeOutQuad">What this enables over time</h2>
-              <p className="lg-w-100 mb-0 d-none d-lg-block">{" This is what changes when pressure no longer controls you: "}</p>
+              <h2 className="text-carbon alt-font text-shadow-soft fs-40 fw-600 ls-minus-2px sm-mb-20px mb-0 w-90 md-w-100" el="childs" staggervalue="150" easing="easeOutQuad">What This Enables Over Time</h2>
+              <p className="lg-w-100 mb-0 d-none d-lg-block">Over time, this might look like:</p>
             </div>
             <div className="col-lg-5 offset-xl-1 last-paragraph-no-margin text-center text-lg-start words lines fw-600 text-shadow-soft splitting appear anime-child anime-complete" data-anime={"{\"el\": \"lines\",  \"translateX\": [30, 0], \"opacity\": [0,1], \"duration\": 800, \"delay\": 0, \"staggervalue\": 150, \"easing\": \"easeOutQuad\" }"} style={{ "--word-total": "20", "--line-total": "4" } as CSSProperties}>
-              <span className="d-inline" el="lines" staggervalue="150" easing="easeOutQuad" style={{ willChange: "inherit" }}>This is not about reducing intensity.</span>
+              <span className="d-inline" el="lines" staggervalue="150" easing="easeOutQuad" style={{ willChange: "inherit" }}>Good decisions don’t always produce good outcomes.</span>
               {" "}
-              <span className="d-inline" el="lines" staggervalue="150" easing="easeOutQuad" style={{ willChange: "inherit" }}>It is about stabilising it.</span>
+              <span className="d-inline" el="lines" staggervalue="150" easing="easeOutQuad" style={{ willChange: "inherit" }}>That’s part of competing in environments where uncertainty exists.</span>
               {" "}
-              <span className="d-inline" el="lines" staggervalue="150" easing="easeOutQuad" style={{ willChange: "inherit" }}>You do not compete less.</span>
-              {" "}
-              <span className="d-inline" el="lines" staggervalue="150" easing="easeOutQuad" style={{ willChange: "inherit" }}>You compete without internal conflict.</span>
+              <span className="d-inline" el="lines" staggervalue="150" easing="easeOutQuad" style={{ willChange: "inherit" }}>Over time, meaningful growth can show up in how you handle those results, how you speak to yourself afterwards and whether you can enjoy life when you’re not competing.</span>
             </div>
-            <p className="lg-w-100 mb-0 sm-mt-2 text-center d-block d-lg-none">{" This is what changes when pressure no longer controls you: "}</p>
+            <p className="lg-w-100 mb-0 sm-mt-2 text-center d-block d-lg-none">Over time, this might look like:</p>
           </div>
           <div className="marketing-swiper swiper mb-7 md-mb-10 sm-mb-15" data-slider-options={"{ \"slidesPerView\": 1, \"spaceBetween\": 20, \"loop\": true, \"speed\": 900, \"centeredSlides\": true, \"grabCursor\": true, \"autoplay\": { \"delay\": 3000, \"disableOnInteraction\": false }, \"breakpoints\": { \"768\": { \"slidesPerView\": 2, \"spaceBetween\": 30 }, \"992\": { \"slidesPerView\": 3, \"spaceBetween\": 30 } }, \"keyboard\": { \"enabled\": true, \"onlyInViewport\": true }, \"navigation\": { \"nextEl\": \".keynote-slide-next\", \"prevEl\": \".keynote-slide-prev\" }, \"effect\": \"slide\" }"}>
             <div className="swiper-wrapper">
               <div className="swiper-slide">
                 <div className="position-relative marketing-card overflow-hidden h-100 p-50px lg-p-30px border-radius-6px">
-                  <span className="d-block text-carbon fw-600 fs-24 mb-25px position-relative z-index-1 ls-minus-1px w-90 xl-w-100 text-center text-sm-start">Clearer decision-making under high pressure.</span>
+                  <span className="d-block text-carbon fw-600 fs-24 mb-25px position-relative z-index-1 ls-minus-1px w-90 xl-w-100 text-center text-sm-start">Trusting your decisions even when the immediate result doesn’t go your way.</span>
                   {" "}
                   <img src="/.netlify/images?url=/img/bg-icon.svg&w=220&fm=webp&q=80" srcSet="/.netlify/images?url=/img/bg-icon.svg&w=110&fm=webp&q=80 110w, /.netlify/images?url=/img/bg-icon.svg&w=220&fm=webp&q=80 220w" alt="bg icon" className="position-absolute animation-zoom swiper-icon bottom-0 end-0 opacity-50 z-index-0 animation-zoom" style={{ width: "110px", transform: "translate(30%, 30%)", pointerEvents: "none" }} />
                 </div>
               </div>
               <div className="swiper-slide">
                 <div className="position-relative marketing-card overflow-hidden h-100 p-50px lg-p-30px border-radius-6px">
-                  <span className="d-block text-carbon fw-600 fs-24 mb-25px position-relative z-index-1 ls-minus-1px w-90 xl-w-100 text-center text-sm-start">Reduced emotional volatility around outcomes.</span>
+                  <span className="d-block text-carbon fw-600 fs-24 mb-25px position-relative z-index-1 ls-minus-1px w-90 xl-w-100 text-center text-sm-start">Responding to winning and losing without allowing either to determine the rest of your day.</span>
                   {" "}
                   <img src="/.netlify/images?url=/img/bg-icon.svg&w=220&fm=webp&q=80" srcSet="/.netlify/images?url=/img/bg-icon.svg&w=110&fm=webp&q=80 110w, /.netlify/images?url=/img/bg-icon.svg&w=220&fm=webp&q=80 220w" alt="bg icon" className="position-absolute swiper-icon bottom-0 end-0 opacity-50 z-index-0 animation-zoom" style={{ width: "110px", transform: "translate(30%, 30%)", pointerEvents: "none" }} />
                 </div>
               </div>
               <div className="swiper-slide">
                 <div className="position-relative marketing-card overflow-hidden h-100 p-50px lg-p-30px border-radius-6px">
-                  <span className="d-block text-carbon fw-600 fs-24 mb-25px position-relative z-index-1 ls-minus-1px w-90 xl-w-100 text-center text-sm-start">Stronger focus without internal tension.</span>
+                  <span className="d-block text-carbon fw-600 fs-24 mb-25px position-relative z-index-1 ls-minus-1px w-90 xl-w-100 text-center text-sm-start">Enjoying a meal, conversation or time away without mentally replaying the last hand, trade or decision.</span>
                   {" "}
                   <img src="/.netlify/images?url=/img/bg-icon.svg&w=220&fm=webp&q=80" srcSet="/.netlify/images?url=/img/bg-icon.svg&w=110&fm=webp&q=80 110w, /.netlify/images?url=/img/bg-icon.svg&w=220&fm=webp&q=80 220w" alt="bg icon" className="position-absolute swiper-icon bottom-0 end-0 opacity-50 z-index-0 animation-zoom" style={{ width: "110px", transform: "translate(30%, 30%)", pointerEvents: "none" }} />
                 </div>
               </div>
               <div className="swiper-slide">
                 <div className="position-relative marketing-card overflow-hidden h-100 p-50px lg-p-30px border-radius-6px">
-                  <span className="d-block text-carbon fw-600 fs-24 mb-25px position-relative z-index-1 ls-minus-1px w-90 xl-w-100 text-center text-sm-start">Greater balance between competition and life.</span>
+                  <span className="d-block text-carbon fw-600 fs-24 mb-25px position-relative z-index-1 ls-minus-1px w-90 xl-w-100 text-center text-sm-start">Feeling more secure in yourself during periods of success, uncertainty or difficult results.</span>
                   {" "}
                   <img src="/.netlify/images?url=/img/bg-icon.svg&w=220&fm=webp&q=80" srcSet="/.netlify/images?url=/img/bg-icon.svg&w=110&fm=webp&q=80 110w, /.netlify/images?url=/img/bg-icon.svg&w=220&fm=webp&q=80 220w" alt="bg icon" className="position-absolute swiper-icon bottom-0 end-0 opacity-50 z-index-0 animation-zoom" style={{ width: "110px", transform: "translate(30%, 30%)", pointerEvents: "none" }} />
                 </div>
               </div>
               <div className="swiper-slide">
                 <div className="position-relative marketing-card overflow-hidden h-100 p-50px lg-p-30px border-radius-6px">
-                  <span className="d-block text-carbon fw-600 fs-24 mb-25px position-relative z-index-1 ls-minus-1px w-90 xl-w-100 text-center text-sm-start">Sustainable performance across long timeframes.</span>
+                  <span className="d-block text-carbon fw-600 fs-24 mb-25px position-relative z-index-1 ls-minus-1px w-90 xl-w-100 text-center text-sm-start">Continuing to compete with ambition whilst feeling more connected to your relationships, wellbeing and personal life.</span>
                   {" "}
                   <img src="/.netlify/images?url=/img/bg-icon.svg&w=220&fm=webp&q=80" srcSet="/.netlify/images?url=/img/bg-icon.svg&w=110&fm=webp&q=80 110w, /.netlify/images?url=/img/bg-icon.svg&w=220&fm=webp&q=80 220w" alt="bg icon" className="position-absolute swiper-icon bottom-0 end-0 opacity-50 z-index-0 animation-zoom" style={{ width: "110px", transform: "translate(30%, 30%)", pointerEvents: "none" }} />
                 </div>
@@ -468,8 +469,8 @@ export default function EliteCompetitorsPage() {
           </div>
         </div>
       </section>
-      <Cta className="h-600px d-flex align-items-center justify-content-center footer-bg mobile-cta cta-page position-relative" style={{"backgroundImage":"url('/.netlify/images?url=/images/cta-image.webp&w=1920&fm=webp&q=80')","backgroundSize":"cover","backgroundPosition":"center","backgroundRepeat":"no-repeat"}} overlayClass="opacity-medium bg-black position-absolute top-0 start-0 w-100 h-100" shadowClass="hero-bottom-shadow mb-shadow-top position-absolute bottom-0 start-0 w-100" containerClass="container position-relative z-index-1" rowClass="row align-items-center justify-content-center" leftClass="col-xl-8 text-center text-xl-start lg-mb-30px" h3Class="alt-font d-inline-block align-middle fs-40 text-white mb-15px mb-md-0 me-md-35px" title=" You’ve Reached a Level Few Ever Do " rightClass="col-xl-4 text-center text-xl-end" buttons={[{"href":"/request-mentorship","className":"btn-primary spacing-below-desktop  active btn-box-shadow fw-600 text-carbon","text":" Request Mentorship "},{"href":"/explore-your-archetype","className":"btn-archetype active btn-box-shadow fw-600 text-carbon sm-mt-15px","text":" Explore Your Archetype "}]} subtitle={{"tag":"h4","className":"alt-font text-base-color d-inline-block align-middle fs-30 mb-15px mb-md-0 me-md-35px position-relative","iconClass":"feather fs-30 icon-feather-arrow-right","text":" Now Outgrow It"}} />
-      <Cta className="h-600px d-flex align-items-center justify-content-center footer-bg desktop-only-footer cta-page" style={{"backgroundImage":"url('/.netlify/images?url=/images/cta-image.webp&w=800&fm=webp&q=70')"}} overlayClass="opacity-medium bg-black" shadowClass="hero-bottom-shadow" containerClass="container position-relative" rowClass="row align-items-center justify-content-center" leftClass="col-xl-8 text-center text-xl-start lg-mb-30px" h3Class="alt-font d-inline-block align-middle fs-40 text-white mb-15px mb-md-0 me-md-35px position-relative" title="You’ve Reached a Level Few Ever Do " rightClass="col-xl-4 text-center text-xl-end" buttons={[{"href":"/request-mentorship","className":"btn-primary spacing-below-desktop  active btn-box-shadow fw-600 text-carbon","text":" Request Mentorship "},{"href":"/explore-your-archetype","className":"btn-archetype active btn-box-shadow fw-600 text-carbon sm-mt-15px","text":" Explore Your Archetype "}]} parallax="0.5" subtitle={{"tag":"h4","className":"alt-font text-base-color d-inline-block align-middle fs-30 mb-15px mb-md-0 me-md-35px position-relative","iconClass":"feather fs-30 icon-feather-arrow-right","text":" Now Outgrow It"}} />
+      <Cta className="h-600px d-flex align-items-center justify-content-center footer-bg mobile-cta cta-page position-relative" style={{"backgroundImage":"url('/.netlify/images?url=/images/cta-image.webp&w=1920&fm=webp&q=80')","backgroundSize":"cover","backgroundPosition":"center","backgroundRepeat":"no-repeat"}} overlayClass="opacity-medium bg-black position-absolute top-0 start-0 w-100 h-100" shadowClass="hero-bottom-shadow mb-shadow-top position-absolute bottom-0 start-0 w-100" containerClass="container position-relative z-index-1" rowClass="row align-items-center justify-content-center" leftClass="col-xl-8 text-center text-xl-start lg-mb-30px" h3Class="alt-font d-inline-block align-middle fs-40 text-white mb-15px mb-md-0 me-md-35px" title="You Can Care About Winning. " rightClass="col-xl-4 text-center text-xl-end" buttons={[{"href":"/request-mentorship","className":"btn-primary spacing-below-desktop  active btn-box-shadow fw-600 text-carbon","text":" Request Mentorship "},{"href":"/explore-your-archetype","className":"btn-archetype active btn-box-shadow fw-600 text-carbon sm-mt-15px","text":" Explore Your Archetype "}]} subtitle={{"tag":"h4","className":"alt-font text-base-color d-inline-block align-middle fs-30 mb-15px mb-md-0 me-md-35px position-relative","iconClass":"feather fs-30 icon-feather-arrow-right","text":"Without Letting It Decide Everything."}} />
+      <Cta className="h-600px d-flex align-items-center justify-content-center footer-bg desktop-only-footer cta-page" style={{"backgroundImage":"url('/.netlify/images?url=/images/cta-image.webp&w=800&fm=webp&q=70')"}} overlayClass="opacity-medium bg-black" shadowClass="hero-bottom-shadow" containerClass="container position-relative" rowClass="row align-items-center justify-content-center" leftClass="col-xl-8 text-center text-xl-start lg-mb-30px" h3Class="alt-font d-inline-block align-middle fs-40 text-white mb-15px mb-md-0 me-md-35px position-relative" title="You Can Care About Winning. " rightClass="col-xl-4 text-center text-xl-end" buttons={[{"href":"/request-mentorship","className":"btn-primary spacing-below-desktop  active btn-box-shadow fw-600 text-carbon","text":" Request Mentorship "},{"href":"/explore-your-archetype","className":"btn-archetype active btn-box-shadow fw-600 text-carbon sm-mt-15px","text":" Explore Your Archetype "}]} parallax="0.5" subtitle={{"tag":"h4","className":"alt-font text-base-color d-inline-block align-middle fs-30 mb-15px mb-md-0 me-md-35px position-relative","iconClass":"feather fs-30 icon-feather-arrow-right","text":"Without Letting It Decide Everything."}} />
       <Footer />
       <WhatsAppWidget />
       <ScrollTop />

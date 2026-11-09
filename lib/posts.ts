@@ -11,9 +11,7 @@
  *   - the article body's <h1> becomes <h2> (the hero already holds the page's H1)
  *   - the date shown is the first 10 characters of publish_date
  *   - BlogPosting schema with the author as a Person and the site as publisher
- * The static SEO pass (tools/seo-enhance.py in the static repo) also added a
- * BreadcrumbList and a "Keep reading" block of three related posts; both are
- * produced here with the same logic.
+ * The static SEO pass also added a BreadcrumbList; it is produced here with the same logic.
  */
 import type { Metadata } from "next";
 import { rest, type Section } from "./supabase";
@@ -118,69 +116,4 @@ export function postMetadata(post: PostRow, section: Section): Metadata {
     openGraph: { type: "article", title, description, url: canonical, siteName: "Two Lives Theory", images: image ? [{ url: image, secureUrl: image, type: "image/jpeg" }] : undefined },
     twitter: { card: "summary_large_image", title, description, images: image ? [{ url: image, alt: title }] : undefined },
   };
-}
-
-// ---- "Keep reading": three related posts, ported from the static site's SEO pass ----
-
-const STOP = new Set(`a an and are as at be but by for from has have how in into is it its of on or our so than that the
-their them then there these they this to us was we what when where which who why will with you your not no more
-most can do does did often even just about over after before between because feel feels high performers
-performer high-performers`.split(/\s+/));
-
-type RelatedDoc = { section: Section; slug: string; title: string; vec: Map<string, number>; norm: number };
-
-const SERVICES: [RegExp, string, string][] = [
-  [/athlet|sport|competit|poker|player|olympic|elite/g, "/athlete", "Mentorship for athletes"],
-  [/entrepreneur|founder|business|startup/g, "/entrepreneur", "Mentorship for entrepreneurs"],
-  [/leader|executive|ceo|leadership|decision/g, "/executive-leaders", "Mentorship for executive leaders"],
-];
-const DEFAULT_SERVICE = ["/our-method", "How the Two Lives Method works"] as const;
-
-/** Which service page a post points to, from its title and slug (descriptions name every audience). */
-export function serviceFor(title: string, slug: string): { href: string; label: string } {
-  const blob = `${title} ${slug.replace(/-/g, " ")}`.toLowerCase();
-  let best: (typeof SERVICES)[number] | null = null, bestN = 0;
-  for (const s of SERVICES) { const n = (blob.match(s[0]) || []).length; if (n > bestN) { bestN = n; best = s; } }
-  return best ? { href: best[1], label: best[2] } : { href: DEFAULT_SERVICE[0], label: DEFAULT_SERVICE[1] };
-}
-
-async function relatedCorpus(): Promise<RelatedDoc[]> {
-  const rows: { section: Section; slug: string; title: string; desc: string }[] = [];
-  for (const section of ["journal", "blog"] as Section[]) {
-    const { table, filter } = TABLE[section];
-    const { data } = await rest<Pick<PostRow, "slug" | "title" | "seo_title" | "seo_description">[]>(`${table}?select=slug,title,seo_title,seo_description${filter}`);
-    for (const r of data) rows.push({ section, slug: r.slug, title: (r.seo_title || r.title || "").replace(TITLE_SUFFIX, ""), desc: r.seo_description || "" });
-  }
-  const counts = rows.map((r) => {
-    const c = new Map<string, number>();
-    for (const w of `${r.title} ${r.title} ${r.desc} ${r.slug.replace(/-/g, " ")}`.toLowerCase().match(/[a-z]{3,}/g) || []) if (!STOP.has(w)) c.set(w, (c.get(w) || 0) + 1);
-    return c;
-  });
-  const df = new Map<string, number>();
-  for (const c of counts) for (const w of c.keys()) df.set(w, (df.get(w) || 0) + 1);
-  const N = rows.length;
-  return rows.map((r, i) => {
-    const vec = new Map<string, number>();
-    for (const [w, n] of counts[i]) vec.set(w, (1 + Math.log(n)) * Math.log(1 + N / df.get(w)!));
-    const norm = Math.sqrt([...vec.values()].reduce((s, x) => s + x * x, 0)) || 1;
-    return { section: r.section, slug: r.slug, title: r.title, vec, norm };
-  });
-}
-
-/** The three posts most similar to this one (same section preferred), plus the service link. */
-export async function relatedPosts(section: Section, slug: string) {
-  const docs = await relatedCorpus();
-  const me = docs.find((d) => d.section === section && d.slug === slug);
-  if (!me) return { posts: [], service: DEFAULT_SERVICE };
-  const sim = (a: RelatedDoc, b: RelatedDoc) => {
-    const [small, big] = a.vec.size < b.vec.size ? [a.vec, b.vec] : [b.vec, a.vec];
-    let s = 0; for (const [t, w] of small) s += w * (big.get(t) || 0);
-    return s / (a.norm * b.norm);
-  };
-  const ranked = docs.filter((d) => d !== me)
-    .map((d) => ({ d, score: sim(me, d) * (d.section === section ? 1.15 : 1), key: `${d.section}/${d.slug}.html` }))
-    .sort((x, y) => y.score - x.score || (x.key < y.key ? -1 : 1))
-    .slice(0, 3);
-  const service = serviceFor(me.title, slug);
-  return { posts: ranked.map((r) => ({ href: `/${r.d.section}/${r.d.slug}`, title: r.d.title })), service: [service.href, service.label] as const };
 }

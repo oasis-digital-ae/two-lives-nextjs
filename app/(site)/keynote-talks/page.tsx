@@ -82,7 +82,7 @@ export default function KeynoteTalksPage() {
                 </div>
                 <div className="feature-box-content last-paragraph-no-margin">
                   <span className="d-block fs-22 fw-900 text-carbon  mb-5px ls-minus-05px">Real-World Environments</span>
-                  <p>Designed for spaces where pressure is high, change is constant, and performance is expected.</p>
+                  <p>Designed for spaces where pressure is high, change is constant and performance is expected.</p>
                 </div>
               </div>
             </div>
@@ -93,7 +93,7 @@ export default function KeynoteTalksPage() {
                 </div>
                 <div className="feature-box-content last-paragraph-no-margin">
                   <span className="d-block fs-22 fw-900 text-carbon  mb-5px ls-minus-05px">{"Inner Alignment & Performance"}</span>
-                  <p>Helping individuals understand how internal alignment impacts leadership, decisions, and results.</p>
+                  <p>Helping individuals understand how internal alignment impacts leadership, decisions and results.</p>
                 </div>
               </div>
             </div>
@@ -119,14 +119,14 @@ export default function KeynoteTalksPage() {
                     <br />
                     {" Motivation"}
                   </span>
-                  <p>Not surface-level inspiration. Grounded, human, and deeply relatable.</p>
+                  <p>Not surface-level inspiration. Grounded, human and deeply relatable.</p>
                 </div>
               </div>
             </div>
           </div>
           <div className="row justify-content-center" data-anime={"{ \"translateY\": [50, 0], \"opacity\": [0,1], \"duration\": 1200, \"delay\": 0, \"staggervalue\": 150, \"easing\": \"easeOutQuad\" }"}>
             <div className="col-auto text-center">
-              <p className="fw-600 text-shadow-soft w-75 sm-w-100 focus-mobile-keyword mx-auto mb-60px sm-mb-40px">The focus is not just inspiration, but real internal alignment — supporting wellbeing while strengthening how people think, decide, and perform.</p>
+              <p className="fw-600 text-shadow-soft w-75 sm-w-100 focus-mobile-keyword mx-auto mb-60px sm-mb-40px">The focus is not just inspiration, but real internal alignment — supporting wellbeing while strengthening how people think, decide and perform.</p>
               <div className="custom-inline-feature pt-30px sm-pt-0px sm-pb-15px">
                 <i className="bi bi-patch-check text-shadow-soft icon-very-medium text-carbon"></i>
                 {" "}
@@ -157,7 +157,7 @@ export default function KeynoteTalksPage() {
                     <div className="col-lg-6 align-items-center my-auto " data-anime={"{ \"el\": \"childs\", \"translateY\": [30, 0], \"opacity\": [0,1], \"duration\": 600, \"delay\": 0, \"staggervalue\":200, \"easing\": \"easeOutQuad\" }"}>
                       <div className="bg-radial fw-600 lh-30 text-white text-uppercase border-radius-30px ps-20px pe-20px fs-11 mb-25px d-inline-block">{"Experience & Credibility"}</div>
                       <h2 className="text-carbon alt-font text-shadow-soft fs-36 ls-minus-1px mb-3 fw-600">Trusted in High-Performance Environments</h2>
-                      <p>Delivering keynote talks across corporate, wellbeing, and global events.</p>
+                      <p>Delivering keynote talks across corporate, wellbeing and global events.</p>
                       <div className="pt-20px pb-20px ps-30px pe-30px bg-white box-shadow-quadruple-large border-radius-6px mt-30px mb-15px icon-with-text-style-08">
                         <div className="feature-box feature-box-left-icon-middle">
                           <div className="feature-box-icon me-20px">
@@ -258,7 +258,7 @@ export default function KeynoteTalksPage() {
                 </div>
               </div>
               <span className="d-inline-block alt-font fw-600 text-carbon fs-18 mb-5px ls-minus-05px">{"Awareness, Resilience & Clarity"}</span>
-              <p className="w-75 sm-w-85 d-inline-block">Strengthening emotional awareness to remain stable, clear, and composed under pressure and change.</p>
+              <p className="w-75 sm-w-85 d-inline-block">Strengthening emotional awareness to remain stable, clear and composed under pressure and change.</p>
             </div>
             <div className="col process-step-style-06 text-center last-paragraph-no-margin hover-box md-mb-50px">
               <h4 className="d-block text-carbon alt-font text-shadow-soft mb-0 fw-700 ls-minus-2px">2</h4>
@@ -269,7 +269,7 @@ export default function KeynoteTalksPage() {
                 </div>
               </div>
               <span className="d-inline-block alt-font fw-600 text-carbon  fs-18 mb-5px ls-minus-05px">Burnout Reduction</span>
-              <p className="w-75 sm-w-85 d-inline-block">Reducing internal overload, mental fatigue, and hidden strain on performance.</p>
+              <p className="w-75 sm-w-85 d-inline-block">Reducing internal overload, mental fatigue and hidden strain on performance.</p>
             </div>
             <div className="col process-step-style-06 text-center last-paragraph-no-margin hover-box xs-mb-50px">
               <h4 className="d-block text-carbon alt-font text-shadow-soft mb-0 fw-700 ls-minus-2px">3</h4>
@@ -280,7 +280,7 @@ export default function KeynoteTalksPage() {
                 </div>
               </div>
               <span className="d-inline-block alt-font fw-600 text-carbon  fs-18 mb-5px ls-minus-05px">Self-Leadership</span>
-              <p className="w-75 sm-w-85 d-inline-block">Developing ownership, accountability, and conscious leadership.</p>
+              <p className="w-75 sm-w-85 d-inline-block">Developing ownership, accountability and conscious leadership.</p>
             </div>
             <div className="col process-step-style-06 text-center last-paragraph-no-margin hover-box">
               <h4 className="d-block text-carbon alt-font text-shadow-soft mb-0 fw-700 ls-minus-2px">4</h4>
@@ -347,7 +347,7 @@ export default function KeynoteTalksPage() {
           <div className="row justify-content-center mb-0">
             <div className="col-12 col-xl-8 text-center">
               <h2 className="fs-40 fw-600 ls-minus-2px alt-font text-carbon mb-3">{" Keynote Themes "}</h2>
-              <p className="mx-auto text-carbon lh-2 mb-5" style={{ maxWidth: "820px" }}>Each talk is tailored to the audience, culture, and context.</p>
+              <p className="mx-auto text-carbon lh-2 mb-5" style={{ maxWidth: "820px" }}>Each talk is tailored to the audience, culture and context.</p>
             </div>
           </div>
           <div className="row align-items-center">
@@ -404,7 +404,7 @@ export default function KeynoteTalksPage() {
                         <div className="w-100">
                           <a className="btn btn-small btn-rounded btn-white text-uppercase fw-700 mb-20px">{" Keynote Theme "}</a>
                           <div className="alt-font fw-700 sliding-box-title mx-auto">
-                            <a className="text-white fs-32">{" Mental clarity, self-leadership, and sustainable success "}</a>
+                            <a className="text-white fs-32">{" Mental clarity, self-leadership and sustainable success "}</a>
                           </div>
                         </div>
                       </div>
@@ -443,7 +443,7 @@ export default function KeynoteTalksPage() {
         </div>
         <div className="bottom-shadow-soft"></div>
       </section>
-      <Cta className="h-600px d-flex align-items-center justify-content-center cta-page" style={{"backgroundImage":"url('/.netlify/images?url=/images/cta-image.webp&w=1920&fm=webp&q=70')"}} overlayClass="opacity-medium bg-black" shadowClass="hero-bottom-shadow mb-shadow-top" containerClass="container position-relative" rowClass="row align-items-center justify-content-center" leftClass="col-xl-8 text-center text-xl-start lg-mb-30px sm-mb-0" h3Class="alt-font d-inline-block align-middle fs-40 text-white mb-15px mb-md-0 me-md-35px position-relative" title="Enquire about keynote availability." rightClass="col-xl-4 text-center footer-grid-system" buttons={[{"href":"mailto:basim@twolivestheory.com","className":"text-white text-decoration-line-bottom sm-mb-6","text":" basim@twolivestheory.com "},{"href":"https://wa.me/447988720640","className":"btn-primary active btn-box-shadow fw-600 text-carbon d-block mt-4","iconBefore":"fab fa-whatsapp text-carbon","text":" Whats App ","iconAfter":{"span":"text-carbon","icon":"feather icon-feather-arrow-right"}}]} parallax="0.5" subtitle={{"tag":"p","className":"alt-font d-inline-block align-middle fw-500 fs-16 text-white lh-16","text":"For organisations and events seeking depth, clarity, and real connection without theatrics, Basim delivers keynote talks that resonate across every level."}} />
+      <Cta className="h-600px d-flex align-items-center justify-content-center cta-page" style={{"backgroundImage":"url('/.netlify/images?url=/images/cta-image.webp&w=1920&fm=webp&q=70')"}} overlayClass="opacity-medium bg-black" shadowClass="hero-bottom-shadow mb-shadow-top" containerClass="container position-relative" rowClass="row align-items-center justify-content-center" leftClass="col-xl-8 text-center text-xl-start lg-mb-30px sm-mb-0" h3Class="alt-font d-inline-block align-middle fs-40 text-white mb-15px mb-md-0 me-md-35px position-relative" title="Enquire about keynote availability." rightClass="col-xl-4 text-center footer-grid-system" buttons={[{"href":"mailto:basim@twolivestheory.com","className":"text-white text-decoration-line-bottom sm-mb-6","text":" basim@twolivestheory.com "},{"href":"https://wa.me/447988720640","className":"btn-primary active btn-box-shadow fw-600 text-carbon d-block mt-4","iconBefore":"fab fa-whatsapp text-carbon","text":" Whats App ","iconAfter":{"span":"text-carbon","icon":"feather icon-feather-arrow-right"}}]} parallax="0.5" subtitle={{"tag":"p","className":"alt-font d-inline-block align-middle fw-500 fs-16 text-white lh-16","text":"For organisations and events seeking depth, clarity and real connection without theatrics, Basim delivers keynote talks that resonate across every level."}} />
       <Footer />
       <WhatsAppWidget />
       <ScrollTop />

@@ -30,7 +30,7 @@ export const mainNav: NavItem[] = [
       columns: "row-cols-lg-2",
       cards: [
         { href: "/about", image: "two-lives/meet-basim.webp", alt: "Meet Basim", title: "Meet Basim", text: "The journey, the philosophy, the work.", overlayClass: "mega-card-overlay bg-none" },
-        { href: "/our-method", image: "method.webp", alt: "method", title: "Our Method", text: "The system behind sustainable transformation." },
+        { href: "/our-method", image: "method.webp", alt: "method", title: "My Method", text: "The system behind sustainable transformation." },
       ],
     },
   },
@@ -96,3 +96,7 @@ export const footerNav = [
 
 export const footerCredit = { text: "Crafted by ", href: "https://oasis-digital.ae/", label: "Oasis Digital" };
 export const copyright = "© 2026 Two Lives Theory®. All rights reserved.";
+
+/** The 404 page still carries the older footer on production: a location line where
+ *  the certification badges now sit. Used only by `<Footer variant="legacy" />`. */
+export const footerLocation = { text: "Earth — Global clients welcomed." };

@@ -48,7 +48,10 @@ export default function EntrepreneurPage() {
           <div className="row align-items-center extra-small-screen">
             <div className="col-7 col-xl-7 col-sm-6 z-index-9 position-relative page-title-extra-small" data-anime={"{ \"el\": \"childs\", \"opacity\": [0, 1], \"translateX\": [-50, 0], \"duration\": 800, \"delay\": 0, \"staggervalue\": 150, \"easing\": \"easeOutQuad\" }"}>
               <h1 className="mb-10px alt-font text-white fw-500 ls-minus-05px">For Entrepreneurs</h1>
-              <h2 className="fw-700 text-white mb-0 ls-minus-2px sm-ls-minus-1px">Build success without losing yourself in the process.</h2>
+              <h2 className="fw-700 text-white mb-0 ls-minus-2px sm-ls-minus-1px">There’s More to You Than What You Build.</h2>
+              <div className="mt-30px">
+                <a href="/request-mentorship" className="btn-primary active btn-box-shadow fw-600 text-carbon d-inline-block">Request Mentorship</a>
+              </div>
             </div>
           </div>
         </div>
@@ -58,7 +61,7 @@ export default function EntrepreneurPage() {
           <div className="mentor-words-row pb-5 pt-0">
             <div className="row justify-content-center">
               <div className="col-lg-10 text-center">
-                <h2 className="text-carbon alt-font text-shadow-soft fs-50 fw-600 ls-minus-2px sm-pt-0px mentor-animate-words">{" Growth can pull you away from clarity. "}</h2>
+                <h2 className="text-carbon alt-font text-shadow-soft fs-50 fw-600 ls-minus-2px sm-pt-0px mentor-animate-words">Your Ambition Matters. So Does Your Life.</h2>
               </div>
             </div>
           </div>
@@ -84,8 +87,8 @@ export default function EntrepreneurPage() {
               </figure>
             </div>
             <div className="col-md-10 col-xl-5 offset-xl-1 col-lg-6" data-anime={"{ \"el\": \"childs\", \"translateY\": [50, 0], \"opacity\": [0,1], \"duration\": 1200, \"delay\": 0, \"staggervalue\": 150, \"easing\": \"easeOutQuad\" }"}>
-              <h2 className="text-carbon alt-font text-shadow-soft fs-40 fw-600 ls-minus-2px">Build success without losing yourself.</h2>
-              <p className="w-85 lg-w-100 mb-30px">Entrepreneurship demands clarity, resilience, and self-leadership. But for many high performers, success begins to carry an internal cost.</p>
+              <p className="w-85 lg-w-100 mb-15px">Building something of your own can be exciting, demanding and deeply personal. But when you’re making decisions, managing expectations and constantly thinking ahead, other parts of life can quietly get less of your attention.</p>
+              <p className="w-85 lg-w-100 mb-30px">Two Lives Theory® helps you understand yourself beyond the business, so you can continue pursuing your ambitions whilst staying connected to the people, experiences and things that matter most.</p>
               <div className="row align-items-center justify-content-center align-items-center pt-3 overflow-hidden sm-pt-15px">
                 <div className="col-md-12 position-relative" data-anime={"{ \"translateX\": [150, 0], \"opacity\": [0,1], \"duration\": 1200, \"delay\": 100, \"staggervalue\": 150, \"easing\": \"easeOutQuad\" }"}>
                   <div className="outside-box-right-30 sm-outside-box-right-0">
@@ -95,10 +98,10 @@ export default function EntrepreneurPage() {
                           <div className="simple-card card-has-number">
                             <div className="card-number-1 alt-font text-dark-green opacity-3 fw-600">1</div>
                             <div className="card-title">
-                              <p className="alt-font fs-20 fw-600 mb-15px">Internal Pressure Builds</p>
+                              <p className="alt-font fs-20 fw-600 mb-15px">The Responsibility You Carry</p>
                             </div>
                             <div className="card-text">
-                              <p className="fs-16">You may be building, scaling, or leading outwardly while internally experiencing pressure, mental fatigue, and emotional noise.</p>
+                              <p className="fs-16">When people depend on you, it’s easy to keep showing up for everyone whilst putting your own needs further down the list.</p>
                             </div>
                           </div>
                         </div>
@@ -106,10 +109,10 @@ export default function EntrepreneurPage() {
                           <div className="simple-card card-has-number">
                             <div className="card-number-1 alt-font text-dark-green opacity-3 fw-600">2</div>
                             <div className="card-title">
-                              <p className="alt-font fs-20 fw-600 mb-15px">Something Starts to Feel Unsustainable</p>
+                              <p className="alt-font fs-20 fw-600 mb-15px">When Work Follows You Home</p>
                             </div>
                             <div className="card-text">
-                              <p className="fs-16">There can be a growing sense that the way you are operating no longer feels aligned or sustainable.</p>
+                              <p className="fs-16">You can love what you’re building and still find your mind at work when you’re with the people who matter most.</p>
                             </div>
                           </div>
                         </div>
@@ -117,10 +120,10 @@ export default function EntrepreneurPage() {
                           <div className="simple-card card-has-number">
                             <div className="card-number-1 alt-font text-dark-green opacity-3 fw-600">3</div>
                             <div className="card-title">
-                              <p className="alt-font fs-20 fw-600 mb-15px">This Is Where Change Begins</p>
+                              <p className="alt-font fs-20 fw-600 mb-15px">There’s Room for Both</p>
                             </div>
                             <div className="card-text">
-                              <p className="fs-16">Two Lives Theory® becomes relevant when your internal system needs to evolve for your next chapter to work.</p>
+                              <p className="fs-16">You don’t have to choose between your ambitions and a meaningful personal life. The way you experience both can change.</p>
                             </div>
                           </div>
                         </div>
@@ -134,7 +137,7 @@ export default function EntrepreneurPage() {
               </div>
             </div>
             <div className="col-12 text-center pt-5 pb-5 sm-pb-120px sm-pt-20px">
-              <p style={{ lineHeight: "1.5" }} className="alt-font text-carbon text-shadow-soft w-80 sm-w-100 mx-auto d-inline-flex align-items-center fs-26 md-fs-24 sm-fs-18 fw-600 position-relative">{" My mentoring supports entrepreneurs who are not broken, but ready to evolve how they operate from within. "}</p>
+              <p style={{ lineHeight: "1.5" }} className="alt-font text-carbon text-shadow-soft w-80 sm-w-100 mx-auto d-inline-flex align-items-center fs-26 md-fs-24 sm-fs-18 fw-600 position-relative">You’ve already learned how to build something meaningful. My mentoring creates space to understand the person behind it all.</p>
             </div>
           </div>
         </div>
@@ -147,8 +150,8 @@ export default function EntrepreneurPage() {
         <div className="container overlap-gap-section pt-5">
           <div className="row justify-content-center mb-2 sm-pt-30px sm-pb-25px">
             <div className="col-lg-8 text-center" data-anime={"{ \"translateY\": [50, 0], \"opacity\": [0,1], \"duration\": 1200, \"delay\": 0, \"staggervalue\": 150, \"easing\": \"easeOutQuad\" }"}>
-              <h2 className="fw-700 text-white ls-minus-2px sm-ls-minus-05px alt-font text-shadow-soft">Common themes I support entrepreneurs with:</h2>
-              <p className="mx-auto text-center text-white">This work is not about slowing you down. It’s about helping you lead, build, and decide from clarity rather than strain.</p>
+              <h2 className="fw-700 text-white ls-minus-2px sm-ls-minus-05px alt-font text-shadow-soft">Common Themes I Support Entrepreneurs With</h2>
+              <p className="mx-auto text-center text-white">Some of the most important things aren’t visible in your results. They show up in how you feel, how you relate to others and whether you have room to enjoy what you’re creating.</p>
             </div>
           </div>
         </div>
@@ -162,8 +165,8 @@ export default function EntrepreneurPage() {
                       <i className="bi bi-arrow-down-up icon-extra-large text-base-color mb-20px justify-content-center"></i>
                     </div>
                     <div className="feature-box-content">
-                      <span className="d-inline-block alt-font text-white fs-20 fw-500 mb-5px">Internal pressure</span>
-                      <p className="text-visible text-light-opacity">{" Persistent mental pressure behind outward success."}</p>
+                      <span className="d-inline-block alt-font text-white fs-20 fw-500 mb-5px">Internal Pressure</span>
+                      <p className="text-visible text-light-opacity">Feeling responsible for keeping everything moving, even when you’re stretched.</p>
                     </div>
                     <div className="feature-box-overlay bg-base-color"></div>
                   </div>
@@ -176,8 +179,8 @@ export default function EntrepreneurPage() {
                       <i className="bi bi-hourglass-split icon-extra-large text-base-color mb-20px justify-content-center"></i>
                     </div>
                     <div className="feature-box-content">
-                      <span className="d-inline-block alt-font text-white fs-20 fw-500 mb-5px">Decision fatigue</span>
-                      <p className="text-visible text-light-opacity">Decision fatigue and overthinking under responsibility.</p>
+                      <span className="d-inline-block alt-font text-white fs-20 fw-500 mb-5px">Always Switched On</span>
+                      <p className="text-visible text-light-opacity">Your mind stays at work long after the working day has finished.</p>
                     </div>
                     <div className="feature-box-overlay bg-base-color"></div>
                   </div>
@@ -190,8 +193,8 @@ export default function EntrepreneurPage() {
                       <i className="bi bi-activity icon-extra-large text-base-color mb-20px justify-content-center"></i>
                     </div>
                     <div className="feature-box-content">
-                      <span className="d-inline-block alt-font text-white fs-20 fw-500 mb-5px">Emotional reactivity</span>
-                      <p className="text-visible text-light-opacity">{" Emotional reactivity affecting leadership or relationships."}</p>
+                      <span className="d-inline-block alt-font text-white fs-20 fw-500 mb-5px">Emotional Spillover</span>
+                      <p className="text-visible text-light-opacity">Pressure from work affecting your mood, relationships or time with people you love.</p>
                     </div>
                     <div className="feature-box-overlay bg-base-color"></div>
                   </div>
@@ -204,8 +207,8 @@ export default function EntrepreneurPage() {
                       <i className="bi bi-slash-circle icon-extra-large text-base-color mb-20px justify-content-center"></i>
                     </div>
                     <div className="feature-box-content">
-                      <span className="d-inline-block alt-font text-white fs-20 fw-500 mb-5px">Misalignment</span>
-                      <p className="text-visible text-light-opacity">Sense of misalignment despite achievement.</p>
+                      <span className="d-inline-block alt-font text-white fs-20 fw-500 mb-5px">{"Identity & Self-Worth"}</span>
+                      <p className="text-visible text-light-opacity">When how your business is doing begins to shape how you feel about yourself.</p>
                     </div>
                     <div className="feature-box-overlay bg-base-color"></div>
                   </div>
@@ -218,8 +221,8 @@ export default function EntrepreneurPage() {
                       <i className="bi bi-speedometer2 icon-extra-large text-base-color mb-20px justify-content-center"></i>
                     </div>
                     <div className="feature-box-content">
-                      <span className="d-inline-block alt-font text-white fs-20 fw-500 mb-5px">Slowing down</span>
-                      <p className="text-visible text-light-opacity">Difficulty slowing down without losing momentum.</p>
+                      <span className="d-inline-block alt-font text-white fs-20 fw-500 mb-5px">{"Rest & Enjoyment"}</span>
+                      <p className="text-visible text-light-opacity">Finding it difficult to switch off or enjoy time away without feeling you’re falling behind.</p>
                     </div>
                     <div className="feature-box-overlay bg-base-color"></div>
                   </div>
@@ -232,8 +235,8 @@ export default function EntrepreneurPage() {
                       <i className="bi bi-sliders icon-extra-large text-base-color mb-20px justify-content-center"></i>
                     </div>
                     <div className="feature-box-content">
-                      <span className="d-inline-block alt-font text-white fs-20 fw-500 mb-5px">Control</span>
-                      <p className="text-visible text-light-opacity">A constant need to stay in control.</p>
+                      <span className="d-inline-block alt-font text-white fs-20 fw-500 mb-5px">{"Trust & Control"}</span>
+                      <p className="text-visible text-light-opacity">Feeling everything needs your attention, even when others could share the responsibility.</p>
                     </div>
                     <div className="feature-box-overlay bg-base-color"></div>
                   </div>
@@ -246,9 +249,9 @@ export default function EntrepreneurPage() {
           <div className="container overlap-gap-section">
             <div className="row justify-content-center mb-4">
               <div className="col-lg-8 text-center" data-anime={"{ \"translateY\": [50, 0], \"opacity\": [0,1], \"duration\": 1200, \"delay\": 0, \"staggervalue\": 150, \"easing\": \"easeOutQuad\" }"}>
-                <h2 className="fw-700 text-white ls-minus-2px sm-ls-minus-05px alt-font text-shadow-soft">How this work strengthens you</h2>
-                <p className="mx-auto text-center text-white">Entrepreneurs often attempt to solve internal challenges with external strategies. More structure. More discipline. More pushing. But inner friction does not resolve through force.</p>
-                <p className="mx-auto fs-26 fw-700 text-center text-white">The work supports entrepreneurs in:</p>
+                <h2 className="fw-700 text-white ls-minus-2px sm-ls-minus-05px alt-font text-shadow-soft">How This Work Strengthens You</h2>
+                <p className="mx-auto text-center text-white">Another plan, routine or productivity tool might help you get more done. But it won’t always change how you feel within yourself or how you experience the life around you.</p>
+                <p className="mx-auto text-center text-white">Sometimes the most meaningful work begins with understanding what drives you, what weighs on you and what you genuinely want more of in life.</p>
               </div>
             </div>
             <div className="row row-cols-1 row-cols-lg-4 row-cols-sm-2" data-anime={"{ \"el\": \"childs\", \"translateX\": [-50, 0], \"opacity\": [0,1], \"duration\": 600, \"delay\": 0, \"staggervalue\": 100, \"easing\": \"easeOutQuad\" }"}>
@@ -264,7 +267,7 @@ export default function EntrepreneurPage() {
                   </div>
                 </div>
                 <span className="d-inline-block fs-19 sm-fs-22 text-white mb-5px fw-600 ls-minus-05px">Clarity Under Pressure</span>
-                <p className="w-75 lg-w-95 text-light-gray mx-auto">Staying steady and thinking clearly without suppression or overwhelm.</p>
+                <p className="w-75 lg-w-95 text-light-gray mx-auto">Approach difficult decisions with a clearer mind, without carrying every outcome as a reflection of yourself.</p>
               </div>
               <div className="col process-step-style-03 text-center last-paragraph-no-margin hover-box md-mb-50px">
                 <div className="process-step-icon-box position-relative mb-25px">
@@ -278,7 +281,7 @@ export default function EntrepreneurPage() {
                   </div>
                 </div>
                 <span className="d-inline-block fs-19 sm-fs-22 text-white mb-5px fw-600 ls-minus-05px">{"Ambition & Wellbeing"}</span>
-                <p className="w-75 text-light-gray lg-w-95 mx-auto">Driving forward without sacrificing yourself in the process.</p>
+                <p className="w-75 text-light-gray lg-w-95 mx-auto">Keep pursuing what excites you whilst looking after your energy, wellbeing and personal life.</p>
               </div>
               <div className="col process-step-style-03 text-center last-paragraph-no-margin hover-box xs-mb-50px">
                 <div className="process-step-icon-box position-relative mb-25px">
@@ -292,7 +295,7 @@ export default function EntrepreneurPage() {
                   </div>
                 </div>
                 <span className="d-inline-block fs-19 sm-fs-22 text-white mb-5px fw-600 ls-minus-05px">Self-Trust</span>
-                <p className="w-75 text-light-gray lg-w-95 mx-auto">Leading and deciding from internal steadiness rather than doubt.</p>
+                <p className="w-75 text-light-gray lg-w-95 mx-auto">Become more comfortable with your choices, even when there’s no perfect answer or guaranteed outcome.</p>
               </div>
               <div className="col process-step-style-03 text-center last-paragraph-no-margin hover-box">
                 <div className="process-step-icon-box position-relative mb-25px">
@@ -304,8 +307,8 @@ export default function EntrepreneurPage() {
                     </span>
                   </div>
                 </div>
-                <span className="d-inline-block fs-19 sm-fs-22 text-white mb-5px fw-600 ls-minus-05px">Sustainable Leadership</span>
-                <p className="w-75 text-light-gray lg-w-95 mx-auto">Building success without long-term internal strain.</p>
+                <span className="d-inline-block fs-19 sm-fs-22 text-white mb-5px fw-600 ls-minus-05px">{"Relationships & Presence"}</span>
+                <p className="w-75 text-light-gray lg-w-95 mx-auto">Be more available to the people you care about, not just the people who depend on you.</p>
               </div>
             </div>
           </div>
@@ -316,64 +319,62 @@ export default function EntrepreneurPage() {
           <div className="row justify-content-center g-0">
             <div className="col-auto text-center last-paragraph-no-margin pt-20px pb-20px ps-60px pe-60px sm-ps-50px sm-pe-40px bg-white box-shadow-large border-radius-100px xs-border-radius-30px">
               <div className="fs-19 ls-minus-05px">
-                <span className="fw-600 text-carbon">This work strengthens how you operate, without dismantling what you’ve built.</span>
+                <span className="fw-600 text-carbon">You can care deeply about your business and still make room for a life that feels full outside it.</span>
               </div>
             </div>
           </div>
         </div>
       </section>
-      <LogoMarquee variant="persona" />
+      <LogoMarquee variant="persona" words={["Clarity.", "Stability.", "Connection.", "Self-Trust.", "Growth.", "Presence."]} />
       <section className="bg-pattern-section pt-1 pb-0">
         <div className="container">
           <div className="row justify-content-center align-items-end mb-6">
             <div className="col-xl-6 col-lg-7 text-center text-lg-start appear anime-child anime-complete" data-anime={"{ \"el\": \"childs\", \"translateY\": [30, 0], \"opacity\": [0,1], \"duration\": 800, \"delay\": 0, \"staggervalue\": 150, \"easing\": \"easeOutQuad\" }"}>
-              <h2 className="text-carbon alt-font text-shadow-soft fs-40 fw-600 ls-minus-2px sm-mb-20px mb-0 w-90 md-w-100" el="childs" staggervalue="150" easing="easeOutQuad">What this enables over time</h2>
-              <p className="lg-w-100 mb-0 d-none d-lg-block">{" Over time, this is how things begin to feel: "}</p>
+              <h2 className="text-carbon alt-font text-shadow-soft fs-40 fw-600 ls-minus-2px sm-mb-20px mb-0 w-90 md-w-100" el="childs" staggervalue="150" easing="easeOutQuad">What This Enables Over Time</h2>
+              <p className="lg-w-100 mb-0 d-none d-lg-block">Over time, this might look like:</p>
             </div>
             <div className="col-lg-5 offset-xl-1 last-paragraph-no-margin text-center text-lg-start words lines fw-600 text-shadow-soft splitting appear anime-child anime-complete" data-anime={"{\"el\": \"lines\",  \"translateX\": [30, 0], \"opacity\": [0,1], \"duration\": 800, \"delay\": 0, \"staggervalue\": 150, \"easing\": \"easeOutQuad\" }"} style={{ "--word-total": "20", "--line-total": "4" } as CSSProperties}>
-              <span className="d-inline" el="lines" staggervalue="150" easing="easeOutQuad" style={{ willChange: "inherit" }}>This is not a reinvention.</span>
+              <span className="d-inline" el="lines" staggervalue="150" easing="easeOutQuad" style={{ willChange: "inherit" }}>The changes that matter aren’t always dramatic.</span>
               {" "}
-              <span className="d-inline" el="lines" staggervalue="150" easing="easeOutQuad" style={{ willChange: "inherit" }}>It is a shift in how you operate.</span>
+              <span className="d-inline" el="lines" staggervalue="150" easing="easeOutQuad" style={{ willChange: "inherit" }}>Sometimes they show up in the way you make a decision, walk through your front door or spend time with someone you love.</span>
               {" "}
-              <span className="d-inline" el="lines" staggervalue="150" easing="easeOutQuad" style={{ willChange: "inherit" }}>You do not step away from ambition.</span>
-              {" "}
-              <span className="d-inline" el="lines" staggervalue="150" easing="easeOutQuad" style={{ willChange: "inherit" }}>You move through it with clarity, stability, and control.</span>
+              <span className="d-inline" el="lines" staggervalue="150" easing="easeOutQuad" style={{ willChange: "inherit" }}>Your business can still mean a great deal to you without occupying every part of your life.</span>
             </div>
-            <p className="lg-w-100 mb-0 sm-mt-2 text-center d-block d-lg-none">{" Over time, this is how things begin to feel: "}</p>
+            <p className="lg-w-100 mb-0 sm-mt-2 text-center d-block d-lg-none">Over time, this might look like:</p>
           </div>
           <div className="marketing-swiper swiper mb-7 md-mb-10 sm-mb-15" data-slider-options={"{ \"slidesPerView\": 1, \"spaceBetween\": 20, \"loop\": true, \"speed\": 900, \"centeredSlides\": true, \"grabCursor\": true, \"autoplay\": { \"delay\": 3000, \"disableOnInteraction\": false }, \"breakpoints\": { \"768\": { \"slidesPerView\": 2, \"spaceBetween\": 30 }, \"992\": { \"slidesPerView\": 3, \"spaceBetween\": 30 } }, \"navigation\": { \"nextEl\": \".entrepreneur-slide-next\", \"prevEl\": \".entrepreneur-slide-prev\" }, \"keyboard\": { \"enabled\": true, \"onlyInViewport\": true }, \"effect\": \"slide\" }"}>
             <div className="swiper-wrapper">
               <div className="swiper-slide">
                 <div className="position-relative marketing-card overflow-hidden h-100 p-50px lg-p-30px border-radius-6px">
-                  <span className="d-block text-carbon fw-600 fs-24 mb-25px position-relative z-index-1 ls-minus-1px w-90 xl-w-100 text-center text-sm-start">Clearer decision-making with less emotional load.</span>
+                  <span className="d-block text-carbon fw-600 fs-24 mb-25px position-relative z-index-1 ls-minus-1px w-90 xl-w-100 text-center text-sm-start">Making difficult decisions without replaying them in your mind all evening.</span>
                   {" "}
                   <img src="/img/bg-icon.svg" srcSet="/img/bg-icon.svg 1x, /img/bg-icon.svg 2x" alt="bg icon" className="position-absolute animation-zoom swiper-icon bottom-0 end-0 opacity-50 z-index-0 animation-zoom" style={{ width: "110px", transform: "translate(30%, 30%)", pointerEvents: "none" }} />
                 </div>
               </div>
               <div className="swiper-slide">
                 <div className="position-relative marketing-card overflow-hidden h-100 p-50px lg-p-30px border-radius-6px">
-                  <span className="d-block text-carbon fw-600 fs-24 mb-25px position-relative z-index-1 ls-minus-1px w-90 xl-w-100 text-center text-sm-start">Increased capacity without burnout.</span>
+                  <span className="d-block text-carbon fw-600 fs-24 mb-25px position-relative z-index-1 ls-minus-1px w-90 xl-w-100 text-center text-sm-start">Being fully present when you spend time with the people you love.</span>
                   {" "}
                   <img src="/img/bg-icon.svg" srcSet="/img/bg-icon.svg 1x, /img/bg-icon.svg 2x" alt="bg icon" className="position-absolute swiper-icon bottom-0 end-0 opacity-50 z-index-0 animation-zoom" style={{ width: "110px", transform: "translate(30%, 30%)", pointerEvents: "none" }} />
                 </div>
               </div>
               <div className="swiper-slide">
                 <div className="position-relative marketing-card overflow-hidden h-100 p-50px lg-p-30px border-radius-6px">
-                  <span className="d-block text-carbon fw-600 fs-24 mb-25px position-relative z-index-1 ls-minus-1px w-90 xl-w-100 text-center text-sm-start">Leadership that feels grounded rather than reactive.</span>
+                  <span className="d-block text-carbon fw-600 fs-24 mb-25px position-relative z-index-1 ls-minus-1px w-90 xl-w-100 text-center text-sm-start">Stepping away from work without feeling everything will fall apart.</span>
                   {" "}
                   <img src="/img/bg-icon.svg" srcSet="/img/bg-icon.svg 1x, /img/bg-icon.svg 2x" alt="bg icon" className="position-absolute swiper-icon bottom-0 end-0 opacity-50 z-index-0 animation-zoom" style={{ width: "110px", transform: "translate(30%, 30%)", pointerEvents: "none" }} />
                 </div>
               </div>
               <div className="swiper-slide">
                 <div className="position-relative marketing-card overflow-hidden h-100 p-50px lg-p-30px border-radius-6px">
-                  <span className="d-block text-carbon fw-600 fs-24 mb-25px position-relative z-index-1 ls-minus-1px w-90 xl-w-100 text-center text-sm-start">The ability to scale life and business together, not in conflict.</span>
+                  <span className="d-block text-carbon fw-600 fs-24 mb-25px position-relative z-index-1 ls-minus-1px w-90 xl-w-100 text-center text-sm-start">Continuing to grow without measuring your worth by the next milestone.</span>
                   {" "}
                   <img src="/img/bg-icon.svg" srcSet="/img/bg-icon.svg 1x, /img/bg-icon.svg 2x" alt="bg icon" className="position-absolute swiper-icon bottom-0 end-0 opacity-50 z-index-0 animation-zoom" style={{ width: "110px", transform: "translate(30%, 30%)", pointerEvents: "none" }} />
                 </div>
               </div>
               <div className="swiper-slide">
                 <div className="position-relative marketing-card overflow-hidden h-100 p-50px lg-p-30px border-radius-6px">
-                  <span className="d-block text-carbon fw-600 fs-24 mb-25px position-relative z-index-1 ls-minus-1px w-90 xl-w-100 text-center text-sm-start">A renewed sense of direction and internal stability.</span>
+                  <span className="d-block text-carbon fw-600 fs-24 mb-25px position-relative z-index-1 ls-minus-1px w-90 xl-w-100 text-center text-sm-start">Feeling proud of what you’ve built and making time to actually enjoy it.</span>
                   {" "}
                   <img src="/img/bg-icon.svg" srcSet="/img/bg-icon.svg 1x, /img/bg-icon.svg 2x" alt="bg icon" className="position-absolute swiper-icon bottom-0 end-0 opacity-50 z-index-0 animation-zoom" style={{ width: "110px", transform: "translate(30%, 30%)", pointerEvents: "none" }} />
                 </div>
@@ -469,8 +470,8 @@ export default function EntrepreneurPage() {
           </div>
         </div>
       </section>
-      <Cta className="h-600px d-flex align-items-center justify-content-center footer-bg mobile-cta position-relative cta-page" style={{"backgroundImage":"url('/.netlify/images?url=/images/cta-image.webp&w=800&fm=webp&q=70')","backgroundSize":"cover","backgroundPosition":"center","backgroundRepeat":"no-repeat"}} overlayClass="opacity-medium bg-black position-absolute top-0 start-0 w-100 h-100" shadowClass="hero-bottom-shadow mb-shadow-top position-absolute bottom-0 start-0 w-100" containerClass="container position-relative z-index-1" rowClass="row align-items-center justify-content-center" leftClass="col-xl-8 text-center text-xl-start lg-mb-30px" h3Class="alt-font d-inline-block align-middle fs-40 text-white mb-15px mb-md-0 me-md-35px" title=" You’ve Reached a Level Few Ever Do " rightClass="col-xl-4 text-center text-xl-end" buttons={[{"href":"/request-mentorship","className":"btn-primary spacing-below-desktop  active btn-box-shadow fw-600 text-carbon","text":" Request Mentorship "},{"href":"/explore-your-archetype","className":"btn-archetype active btn-box-shadow fw-600 text-carbon sm-mt-15px","text":" Explore Your Archetype "}]} subtitle={{"tag":"h4","className":"alt-font text-base-color d-inline-block align-middle fs-30 mb-15px mb-md-0 me-md-35px position-relative","iconClass":"feather fs-30 icon-feather-arrow-right","text":" Now Outgrow It"}} />
-      <Cta className="h-600px d-flex align-items-center justify-content-center footer-bg desktop-only-footer cta-page" style={{"backgroundImage":"url('/.netlify/images?url=/images/cta-image.webp&w=800&fm=webp&q=70')"}} overlayClass="opacity-medium bg-black" shadowClass="hero-bottom-shadow" containerClass="container position-relative" rowClass="row align-items-center justify-content-center" leftClass="col-xl-8 text-center text-xl-start lg-mb-30px" h3Class="alt-font d-inline-block align-middle fs-40 text-white mb-15px mb-md-0 me-md-35px position-relative" title="You’ve Reached a Level Few Ever Do " rightClass="col-xl-4 text-center text-xl-end" buttons={[{"href":"/request-mentorship","className":"btn-primary spacing-below-desktop  active btn-box-shadow fw-600 text-carbon","text":" Request Mentorship "},{"href":"/explore-your-archetype","className":"btn-archetype active btn-box-shadow fw-600 text-carbon sm-mt-15px","text":" Explore Your Archetype "}]} parallax="0.5" subtitle={{"tag":"h4","className":"alt-font text-base-color d-inline-block align-middle fs-30 mb-15px mb-md-0 me-md-35px position-relative","iconClass":"feather fs-30 icon-feather-arrow-right","text":" Now Outgrow It"}} />
+      <Cta className="h-600px d-flex align-items-center justify-content-center footer-bg mobile-cta position-relative cta-page" style={{"backgroundImage":"url('/.netlify/images?url=/images/cta-image.webp&w=800&fm=webp&q=70')","backgroundSize":"cover","backgroundPosition":"center","backgroundRepeat":"no-repeat"}} overlayClass="opacity-medium bg-black position-absolute top-0 start-0 w-100 h-100" shadowClass="hero-bottom-shadow mb-shadow-top position-absolute bottom-0 start-0 w-100" containerClass="container position-relative z-index-1" rowClass="row align-items-center justify-content-center" leftClass="col-xl-8 text-center text-xl-start lg-mb-30px" h3Class="alt-font d-inline-block align-middle fs-40 text-white mb-15px mb-md-0 me-md-35px" title="You’ve Built Something Worth Being Proud Of. " rightClass="col-xl-4 text-center text-xl-end" buttons={[{"href":"/request-mentorship","className":"btn-primary spacing-below-desktop  active btn-box-shadow fw-600 text-carbon","text":" Request Mentorship "},{"href":"/explore-your-archetype","className":"btn-archetype active btn-box-shadow fw-600 text-carbon sm-mt-15px","text":" Explore Your Archetype "}]} subtitle={{"tag":"h4","className":"alt-font text-base-color d-inline-block align-middle fs-30 mb-15px mb-md-0 me-md-35px position-relative","iconClass":"feather fs-30 icon-feather-arrow-right","text":"Make Room to Enjoy the Life Around It."}} />
+      <Cta className="h-600px d-flex align-items-center justify-content-center footer-bg desktop-only-footer cta-page" style={{"backgroundImage":"url('/.netlify/images?url=/images/cta-image.webp&w=800&fm=webp&q=70')"}} overlayClass="opacity-medium bg-black" shadowClass="hero-bottom-shadow" containerClass="container position-relative" rowClass="row align-items-center justify-content-center" leftClass="col-xl-8 text-center text-xl-start lg-mb-30px" h3Class="alt-font d-inline-block align-middle fs-40 text-white mb-15px mb-md-0 me-md-35px position-relative" title="You’ve Built Something Worth Being Proud Of. " rightClass="col-xl-4 text-center text-xl-end" buttons={[{"href":"/request-mentorship","className":"btn-primary spacing-below-desktop  active btn-box-shadow fw-600 text-carbon","text":" Request Mentorship "},{"href":"/explore-your-archetype","className":"btn-archetype active btn-box-shadow fw-600 text-carbon sm-mt-15px","text":" Explore Your Archetype "}]} parallax="0.5" subtitle={{"tag":"h4","className":"alt-font text-base-color d-inline-block align-middle fs-30 mb-15px mb-md-0 me-md-35px position-relative","iconClass":"feather fs-30 icon-feather-arrow-right","text":"Make Room to Enjoy the Life Around It."}} />
       <Footer />
       <WhatsAppWidget />
       <ScrollTop />

@@ -14,9 +14,9 @@ const SLIDER_OPTIONS = '{ "slidesPerView":"auto","spaceBetween":40,"speed":12000
 const FILLED = "fs-140 lg-fs-130 md-fs-110 sm-fs-90 text-carbon opacity-8 fw-600 ls-minus-6px alt-font";
 const OUTLINED = "fs-140 lg-fs-130 md-fs-110 sm-fs-90 fw-600 text-outline text-outline-color-black ls-minus-6px alt-font";
 
-export function LogoMarquee({ variant }: { variant?: "persona" }) {
+export function LogoMarquee({ variant, words = marqueeWords }: { variant?: "persona"; words?: string[] }) {
   const persona = variant === "persona";
-  const slides = [...marqueeWords, ...marqueeWords];
+  const slides = [...words, ...words];
   return (
     <section className={persona ? "half-section pb-0 bg-pattern-section sm-pt-65px sm-pb-30px" : "half-section pb-0 bg-pattern-section"}>
       <div className="container-fluid">

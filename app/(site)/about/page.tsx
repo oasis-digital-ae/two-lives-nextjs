@@ -60,9 +60,9 @@ export default function AboutPage() {
             </div>
             <div className="col-xl-5 col-lg-6 offset-xl-1 text-center text-md-start" data-anime={"{ \"el\": \"childs\", \"translateY\": [30, 0], \"opacity\": [0,1], \"duration\": 600, \"delay\": 0, \"staggervalue\": 300, \"easing\": \"easeOutQuad\" }"}>
               <h2 className="text-carbon alt-font text-shadow-soft fs-40 fw-600 ls-minus-2px alt-font mb-20px">Meet the Founder</h2>
-              <p className="mb-15px">I’m Basim, Mindset and Growth Mentor with over twelve years of experience guiding Leaders, Athletes, Entrepreneurs and High Competitors through periods of transition, inner realignment, and personal evolution.</p>
-              <p className="mb-15px">I mentor individuals who are outwardly capable and successful, yet feel an internal pull towards greater clarity, freedom, and alignment. This work is not about fixing what is broken. It is about strengthening what already exists so the next phase of life is built consciously, not reactively.</p>
-              <p className="mb-15px">The result is greater focus, cleaner decisions, and performance that feels grounded rather than forced.</p>
+              <p className="mb-15px">I’m Basim, Mindset and Growth Mentor with over twelve years of experience guiding Leaders, Athletes, Entrepreneurs and High Competitors through periods of transition, inner realignment and personal evolution.</p>
+              <p className="mb-15px">I mentor individuals who are outwardly capable and successful, yet feel an internal pull towards greater clarity, freedom and alignment. This work is not about fixing what is broken. It is about strengthening what already exists so the next phase of life is built consciously, not reactively.</p>
+              <p className="mb-15px">The result is greater focus, cleaner decisions and performance that feels grounded rather than forced.</p>
               <p className="mb-15px text-carbon fw-700">This is the foundation of the Two Lives Theory®.</p>
             </div>
           </div>
@@ -138,7 +138,7 @@ export default function AboutPage() {
                   </span>
                 </span>
               </h2>
-              <h3 className="text-carbon w-80 text-shadow-soft fs-24 fw-500">This is mentoring, not motivation and not quick fixes.</h3>
+              <h3 className="text-carbon w-80 text-shadow-soft fs-24 fw-500">This is mentoring that looks beyond what you achieve, to the person experiencing it all.</h3>
             </div>
             <div className="col-lg-7" data-anime={"{ \"el\": \"childs\", \"translateY\": [15, 0], \"opacity\": [0,1], \"duration\": 600, \"delay\": 0, \"staggervalue\": 300, \"easing\": \"easeOutQuad\" }"}>
               <div className="row">
@@ -146,7 +146,7 @@ export default function AboutPage() {
                   <div className="fs-22 alt-font fw-600 text-carbon w-100 xl-w-100 sm-mb-10px">Integrated, not fragmented.</div>
                 </div>
                 <div className="col-md-7 last-paragraph-no-margin">
-                  <p>I guide you across the mental, emotional, spiritual, and physical through a deeply considered process.</p>
+                  <p>Your thoughts, emotions, wellbeing, relationships and sense of purpose are all connected. We explore the whole picture, not just one part of your life.</p>
                 </div>
               </div>
               <div className="separator-line-1px border-bottom border-color-extra-medium-gray mt-40px mb-40px sm-mt-20px sm-mb-20px"></div>
@@ -155,16 +155,16 @@ export default function AboutPage() {
                   <div className="fs-22 alt-font fw-600 text-carbon w-100 xl-w-100 sm-mb-10px">The work beneath the surface.</div>
                 </div>
                 <div className="col-md-7 last-paragraph-no-margin">
-                  <p>This can involve reflection, emotional processing, and releasing old patterns or grounding into clarity and aligned action.</p>
+                  <p>It’s about understanding what’s shaping your thoughts, reactions and choices, whilst reconnecting with what genuinely matters to you.</p>
                 </div>
               </div>
               <div className="separator-line-1px border-bottom border-color-extra-medium-gray mt-40px mb-40px sm-mt-20px sm-mb-20px"></div>
               <div className="row">
                 <div className="col-md-5">
-                  <div className="fs-22 alt-font fw-600 text-carbon w-100 xl-w-100 sm-mb-10px">No formula. No rush.</div>
+                  <div className="fs-22 alt-font fw-600 text-carbon w-100 xl-w-100 sm-mb-10px">Personal to you. Built around your life.</div>
                 </div>
                 <div className="col-md-7 last-paragraph-no-margin">
-                  <p>Growth happens with your life, not at the expense of it.</p>
+                  <p>There’s no need to force change or follow someone else’s pace. We work with where you are, allowing growth to become part of your life, not something that takes you away from it.</p>
                 </div>
               </div>
             </div>
@@ -251,8 +251,8 @@ export default function AboutPage() {
               <h2 className="text-carbon alt-font text-shadow-soft sm-text-center fs-40 fw-600 ls-minus-2px alt-font mb-20px">{"Experience & Foundation"}</h2>
               <p className="mb-15px">{"My mentoring is shaped by over a decade of professional training and lived experience. "}</p>
               <p className="mb-15px fw-600 fst-italic">{"I have worked with elite performers from UFC and Premiership football athletes to professional poker players and business leaders. "}</p>
-              <p className="mb-15px">I have qualifications spanning mindset work, counselling skills, life coaching, neuro-linguistic programming, hypnosis, and performance coaching.</p>
-              <p className="mb-15px">This foundation allows me to work with discernment, depth, and integrity — not theory alone.</p>
+              <p className="mb-15px">I have qualifications spanning mindset work, counselling skills, life coaching, neuro-linguistic programming, hypnosis and performance coaching.</p>
+              <p className="mb-15px">This foundation allows me to work with discernment, depth and integrity — not theory alone.</p>
               <div className="btn-wrapper d-none d-lg-flex justify-content-center">
                 <div className="d-inline-block mt-3 mb-3">
                   <a href="/request-mentorship" className="btn-three active btn-box-shadow fw-600">{" Request Mentorship "}</a>
@@ -350,8 +350,8 @@ export default function AboutPage() {
         </div>
       </section>
       <LogoMarquee />
-      <Cta className="h-600px d-flex align-items-center justify-content-center footer-bg mobile-cta cta-page position-relative" style={{"backgroundImage":"image-set(\n                         url('/.netlify/images?url=/images/cta-image.webp&w=1200&fm=webp&q=75') 1x,\n                         url('/.netlify/images?url=/images/cta-image.webp&w=2000&fm=webp&q=75') 2x\n                     )","backgroundSize":"cover","backgroundPosition":"center","backgroundRepeat":"no-repeat"}} overlayClass="opacity-medium bg-black position-absolute top-0 start-0 w-100 h-100" shadowClass="hero-bottom-shadow  mb-shadow-top position-absolute bottom-0 start-0 w-100" containerClass="container position-relative z-index-1" rowClass="row align-items-center justify-content-center" leftClass="col-xl-8 text-center text-xl-start lg-mb-30px" h3Class="alt-font d-inline-block align-middle fs-40 text-white mb-15px mb-md-0 me-md-35px position-relative" title="Step Into Your Next Life" rightClass="col-xl-4 text-center text-xl-end" buttons={[{"href":"/request-mentorship","className":"btn-primary active btn-box-shadow fw-600 text-carbon","text":" Request Mentorship "},{"href":"/explore-your-archetype","className":"btn-archetype active btn-box-shadow fw-600 text-carbon sm-mt-15px","text":" Explore Your Archetype "}]} subtitle={{"tag":"p","className":"alt-font d-inline-block align-middle fw-500 fs-16 text-white lh-16","text":" Not becoming someone new. It’s about returning to yourself with clarity, strength, and freedom. "}} />
-      <Cta className="h-600px d-flex align-items-center justify-content-center footer-bg desktop-only-footer cta-page" style={{"backgroundImage":"image-set(\n                                            url('/.netlify/images?url=/images/cta-image.webp&w=1600&fm=webp&q=75') 1x,\n                                            url('/.netlify/images?url=/images/cta-image.webp&w=2400&fm=webp&q=75') 2x\n                                        )"}} overlayClass="opacity-medium bg-black" shadowClass="hero-bottom-shadow" containerClass="container position-relative" rowClass="row align-items-center justify-content-center" leftClass="col-xl-8 text-center text-xl-start lg-mb-30px" h3Class="alt-font d-inline-block align-middle fs-40 text-white mb-15px mb-md-0 me-md-35px position-relative" title="Step Into Your Next Life" rightClass="col-xl-4 text-center text-xl-end" buttons={[{"href":"/request-mentorship","className":"btn-primary spacing-below-desktop  active btn-box-shadow fw-600 text-carbon","text":" Request Mentorship "},{"href":"/explore-your-archetype","className":"btn-archetype active btn-box-shadow fw-600 text-carbon sm-mt-15px","text":" Explore Your Archetype "}]} parallax="0.5" subtitle={{"tag":"h4","className":"alt-font text-white d-inline-block align-middle fs-20 lh-16 mb-15px fw-600 mb-md-0 me-md-35px position-relative","text":"Not becoming someone new. It’s about returning to yourself with clarity, strength, and freedom."}} />
+      <Cta className="h-600px d-flex align-items-center justify-content-center footer-bg mobile-cta cta-page position-relative" style={{"backgroundImage":"image-set(\n                         url('/.netlify/images?url=/images/cta-image.webp&w=1200&fm=webp&q=75') 1x,\n                         url('/.netlify/images?url=/images/cta-image.webp&w=2000&fm=webp&q=75') 2x\n                     )","backgroundSize":"cover","backgroundPosition":"center","backgroundRepeat":"no-repeat"}} overlayClass="opacity-medium bg-black position-absolute top-0 start-0 w-100 h-100" shadowClass="hero-bottom-shadow  mb-shadow-top position-absolute bottom-0 start-0 w-100" containerClass="container position-relative z-index-1" rowClass="row align-items-center justify-content-center" leftClass="col-xl-8 text-center text-xl-start lg-mb-30px" h3Class="alt-font d-inline-block align-middle fs-40 text-white mb-15px mb-md-0 me-md-35px position-relative" title="Step Into Your Next Life" rightClass="col-xl-4 text-center text-xl-end" buttons={[{"href":"/request-mentorship","className":"btn-primary active btn-box-shadow fw-600 text-carbon","text":" Request Mentorship "},{"href":"/explore-your-archetype","className":"btn-archetype active btn-box-shadow fw-600 text-carbon sm-mt-15px","text":" Explore Your Archetype "}]} subtitle={{"tag":"p","className":"alt-font d-inline-block align-middle fw-500 fs-16 text-white lh-16","text":" Not becoming someone new. It’s about returning to yourself with clarity, strength and freedom. "}} />
+      <Cta className="h-600px d-flex align-items-center justify-content-center footer-bg desktop-only-footer cta-page" style={{"backgroundImage":"image-set(\n                                            url('/.netlify/images?url=/images/cta-image.webp&w=1600&fm=webp&q=75') 1x,\n                                            url('/.netlify/images?url=/images/cta-image.webp&w=2400&fm=webp&q=75') 2x\n                                        )"}} overlayClass="opacity-medium bg-black" shadowClass="hero-bottom-shadow" containerClass="container position-relative" rowClass="row align-items-center justify-content-center" leftClass="col-xl-8 text-center text-xl-start lg-mb-30px" h3Class="alt-font d-inline-block align-middle fs-40 text-white mb-15px mb-md-0 me-md-35px position-relative" title="Step Into Your Next Life" rightClass="col-xl-4 text-center text-xl-end" buttons={[{"href":"/request-mentorship","className":"btn-primary spacing-below-desktop  active btn-box-shadow fw-600 text-carbon","text":" Request Mentorship "},{"href":"/explore-your-archetype","className":"btn-archetype active btn-box-shadow fw-600 text-carbon sm-mt-15px","text":" Explore Your Archetype "}]} parallax="0.5" subtitle={{"tag":"h4","className":"alt-font text-white d-inline-block align-middle fs-20 lh-16 mb-15px fw-600 mb-md-0 me-md-35px position-relative","text":"Not becoming someone new. It’s about returning to yourself with clarity, strength and freedom."}} />
       <Footer />
       <WhatsAppWidget />
       <ScrollTop />

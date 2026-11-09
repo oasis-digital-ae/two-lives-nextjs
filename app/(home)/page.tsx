@@ -52,7 +52,7 @@ export default function IndexPage() {
         </div>
         <div className="hero-headline text-center fs-28 fw-600 alt-font text-white">
           <div className="h1 hero-slogan mb-15px md-fs-55">Step Into Your Next Life</div>
-          <p className="text-center fs-24 md-fs-22 sm-fs-20 fw-500 alt-font font-style-italic text-white pt-0">With Clarity, Strength, and Inner Alignment.</p>
+          <p className="text-center fs-24 md-fs-22 sm-fs-20 fw-500 alt-font font-style-italic text-white pt-0">With Clarity, Strength and Inner Alignment.</p>
         </div>
         <div className="container hero-content pt-0 pb-0 mt-0 mb-0">
           <div className="row w-100 pb-11 align-items-center justify-content-between gap-4 gap-lg-0">
@@ -74,7 +74,7 @@ export default function IndexPage() {
         <div className="mobile-hero-bg"></div>
         <div className="mobile-hero-content text-center text-white">
           <div className="hero-slogan-mobile mb-10px text-center fw-600 alt-font text-white">Step Into Your Next Life</div>
-          <p className="mb-15px text-center fw-600 alt-font font-style-italic text-white">{" With Clarity, Strength, and Inner Alignment. "}</p>
+          <p className="mb-15px text-center fw-600 alt-font font-style-italic text-white">{" With Clarity, Strength and Inner Alignment. "}</p>
           <div className="mobile-subtext hero-lede mb-25px">
             <h1>Private Mentorship for High Performers.</h1>
             {" Led by "}
@@ -165,10 +165,10 @@ export default function IndexPage() {
           <div className="row align-items-center sm-mb-30px mb-30px">
             <div className="col-lg-6 col-offset-2 md-mb-50px sm-mb-40px text-center text-sm-start" data-anime={"{ \"opacity\": [0,1], \"duration\": 600, \"delay\": 0, \"staggervalue\": 300, \"easing\": \"easeOutQuad\" }"}>
               <h2 className="text-carbon text-shadow-soft fs-40 fw-600 sm-fs-28 ls-minus-2px alt-font mb-20px" data-anime={"{\n        \"translateY\": [30, 0],\n        \"opacity\": [0,1],\n        \"delay\": 0,\n        \"duration\": 600,\n        \"easing\": \"easeOutQuad\"\n    }"}>
-                {" Operating at a High Level Can Feel "}
-                <span className="highlighter-below animate">Overwhelming</span>
+                {" You Can Be Proud of What You’ve Built and Still Feel "}
+                <span className="highlighter-below animate">Overwhelmed</span>
               </h2>
-              <p className="w-80 md-w-100 md-mb-0" data-anime={"{ \"el\": \"lines\", \"translateY\": [30, 0], \"opacity\": [0,1], \"delay\": 200, \"duration\": 600, \"staggervalue\": 100, \"easing\": \"easeOutQuad\" }"}>Especially when the internal framework that got you here no longer supports where you’re going.</p>
+              <p className="w-80 md-w-100 md-mb-0" data-anime={"{ \"el\": \"lines\", \"translateY\": [30, 0], \"opacity\": [0,1], \"delay\": 200, \"duration\": 600, \"staggervalue\": 100, \"easing\": \"easeOutQuad\" }"}>You’ve worked hard to get where you are. But when so much of life revolves around responsibilities, expectations and moving forward, it’s easy to lose touch with what you need as a person.</p>
             </div>
             <div className="col-lg-6 last-paragraph-no-margin">
               <div className="row align-items-center">
@@ -190,7 +190,7 @@ export default function IndexPage() {
                 </div>
                 <div className="col-xl-6 col-lg-7 col-sm-8 text-center text-sm-start d-none d-md-block" data-anime={"{ \"translateX\": [0, 0], \"opacity\": [0,1], \"duration\": 600, \"delay\": 0, \t\t\"staggervalue\": 300, \"easing\": \"easeOutQuad\" }"}>
                   <span className="fs-14 text-uppercase ls-1px text-carbn fw-600 d-block mb-5px">12 Years Experience</span>
-                  <p className="w-90 lg-w-100">Two Lives Theory® supports high performers in strengthening what they’ve built and stepping into what’s next.</p>
+                  <p className="w-90 lg-w-100">Two Lives Theory® helps you strengthen the connection between who you are, what matters to you and the life you’re creating.</p>
                 </div>
               </div>
             </div>
@@ -201,19 +201,19 @@ export default function IndexPage() {
             <div className="col-12 col-lg-4">
               <div className="mindset-row">
                 <img src="/.netlify/images?url=/images/compass.webp&w=600&fm=webp&q=70" srcSet="/.netlify/images?url=/images/compass.webp&w=200&fm=webp&q=70 200w, /.netlify/images?url=/images/compass.webp&w=400&fm=webp&q=70 400w, /.netlify/images?url=/images/compass.webp&w=600&fm=webp&q=70 600w" sizes="200px" width="200" height="200" className="mindset-img" alt="Misalignment" loading="lazy" />
-                <p className="text-carbon fw-600 fs-20 w-80 text-center">{" You’re performing, but something feels off. "}</p>
+                <p className="text-carbon fw-600 fs-20 w-80 text-center">You’ve come a long way, but sometimes feel disconnected from what matters most.</p>
               </div>
             </div>
             <div className="col-12 col-lg-4">
               <div className="mindset-row">
                 <img src="/.netlify/images?url=/images/weight.webp&w=600&fm=webp&q=70" srcSet="/.netlify/images?url=/images/weight.webp&w=200&fm=webp&q=70 200w, /.netlify/images?url=/images/weight.webp&w=400&fm=webp&q=70 400w, /.netlify/images?url=/images/weight.webp&w=600&fm=webp&q=70 600w" sizes="200px" width="200" height="200" className="mindset-img" alt="Pressure" loading="lazy" />
-                <p className="text-carbon fw-600 fs-20 w-80 text-center">{" You carry constant pressure to stay sharp, stay strong, and keep moving forward. "}</p>
+                <p className="text-carbon fw-600 fs-20 w-80 text-center">You carry responsibilities that others don’t always see, even when you make it look easy.</p>
               </div>
             </div>
             <div className="col-12 col-lg-4">
               <div className="mindset-row">
                 <img src="/.netlify/images?url=/images/path.webp&w=600&fm=webp&q=70" srcSet="/.netlify/images?url=/images/path.webp&w=200&fm=webp&q=70 200w, /.netlify/images?url=/images/path.webp&w=400&fm=webp&q=70 400w, /.netlify/images?url=/images/path.webp&w=600&fm=webp&q=70 600w" sizes="200px" width="200" height="200" className="mindset-img" alt="Path" loading="lazy" />
-                <p className="text-carbon fw-600 fs-20 w-80 text-center">{" You can feel the next chapter, but haven’t found the path into it yet. "}</p>
+                <p className="text-carbon fw-600 fs-20 w-80 text-center">You still want to grow, but you want the life around your ambitions to feel meaningful too.</p>
               </div>
             </div>
           </div>
@@ -223,7 +223,8 @@ export default function IndexPage() {
             <div className="col-lg-5 md-mb-10px" data-anime={"{ \"translateY\": [0, 0], \"opacity\": [0,1], \"duration\": 800, \"delay\": 200, \"staggervalue\": 300, \"easing\": \"easeOutQuad\" }"}>
               <span className="ps-20px pt-5px pb-5px pe-20px mb-30px alt-font text-white fs-16 border-radius-100px bg-radial text-white box-shadow-small d-inline-block">The Solution</span>
               <h3 className="text-carbon alt-font text-shadow-soft mb-10px w-80 fs-40 fw-600 ls-minus-2px">How Two Lives Theory® Helps</h3>
-              <p className="mb-20px sm-mb-40px">{" Two Lives Theory® is private mentorship for high performers in transition. Not to fix you, but to realign you. So your focus sharpens, your decisions become clean, and you step into your next life without burning out or losing yourself."}</p>
+              <p className="mb-15px">You’ve worked hard to build the life you have and there’s still so much ahead of you. But beneath the achievements, responsibilities and expectations, there’s another part of life that deserves just as much attention.</p>
+              <p className="mb-20px sm-mb-40px">Two Lives Theory® helps you understand yourself more deeply, reconnect with what truly matters and bring your inner world into greater alignment with the life you’re creating.</p>
               <a href="/request-mentorship" className="btn-three active btn-box-shadow fw-600 mt-3 md-mb-6 d-none d-md-inline-block desktop-only-btn">Request Mentorship</a>
             </div>
             <div className="col-lg-7" data-anime={"{ \"el\": \"childs\", \"translateY\": [15, 0], \"opacity\": [0,1], \"duration\": 300, \"delay\": 0, \"staggervalue\": 100, \"easing\": \"easeOutQuad\" }"}>
@@ -236,7 +237,7 @@ export default function IndexPage() {
                           <div className="simple-card">
                             <div className="card-number alt-font text-dark-green opacity-3 fw-600">1</div>
                             <div className="card-text">
-                              <p>Build a clear path through transition, with decisive next moves.</p>
+                              <p>Understand the pressure you carry, even when everything looks fine on the outside.</p>
                             </div>
                           </div>
                         </div>
@@ -244,7 +245,7 @@ export default function IndexPage() {
                           <div className="simple-card">
                             <div className="card-number alt-font text-dark-green opacity-3 fw-600">2</div>
                             <div className="card-text">
-                              <p>Regain clarity across mind, body and emotions so performance becomes clean again.</p>
+                              <p>Reconnect with yourself, the people you love and the things that make life meaningful.</p>
                             </div>
                           </div>
                         </div>
@@ -252,7 +253,7 @@ export default function IndexPage() {
                           <div className="simple-card">
                             <div className="card-number alt-font text-dark-green opacity-3 fw-600">3</div>
                             <div className="card-text">
-                              <p>Move forward without burning out, losing yourself, or forcing change.</p>
+                              <p>Keep moving forward, whilst feeling more present in the life you’ve worked so hard to build.</p>
                             </div>
                           </div>
                         </div>
@@ -260,7 +261,7 @@ export default function IndexPage() {
                           <div className="simple-card">
                             <div className="card-number alt-font text-dark-green opacity-3 fw-600">1</div>
                             <div className="card-text">
-                              <p>Build a clear path through transition, with decisive next moves.</p>
+                              <p>Understand the pressure you carry, even when everything looks fine on the outside.</p>
                             </div>
                           </div>
                         </div>
@@ -268,7 +269,7 @@ export default function IndexPage() {
                           <div className="simple-card">
                             <div className="card-number alt-font text-dark-green opacity-3 fw-600">2</div>
                             <div className="card-text">
-                              <p>Regain clarity across mind, body and emotions so performance becomes clean again.</p>
+                              <p>Reconnect with yourself, the people you love and the things that make life meaningful.</p>
                             </div>
                           </div>
                         </div>
@@ -276,7 +277,7 @@ export default function IndexPage() {
                           <div className="simple-card">
                             <div className="card-number alt-font text-dark-green opacity-3 fw-600">3</div>
                             <div className="card-text">
-                              <p>Move forward without burning out, losing yourself, or forcing change.</p>
+                              <p>Keep moving forward, whilst feeling more present in the life you’ve worked so hard to build.</p>
                             </div>
                           </div>
                         </div>
@@ -332,7 +333,7 @@ export default function IndexPage() {
               </div>
             </div>
             <div className="col-lg-6 md-mt-8" data-anime={"{ \"el\": \"childs\", \"opacity\": [0, 1], \"translateY\": [30, 0], \"duration\": 600, \"delay\": 100, \"staggervalue\": 300, \"easing\": \"easeOutQuad\" }"}>
-              <p className="w-95 lg-w-100 mb-25px text-carbon lh-2 mb-2">{" I guide high performers through expansion and transition. My clients include elite athletes, entrepreneurs, and business leaders operating at the next level. "}</p>
+              <p className="w-95 lg-w-100 mb-25px text-carbon lh-2 mb-2">{" I guide high performers through expansion and transition. My clients include elite athletes, entrepreneurs and business leaders operating at the next level. "}</p>
               <p className="w-95 lg-w-100 mb-25px text-carbon lh-2 mb-2">
                 {"Backed by "}
                 <b>12 years of experience,</b>
@@ -414,8 +415,8 @@ export default function IndexPage() {
           <div className="row text-carbon align-items-center">
             <div className="col-12">
               <h2 className="text-dark-green fs-30 fw-600 ls-minus-2px mb-15px text-center">The 3-Step Transition</h2>
-              <h2 className="text-shadow-soft fs-40 fw-600 ls-minus-2px alt-font text-carbon mb-25px text-center">The Transition From Your Old Life to Your Next Life</h2>
-              <p className="w-80 md-w-100 text-carbon text-center mx-auto">{" This transition isn’t about force, reinvention, or walking away from what you’ve built. It’s a process of strengthening and realignment that unfolds in clear phases, allowing growth without disruption. "}</p>
+              <h2 className="text-shadow-soft fs-40 fw-600 ls-minus-2px alt-font text-carbon mb-25px text-center">Your Next Life Begins From Within</h2>
+              <p className="w-80 md-w-100 text-carbon text-center mx-auto">Moving into your next life doesn’t mean leaving behind everything you’ve built. It’s about understanding yourself more deeply, strengthening what matters and bringing greater alignment between who you are and the life you want to experience.</p>
             </div>
           </div>
         </div>
@@ -442,7 +443,7 @@ export default function IndexPage() {
                     </div>
                     <h2 className="text-carbon text-shadow-soft  alt-font fs-40 fw-600 ls-minus-2px mb-25px">Awareness Before Change</h2>
                     <p className="w-100 md-w-100 text-carbon fw-600 mb-20px">{" Before anything changes externally, clarity is built internally."}</p>
-                    <p className="w-100md-w-100 text-carbon">{"This phase is about understanding the patterns, emotional responses, and internal pressures shaping your current life. Not to fix them, but to see them clearly. Awareness creates stability and allows the next phase to be entered consciously, not reactively. "}</p>
+                    <p className="w-100md-w-100 text-carbon">{"This phase is about understanding the patterns, emotional responses and internal pressures shaping your current life. Not to fix them, but to see them clearly. Awareness creates stability and allows the next phase to be entered consciously, not reactively. "}</p>
                   </div>
                 </div>
               </div>
@@ -467,7 +468,7 @@ export default function IndexPage() {
                       <span className="text-dark-green  fs-18 fw-600 text-uppercase">Phase Two</span>
                     </div>
                     <h2 className="text-carbon text-shadow-soft  alt-font fs-40 fw-600 ls-minus-2px mb-25px">{" Integration & Release "}</h2>
-                    <p className="w-100 text-carbon text-italic md-w-100 mb-20px font-style-italic">{" “Growth does not come from pushing forward. It comes from integration.” "}</p>
+                    <p className="w-100 text-carbon text-italic md-w-100 mb-20px font-style-italic">“Not all growth comes from pushing harder. Sometimes it begins with understanding yourself more deeply.”</p>
                     <p className="w-100 text-carbon md-w-100 mb-20px">{" This phase requires patience and respect for your pace. "}</p>
                     <p className="w-100 text-carbon  md-w-100">{" Nothing is rushed. The work unfolds around your life, not against it. What needs to be acknowledged, processed, or released is handled with intention, so it no longer controls the present. What serves you is strengthened. What doesn’t is let go. "}</p>
                   </div>
@@ -494,8 +495,8 @@ export default function IndexPage() {
                       <span className="text-dark-green  fs-18 fw-600 text-uppercase">Phase Three</span>
                     </div>
                     <h2 className="text-carbon text-shadow-soft  alt-font fs-40 fw-600 ls-minus-2px mb-25px">{" Alignment Into Your Next Life "}</h2>
-                    <p className="w-100 text-carbon fw-600 md-w-100 mb-20px">{" When clarity and internal stability are established, direction no longer needs to be forced. It becomes obvious. "}</p>
-                    <p className="w-100 text-carbon  md-w-100 mb-20px">{" This is where your inner world and outer life begin to align. Decisions are made with confidence, not doubt. Energy becomes consistent, not reactive. You move through work, relationships, and life with greater ease, clarity, and self-trust. "}</p>
+                    <p className="w-100 text-carbon fw-600 md-w-100 mb-20px">When you begin to understand yourself more deeply, the way you approach life starts to change. Decisions feel clearer, relationships become more meaningful and you begin to trust yourself in a different way.</p>
+                    <p className="w-100 text-carbon  md-w-100 mb-20px">{" This is where your inner world and outer life begin to align. Decisions are made with confidence, not doubt. Energy becomes consistent, not reactive. You move through work, relationships and life with greater ease, clarity and self-trust. "}</p>
                     <p className="w-100 md-w-100 fs-19 fst-italic fw-600 text-carbon">{" “Your next life isn’t forced. It’s built from clarity.” "}</p>
                   </div>
                 </div>
@@ -513,7 +514,7 @@ export default function IndexPage() {
           </div>
           <div className="col-lg-10">
             <h2 className="fs-40 text-carbon text-shadow-soft  fw-600 ls-minus-2px alt-font mb-2 md-mb-5 ">The Four Areas of Alignment</h2>
-            <p className="fs-30 sm-fs-18 text-carbon ls-minus-1px fw-500 alt-font mb-4 md-mb-5">No area works in isolation. Strength in one strengthens them all.</p>
+            <p className="fs-30 sm-fs-18 text-carbon ls-minus-1px fw-500 alt-font mb-4 md-mb-5">No part of life exists in isolation. How you feel within yourself influences how you show up in your relationships, your wellbeing and the life you’re creating.</p>
           </div>
           <div className="row row-cols-1 row-cols-lg-4 row-cols-md-2 justify-content-center" data-anime={"{\"el\": \"childs\", \"translateY\": [0, 0], \"perspective\": [1000,1200], \"scale\": [1.1, 1], \"rotateX\": [50, 0], \"opacity\": [0,1], \"duration\": 800, \"delay\": 200, \"staggervalue\": 300, \"easing\": \"easeOutQuad\" }"}>
             <div className="col interactive-banner-style-03 transition-inner-all md-mb-30px px-2">
@@ -527,12 +528,12 @@ export default function IndexPage() {
                         <img src="/images/tl-icon-01.svg" height="60" width="60" className="me-2" alt="" />
                         {" "}
                         <span>
-                          Mental and
+                          {"Mental &"}
                           <br />
                           Emotional Clarity
                         </span>
                       </div>
-                      <div className="alignment-desc p-10px">{" Build emotional control and inner steadiness so decisions come from clarity, not reaction. "}</div>
+                      <div className="alignment-desc p-10px">Develop a deeper understanding of your thoughts and emotions, so you can respond to life with greater clarity and calm.</div>
                     </div>
                   </figcaption>
                 </figure>
@@ -549,12 +550,12 @@ export default function IndexPage() {
                         <img src="/images/tl-icon-02.svg" height="60" width="60" className="me-2" alt="" />
                         {" "}
                         <span>
-                          Physical
+                          {"Body &"}
                           <br />
-                          Foundation
+                          Wellbeing
                         </span>
                       </div>
-                      <div className="alignment-desc p-10px">{" Build physical strength, energy, and structure as the foundation for sustainable performance. "}</div>
+                      <div className="alignment-desc p-10px">Look after your energy, health and recovery, so you can feel stronger and more present in everyday life.</div>
                     </div>
                   </figcaption>
                 </figure>
@@ -576,7 +577,7 @@ export default function IndexPage() {
                           Alignment
                         </span>
                       </div>
-                      <div className="alignment-desc p-10px">{" Strengthen how you relate to others and yourself through self-awareness, clear communication, and emotional presence. "}</div>
+                      <div className="alignment-desc p-10px">Strengthen how you relate to others and yourself through self-awareness, clear communication and emotional presence.</div>
                     </div>
                   </figcaption>
                 </figure>
@@ -598,7 +599,7 @@ export default function IndexPage() {
                           {" Leadership"}
                         </span>
                       </div>
-                      <div className="alignment-desc p-10px">{" Clarify direction and lead yourself so your life reflects who you’re becoming. "}</div>
+                      <div className="alignment-desc p-10px">Find greater clarity in where you’re going, making choices that reflect who you are and what matters most.</div>
                     </div>
                   </figcaption>
                 </figure>
@@ -615,7 +616,7 @@ export default function IndexPage() {
           <div className="row">
             <div className="col-lg-10">
               <h2 className="fs-40 text-carbon text-shadow-soft fw-600 ls-minus-2px alt-font mb-2 md-mb-5 text-center">{" The Four Areas of Alignment "}</h2>
-              <p className="fs-30 sm-fs-18 text-carbon ls-minus-1px fw-500 alt-font mb-4 md-mb-5 text-center">{" No area works in isolation. Strength in one strengthens them all. "}</p>
+              <p className="fs-30 sm-fs-18 text-carbon ls-minus-1px fw-500 alt-font mb-4 md-mb-5 text-center">No part of life exists in isolation. How you feel within yourself influences how you show up in your relationships, your wellbeing and the life you’re creating.</p>
             </div>
           </div>
           <div className="row align-items-center">
@@ -650,13 +651,13 @@ export default function IndexPage() {
                               </div>
                               <div className="alignment-overlay mt-auto">
                                 <div className="alignment-title d-flex align-items-center justify-content-between gap-2">
-                                  <span>Mental and Emotional Clarity</span>
+                                  <span>{"Mental & Emotional Clarity"}</span>
                                   {" "}
                                   <span className="alignment-btn">
                                     <i className="bi bi-arrow-right"></i>
                                   </span>
                                 </div>
-                                <div className="alignment-desc p-10px">{" Build emotional control and inner steadiness so decisions come from clarity, not reaction. "}</div>
+                                <div className="alignment-desc p-10px">Develop a deeper understanding of your thoughts and emotions, so you can respond to life with greater clarity and calm.</div>
                               </div>
                             </figcaption>
                           </figure>
@@ -675,13 +676,13 @@ export default function IndexPage() {
                               </div>
                               <div className="alignment-overlay mt-auto">
                                 <div className="alignment-title d-flex align-items-center justify-content-between gap-2">
-                                  <span>Physical Foundation</span>
+                                  <span>{"Body & Wellbeing"}</span>
                                   {" "}
                                   <span className="alignment-btn">
                                     <i className="bi bi-arrow-right"></i>
                                   </span>
                                 </div>
-                                <div className="alignment-desc p-10px">{" Build physical strength, energy, and structure as the foundation for sustainable performance. "}</div>
+                                <div className="alignment-desc p-10px">Look after your energy, health and recovery, so you can feel stronger and more present in everyday life.</div>
                               </div>
                             </figcaption>
                           </figure>
@@ -706,7 +707,7 @@ export default function IndexPage() {
                                     <i className="bi bi-arrow-right"></i>
                                   </span>
                                 </div>
-                                <div className="alignment-desc p-10px">{" Strengthen how you relate to others and yourself through self-awareness, clear communication, and emotional presence. "}</div>
+                                <div className="alignment-desc p-10px">Strengthen how you relate to others and yourself through self-awareness, clear communication and emotional presence.</div>
                               </div>
                             </figcaption>
                           </figure>
@@ -731,7 +732,7 @@ export default function IndexPage() {
                                     <i className="bi bi-arrow-right"></i>
                                   </span>
                                 </div>
-                                <div className="alignment-desc p-10px">{" Clarify direction and lead yourself so your life reflects who you’re becoming. "}</div>
+                                <div className="alignment-desc p-10px">Find greater clarity in where you’re going, making choices that reflect who you are and what matters most.</div>
                               </div>
                             </figcaption>
                           </figure>
@@ -807,7 +808,7 @@ export default function IndexPage() {
                       <figure className="mb-0 position-relative">
                         <img src="/.netlify/images?url=/images/two-lives/entreprenuer.webp&w=800&fm=webp&q=70" srcSet="/.netlify/images?url=/images/two-lives/entreprenuer.webp&w=400&fm=webp&q=70 400w, /.netlify/images?url=/images/two-lives/entreprenuer.webp&w=800&fm=webp&q=70 800w, /.netlify/images?url=/images/two-lives/entreprenuer.webp&w=1200&fm=webp&q=70 1200w" sizes="(max-width:768px) 100vw, 800px" alt="Entrepreneur" className="w-100 border-radius-6px box-shad" />
                         <div className="bg-carbon-opacity position-absolute pt-10px pb-10px ps-25px pe-25px border-radius-4px bottom-30px left-30px box-shadow-large d-flex align-items-center sm-bottom-0" data-anime={"{ \"translateY\": [0, 0], \"opacity\": [0,1], \"duration\": 1200, \"delay\": 800, \"staggervalue\": 500, \"easing\": \"easeOutQuad\" }"}>
-                          <span className="text-white fs-16 d-inline-block">Founders, Builders, Investors.</span>
+                          <span className="text-white fs-16 d-inline-block">Founders · Business Owners · Investors</span>
                         </div>
                         <figcaption className="position-absolute bottom-90px right-minus-50px xs-bottom-auto xs-top-10px sm-right-minus-20px xs-right-auto xs-left-10px xs-w-140px">
                           <img src="/images/twoliveslogo.svg" width="125px" height="125px" className="animation-float bg-carbon-opacity p-3 border-radius-100px box-shadow-large md-w-100px md-h-100px sm-w-100px sm-h-100px xs-w-80px xs-h-80px" alt="" />
@@ -818,7 +819,7 @@ export default function IndexPage() {
                       <div className="mb-20px">
                         <span className="d-inline-block text-carbon align-middle fw-900 fs-24">Entrepreneurs</span>
                       </div>
-                      <p className="fw-500 text-carbon md-mb-20px">Builders who have achieved success but know there’s another level. Strengthen your mindset, steady your emotions, and align your work with your life so growth feels powerful, not heavy.</p>
+                      <p className="fw-500 text-carbon md-mb-20px">You’ve built something you’re proud of. Now grow in a way that supports your ambitions, strengthens your relationships and allows you to enjoy more of the life you’re creating.</p>
                       <a href="/entrepreneur" className="btn-three active btn-box-shadow fw-600">
                         Learn More
                         <span className="visually-hidden">{" about entrepreneur mentorship"}</span>
@@ -832,7 +833,7 @@ export default function IndexPage() {
                       <figure className="mb-0 position-relative">
                         <img src="/.netlify/images?url=/images/two-lives/athlete.webp&w=800&fm=webp&q=70" srcSet="/.netlify/images?url=/images/two-lives/athlete.webp&w=400&fm=webp&q=70 400w, /.netlify/images?url=/images/two-lives/athlete.webp&w=800&fm=webp&q=70 800w, /.netlify/images?url=/images/two-lives/athlete.webp&w=1200&fm=webp&q=70 1200w" sizes="(max-width:768px) 100vw, 800px" alt="Athlete" className="w-100 border-radius-4px box-shad" />
                         <div className="bg-carbon-opacity position-absolute pt-10px pb-10px ps-25px pe-25px border-radius-4px bottom-30px left-30px box-shadow-large d-flex align-items-center sm-bottom-0" data-anime={"{ \"translateY\": [0, 0], \"opacity\": [0,1], \"duration\": 1200, \"delay\": 800, \"staggervalue\": 500, \"easing\": \"easeOutQuad\" }"}>
-                          <span className="text-white fs-16 d-inline-block">Professionals, Endurance, Aspiring Athletes.</span>
+                          <span className="text-white fs-16 d-inline-block">Professional · Competitive · Aspiring Athletes</span>
                         </div>
                         <figcaption className="position-absolute bottom-90px right-minus-50px xs-bottom-auto xs-top-10px sm-right-minus-20px xs-right-auto xs-left-10px xs-w-140px">
                           <img src="/images/twoliveslogo.svg" width="125px" height="125px" className="animation-float bg-carbon-opacity p-3 border-radius-100px box-shadow-large md-w-100px md-h-100px sm-w-100px sm-h-100px xs-w-80px xs-h-80px" alt="" />
@@ -843,7 +844,7 @@ export default function IndexPage() {
                       <div className="mb-20px">
                         <span className="d-inline-block text-carbon align-middle fw-900 fs-24">Athletes</span>
                       </div>
-                      <p className="fw-500 text-carbon md-mb-20px">Competitors who understand performance starts within. Build mental strength, emotional control, and self-belief so you evolve not just in sport, but in who you become beyond it.</p>
+                      <p className="fw-500 text-carbon md-mb-20px">Your sport is an important part of who you are, but it doesn’t define all of you. Build self-belief, emotional strength and fulfilment both within and beyond competition.</p>
                       <a href="/athlete" className="btn-three active btn-box-shadow fw-600">
                         Learn More
                         <span className="visually-hidden">{" about athlete mentorship"}</span>
@@ -857,7 +858,7 @@ export default function IndexPage() {
                       <figure className="mb-0 position-relative">
                         <img src="/.netlify/images?url=/images/two-lives/poker-player.webp&w=800&fm=webp&q=70" srcSet="/.netlify/images?url=/images/two-lives/poker-player.webp&w=400&fm=webp&q=70 400w, /.netlify/images?url=/images/two-lives/poker-player.webp&w=800&fm=webp&q=70 800w, /.netlify/images?url=/images/two-lives/poker-player.webp&w=1200&fm=webp&q=70 1200w" sizes="(max-width:768px) 100vw, 800px" alt="Poker player" className="w-100 border-radius-4px box-shad" />
                         <div className="bg-carbon-opacity position-absolute pt-10px pb-10px ps-25px pe-25px border-radius-4px bottom-30px left-30px box-shadow-large d-flex align-items-center sm-bottom-0" data-anime={"{ \"translateY\": [0, 0], \"opacity\": [0,1], \"duration\": 1200, \"delay\": 800, \"staggervalue\": 500, \"easing\": \"easeOutQuad\" }"}>
-                          <span className="text-white fs-16 d-inline-block">Poker Players, Traders, Strategic Competitors.</span>
+                          <span className="text-white fs-16 d-inline-block">Poker Players · Traders · Strategic Competitors</span>
                         </div>
                         <figcaption className="position-absolute bottom-90px right-minus-50px xs-bottom-auto xs-top-10px sm-right-minus-20px xs-right-auto xs-left-10px xs-w-140px">
                           <img src="/images/twoliveslogo.svg" width="125px" height="125px" className="animation-float bg-carbon-opacity p-3 border-radius-100px box-shadow-large md-w-100px md-h-100px sm-w-100px sm-h-100px xs-w-80px xs-h-80px" alt="" />
@@ -868,7 +869,7 @@ export default function IndexPage() {
                       <div className="mb-20px">
                         <span className="d-inline-block text-carbon align-middle fw-900 fs-24">Elite Competitors</span>
                       </div>
-                      <p className="fw-500 text-carbon md-mb-20px">High-level performers operating under relentless pressure. Sharpen focus, master emotional control, and evolve your identity so success becomes sustainable and your next chapter intentional.</p>
+                      <p className="fw-500 text-carbon md-mb-20px">You understand pressure and high stakes. But there’s more to life than the next result. Find greater emotional balance, self-trust and connection to what matters beyond competition.</p>
                       <a href="/elite-competitors" className="btn-three active btn-box-shadow fw-600">
                         Learn More
                         <span className="visually-hidden">{" about elite competitor mentorship"}</span>
@@ -882,7 +883,7 @@ export default function IndexPage() {
                       <figure className="mb-0 position-relative">
                         <img src="/.netlify/images?url=/images/two-lives/exec-leader.webp&w=800&fm=webp&q=70" srcSet="/.netlify/images?url=/images/two-lives/exec-leader.webp&w=400&fm=webp&q=70 400w, /.netlify/images?url=/images/two-lives/exec-leader.webp&w=800&fm=webp&q=70 800w, /.netlify/images?url=/images/two-lives/exec-leader.webp&w=1200&fm=webp&q=70 1200w" sizes="(max-width:768px) 100vw, 800px" alt="Executive leader" className="w-100 border-radius-4px box-shad" />
                         <div className="bg-carbon-opacity position-absolute pt-10px pb-10px ps-25px pe-25px border-radius-4px bottom-30px left-30px box-shadow-large d-flex align-items-center sm-bottom-0" data-anime={"{ \"translateY\": [0, 0], \"opacity\": [0,1], \"duration\": 1200, \"delay\": 800, \"staggervalue\": 500, \"easing\": \"easeOutQuad\" }"}>
-                          <span className="text-white fs-16 d-inline-block">C-Suite, Corporate Leaders, Decision Makers.</span>
+                          <span className="text-white fs-16 d-inline-block">C-Suite · Senior Leaders · Decision Makers</span>
                         </div>
                         <figcaption className="position-absolute bottom-90px right-minus-50px xs-bottom-auto xs-top-10px sm-right-minus-20px xs-right-auto xs-left-10px xs-w-140px">
                           <img src="/images/twoliveslogo.svg" width="125px" height="125px" className="animation-float bg-carbon-opacity p-3 border-radius-100px box-shadow-large md-w-100px md-h-100px sm-w-100px sm-h-100px xs-w-80px xs-h-80px" alt="" />
@@ -893,7 +894,7 @@ export default function IndexPage() {
                       <div className="mb-20px">
                         <span className="d-inline-block text-carbon align-middle fw-900 fs-24">{"Executives & Leaders"}</span>
                       </div>
-                      <p className="fw-500 text-carbon md-mb-20px">Operating under constant pressure, responsibility, and decisions. Think clearly, stay composed, and build a strong inner foundation so your leadership and life feels calm, decisive, and aligned across work and life.</p>
+                      <p className="fw-500 text-carbon md-mb-20px">Others count on your judgement, strength and direction. Your own wellbeing matters too. Lead with clarity whilst staying connected to yourself, your relationships and the life outside work.</p>
                       <a href="/executive-leaders" className="btn-three active btn-box-shadow fw-600">
                         Learn More
                         <span className="visually-hidden">{" about executive leadership mentorship"}</span>
@@ -1057,7 +1058,7 @@ export default function IndexPage() {
                   <p className="text-white mb-5 pt-5 text-center text-md-start">
                     {" Create lasting change across every area of your life. "}
                     <br />
-                    {" This is precise, personal mentorship with real accountability, direct support, and honest conversations that move you forward. "}
+                    {" This is precise, personal mentorship with real accountability, direct support and honest conversations that move you forward. "}
                   </p>
                   <div className="pt-5 md-pb-5 text-center text-lg-start">
                     <a href="/request-mentorship" className="btn-primary active btn-box-shadow fw-600">{" Request Mentorship "}</a>
@@ -1415,56 +1416,77 @@ export default function IndexPage() {
           <div className="row justify-content-center mb-3">
             <div className="col-xxl-10 col-xl-10 col-lg-10 col-md-10 col-sm-10 text-center last-paragraph-no-margin">
               <h2 className="text-carbon fs-40 fw-600 ls-minus-2px text-shadow-soft  alt-font mb-25px text-center">The Path Into Your Next Life</h2>
+              <p className="w-80 md-w-100 mx-auto text-carbon">Real change begins with understanding yourself. These five elements guide the inner work, helping you strengthen what matters, reconnect with yourself and experience more of the life you’ve built.</p>
             </div>
           </div>
-          <div className="row row-cols-1 row-cols-md-2 row-cols-lg-3 mb-3 sm-p-5">
-            <div className="col text-center last-paragraph-no-margin hover-box process-step-style-09">
-              <div className="process-step-icon-box position-relative mb-25px">
-                <div className="process-step-icon d-flex justify-content-center align-items-center mx-auto rounded-circle h-100px w-100px fs-28 bg-green text-white alt-font">
-                  <span className="number position-relative z-index-1 alt-font fw-600">1</span>
-                  <div className="box-overlay bg-slate-blue rounded-circle"></div>
+          <div className="position-relative mb-4 sm-p-5">
+            <div className="swiper slider-three-slide magic-cursor drag-cursor" data-slider-options={"{ \"slidesPerView\": 1, \"spaceBetween\": 25, \"loop\": true, \"speed\": 800, \"autoplay\": { \"delay\": 8500, \"disableOnInteraction\": false }, \"navigation\": { \"nextEl\": \".path-slide-next\", \"prevEl\": \".path-slide-prev\" }, \"keyboard\": { \"enabled\": true, \"onlyInViewport\": true }, \"breakpoints\": { \"1200\": { \"slidesPerView\": 3 }, \"992\": { \"slidesPerView\": 3 }, \"768\": { \"slidesPerView\": 2 }, \"320\": { \"slidesPerView\": 1 } }, \"effect\": \"slide\" }"}>
+              <div className="swiper-wrapper">
+                <div className="swiper-slide">
+                  <div className="simple-card card-has-number">
+                    <div className="card-number-1 alt-font text-dark-green opacity-3 fw-600">1</div>
+                    <div className="card-title">
+                      <p className="alt-font fs-20 fw-600 mb-15px">Awareness</p>
+                    </div>
+                    <div className="card-text">
+                      <p className="fs-16">Recognise the patterns, pressures and expectations shaping how you think, feel and experience life.</p>
+                    </div>
+                  </div>
+                </div>
+                <div className="swiper-slide">
+                  <div className="simple-card card-has-number">
+                    <div className="card-number-1 alt-font text-dark-green opacity-3 fw-600">2</div>
+                    <div className="card-title">
+                      <p className="alt-font fs-20 fw-600 mb-15px">Identity</p>
+                    </div>
+                    <div className="card-text">
+                      <p className="fs-16">Explore who you are beyond your achievements, responsibilities and the roles you’ve learned to carry.</p>
+                    </div>
+                  </div>
+                </div>
+                <div className="swiper-slide">
+                  <div className="simple-card card-has-number">
+                    <div className="card-number-1 alt-font text-dark-green opacity-3 fw-600">3</div>
+                    <div className="card-title">
+                      <p className="alt-font fs-20 fw-600 mb-15px">Release</p>
+                    </div>
+                    <div className="card-text">
+                      <p className="fs-16">Let go of the beliefs, habits and emotional weight that no longer support who you’re becoming.</p>
+                    </div>
+                  </div>
+                </div>
+                <div className="swiper-slide">
+                  <div className="simple-card card-has-number">
+                    <div className="card-number-1 alt-font text-dark-green opacity-3 fw-600">4</div>
+                    <div className="card-title">
+                      <p className="alt-font fs-20 fw-600 mb-15px">Realignment</p>
+                    </div>
+                    <div className="card-text">
+                      <p className="fs-16">Bring your choices, relationships and ambitions closer to what genuinely matters to you.</p>
+                    </div>
+                  </div>
+                </div>
+                <div className="swiper-slide">
+                  <div className="simple-card card-has-number">
+                    <div className="card-number-1 alt-font text-dark-green opacity-3 fw-600">5</div>
+                    <div className="card-title">
+                      <p className="alt-font fs-20 fw-600 mb-15px">Integration</p>
+                    </div>
+                    <div className="card-text">
+                      <p className="fs-16">Turn deeper understanding into everyday living, where growth becomes something you experience, not just something you pursue.</p>
+                    </div>
+                  </div>
                 </div>
               </div>
-              <span className="d-inline-block fw-700 text-carbon alt-font fs-22 mb-20px">Pause and Take Stock</span>
-              <p className="w-90 lg-w-100 sm-w-90 d-inline-block text-carbon mb-10px">You don’t start by fixing anything. You start by seeing clearly.</p>
-              <p className="w-90 lg-w-100 sm-w-90 d-inline-block text-carbon mb-10px">Understand where you are, what’s driving you, and what no longer fits.</p>
-              <p className="w-90 lg-w-100 sm-w-90 d-inline-block text-carbon mb-10px">This creates the space to respond, not react.</p>
-              <p className="w-90 lg-w-100 sm-w-90 d-inline-block text-carbon mb-10px">
-                <b>Clarity reveals what needs to change.</b>
-              </p>
             </div>
-            <div className="col text-center last-paragraph-no-margin hover-box process-step-style-09">
-              <div className="process-step-icon-box position-relative mb-25px">
-                <div className="process-step-icon d-flex justify-content-center align-items-center mx-auto rounded-circle h-100px w-100px fs-28 bg-green text-white alt-font">
-                  <span className="number position-relative z-index-1 alt-font fw-600">2</span>
-                  <div className="box-overlay bg-slate-blue rounded-circle"></div>
-                </div>
+            <div className="d-flex justify-content-center gap-2 mt-4">
+              <div className="path-slide-prev swiper-button-prev slider-navigation-style-04" tabIndex={0} role="button" aria-label="Previous slide">
+                <i className="bi bi-arrow-left-short icon-very-medium text-carbon"></i>
               </div>
-              <span className="d-inline-block fw-700 text-carbon alt-font fs-22 mb-20px">Do the Inner Work</span>
-              <p className="w-90 lg-w-100 sm-w-90 d-inline-block text-carbon mb-10px">Clarity creates direction.</p>
-              <p className="w-90 lg-w-100 sm-w-90 d-inline-block text-carbon mb-10px">Release old patterns and ways of operating that no longer support who you’re becoming.</p>
-              <p className="w-90 lg-w-100 sm-w-90 d-inline-block text-carbon mb-10px">Strengthen your mind, emotions, and physical foundation.</p>
-              <p className="w-90 lg-w-100 sm-w-90 d-inline-block text-carbon mb-10px">
-                <b>This is where real change happens.</b>
-              </p>
-            </div>
-            <div className="col text-center last-paragraph-no-margin hover-box process-step-style-09">
-              <div className="process-step-icon-box position-relative mb-25px">
-                <div className="process-step-icon d-flex justify-content-center align-items-center mx-auto rounded-circle h-100px w-100px fs-28 bg-green text-white alt-font">
-                  <span className="number position-relative z-index-1 alt-font fw-600">3</span>
-                  <div className="box-overlay bg-slate-blue rounded-circle"></div>
-                </div>
+              <div className="path-slide-next swiper-button-next slider-navigation-style-04" tabIndex={0} role="button" aria-label="Next slide">
+                <i className="bi bi-arrow-right-short icon-very-medium text-carbon"></i>
               </div>
-              <span className="d-inline-block fw-700 text-carbon alt-font fs-22 mb-20px">Step Forward With Stability</span>
-              <p className="w-90 lg-w-100 sm-w-90 d-inline-block text-carbon mb-10px">This is where everything integrates.</p>
-              <p className="w-90 lg-w-100 sm-w-90 d-inline-block text-carbon mb-10px">You begin operating from your next life, not forcing change but embodying it.</p>
-              <p className="w-90 lg-w-100 sm-w-90 d-inline-block text-carbon mb-10px">Decisions feel clear. Pressure feels lighter. Confidence becomes grounded.</p>
-              <p className="w-90 lg-w-100 sm-w-90 d-inline-block text-carbon mb-10px">
-                <b>You move forward from alignment.</b>
-              </p>
-              <b></b>
             </div>
-            <b></b>
           </div>
           <b>
             <div className="col-12 text-center sm-mb-3">
@@ -1637,7 +1659,7 @@ export default function IndexPage() {
                             </div>
                             <div id="accordion-style-01-01" className="accordion-collapse collapse show" data-bs-parent="#accordion-style-01">
                               <div className="accordion-body last-paragraph-no-margin border-bottom border-color-extra-medium-gray">
-                                <p className="fw-500">Two Lives Theory® is about strengthening the life you have built while consciously stepping into the next phase of who you are becoming. Rather than dismantling your identity or success, the work focuses on integration, alignment, and evolution so growth feels grounded rather than disruptive.</p>
+                                <p className="fw-500">Two Lives Theory® is about strengthening the life you have built while consciously stepping into the next phase of who you are becoming. Rather than dismantling your identity or success, the work focuses on integration, alignment and evolution so growth feels grounded rather than disruptive.</p>
                               </div>
                             </div>
                           </div>
@@ -1652,7 +1674,7 @@ export default function IndexPage() {
                             </div>
                             <div id="accordion-style-01-02" className="accordion-collapse collapse" data-bs-parent="#accordion-style-01">
                               <div className="accordion-body last-paragraph-no-margin border-bottom border-color-extra-medium-gray">
-                                <p className="fw-500">This is not therapy and it is not traditional coaching. Coaching often focuses on goals and performance. Therapy often focuses on healing the past. This mentoring integrates both where needed, offering depth, perspective, and long-term guidance without placing you in a patient role.</p>
+                                <p className="fw-500">This is not therapy and it is not traditional coaching. Coaching often focuses on goals and performance. Therapy often focuses on healing the past. This mentoring integrates both where needed, offering depth, perspective and long-term guidance without placing you in a patient role.</p>
                               </div>
                             </div>
                           </div>
@@ -1713,7 +1735,7 @@ export default function IndexPage() {
                             </div>
                             <div id="accordion-style-03-01" className="accordion-collapse collapse show" data-bs-parent="#accordion-style-03">
                               <div className="accordion-body last-paragraph-no-margin border-bottom border-color-extra-medium-gray">
-                                <p className="fw-500">My role is that of a mentor who walks alongside you consistently. I do not offer one-off advice or motivational strategies. I provide ongoing guidance across mental, emotional, spiritual, and physical layers as you navigate growth over time, within a proven, integrated framework that is tailored to each individual.</p>
+                                <p className="fw-500">My role is that of a mentor who walks alongside you consistently. I do not offer one-off advice or motivational strategies. I provide ongoing guidance across mental, emotional, spiritual and physical layers as you navigate growth over time, within a proven, integrated framework that is tailored to each individual.</p>
                               </div>
                             </div>
                           </div>
@@ -1728,7 +1750,7 @@ export default function IndexPage() {
                             </div>
                             <div id="accordion-style-03-02" className="accordion-collapse collapse" data-bs-parent="#accordion-style-03">
                               <div className="accordion-body last-paragraph-no-margin border-bottom border-color-extra-medium-gray">
-                                <p className="fw-500">I bring over twelve years of experience guiding individuals through growth, emotional challenges, identity shifts, relationships, and life transitions. This experience allows me to mentor with discernment, calm presence, and perspective. I have guided high performers from around the world.</p>
+                                <p className="fw-500">I bring over twelve years of experience guiding individuals through growth, emotional challenges, identity shifts, relationships and life transitions. This experience allows me to mentor with discernment, calm presence and perspective. I have guided high performers from around the world.</p>
                               </div>
                             </div>
                           </div>
@@ -1751,7 +1773,7 @@ export default function IndexPage() {
                             </div>
                             <div id="accordion-style-04-01" className="accordion-collapse collapse show" data-bs-parent="#accordion-style-04">
                               <div className="accordion-body last-paragraph-no-margin border-bottom border-color-extra-medium-gray">
-                                <p className="fw-500">I support people mentally, emotionally, spiritually, and physically. Every client is different, and the work responds to what is most present for them. This may include clarity, anxiety, low mood, emotional overwhelm, relationships, self-trust, confidence, deeper self understanding, passion, and purpose. The focus is integration rather than fixing or labelling.</p>
+                                <p className="fw-500">I support people mentally, emotionally, spiritually and physically. Every client is different, and the work responds to what is most present for them. This may include clarity, anxiety, low mood, emotional overwhelm, relationships, self-trust, confidence, deeper self understanding, passion and purpose. The focus is integration rather than fixing or labelling.</p>
                               </div>
                             </div>
                           </div>
@@ -1766,7 +1788,7 @@ export default function IndexPage() {
                             </div>
                             <div id="accordion-style-04-02" className="accordion-collapse collapse" data-bs-parent="#accordion-style-04">
                               <div className="accordion-body last-paragraph-no-margin border-bottom border-color-extra-medium-gray">
-                                <p className="fw-500">YES. Part of moving forward is integrating and releasing what no longer serves you. This work supports emotional processing, awareness, and release when needed, but always within a grounded mentoring relationship rather than a clinical framework.</p>
+                                <p className="fw-500">YES. Part of moving forward is integrating and releasing what no longer serves you. This work supports emotional processing, awareness and release when needed, but always within a grounded mentoring relationship rather than a clinical framework.</p>
                               </div>
                             </div>
                           </div>
@@ -1781,7 +1803,7 @@ export default function IndexPage() {
                             </div>
                             <div id="accordion-style-04-03" className="accordion-collapse collapse" data-bs-parent="#accordion-style-04">
                               <div className="accordion-body last-paragraph-no-margin border-bottom border-color-extra-medium-gray">
-                                <p className="fw-500">NO. This work is intentionally not a quick fix. It is for people who value consistency, depth, and sustainable growth rather than dramatic short term change or motivational highs.</p>
+                                <p className="fw-500">NO. This work is intentionally not a quick fix. It is for people who value consistency, depth and sustainable growth rather than dramatic short term change or motivational highs.</p>
                               </div>
                             </div>
                           </div>
@@ -1796,7 +1818,7 @@ export default function IndexPage() {
                             </div>
                             <div id="accordion-style-04-04" className="accordion-collapse collapse" data-bs-parent="#accordion-style-04">
                               <div className="accordion-body last-paragraph-no-margin border-bottom border-color-extra-medium-gray">
-                                <p className="fw-500">It will not take away your ambition. By reducing internal friction and emotional load, many people experience clearer focus, steadier energy, and more intentional leadership rather than pressure driven performance.</p>
+                                <p className="fw-500">It will not take away your ambition. By reducing internal friction and emotional load, many people experience clearer focus, steadier energy and more intentional leadership rather than pressure driven performance.</p>
                               </div>
                             </div>
                           </div>
@@ -1826,7 +1848,7 @@ export default function IndexPage() {
           <div className="tl-container">
             <div className="tl-heading">
               <h2 className="text-shadow-soft fs-40 fw-600 mb-2 ls-minus-2px alt-font text-carbon">{" Real Client Transformations "}</h2>
-              <p className="text-carbon">{" A closer look at how Two Lives Theory® unfolds over time. These are real transitions, showing how clarity, alignment, and self-leadership create sustainable success. "}</p>
+              <p className="text-carbon">{" A closer look at how Two Lives Theory® unfolds over time. These are real transitions, showing how clarity, alignment and self-leadership create sustainable success. "}</p>
             </div>
             <div className="tl-grid sm-pb-70px">
               <a href="/case-study/elite-athlete" className="tl-card">
@@ -1836,7 +1858,7 @@ export default function IndexPage() {
                 <div className="tl-body">
                   <p className="tl-role">Elite Sports Person</p>
                   <h3 className="tl-title alt-font text-dark-gray fw-700">Private Client</h3>
-                  <p className="tl-desc">{" Already performing at the highest level, this journey focused on strengthening mindset, focus, and balance while navigating sustained pressure and visibility. "}</p>
+                  <p className="tl-desc">{" Already performing at the highest level, this journey focused on strengthening mindset, focus and balance while navigating sustained pressure and visibility. "}</p>
                   <div className="tl-link">
                     <span className="tl-link-main">View Case Study</span>
                     {" "}
@@ -1866,7 +1888,7 @@ export default function IndexPage() {
                 <div className="tl-body">
                   <p className="tl-role">{"Business Owner & CEO"}</p>
                   <h3 className="tl-title alt-font text-dark-gray fw-700">Private Client</h3>
-                  <p className="tl-desc">{" A period of sustained responsibility and growth led this client to seek a different way of relating to pressure, leadership, and life. "}</p>
+                  <p className="tl-desc">{" A period of sustained responsibility and growth led this client to seek a different way of relating to pressure, leadership and life. "}</p>
                   <div className="tl-link">
                     <span className="tl-link-main">View Case Study</span>
                     {" "}

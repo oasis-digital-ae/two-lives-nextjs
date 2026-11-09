@@ -1,8 +1,11 @@
-import { badges, contact, copyright, footerCredit, footerNav, socials } from "@/lib/site-nav";
+import { badges, contact, copyright, footerCredit, footerLocation, footerNav, socials } from "@/lib/site-nav";
 
 /* Site footer: logo, certification badges, contact and social links, the footer menu
-   and the copyright line. Content comes from lib/site-nav.ts; markup is the theme's. */
-export function Footer() {
+   and the copyright line. Content comes from lib/site-nav.ts; markup is the theme's.
+   variant="legacy" is the older footer the 404 page still shows on production: a
+   location line in place of the badges, and a narrower contact column. */
+export function Footer({ variant = "current" }: { variant?: "current" | "legacy" }) {
+  const legacy = variant === "legacy";
   return (
     <footer className="footer-dark py-0">
       <div className="container">
@@ -19,16 +22,25 @@ export function Footer() {
               <img className="footer-logo" src="/.netlify/images?url=/images/two-lives/logo.svg" width="300" height="63" alt="Two Lives Theory" />
             </a>
           </div>
-          <div className="col-lg-4 col-sm-6 text-center text-lg-start last-paragraph-no-margin xs-mb-30px sm-mt-30px">
-            <div className="d-flex flex-wrap justify-content-center justify-content-lg-start gap-0 footer-badges">
-              {badges.map((badge) => (
-                <div key={badge.image} className="icon-circle">
-                  <img src={badge.image} alt={badge.alt} width="80" height="80" loading="lazy" />
-                </div>
-              ))}
+          {legacy ? (
+            <div className="col-lg-4 col-sm-6 text-center text-lg-start last-paragraph-no-margin xs-mb-30px">
+              <span className="alt-font d-inline-block text-white mb-5px fs-18">
+                <i className="bi bi-geo-alt me-10px"></i>Location
+              </span>
+              <p className="w-80 xs-w-100 d-inline-block">{footerLocation.text}</p>
             </div>
-          </div>
-          <div className="col-lg-4 col-sm-6 text-center text-lg-start last-paragraph-no-margin">
+          ) : (
+            <div className="col-lg-4 col-sm-6 text-center text-lg-start last-paragraph-no-margin xs-mb-30px sm-mt-30px">
+              <div className="d-flex flex-wrap justify-content-center justify-content-lg-start gap-0 footer-badges">
+                {badges.map((badge) => (
+                  <div key={badge.image} className="icon-circle">
+                    <img src={badge.image} alt={badge.alt} width="80" height="80" loading="lazy" />
+                  </div>
+                ))}
+              </div>
+            </div>
+          )}
+          <div className={`${legacy ? "col-lg-3" : "col-lg-4"} col-sm-6 text-center text-lg-start last-paragraph-no-margin`}>
             <span className="alt-font d-inline-block text-white mb-5px fs-18">
               <i className="bi bi-envelope me-10px"></i>
               {"Contact: "}

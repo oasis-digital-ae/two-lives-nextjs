@@ -48,7 +48,10 @@ export default function AthletePage() {
           <div className="row align-items-center extra-small-screen">
             <div className="col-7 col-xl-7 col-sm-6 z-index-9 position-relative page-title-extra-small" data-anime={"{ \"el\": \"childs\", \"opacity\": [0, 1], \"translateX\": [-50, 0], \"duration\": 800, \"delay\": 0, \"staggervalue\": 150, \"easing\": \"easeOutQuad\" }"}>
               <h1 className="mb-20px alt-font text-white fw-500 ls-minus-05px">For Athletes</h1>
-              <h2 className=" fw-700 text-white mb-0 ls-minus-2px sm-ls-minus-1px">Perform at a high level without losing yourself to it.</h2>
+              <h2 className=" fw-700 text-white mb-0 ls-minus-2px sm-ls-minus-1px">Your Sport Matters. So Does the Person Behind It.</h2>
+              <div className="mt-30px">
+                <a href="/request-mentorship" className="btn-primary active btn-box-shadow fw-600 text-carbon d-inline-block">Request Mentorship</a>
+              </div>
             </div>
           </div>
         </div>
@@ -58,7 +61,7 @@ export default function AthletePage() {
           <div className="mentor-words-row pb-5 pt-0">
             <div className="row justify-content-center">
               <div className="col-lg-10 text-center">
-                <h2 className="text-carbon alt-font text-shadow-soft fs-50 fw-600 sm-pt-0px  ls-minus-2px mentor-animate-words">{" When performance becomes who you are, everything starts to blur. "}</h2>
+                <h2 className="text-carbon alt-font text-shadow-soft fs-50 fw-600 sm-pt-0px  ls-minus-2px mentor-animate-words">Give Everything to Your Sport Without Losing Sight of Yourself.</h2>
               </div>
             </div>
           </div>
@@ -84,8 +87,9 @@ export default function AthletePage() {
               </figure>
             </div>
             <div className="col-md-10 col-xl-5 offset-xl-1 col-lg-6" data-anime={"{ \"el\": \"childs\", \"translateY\": [50, 0], \"opacity\": [0,1], \"duration\": 1200, \"delay\": 0, \"staggervalue\": 150, \"easing\": \"easeOutQuad\" }"}>
-              <h2 className="text-carbon alt-font text-shadow-soft fs-40 fw-600 ls-minus-2px">Strength, performance, and identity must stay aligned.</h2>
-              <p className="w-85 lg-w-100 mb-30px">Athletic performance demands discipline, resilience, and mental strength. But for many athletes, the internal experience begins to shift as pressure increases.</p>
+              <p className="w-85 lg-w-100 mb-15px">Sport can give you purpose, direction and some of the most meaningful moments of your life. You’ve put time, energy and commitment into becoming the athlete you are.</p>
+              <p className="w-85 lg-w-100 mb-15px">But there’s also the person away from training and competition. Your relationships, your happiness and how you feel about yourself matter just as much as the next result.</p>
+              <p className="w-85 lg-w-100 mb-30px">Two Lives Theory® helps you strengthen that connection, so you can continue pursuing what you love whilst growing in other areas of your life.</p>
               <div className="row align-items-center justify-content-center align-items-center pt-3 overflow-hidden sm-pt-15px">
                 <div className="col-md-12 position-relative" data-anime={"{ \"translateX\": [150, 0], \"opacity\": [0,1], \"duration\": 1200, \"delay\": 100, \"staggervalue\": 150, \"easing\": \"easeOutQuad\" }"}>
                   <div className="outside-box-right-30 sm-outside-box-right-0">
@@ -95,10 +99,10 @@ export default function AthletePage() {
                           <div className="simple-card card-has-number">
                             <div className="card-number-1 alt-font text-dark-green opacity-3 fw-600">1</div>
                             <div className="card-title">
-                              <p className="alt-font fs-20 fw-600 mb-15px">Pressure Changes the Experience</p>
+                              <p className="alt-font fs-20 fw-600 mb-15px">The Expectations You Carry</p>
                             </div>
                             <div className="card-text">
-                              <p className="fs-16">As expectations rise, identity can tighten and the body and mind are pushed for long periods of time.</p>
+                              <p className="fs-16">The standards you set for yourself can be high. And sometimes the pressure stays with you long after training or competition has finished.</p>
                             </div>
                           </div>
                         </div>
@@ -106,10 +110,10 @@ export default function AthletePage() {
                           <div className="simple-card card-has-number">
                             <div className="card-number-1 alt-font text-dark-green opacity-3 fw-600">2</div>
                             <div className="card-title">
-                              <p className="alt-font fs-20 fw-600 mb-15px">Performance Continues, But Something Feels Off</p>
+                              <p className="alt-font fs-20 fw-600 mb-15px">The Moments Nobody Sees</p>
                             </div>
                             <div className="card-text">
-                              <p className="fs-16">You may still be competing and progressing, yet carrying internal tension, emotional strain, or a disconnect from your performance.</p>
+                              <p className="fs-16">A difficult performance, injury or setback can affect how you feel about yourself, even when everyone around you has moved on.</p>
                             </div>
                           </div>
                         </div>
@@ -117,10 +121,10 @@ export default function AthletePage() {
                           <div className="simple-card card-has-number">
                             <div className="card-number-1 alt-font text-dark-green opacity-3 fw-600">3</div>
                             <div className="card-title">
-                              <p className="alt-font fs-20 fw-600 mb-15px">This Is Where Change Begins</p>
+                              <p className="alt-font fs-20 fw-600 mb-15px">Who You Are Beyond Sport</p>
                             </div>
                             <div className="card-text">
-                              <p className="fs-16">Two Lives Theory® becomes relevant when performance, identity, and life need to come back into alignment.</p>
+                              <p className="fs-16">You can love competing and still want more time, connection and fulfilment in the parts of life that have nothing to do with results.</p>
                             </div>
                           </div>
                         </div>
@@ -134,7 +138,7 @@ export default function AthletePage() {
               </div>
             </div>
             <div className="col-12 text-center pt-5 pb-5 sm-pb-120px sm-pt-20px">
-              <p style={{ lineHeight: "1.5" }} className="alt-font text-carbon text-shadow-soft w-80 mx-auto d-inline-flex align-items-center fs-26 md-fs-24 sm-fs-18 fw-600 position-relative">{" My mentoring supports athletes through transition, strengthening their inner foundation so performance and life remain aligned. "}</p>
+              <p style={{ lineHeight: "1.5" }} className="alt-font text-carbon text-shadow-soft w-80 mx-auto d-inline-flex align-items-center fs-26 md-fs-24 sm-fs-18 fw-600 position-relative">My mentoring supports the person behind the athlete, helping you grow within your sport whilst strengthening your connection to life outside it.</p>
             </div>
           </div>
         </div>
@@ -147,8 +151,8 @@ export default function AthletePage() {
         <div className="container overlap-gap-section pt-5">
           <div className="row justify-content-center mb-2 sm-pt-30px sm-pb-25px">
             <div className="col-lg-8 text-center" data-anime={"{ \"translateY\": [50, 0], \"opacity\": [0,1], \"duration\": 1200, \"delay\": 0, \"staggervalue\": 150, \"easing\": \"easeOutQuad\" }"}>
-              <h2 className="fw-700 text-white ls-minus-2px sm-ls-0px sm-ls-minus-05px">Common themes I support athletes with:</h2>
-              <p className="mx-auto text-center text-white">This work is not about mindset tricks or pushing harder. It’s about creating internal stability so performance becomes sustainable.</p>
+              <h2 className="fw-700 text-white ls-minus-2px sm-ls-0px sm-ls-minus-05px">Common Themes I Support Athletes With</h2>
+              <p className="mx-auto text-center text-white">Being an athlete involves more than physical preparation. There’s the mental and emotional side of competition, the expectations you carry and the life you’re building beyond your sport.</p>
             </div>
           </div>
         </div>
@@ -162,8 +166,8 @@ export default function AthletePage() {
                       <i className="bi bi-arrow-down-up icon-extra-large text-base-color mb-20px justify-content-center"></i>
                     </div>
                     <div className="feature-box-content">
-                      <span className="d-inline-block alt-font text-white fs-20 fw-500 mb-5px">Performance pressure</span>
-                      <p className="text-visible text-light-opacity">Pressure that follows you beyond training or competition.</p>
+                      <span className="d-inline-block alt-font text-white fs-20 fw-500 mb-5px">{"Pressure & Expectations"}</span>
+                      <p className="text-visible text-light-opacity">Carrying the expectations of coaches, teammates, supporters or yourself, especially when the stakes feel high.</p>
                     </div>
                     <div className="feature-box-overlay bg-base-color"></div>
                   </div>
@@ -176,8 +180,8 @@ export default function AthletePage() {
                       <i className="bi bi-hourglass-split icon-extra-large text-base-color mb-20px justify-content-center"></i>
                     </div>
                     <div className="feature-box-content">
-                      <span className="d-inline-block alt-font text-white fs-20 fw-500 mb-5px">Identity attachment</span>
-                      <p className="text-visible text-light-opacity">Identity closely tied to results, form, or physical output.</p>
+                      <span className="d-inline-block alt-font text-white fs-20 fw-500 mb-5px">{"Confidence & Form"}</span>
+                      <p className="text-visible text-light-opacity">Feeling confident when things are going well but questioning yourself when performance or results change.</p>
                     </div>
                     <div className="feature-box-overlay bg-base-color"></div>
                   </div>
@@ -190,8 +194,8 @@ export default function AthletePage() {
                       <i className="bi bi-activity icon-extra-large text-base-color mb-20px justify-content-center"></i>
                     </div>
                     <div className="feature-box-content">
-                      <span className="d-inline-block alt-font text-white fs-20 fw-500 mb-5px">Emotional swings</span>
-                      <p className="text-visible text-light-opacity">Emotional volatility around success, failure, or expectation.</p>
+                      <span className="d-inline-block alt-font text-white fs-20 fw-500 mb-5px">{"Emotional Highs & Lows"}</span>
+                      <p className="text-visible text-light-opacity">Managing the feelings that come with winning, losing, selection, setbacks and everything in between.</p>
                     </div>
                     <div className="feature-box-overlay bg-base-color"></div>
                   </div>
@@ -204,8 +208,8 @@ export default function AthletePage() {
                       <i className="bi bi-slash-circle icon-extra-large text-base-color mb-20px justify-content-center"></i>
                     </div>
                     <div className="feature-box-content">
-                      <span className="d-inline-block alt-font text-white fs-20 fw-500 mb-5px">Switching off</span>
-                      <p className="text-visible text-light-opacity">Difficulty being present outside of sport.</p>
+                      <span className="d-inline-block alt-font text-white fs-20 fw-500 mb-5px">Switching Off</span>
+                      <p className="text-visible text-light-opacity">Finding it difficult to mentally step away from sport and be present in your personal life.</p>
                     </div>
                     <div className="feature-box-overlay bg-base-color"></div>
                   </div>
@@ -218,8 +222,8 @@ export default function AthletePage() {
                       <i className="bi bi-speedometer2 icon-extra-large text-base-color mb-20px justify-content-center"></i>
                     </div>
                     <div className="feature-box-content">
-                      <span className="d-inline-block alt-font text-white fs-20 fw-500 mb-5px">What’s next</span>
-                      <p className="text-visible text-light-opacity">{"A sense of \"what’s next\" beginning to surface."}</p>
+                      <span className="d-inline-block alt-font text-white fs-20 fw-500 mb-5px">Identity Beyond Sport</span>
+                      <p className="text-visible text-light-opacity">Understanding who you are beyond your sporting achievements and what makes you feel valued as a person.</p>
                     </div>
                     <div className="feature-box-overlay bg-base-color"></div>
                   </div>
@@ -232,8 +236,8 @@ export default function AthletePage() {
                       <i className="bi bi-sliders icon-extra-large text-base-color mb-20px justify-content-center"></i>
                     </div>
                     <div className="feature-box-content">
-                      <span className="d-inline-block alt-font text-white fs-20 fw-500 mb-5px">Confidence fluctuations</span>
-                      <p className="text-visible text-light-opacity">Confidence rising and falling based on performance, results, or external feedback.</p>
+                      <span className="d-inline-block alt-font text-white fs-20 fw-500 mb-5px">{"Injury, Change & What’s Next"}</span>
+                      <p className="text-visible text-light-opacity">Navigating uncertainty around injuries, changes in your career or the future beyond competition.</p>
                     </div>
                     <div className="feature-box-overlay bg-base-color"></div>
                   </div>
@@ -246,9 +250,9 @@ export default function AthletePage() {
           <div className="container overlap-gap-section">
             <div className="row justify-content-center mb-4">
               <div className="col-lg-8 text-center" data-anime={"{ \"translateY\": [50, 0], \"opacity\": [0,1], \"duration\": 1200, \"delay\": 0, \"staggervalue\": 150, \"easing\": \"easeOutQuad\" }"}>
-                <h2 className="fw-700 text-white ls-minus-2px sm-ls-minus-05px alt-font text-shadow-soft">How this work strengthens you</h2>
-                <p className="mx-auto text-center text-white">Athletes are often taught to override internal signals in pursuit of results. This can build resilience - but over time, it can also create inner conflict, emotional suppression, or burnout patterns.</p>
-                <p className="mx-auto fs-26 fw-700 text-center text-white">The work supports athletes in:</p>
+                <h2 className="fw-700 text-white ls-minus-2px sm-ls-minus-05px alt-font text-shadow-soft">How This Work Strengthens You</h2>
+                <p className="mx-auto text-center text-white">Training develops your physical abilities, but there’s another side of being an athlete that deserves attention.</p>
+                <p className="mx-auto text-center text-white">How you speak to yourself, handle difficult moments and experience life away from competition can influence how you feel both within and beyond your sport.</p>
               </div>
             </div>
             <div className="row row-cols-1 row-cols-lg-4 row-cols-sm-2" data-anime={"{ \"el\": \"childs\", \"translateX\": [-50, 0], \"opacity\": [0,1], \"duration\": 600, \"delay\": 0, \"staggervalue\": 100, \"easing\": \"easeOutQuad\" }"}>
@@ -263,8 +267,8 @@ export default function AthletePage() {
                     </span>
                   </div>
                 </div>
-                <span className="d-inline-block fs-19 sm-fs-22 text-white mb-5px fw-600 ls-minus-05px">Emotional Control</span>
-                <p className="w-75 lg-w-95 text-light-gray mx-auto">Composure under performance pressure.</p>
+                <span className="d-inline-block fs-19 sm-fs-22 text-white mb-5px fw-600 ls-minus-05px">Emotional Steadiness</span>
+                <p className="w-75 lg-w-95 text-light-gray mx-auto">Understand your emotional responses so you can approach pressure, setbacks and important moments with greater clarity.</p>
               </div>
               <div className="col process-step-style-03 text-center last-paragraph-no-margin hover-box md-mb-50px">
                 <div className="process-step-icon-box position-relative mb-25px">
@@ -277,8 +281,8 @@ export default function AthletePage() {
                     </span>
                   </div>
                 </div>
-                <span className="d-inline-block fs-19 sm-fs-22 text-white mb-5px fw-600 ls-minus-05px">{"Identity & Integration"}</span>
-                <p className="w-75 text-light-gray lg-w-95 mx-auto">Performing at a high level without losing yourself beyond sport.</p>
+                <span className="d-inline-block fs-19 sm-fs-22 text-white mb-5px fw-600 ls-minus-05px">Self-Belief Beyond Results</span>
+                <p className="w-75 text-light-gray lg-w-95 mx-auto">Develop confidence in who you are, not just how well you perform on any given day.</p>
               </div>
               <div className="col process-step-style-03 text-center last-paragraph-no-margin hover-box xs-mb-50px">
                 <div className="process-step-icon-box position-relative mb-25px">
@@ -291,8 +295,8 @@ export default function AthletePage() {
                     </span>
                   </div>
                 </div>
-                <span className="d-inline-block fs-19 sm-fs-22 text-white mb-5px fw-600 ls-minus-05px">Narrative Reset</span>
-                <p className="w-75 text-light-gray lg-w-95 mx-auto">Letting go of unhelpful patterns and internal stories.</p>
+                <span className="d-inline-block fs-19 sm-fs-22 text-white mb-5px fw-600 ls-minus-05px">{"Identity & Perspective"}</span>
+                <p className="w-75 text-light-gray lg-w-95 mx-auto">Strengthen your sense of self beyond sport whilst continuing to pursue the ambitions that matter to you.</p>
               </div>
               <div className="col process-step-style-03 text-center last-paragraph-no-margin hover-box">
                 <div className="process-step-icon-box position-relative mb-25px">
@@ -304,8 +308,8 @@ export default function AthletePage() {
                     </span>
                   </div>
                 </div>
-                <span className="d-inline-block fs-19 sm-fs-22 text-white mb-5px fw-600 ls-minus-05px">Self-Trust</span>
-                <p className="w-75 text-light-gray lg-w-95 mx-auto">Confidence that remains stable beyond results and performance.</p>
+                <span className="d-inline-block fs-19 sm-fs-22 text-white mb-5px fw-600 ls-minus-05px">{"Life & Relationships"}</span>
+                <p className="w-75 text-light-gray lg-w-95 mx-auto">Feel more connected to the people you love and make room for meaningful experiences outside training and competition.</p>
               </div>
             </div>
           </div>
@@ -316,64 +320,60 @@ export default function AthletePage() {
           <div className="row justify-content-center g-0">
             <div className="col-auto text-center last-paragraph-no-margin pt-20px pb-20px ps-60px pe-60px sm-ps-50px sm-pe-40px bg-white box-shadow-large border-radius-100px xs-border-radius-30px">
               <div className="fs-19 ls-minus-05px">
-                <span className="fw-600 text-carbon">This work builds stability so performance becomes sustainable.</span>
+                <span className="fw-600 text-carbon">Your sport can remain an important part of your identity without becoming the only thing that defines you.</span>
               </div>
             </div>
           </div>
         </div>
       </section>
-      <LogoMarquee variant="persona" />
+      <LogoMarquee variant="persona" words={["Clarity.", "Resilience.", "Connection.", "Self-Belief.", "Growth.", "Presence."]} />
       <section className="bg-pattern-section pt-1 pb-0">
         <div className="container">
           <div className="row justify-content-center align-items-end mb-6">
             <div className="col-xl-6 col-lg-7 text-center text-lg-start appear anime-child anime-complete" data-anime={"{ \"el\": \"childs\", \"translateY\": [30, 0], \"opacity\": [0,1], \"duration\": 800, \"delay\": 0, \"staggervalue\": 150, \"easing\": \"easeOutQuad\" }"}>
-              <h2 className="text-carbon alt-font text-shadow-soft fs-40 fw-600 ls-minus-2px sm-mb-20px mb-0 w-90 md-w-100" el="childs" staggervalue="150" easing="easeOutQuad">What this enables over time</h2>
-              <p className="lg-w-100 mb-0 d-none d-lg-block">{" This is what performance starts to feel like: "}</p>
+              <h2 className="text-carbon alt-font text-shadow-soft fs-40 fw-600 ls-minus-2px sm-mb-20px mb-0 w-90 md-w-100" el="childs" staggervalue="150" easing="easeOutQuad">What This Enables Over Time</h2>
+              <p className="lg-w-100 mb-0 d-none d-lg-block">Over time, this might look like:</p>
             </div>
             <div className="col-lg-5 offset-xl-1 last-paragraph-no-margin text-center text-lg-start words fw-600 text-shadow-soft lines splitting appear anime-child anime-complete" data-anime={"{\"el\": \"lines\",  \"translateX\": [30, 0], \"opacity\": [0,1], \"duration\": 800, \"delay\": 0, \"staggervalue\": 150, \"easing\": \"easeOutQuad\" }"} style={{ "--word-total": "20", "--line-total": "4" } as CSSProperties}>
-              <span className="d-inline" el="lines" staggervalue="150" easing="easeOutQuad" style={{ willChange: "inherit" }}>This is not about stepping away from excellence.</span>
+              <span className="d-inline" el="lines" staggervalue="150" easing="easeOutQuad" style={{ willChange: "inherit" }}>Progress isn’t always measured by what happens on the pitch, in the gym or during competition.</span>
               {" "}
-              <span className="d-inline" el="lines" staggervalue="150" easing="easeOutQuad" style={{ willChange: "inherit" }}>It is about sustaining it without internal cost.</span>
-              {" "}
-              <span className="d-inline" el="lines" staggervalue="150" easing="easeOutQuad" style={{ willChange: "inherit" }}>You do not lose your edge.</span>
-              {" "}
-              <span className="d-inline" el="lines" staggervalue="150" easing="easeOutQuad" style={{ willChange: "inherit" }}>You remove what interferes with it.</span>
+              <span className="d-inline" el="lines" staggervalue="150" easing="easeOutQuad" style={{ willChange: "inherit" }}>Sometimes it’s how you respond after a difficult result, how you feel during time away from sport or how comfortable you become with yourself beyond being an athlete.</span>
             </div>
-            <p className="lg-w-100 mb-0 sm-mt-2 text-center d-block d-lg-none">{" This is what performance starts to feel like: "}</p>
+            <p className="lg-w-100 mb-0 sm-mt-2 text-center d-block d-lg-none">Over time, this might look like:</p>
           </div>
           <div className="marketing-swiper swiper mb-7 md-mb-10 sm-mb-15" data-slider-options={"{ \"slidesPerView\": 1, \"spaceBetween\": 20, \"loop\": true, \"speed\": 900, \"centeredSlides\": true, \"grabCursor\": true, \"autoplay\": { \"delay\": 3000, \"disableOnInteraction\": false }, \"breakpoints\": { \"768\": { \"slidesPerView\": 2, \"spaceBetween\": 30 }, \"992\": { \"slidesPerView\": 3, \"spaceBetween\": 30 } }, \"navigation\": { \"nextEl\": \".athlete-marketing-slide-next\", \"prevEl\": \".athlete-marketing-slide-prev\" }, \"keyboard\": { \"enabled\": true, \"onlyInViewport\": true }, \"effect\": \"slide\" }"}>
             <div className="swiper-wrapper">
               <div className="swiper-slide">
                 <div className="position-relative marketing-card overflow-hidden h-100 p-50px lg-p-30px border-radius-6px">
-                  <span className="d-block text-carbon fw-600 fs-24 mb-25px position-relative z-index-1 ls-minus-1px w-90 xl-w-100 text-center text-sm-start">Greater calm and clarity in competition.</span>
+                  <span className="d-block text-carbon fw-600 fs-24 mb-25px position-relative z-index-1 ls-minus-1px w-90 xl-w-100 text-center text-sm-start">Approaching important competitions with greater self-trust, even when expectations are high.</span>
                   {" "}
                   <img src="/img/bg-icon.svg" alt="bg icon" className="position-absolute animation-zoom swiper-icon bottom-0 end-0 opacity-50 z-index-0 animation-zoom" style={{ width: "110px", transform: "translate(30%, 30%)", pointerEvents: "none" }} />
                 </div>
               </div>
               <div className="swiper-slide">
                 <div className="position-relative marketing-card overflow-hidden h-100 p-50px lg-p-30px border-radius-6px">
-                  <span className="d-block text-carbon fw-600 fs-24 mb-25px position-relative z-index-1 ls-minus-1px w-90 xl-w-100 text-center text-sm-start">Reduced emotional swings around results.</span>
+                  <span className="d-block text-carbon fw-600 fs-24 mb-25px position-relative z-index-1 ls-minus-1px w-90 xl-w-100 text-center text-sm-start">Recovering emotionally from difficult results without allowing one performance to define how you feel about yourself.</span>
                   {" "}
                   <img src="/img/bg-icon.svg" alt="bg icon" className="position-absolute swiper-icon bottom-0 end-0 opacity-50 z-index-0 animation-zoom" style={{ width: "110px", transform: "translate(30%, 30%)", pointerEvents: "none" }} />
                 </div>
               </div>
               <div className="swiper-slide">
                 <div className="position-relative marketing-card overflow-hidden h-100 p-50px lg-p-30px border-radius-6px">
-                  <span className="d-block text-carbon fw-600 fs-24 mb-25px position-relative z-index-1 ls-minus-1px w-90 xl-w-100 text-center text-sm-start">Stronger focus without internal pressure.</span>
+                  <span className="d-block text-carbon fw-600 fs-24 mb-25px position-relative z-index-1 ls-minus-1px w-90 xl-w-100 text-center text-sm-start">Enjoying time with friends, family or a partner without your mind constantly returning to sport.</span>
                   {" "}
                   <img src="/img/bg-icon.svg" alt="bg icon" className="position-absolute swiper-icon bottom-0 end-0 opacity-50 z-index-0 animation-zoom" style={{ width: "110px", transform: "translate(30%, 30%)", pointerEvents: "none" }} />
                 </div>
               </div>
               <div className="swiper-slide">
                 <div className="position-relative marketing-card overflow-hidden h-100 p-50px lg-p-30px border-radius-6px">
-                  <span className="d-block text-carbon fw-600 fs-24 mb-25px position-relative z-index-1 ls-minus-1px w-90 xl-w-100 text-center text-sm-start">A healthier relationship with identity and performance.</span>
+                  <span className="d-block text-carbon fw-600 fs-24 mb-25px position-relative z-index-1 ls-minus-1px w-90 xl-w-100 text-center text-sm-start">Feeling more comfortable with who you are during injuries, setbacks or periods of change.</span>
                   {" "}
                   <img src="/img/bg-icon.svg" alt="bg icon" className="position-absolute swiper-icon bottom-0 end-0 opacity-50 z-index-0 animation-zoom" style={{ width: "110px", transform: "translate(30%, 30%)", pointerEvents: "none" }} />
                 </div>
               </div>
               <div className="swiper-slide">
                 <div className="position-relative marketing-card overflow-hidden h-100 p-50px lg-p-30px border-radius-6px">
-                  <span className="d-block text-carbon fw-600 fs-24 mb-25px position-relative z-index-1 ls-minus-1px w-90 xl-w-100 text-center text-sm-start">Confidence that extends beyond sport.</span>
+                  <span className="d-block text-carbon fw-600 fs-24 mb-25px position-relative z-index-1 ls-minus-1px w-90 xl-w-100 text-center text-sm-start">Continuing to pursue your sporting goals whilst building a life that feels meaningful beyond competition.</span>
                   {" "}
                   <img src="/img/bg-icon.svg" alt="bg icon" className="position-absolute swiper-icon bottom-0 end-0 opacity-50 z-index-0 animation-zoom" style={{ width: "110px", transform: "translate(30%, 30%)", pointerEvents: "none" }} />
                 </div>
@@ -469,8 +469,8 @@ export default function AthletePage() {
           </div>
         </div>
       </section>
-      <Cta className="h-600px d-flex align-items-center justify-content-center footer-bg mobile-cta cta-page position-relative" style={{"backgroundImage":"url('/.netlify/images?url=/images/cta-image.webp&w=1920&fm=webp&q=80')","backgroundSize":"cover","backgroundPosition":"center","backgroundRepeat":"no-repeat"}} overlayClass="opacity-medium bg-black position-absolute top-0 start-0 w-100 h-100" shadowClass="hero-bottom-shadow mb-shadow-top position-absolute bottom-0 start-0 w-100" containerClass="container position-relative z-index-1" rowClass="row align-items-center justify-content-center" leftClass="col-xl-8 text-center text-xl-start lg-mb-30px" h3Class="alt-font d-inline-block align-middle fs-40 text-white mb-15px mb-md-0 me-md-35px" title=" You’ve Reached a Level Few Ever Do " rightClass="col-xl-4 text-center text-xl-end" buttons={[{"href":"/request-mentorship","className":"btn-primary spacing-below-desktop  active btn-box-shadow fw-600 text-carbon","text":" Request Mentorship "},{"href":"/explore-your-archetype","className":"btn-archetype active btn-box-shadow fw-600 text-carbon sm-mt-15px","text":" Explore Your Archetype "}]} subtitle={{"tag":"h4","className":"alt-font text-base-color d-inline-block align-middle fs-30 mb-15px mb-md-0 me-md-35px position-relative","iconClass":"feather fs-30 icon-feather-arrow-right","text":" Now Outgrow It"}} />
-      <Cta className="h-600px d-flex align-items-center justify-content-center footer-bg desktop-only-footer cta-page" style={{"backgroundImage":"url('/.netlify/images?url=/images/cta-image.webp&w=1920&fm=webp&q=80')"}} overlayClass="opacity-medium bg-black" shadowClass="hero-bottom-shadow" containerClass="container position-relative" rowClass="row align-items-center justify-content-center" leftClass="col-xl-8 text-center text-xl-start lg-mb-30px" h3Class="alt-font d-inline-block align-middle fs-40 text-white mb-15px mb-md-0 me-md-35px position-relative" title="You’ve Reached a Level Few Ever Do " rightClass="col-xl-4 text-center text-xl-end" buttons={[{"href":"/request-mentorship","className":"btn-primary spacing-below-desktop  active btn-box-shadow fw-600 text-carbon","text":" Request Mentorship "},{"href":"/explore-your-archetype","className":"btn-archetype active btn-box-shadow fw-600 text-carbon sm-mt-15px","text":" Explore Your Archetype "}]} parallax="0.5" subtitle={{"tag":"h4","className":"alt-font text-base-color d-inline-block align-middle fs-30 mb-15px mb-md-0 me-md-35px position-relative","iconClass":"feather fs-30 icon-feather-arrow-right","text":" Now Outgrow It"}} />
+      <Cta className="h-600px d-flex align-items-center justify-content-center footer-bg mobile-cta cta-page position-relative" style={{"backgroundImage":"url('/.netlify/images?url=/images/cta-image.webp&w=1920&fm=webp&q=80')","backgroundSize":"cover","backgroundPosition":"center","backgroundRepeat":"no-repeat"}} overlayClass="opacity-medium bg-black position-absolute top-0 start-0 w-100 h-100" shadowClass="hero-bottom-shadow mb-shadow-top position-absolute bottom-0 start-0 w-100" containerClass="container position-relative z-index-1" rowClass="row align-items-center justify-content-center" leftClass="col-xl-8 text-center text-xl-start lg-mb-30px" h3Class="alt-font d-inline-block align-middle fs-40 text-white mb-15px mb-md-0 me-md-35px" title="Your Sporting Journey Is Important. " rightClass="col-xl-4 text-center text-xl-end" buttons={[{"href":"/request-mentorship","className":"btn-primary spacing-below-desktop  active btn-box-shadow fw-600 text-carbon","text":" Request Mentorship "},{"href":"/explore-your-archetype","className":"btn-archetype active btn-box-shadow fw-600 text-carbon sm-mt-15px","text":" Explore Your Archetype "}]} subtitle={{"tag":"h4","className":"alt-font text-base-color d-inline-block align-middle fs-30 mb-15px mb-md-0 me-md-35px position-relative","iconClass":"feather fs-30 icon-feather-arrow-right","text":"So Is the Life You’re Living Along the Way."}} />
+      <Cta className="h-600px d-flex align-items-center justify-content-center footer-bg desktop-only-footer cta-page" style={{"backgroundImage":"url('/.netlify/images?url=/images/cta-image.webp&w=1920&fm=webp&q=80')"}} overlayClass="opacity-medium bg-black" shadowClass="hero-bottom-shadow" containerClass="container position-relative" rowClass="row align-items-center justify-content-center" leftClass="col-xl-8 text-center text-xl-start lg-mb-30px" h3Class="alt-font d-inline-block align-middle fs-40 text-white mb-15px mb-md-0 me-md-35px position-relative" title="Your Sporting Journey Is Important. " rightClass="col-xl-4 text-center text-xl-end" buttons={[{"href":"/request-mentorship","className":"btn-primary spacing-below-desktop  active btn-box-shadow fw-600 text-carbon","text":" Request Mentorship "},{"href":"/explore-your-archetype","className":"btn-archetype active btn-box-shadow fw-600 text-carbon sm-mt-15px","text":" Explore Your Archetype "}]} parallax="0.5" subtitle={{"tag":"h4","className":"alt-font text-base-color d-inline-block align-middle fs-30 mb-15px mb-md-0 me-md-35px position-relative","iconClass":"feather fs-30 icon-feather-arrow-right","text":"So Is the Life You’re Living Along the Way."}} />
       <Footer />
       <WhatsAppWidget />
       <ScrollTop />

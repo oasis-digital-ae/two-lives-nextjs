@@ -84,20 +84,20 @@ export default function BusinessCeoCaseStudy() {
             <div className="col-lg-8">
               <article className="blog-content">
                 <h2 className="text-carbon alt-font text-shadow-soft fs-40 fw-600 ls-minus-2px alt-font mb-25px">Context</h2>
-                <p className="text-carbon mb-25px">This client entered the work as a successful business owner leading a growing organisation. Externally, they were respected, decisive, and highly capable. Internally, they were carrying long-term pressure, responsibility, and a constant sense of needing to stay ahead.</p>
+                <p className="text-carbon mb-25px">This client entered the work as a successful business owner leading a growing organisation. Externally, they were respected, decisive and highly capable. Internally, they were carrying long-term pressure, responsibility and a constant sense of needing to stay ahead.</p>
                 <p className="text-carbon mb-25px">While the business was progressing, there was little space to slow down or reflect. Life felt structured around performance and problem-solving, with limited room for internal clarity or balance.</p>
                 <h2 className="text-carbon alt-font text-shadow-soft fs-40 fw-600 ls-minus-2px alt-font mb-25px mt-40px">The Inner Tension</h2>
                 <p className="text-carbon mb-25px">The challenge was not burnout, but a quieter realisation that the way they were leading themselves no longer matched the phase of life and leadership they were entering. Decisions were being made efficiently, but often from urgency rather than clarity.</p>
                 <p className="text-carbon mb-25px">There was a growing disconnect between external success and internal experience. Pushing harder was no longer creating relief, only more pressure.</p>
                 <h2 className="text-carbon alt-font text-shadow-soft fs-40 fw-600 ls-minus-2px alt-font mb-25px mt-40px">The Mentoring Relationship</h2>
-                <p className="text-carbon mb-25px">The mentoring focused on helping them step out of constant urgency and into grounded self-leadership. Rather than working on business strategy, the work centred on clarity, emotional regulation, identity, and how decisions were being made under pressure.</p>
-                <p className="text-carbon mb-25px">The process was consistent and adaptive, working around the demands of leadership rather than competing with them. Attention was given to boundaries, inner dialogue, and restoring space for perspective without sacrificing ambition.</p>
+                <p className="text-carbon mb-25px">The mentoring focused on helping them step out of constant urgency and into grounded self-leadership. Rather than working on business strategy, the work centred on clarity, emotional regulation, identity and how decisions were being made under pressure.</p>
+                <p className="text-carbon mb-25px">The process was consistent and adaptive, working around the demands of leadership rather than competing with them. Attention was given to boundaries, inner dialogue and restoring space for perspective without sacrificing ambition.</p>
                 <h2 className="text-carbon alt-font text-shadow-soft fs-40 fw-600 ls-minus-2px alt-font mb-25px mt-40px">The Shift</h2>
                 <p className="text-carbon mb-25px">Over time, they experienced a noticeable shift in how they related to responsibility and pressure. Decision-making became calmer and more intentional. Emotional reactivity reduced, and leadership felt steadier rather than effortful.</p>
                 <p className="text-carbon mb-25px">They began leading from clarity rather than momentum, with greater trust in themselves and their judgment.</p>
                 <h2 className="text-carbon alt-font text-shadow-soft fs-40 fw-600 ls-minus-2px alt-font mb-25px mt-40px">Life Now</h2>
-                <p className="text-carbon mb-25px">Today, they lead their business with presence and confidence, able to hold responsibility without internal strain. Success is no longer driven by pressure alone, but by alignment, perspective, and self-trust. Their personal life now has more meaning.</p>
-                <p className="text-carbon mb-25px">This journey was not about changing who they are. It was about strengthening how they relate to themselves, their role, and their life.</p>
+                <p className="text-carbon mb-25px">Today, they lead their business with presence and confidence, able to hold responsibility without internal strain. Success is no longer driven by pressure alone, but by alignment, perspective and self-trust. Their personal life now has more meaning.</p>
+                <p className="text-carbon mb-25px">This journey was not about changing who they are. It was about strengthening how they relate to themselves, their role and their life.</p>
               </article>
             </div>
             <div className="col-lg-4">

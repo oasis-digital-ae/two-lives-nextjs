@@ -48,7 +48,10 @@ export default function ExecutiveLeadersPage() {
           <div className="row align-items-center extra-small-screen">
             <div className="col-7 col-xl-7 col-sm-6 z-index-9 position-relative page-title-extra-small" data-anime={"{ \"el\": \"childs\", \"opacity\": [0, 1], \"translateX\": [-50, 0], \"duration\": 800, \"delay\": 0, \"staggervalue\": 150, \"easing\": \"easeOutQuad\" }"}>
               <h1 className="mb-20px alt-font text-white fw-500 ls-minus-05px">{"For Executives & Leaders"}</h1>
-              <h2 className=" fw-700 text-white mb-0 ls-minus-2px sm-ls-minus-1px">Lead with clarity without carrying internal strain.</h2>
+              <h2 className=" fw-700 text-white mb-0 ls-minus-2px sm-ls-minus-1px">You Can Lead Others Without Losing Touch With Yourself.</h2>
+              <div className="mt-30px">
+                <a href="/request-mentorship" className="btn-primary active btn-box-shadow fw-600 text-carbon d-inline-block">Request Mentorship</a>
+              </div>
             </div>
           </div>
         </div>
@@ -58,7 +61,7 @@ export default function ExecutiveLeadersPage() {
           <div className="mentor-words-row pb-5 pt-0">
             <div className="row justify-content-center">
               <div className="col-lg-10 text-center">
-                <h2 className="text-carbon alt-font text-shadow-soft fs-50 fw-600 sm-pt-0px ls-minus-2px mentor-animate-words">{" Responsibility doesn’t switch off. Neither does the pressure. "}</h2>
+                <h2 className="text-carbon alt-font text-shadow-soft fs-50 fw-600 sm-pt-0px ls-minus-2px mentor-animate-words">Behind the Decisions, There’s Still a Person.</h2>
               </div>
             </div>
           </div>
@@ -84,8 +87,8 @@ export default function ExecutiveLeadersPage() {
               </figure>
             </div>
             <div className="col-md-10 col-xl-5 offset-xl-1 col-lg-6" data-anime={"{ \"el\": \"childs\", \"translateY\": [50, 0], \"opacity\": [0,1], \"duration\": 1200, \"delay\": 0, \"staggervalue\": 150, \"easing\": \"easeOutQuad\" }"}>
-              <h2 className="text-carbon alt-font text-shadow-soft fs-40 fw-600 ls-minus-2px">Lead with clarity, not internal strain.</h2>
-              <p className="w-85 lg-w-100 mb-30px">Leadership requires decisiveness, composure, and responsibility. Yet for many executives and leaders, the external role expands while internal pressure quietly builds.</p>
+              <p className="w-85 lg-w-100 mb-15px">Leadership can be incredibly rewarding. You’ve worked hard to reach a position where people trust your judgement, depend on your direction and look to you when decisions need to be made.</p>
+              <p className="w-85 lg-w-100 mb-30px">But being responsible for others doesn’t mean your own thoughts, emotions and needs become any less important. Two Lives Theory® helps you understand the person behind the role, so you can continue leading with purpose whilst feeling more connected to yourself, your relationships and the life outside work.</p>
               <div className="row align-items-center justify-content-center align-items-center pt-3 overflow-hidden sm-pt-15px">
                 <div className="col-md-12 position-relative" data-anime={"{ \"translateX\": [150, 0], \"opacity\": [0,1], \"duration\": 1200, \"delay\": 100, \"staggervalue\": 150, \"easing\": \"easeOutQuad\" }"}>
                   <div className="outside-box-right-30 sm-outside-box-right-0">
@@ -95,10 +98,10 @@ export default function ExecutiveLeadersPage() {
                           <div className="simple-card card-has-number">
                             <div className="card-number-1 alt-font text-dark-green opacity-3 fw-600">1</div>
                             <div className="card-title">
-                              <p className="alt-font fs-20 fw-600 mb-15px">The Role Expands, The Pressure Builds</p>
+                              <p className="alt-font fs-20 fw-600 mb-15px">Being the One Others Rely On</p>
                             </div>
                             <div className="card-text">
-                              <p className="fs-16">As responsibility grows, the internal experience can become increasingly heavy and demanding.</p>
+                              <p className="fs-16">When people look to you for answers, it can become natural to put their needs and expectations ahead of your own.</p>
                             </div>
                           </div>
                         </div>
@@ -106,10 +109,10 @@ export default function ExecutiveLeadersPage() {
                           <div className="simple-card card-has-number">
                             <div className="card-number-1 alt-font text-dark-green opacity-3 fw-600">2</div>
                             <div className="card-title">
-                              <p className="alt-font fs-20 fw-600 mb-15px">Outward Success, Internal Load</p>
+                              <p className="alt-font fs-20 fw-600 mb-15px">What You Carry Home</p>
                             </div>
                             <div className="card-text">
-                              <p className="fs-16">You may be effective, respected, and capable, while privately carrying mental load, emotional fatigue, or strain.</p>
+                              <p className="fs-16">Difficult decisions, conversations and responsibilities don’t always leave your mind when the working day ends.</p>
                             </div>
                           </div>
                         </div>
@@ -117,10 +120,10 @@ export default function ExecutiveLeadersPage() {
                           <div className="simple-card card-has-number">
                             <div className="card-number-1 alt-font text-dark-green opacity-3 fw-600">3</div>
                             <div className="card-title">
-                              <p className="alt-font fs-20 fw-600 mb-15px">This Is Where Change Begins</p>
+                              <p className="alt-font fs-20 fw-600 mb-15px">Your Life Beyond the Role</p>
                             </div>
                             <div className="card-text">
-                              <p className="fs-16">Two Lives Theory® becomes relevant when leadership requires a deeper internal shift, not just external performance.</p>
+                              <p className="fs-16">You can be proud of the leader you’ve become and still want more connection, fulfilment and time for the person you are outside work.</p>
                             </div>
                           </div>
                         </div>
@@ -134,7 +137,7 @@ export default function ExecutiveLeadersPage() {
               </div>
             </div>
             <div className="col-12 text-center pt-5 pb-5 sm-pb-120px sm-pt-20px">
-              <p style={{ lineHeight: "1.5" }} className="alt-font text-carbon text-shadow-soft w-80 mx-auto d-inline-flex align-items-center fs-26 md-fs-24 sm-fs-18 fw-600 position-relative">{" My mentoring supports leaders through transition, strengthening self-leadership so decisions and direction are held with clarity rather than tension. "}</p>
+              <p style={{ lineHeight: "1.5" }} className="alt-font text-carbon text-shadow-soft w-80 mx-auto d-inline-flex align-items-center fs-26 md-fs-24 sm-fs-18 fw-600 position-relative">My mentoring creates a private space to explore the person behind the position, helping you strengthen your inner world whilst continuing to lead with purpose.</p>
             </div>
           </div>
         </div>
@@ -147,8 +150,8 @@ export default function ExecutiveLeadersPage() {
         <div className="container overlap-gap-section pt-5">
           <div className="row justify-content-center mb-2 sm-pt-30px sm-pb-25px">
             <div className="col-lg-8 text-center" data-anime={"{ \"translateY\": [50, 0], \"opacity\": [0,1], \"duration\": 1200, \"delay\": 0, \"staggervalue\": 150, \"easing\": \"easeOutQuad\" }"}>
-              <h2 className="fw-700 text-white ls-minus-2px sm-ls-minus-05px alt-font text-shadow-soft">Common themes I support leaders with:</h2>
-              <p className="mx-auto text-center text-white">This work is not about performance optimisation. It’s about creating the internal conditions for calm, grounded leadership.</p>
+              <h2 className="fw-700 text-white ls-minus-2px sm-ls-minus-05px alt-font text-shadow-soft">Common Themes I Support Leaders With</h2>
+              <p className="mx-auto text-center text-white">Leadership brings opportunities, purpose and responsibility. But there’s also the personal experience of being someone others rely on, which isn’t always visible from the outside.</p>
             </div>
           </div>
         </div>
@@ -162,8 +165,8 @@ export default function ExecutiveLeadersPage() {
                       <i className="bi bi-arrow-down-up icon-extra-large text-base-color mb-20px justify-content-center"></i>
                     </div>
                     <div className="feature-box-content">
-                      <span className="d-inline-block alt-font text-white fs-20 fw-500 mb-5px">Constant responsibility</span>
-                      <p className="text-visible text-light-opacity">Mental load that never fully switches off.</p>
+                      <span className="d-inline-block alt-font text-white fs-20 fw-500 mb-5px">Constant Responsibility</span>
+                      <p className="text-visible text-light-opacity">Feeling the weight of decisions, expectations and people depending on you, even outside working hours.</p>
                     </div>
                     <div className="feature-box-overlay bg-base-color"></div>
                   </div>
@@ -176,8 +179,8 @@ export default function ExecutiveLeadersPage() {
                       <i className="bi bi-hourglass-split icon-extra-large text-base-color mb-20px justify-content-center"></i>
                     </div>
                     <div className="feature-box-content">
-                      <span className="d-inline-block alt-font text-white fs-20 fw-500 mb-5px">Decision fatigue</span>
-                      <p className="text-visible text-light-opacity">Decision fatigue under sustained pressure.</p>
+                      <span className="d-inline-block alt-font text-white fs-20 fw-500 mb-5px">Decision Fatigue</span>
+                      <p className="text-visible text-light-opacity">Spending so much time making decisions for others that you have little space left for yourself.</p>
                     </div>
                     <div className="feature-box-overlay bg-base-color"></div>
                   </div>
@@ -190,8 +193,8 @@ export default function ExecutiveLeadersPage() {
                       <i className="bi bi-activity icon-extra-large text-base-color mb-20px justify-content-center"></i>
                     </div>
                     <div className="feature-box-content">
-                      <span className="d-inline-block alt-font text-white fs-20 fw-500 mb-5px">Emotional containment</span>
-                      <p className="text-visible text-light-opacity">Emotional containment affecting wellbeing or relationships.</p>
+                      <span className="d-inline-block alt-font text-white fs-20 fw-500 mb-5px">Holding Everything Together</span>
+                      <p className="text-visible text-light-opacity">Feeling the need to remain composed and strong, even when you’re carrying uncertainty or difficult emotions.</p>
                     </div>
                     <div className="feature-box-overlay bg-base-color"></div>
                   </div>
@@ -204,8 +207,8 @@ export default function ExecutiveLeadersPage() {
                       <i className="bi bi-slash-circle icon-extra-large text-base-color mb-20px justify-content-center"></i>
                     </div>
                     <div className="feature-box-content">
-                      <span className="d-inline-block alt-font text-white fs-20 fw-500 mb-5px">Identity pressure</span>
-                      <p className="text-visible text-light-opacity">Identity tied to role, status, or outcomes.</p>
+                      <span className="d-inline-block alt-font text-white fs-20 fw-500 mb-5px">Isolation in Leadership</span>
+                      <p className="text-visible text-light-opacity">Having people around you but limited opportunities to speak openly about what you’re experiencing.</p>
                     </div>
                     <div className="feature-box-overlay bg-base-color"></div>
                   </div>
@@ -218,8 +221,8 @@ export default function ExecutiveLeadersPage() {
                       <i className="bi bi-speedometer2 icon-extra-large text-base-color mb-20px justify-content-center"></i>
                     </div>
                     <div className="feature-box-content">
-                      <span className="d-inline-block alt-font text-white fs-20 fw-500 mb-5px">Misalignment</span>
-                      <p className="text-visible text-light-opacity">A growing sense of misalignment despite professional success.</p>
+                      <span className="d-inline-block alt-font text-white fs-20 fw-500 mb-5px">{"Identity & Expectations"}</span>
+                      <p className="text-visible text-light-opacity">When your role, responsibilities or professional reputation begin to define how you see yourself.</p>
                     </div>
                     <div className="feature-box-overlay bg-base-color"></div>
                   </div>
@@ -232,8 +235,8 @@ export default function ExecutiveLeadersPage() {
                       <i className="bi bi-sliders icon-extra-large text-base-color mb-20px justify-content-center"></i>
                     </div>
                     <div className="feature-box-content">
-                      <span className="d-inline-block alt-font text-white fs-20 fw-500 mb-5px">Isolation</span>
-                      <p className="text-visible text-light-opacity">Feeling isolated in decision-making, with limited space to think openly or be supported.</p>
+                      <span className="d-inline-block alt-font text-white fs-20 fw-500 mb-5px">Presence Beyond Work</span>
+                      <p className="text-visible text-light-opacity">Finding it difficult to give your full attention to relationships, wellbeing and the parts of life outside your responsibilities.</p>
                     </div>
                     <div className="feature-box-overlay bg-base-color"></div>
                   </div>
@@ -246,9 +249,9 @@ export default function ExecutiveLeadersPage() {
           <div className="container overlap-gap-section">
             <div className="row justify-content-center mb-4">
               <div className="col-lg-8 text-center" data-anime={"{ \"translateY\": [50, 0], \"opacity\": [0,1], \"duration\": 1200, \"delay\": 0, \"staggervalue\": 150, \"easing\": \"easeOutQuad\" }"}>
-                <h2 className="fw-700 text-white ls-minus-2px sm-ls-minus-05px alt-font text-shadow-soft">How this work strengthens you</h2>
-                <p className="mx-auto text-center text-white">Leadership roles often require emotional restraint, strategic thinking, and consistency. Over time, this can lead to internal suppression, reduced self-connection, or reactive decision-making under pressure.</p>
-                <p className="mx-auto fs-26 fw-700 text-center text-white">The work supports leaders in:</p>
+                <h2 className="fw-700 text-white ls-minus-2px sm-ls-minus-05px alt-font text-shadow-soft">How This Work Strengthens You</h2>
+                <p className="mx-auto text-center text-white">You’ve developed the ability to lead, make decisions and take responsibility. But personal growth isn’t only about becoming more effective in your role.</p>
+                <p className="mx-auto text-center text-white">It’s also about understanding how you experience that responsibility, recognising what matters to you and strengthening the relationships and parts of life that exist beyond your professional identity.</p>
               </div>
             </div>
             <div className="row row-cols-1 row-cols-lg-4 row-cols-sm-2" data-anime={"{ \"el\": \"childs\", \"translateX\": [-50, 0], \"opacity\": [0,1], \"duration\": 600, \"delay\": 0, \"staggervalue\": 100, \"easing\": \"easeOutQuad\" }"}>
@@ -263,8 +266,8 @@ export default function ExecutiveLeadersPage() {
                     </span>
                   </div>
                 </div>
-                <span className="d-inline-block fs-19 sm-fs-22 text-white mb-5px fw-600 ls-minus-05px">Clarity Under Pressure</span>
-                <p className="w-75 lg-w-95 text-light-gray mx-auto">Leading and making decisions with emotional stability rather than urgency or shutdown.</p>
+                <span className="d-inline-block fs-19 sm-fs-22 text-white mb-5px fw-600 ls-minus-05px">Clarity in Difficult Moments</span>
+                <p className="w-75 lg-w-95 text-light-gray mx-auto">Approach important decisions and conversations with greater emotional awareness, clarity and perspective.</p>
               </div>
               <div className="col process-step-style-03 text-center last-paragraph-no-margin hover-box md-mb-50px">
                 <div className="process-step-icon-box position-relative mb-25px">
@@ -277,8 +280,8 @@ export default function ExecutiveLeadersPage() {
                     </span>
                   </div>
                 </div>
-                <span className="d-inline-block fs-19 sm-fs-22 text-white mb-5px fw-600 ls-minus-05px">Narrative Awareness</span>
-                <p className="w-75 text-light-gray lg-w-95 mx-auto">Recognising and releasing unhelpful leadership patterns and internal narratives.</p>
+                <span className="d-inline-block fs-19 sm-fs-22 text-white mb-5px fw-600 ls-minus-05px">{"Self-Trust & Boundaries"}</span>
+                <p className="w-75 text-light-gray lg-w-95 mx-auto">Become more comfortable trusting your judgement, acknowledging your needs and setting boundaries that support your wellbeing.</p>
               </div>
               <div className="col process-step-style-03 text-center last-paragraph-no-margin hover-box xs-mb-50px">
                 <div className="process-step-icon-box position-relative mb-25px">
@@ -291,8 +294,8 @@ export default function ExecutiveLeadersPage() {
                     </span>
                   </div>
                 </div>
-                <span className="d-inline-block fs-19 sm-fs-22 text-white mb-5px fw-600 ls-minus-05px">Inner Authority</span>
-                <p className="w-75 text-light-gray lg-w-95 mx-auto">Trusting your own direction without over-reliance on external validation.</p>
+                <span className="d-inline-block fs-19 sm-fs-22 text-white mb-5px fw-600 ls-minus-05px">{"Connection & Communication"}</span>
+                <p className="w-75 text-light-gray lg-w-95 mx-auto">Build greater understanding in how you relate to others, allowing more openness, emotional presence and meaningful connection.</p>
               </div>
               <div className="col process-step-style-03 text-center last-paragraph-no-margin hover-box">
                 <div className="process-step-icon-box position-relative mb-25px">
@@ -304,8 +307,8 @@ export default function ExecutiveLeadersPage() {
                     </span>
                   </div>
                 </div>
-                <span className="d-inline-block fs-19 sm-fs-22 text-white mb-5px fw-600 ls-minus-05px">Integrated Leadership</span>
-                <p className="w-75 text-light-gray lg-w-95 mx-auto">Leading beyond the role, with alignment across work, identity, and life.</p>
+                <span className="d-inline-block fs-19 sm-fs-22 text-white mb-5px fw-600 ls-minus-05px">Life Beyond Leadership</span>
+                <p className="w-75 text-light-gray lg-w-95 mx-auto">Strengthen your connection to the people and experiences that matter to you outside your professional responsibilities.</p>
               </div>
             </div>
           </div>
@@ -316,64 +319,60 @@ export default function ExecutiveLeadersPage() {
           <div className="row justify-content-center g-0">
             <div className="col-auto text-center last-paragraph-no-margin pt-20px pb-20px ps-60px pe-60px sm-ps-50px sm-pe-40px bg-white box-shadow-large border-radius-100px xs-border-radius-30px">
               <div className="fs-19 ls-minus-05px">
-                <span className="fw-600 text-carbon">This work creates the internal conditions for calm, grounded leadership.</span>
+                <span className="fw-600 text-carbon">You can remain committed to being a strong leader whilst giving the person behind that responsibility the same care and attention.</span>
               </div>
             </div>
           </div>
         </div>
       </section>
-      <LogoMarquee variant="persona" />
+      <LogoMarquee variant="persona" words={["Clarity.", "Confidence.", "Connection.", "Self-Trust.", "Growth.", "Presence."]} />
       <section className="bg-pattern-section pt-1 pb-0">
         <div className="container">
           <div className="row justify-content-center align-items-end mb-6">
             <div className="col-xl-6 col-lg-7 text-center text-lg-start appear anime-child anime-complete" data-anime={"{ \"el\": \"childs\", \"translateY\": [30, 0], \"opacity\": [0,1], \"duration\": 800, \"delay\": 0, \"staggervalue\": 150, \"easing\": \"easeOutQuad\" }"}>
-              <h2 className="text-carbon alt-font text-shadow-soft fs-40 fw-600 ls-minus-2px sm-mb-20px mb-0 w-90 md-w-100" el="childs" staggervalue="150" easing="easeOutQuad">What this enables over time</h2>
-              <p className="lg-w-100 mb-0 d-none d-lg-block">{" This is how leadership begins to shift: "}</p>
+              <h2 className="text-carbon alt-font text-shadow-soft fs-40 fw-600 ls-minus-2px sm-mb-20px mb-0 w-90 md-w-100" el="childs" staggervalue="150" easing="easeOutQuad">What This Enables Over Time</h2>
+              <p className="lg-w-100 mb-0 d-none d-lg-block">Over time, this might look like:</p>
             </div>
             <div className="col-lg-5 offset-xl-1 last-paragraph-no-margin text-center text-lg-start words lines fw-600 text-shadow-soft splitting appear anime-child anime-complete" data-anime={"{\"el\": \"lines\",  \"translateX\": [30, 0], \"opacity\": [0,1], \"duration\": 800, \"delay\": 0, \"staggervalue\": 150, \"easing\": \"easeOutQuad\" }"} style={{ "--word-total": "20", "--line-total": "4" } as CSSProperties}>
-              <span className="d-inline" el="lines" staggervalue="150" easing="easeOutQuad" style={{ willChange: "inherit" }}>This is not about doing more.</span>
+              <span className="d-inline" el="lines" staggervalue="150" easing="easeOutQuad" style={{ willChange: "inherit" }}>The most meaningful changes don’t always appear in a meeting, a business result or someone’s opinion of your leadership.</span>
               {" "}
-              <span className="d-inline" el="lines" staggervalue="150" easing="easeOutQuad" style={{ willChange: "inherit" }}>It is about leading differently.</span>
-              {" "}
-              <span className="d-inline" el="lines" staggervalue="150" easing="easeOutQuad" style={{ willChange: "inherit" }}>From pressure to presence.</span>
-              {" "}
-              <span className="d-inline" el="lines" staggervalue="150" easing="easeOutQuad" style={{ willChange: "inherit" }}>From control to clarity.</span>
+              <span className="d-inline" el="lines" staggervalue="150" easing="easeOutQuad" style={{ willChange: "inherit" }}>Sometimes they’re found in how you feel at the end of the day, the conversations you have at home or your ability to be yourself without needing to fulfil a role.</span>
             </div>
-            <p className="lg-w-100 mb-0 sm-mt-2 text-center d-block d-lg-none">{" This is how leadership begins to shift: "}</p>
+            <p className="lg-w-100 mb-0 sm-mt-2 text-center d-block d-lg-none">Over time, this might look like:</p>
           </div>
           <div className="marketing-swiper swiper mb-7 md-mb-10 sm-mb-15" data-slider-options={"{ \"slidesPerView\": 1, \"spaceBetween\": 20, \"loop\": true, \"speed\": 900, \"centeredSlides\": true, \"grabCursor\": true, \"autoplay\": { \"delay\": 3000, \"disableOnInteraction\": false }, \"breakpoints\": { \"768\": { \"slidesPerView\": 2, \"spaceBetween\": 30 }, \"992\": { \"slidesPerView\": 3, \"spaceBetween\": 30 } }, \"navigation\": { \"nextEl\": \".executive-marketing-slide-next\", \"prevEl\": \".executive-marketing-slide-prev\" }, \"keyboard\": { \"enabled\": true, \"onlyInViewport\": true }, \"effect\": \"slide\" }"}>
             <div className="swiper-wrapper">
               <div className="swiper-slide">
                 <div className="position-relative marketing-card overflow-hidden h-100 p-50px lg-p-30px border-radius-6px">
-                  <span className="d-block text-carbon fw-600 fs-24 mb-25px position-relative z-index-1 ls-minus-1px w-90 xl-w-100 text-center text-sm-start">Clearer, calmer decision-making under pressure.</span>
+                  <span className="d-block text-carbon fw-600 fs-24 mb-25px position-relative z-index-1 ls-minus-1px w-90 xl-w-100 text-center text-sm-start">Making difficult decisions with greater confidence without carrying every outcome home with you.</span>
                   {" "}
                   <img src="/.netlify/images?url=/img/bg-icon.svg&w=220&fm=webp&q=80" srcSet="/.netlify/images?url=/img/bg-icon.svg&w=110&fm=webp&q=80 110w, /.netlify/images?url=/img/bg-icon.svg&w=220&fm=webp&q=80 220w" sizes="110px" alt="bg icon" className="position-absolute animation-zoom swiper-icon bottom-0 end-0 opacity-50 z-index-0 animation-zoom" style={{ width: "110px", transform: "translate(30%, 30%)", pointerEvents: "none" }} />
                 </div>
               </div>
               <div className="swiper-slide">
                 <div className="position-relative marketing-card overflow-hidden h-100 p-50px lg-p-30px border-radius-6px">
-                  <span className="d-block text-carbon fw-600 fs-24 mb-25px position-relative z-index-1 ls-minus-1px w-90 xl-w-100 text-center text-sm-start">Reduced internal pressure under responsibility.</span>
+                  <span className="d-block text-carbon fw-600 fs-24 mb-25px position-relative z-index-1 ls-minus-1px w-90 xl-w-100 text-center text-sm-start">Feeling more comfortable expressing what you need or asking for support without seeing it as a weakness.</span>
                   {" "}
                   <img src="/.netlify/images?url=/img/bg-icon.svg&w=220&fm=webp&q=80" srcSet="/.netlify/images?url=/img/bg-icon.svg&w=110&fm=webp&q=80 110w, /.netlify/images?url=/img/bg-icon.svg&w=220&fm=webp&q=80 220w" sizes="110px" alt="bg icon" className="position-absolute swiper-icon bottom-0 end-0 opacity-50 z-index-0 animation-zoom" style={{ width: "110px", transform: "translate(30%, 30%)", pointerEvents: "none" }} />
                 </div>
               </div>
               <div className="swiper-slide">
                 <div className="position-relative marketing-card overflow-hidden h-100 p-50px lg-p-30px border-radius-6px">
-                  <span className="d-block text-carbon fw-600 fs-24 mb-25px position-relative z-index-1 ls-minus-1px w-90 xl-w-100 text-center text-sm-start">Leadership presence that feels steady rather than effortful.</span>
+                  <span className="d-block text-carbon fw-600 fs-24 mb-25px position-relative z-index-1 ls-minus-1px w-90 xl-w-100 text-center text-sm-start">Being genuinely present with your partner, family or friends instead of mentally preparing for the next responsibility.</span>
                   {" "}
                   <img src="/.netlify/images?url=/img/bg-icon.svg&w=220&fm=webp&q=80" srcSet="/.netlify/images?url=/img/bg-icon.svg&w=110&fm=webp&q=80 110w, /.netlify/images?url=/img/bg-icon.svg&w=220&fm=webp&q=80 220w" sizes="110px" alt="bg icon" className="position-absolute swiper-icon bottom-0 end-0 opacity-50 z-index-0 animation-zoom" style={{ width: "110px", transform: "translate(30%, 30%)", pointerEvents: "none" }} />
                 </div>
               </div>
               <div className="swiper-slide">
                 <div className="position-relative marketing-card overflow-hidden h-100 p-50px lg-p-30px border-radius-6px">
-                  <span className="d-block text-carbon fw-600 fs-24 mb-25px position-relative z-index-1 ls-minus-1px w-90 xl-w-100 text-center text-sm-start">Improved balance between role and personal life.</span>
+                  <span className="d-block text-carbon fw-600 fs-24 mb-25px position-relative z-index-1 ls-minus-1px w-90 xl-w-100 text-center text-sm-start">Setting healthier boundaries that allow room for your wellbeing, relationships and personal interests.</span>
                   {" "}
                   <img src="/.netlify/images?url=/img/bg-icon.svg&w=220&fm=webp&q=80" srcSet="/.netlify/images?url=/img/bg-icon.svg&w=110&fm=webp&q=80 110w, /.netlify/images?url=/img/bg-icon.svg&w=220&fm=webp&q=80 220w" sizes="110px" alt="bg icon" className="position-absolute swiper-icon bottom-0 end-0 opacity-50 z-index-0 animation-zoom" style={{ width: "110px", transform: "translate(30%, 30%)", pointerEvents: "none" }} />
                 </div>
               </div>
               <div className="swiper-slide">
                 <div className="position-relative marketing-card overflow-hidden h-100 p-50px lg-p-30px border-radius-6px">
-                  <span className="d-block text-carbon fw-600 fs-24 mb-25px position-relative z-index-1 ls-minus-1px w-90 xl-w-100 text-center text-sm-start">A renewed sense of direction and internal alignment.</span>
+                  <span className="d-block text-carbon fw-600 fs-24 mb-25px position-relative z-index-1 ls-minus-1px w-90 xl-w-100 text-center text-sm-start">Feeling more connected to who you are beyond your title, responsibilities and what others expect from you.</span>
                   {" "}
                   <img src="/.netlify/images?url=/img/bg-icon.svg&w=220&fm=webp&q=80" srcSet="/.netlify/images?url=/img/bg-icon.svg&w=110&fm=webp&q=80 110w, /.netlify/images?url=/img/bg-icon.svg&w=220&fm=webp&q=80 220w" sizes="110px" alt="bg icon" className="position-absolute swiper-icon bottom-0 end-0 opacity-50 z-index-0 animation-zoom" style={{ width: "110px", transform: "translate(30%, 30%)", pointerEvents: "none" }} />
                 </div>
@@ -468,8 +467,8 @@ export default function ExecutiveLeadersPage() {
           </div>
         </div>
       </section>
-      <Cta className="h-600px d-flex align-items-center justify-content-center footer-bg mobile-cta position-relative cta-page" style={{"backgroundImage":"url('/.netlify/images?url=/images/cta-image.webp&w=800&fm=webp&q=70')","backgroundSize":"cover","backgroundPosition":"center","backgroundRepeat":"no-repeat"}} overlayClass="opacity-medium bg-black position-absolute top-0 start-0 w-100 h-100" shadowClass="hero-bottom-shadow  mb-shadow-top position-absolute bottom-0 start-0 w-100" containerClass="container position-relative z-index-1" rowClass="row align-items-center justify-content-center" leftClass="col-xl-8 text-center text-xl-start lg-mb-30px" h3Class="alt-font d-inline-block align-middle fs-40 text-white mb-15px mb-md-0 me-md-35px" title=" You’ve Reached a Level Few Ever Do " rightClass="col-xl-4 text-center text-xl-end" buttons={[{"href":"/request-mentorship","className":"btn-primary spacing-below-desktop  active btn-box-shadow fw-600 text-carbon","text":" Request Mentorship "},{"href":"/explore-your-archetype","className":"btn-archetype active btn-box-shadow fw-600 text-carbon sm-mt-15px","text":" Explore Your Archetype "}]} subtitle={{"tag":"h4","className":"alt-font text-base-color d-inline-block align-middle fs-30 mb-15px mb-md-0 me-md-35px position-relative","iconClass":"feather fs-30 icon-feather-arrow-right","text":" Now Outgrow It"}} />
-      <Cta className="h-600px d-flex align-items-center justify-content-center footer-bg desktop-only-footer cta-page" style={{"backgroundImage":"url('/.netlify/images?url=/images/cta-image.webp&w=800&fm=webp&q=70')"}} overlayClass="opacity-medium bg-black" shadowClass="hero-bottom-shadow" containerClass="container position-relative" rowClass="row align-items-center justify-content-center" leftClass="col-xl-8 text-center text-xl-start lg-mb-30px" h3Class="alt-font d-inline-block align-middle fs-40 text-white mb-15px mb-md-0 me-md-35px position-relative" title="You’ve Reached a Level Few Ever Do " rightClass="col-xl-4 text-center text-xl-end" buttons={[{"href":"/request-mentorship","className":"btn-primary spacing-below-desktop  active btn-box-shadow fw-600 text-carbon","text":" Request Mentorship "},{"href":"/explore-your-archetype","className":"btn-archetype active btn-box-shadow fw-600 text-carbon sm-mt-15px","text":" Explore Your Archetype "}]} parallax="0.5" subtitle={{"tag":"h4","className":"alt-font text-base-color d-inline-block align-middle fs-30 mb-15px mb-md-0 me-md-35px position-relative","iconClass":"feather fs-30 icon-feather-arrow-right","text":" Now Outgrow It"}} />
+      <Cta className="h-600px d-flex align-items-center justify-content-center footer-bg mobile-cta position-relative cta-page" style={{"backgroundImage":"url('/.netlify/images?url=/images/cta-image.webp&w=800&fm=webp&q=70')","backgroundSize":"cover","backgroundPosition":"center","backgroundRepeat":"no-repeat"}} overlayClass="opacity-medium bg-black position-absolute top-0 start-0 w-100 h-100" shadowClass="hero-bottom-shadow  mb-shadow-top position-absolute bottom-0 start-0 w-100" containerClass="container position-relative z-index-1" rowClass="row align-items-center justify-content-center" leftClass="col-xl-8 text-center text-xl-start lg-mb-30px" h3Class="alt-font d-inline-block align-middle fs-40 text-white mb-15px mb-md-0 me-md-35px" title="Your Leadership Has Meaning. " rightClass="col-xl-4 text-center text-xl-end" buttons={[{"href":"/request-mentorship","className":"btn-primary spacing-below-desktop  active btn-box-shadow fw-600 text-carbon","text":" Request Mentorship "},{"href":"/explore-your-archetype","className":"btn-archetype active btn-box-shadow fw-600 text-carbon sm-mt-15px","text":" Explore Your Archetype "}]} subtitle={{"tag":"h4","className":"alt-font text-base-color d-inline-block align-middle fs-30 mb-15px mb-md-0 me-md-35px position-relative","iconClass":"feather fs-30 icon-feather-arrow-right","text":"So Does the Life You’re Living Outside It."}} />
+      <Cta className="h-600px d-flex align-items-center justify-content-center footer-bg desktop-only-footer cta-page" style={{"backgroundImage":"url('/.netlify/images?url=/images/cta-image.webp&w=800&fm=webp&q=70')"}} overlayClass="opacity-medium bg-black" shadowClass="hero-bottom-shadow" containerClass="container position-relative" rowClass="row align-items-center justify-content-center" leftClass="col-xl-8 text-center text-xl-start lg-mb-30px" h3Class="alt-font d-inline-block align-middle fs-40 text-white mb-15px mb-md-0 me-md-35px position-relative" title="Your Leadership Has Meaning. " rightClass="col-xl-4 text-center text-xl-end" buttons={[{"href":"/request-mentorship","className":"btn-primary spacing-below-desktop  active btn-box-shadow fw-600 text-carbon","text":" Request Mentorship "},{"href":"/explore-your-archetype","className":"btn-archetype active btn-box-shadow fw-600 text-carbon sm-mt-15px","text":" Explore Your Archetype "}]} parallax="0.5" subtitle={{"tag":"h4","className":"alt-font text-base-color d-inline-block align-middle fs-30 mb-15px mb-md-0 me-md-35px position-relative","iconClass":"feather fs-30 icon-feather-arrow-right","text":"So Does the Life You’re Living Outside It."}} />
       <Footer />
       <WhatsAppWidget />
       <ScrollTop />

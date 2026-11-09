@@ -40,7 +40,7 @@ export default function RecommendedReadingPage() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: "{\n  \"@context\": \"https://schema.org\",\n  \"@graph\": [\n    {\n      \"@type\": \"BreadcrumbList\",\n      \"itemListElement\": [\n        {\n          \"@type\": \"ListItem\",\n          \"position\": 1,\n          \"name\": \"Home\",\n          \"item\": \"https://twolivestheory.com/\"\n        },\n        {\n          \"@type\": \"ListItem\",\n          \"position\": 2,\n          \"name\": \"Recommended Reading | Mindset Books\",\n          \"item\": \"https://twolivestheory.com/recommended-reading\"\n        }\n      ]\n    }\n  ]\n}" }} />
       <CursorPageInner />
       <Header />
-      <PageHero style={{"backgroundImage":"url('/.netlify/images?url=/images/hero-bg-11.webp&w=1920&fm=webp&q=80')","backgroundSize":"cover","backgroundRepeat":"no-repeat","backgroundPosition":"center"}} className="page-title-separate-breadcrumbs bg-carbon position-relative text-white pt-18 md-pt-20 sm-pt-30 pb-4 sm-pb-20" leftClass="col-lg-6 position-relative page-title-extra-large md-mb-30px sm-mb-10px z-index-9" h1Class="text-white fw-600 ls-minus-2px mb-0 alt-font highlight-separator-small" lead=" Recommended " title=" Readings " leadFirst rightClass="col-lg-6 text-white z-index-9" pClass="fs-20 md-fs-18 sm-fs-16 lh-32 text-white force-white w-90 lg-w-100 md-w-80 mb-0" subtitle=" A small selection of work I have personally read that echoes themes explored within the Two Lives Theory®. These are not required reading, but offer perspective on growth, inner alignment, and conscious transition. " />
+      <PageHero style={{"backgroundImage":"url('/.netlify/images?url=/images/hero-bg-11.webp&w=1920&fm=webp&q=80')","backgroundSize":"cover","backgroundRepeat":"no-repeat","backgroundPosition":"center"}} className="page-title-separate-breadcrumbs bg-carbon position-relative text-white pt-18 md-pt-20 sm-pt-30 pb-4 sm-pb-20" leftClass="col-lg-6 position-relative page-title-extra-large md-mb-30px sm-mb-10px z-index-9" h1Class="text-white fw-600 ls-minus-2px mb-0 alt-font highlight-separator-small" lead=" Recommended " title=" Readings " leadFirst rightClass="col-lg-6 text-white z-index-9" pClass="fs-20 md-fs-18 sm-fs-16 lh-32 text-white force-white w-90 lg-w-100 md-w-80 mb-0" subtitle=" A small selection of work I have personally read that echoes themes explored within the Two Lives Theory®. These are not required reading, but offer perspective on growth, inner alignment and conscious transition. " />
       <section className="ps-9 pe-9 xl-ps-2 xl-pe-2 bg-pattern-section relative">
         <div className="container-fluid">
           <div className="mentor-words-row pb-5 pt-0">
@@ -60,7 +60,7 @@ export default function RecommendedReadingPage() {
                   <div className="content-hover w-100">
                     <div className="ls-minus-1px fw-600 text-carbon">{" Man’s Search for Meaning "}</div>
                     <span className="fw-700 text-carbon fs-14 text-medium-gray d-block mb-15px">{" Viktor E. Frankl "}</span>
-                    <p className="fs-14 lh-16 mb-20px">{" A timeless exploration of meaning, responsibility, and inner freedom. Frankl’s work speaks powerfully to how our inner relationship with life shapes how we endure pressure, challenge, and transition. "}</p>
+                    <p className="fs-14 lh-16 mb-20px">{" A timeless exploration of meaning, responsibility and inner freedom. Frankl’s work speaks powerfully to how our inner relationship with life shapes how we endure pressure, challenge and transition. "}</p>
                     <small className="fs-12 fst-italic text-medium-gray">{" Available via Audible & Paperback "}</small>
                   </div>
                 </div>
@@ -73,7 +73,7 @@ export default function RecommendedReadingPage() {
                   <div className="content-hover w-100">
                     <div className="ls-minus-1px fw-600 text-carbon">{" The Untethered Soul "}</div>
                     <span className="fw-700 text-carbon fs-14 text-medium-gray d-block mb-15px">{" Michael A. Singer "}</span>
-                    <p className="fs-14 lh-16 mb-20px">{" An insightful look at awareness, inner dialogue, and emotional release. This book explores how loosening identification with thoughts and patterns can create greater clarity and inner freedom. "}</p>
+                    <p className="fs-14 lh-16 mb-20px">{" An insightful look at awareness, inner dialogue and emotional release. This book explores how loosening identification with thoughts and patterns can create greater clarity and inner freedom. "}</p>
                     <small className="fs-12 fst-italic text-medium-gray">{" Available via Audible & Paperback "}</small>
                   </div>
                 </div>
@@ -86,7 +86,7 @@ export default function RecommendedReadingPage() {
                   <div className="content-hover w-100">
                     <div className="ls-minus-1px fw-600 text-carbon">{" Atomic Habits "}</div>
                     <span className="fw-700 text-carbon fs-14 text-medium-gray d-block mb-15px">{" James Clear "}</span>
-                    <p className="fs-14 lh-16 mb-20px">{" A grounded examination of how identity, behaviour, and consistency shape long-term change. It reinforces the idea that sustainable growth comes from alignment rather than force. "}</p>
+                    <p className="fs-14 lh-16 mb-20px">{" A grounded examination of how identity, behaviour and consistency shape long-term change. It reinforces the idea that sustainable growth comes from alignment rather than force. "}</p>
                     <small className="fs-12 fst-italic text-medium-gray">{" Available via Audible & Paperback "}</small>
                   </div>
                 </div>

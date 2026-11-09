@@ -1,7 +1,7 @@
 import type { CSSProperties } from "react";
 import { notFound } from "next/navigation";
 import type { Section } from "@/lib/supabase";
-import { articleHtml, blogPostingSchema, breadcrumbSchema, canonicalFor, getPost, headingParts, relatedPosts, shownDate } from "@/lib/posts";
+import { articleHtml, blogPostingSchema, breadcrumbSchema, canonicalFor, getPost, headingParts, shownDate } from "@/lib/posts";
 import { Footer } from "./Footer";
 import { Header } from "./Header";
 import { LogoMarquee } from "./LogoMarquee";
@@ -26,7 +26,6 @@ export async function PostPage({ section, slug }: { section: Section; slug: stri
   if (!post) notFound();
   const canonical = canonicalFor(post, section);
   const heading = headingParts(post);
-  const related = await relatedPosts(section, slug);
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(blogPostingSchema(post, canonical)) }} />
@@ -58,23 +57,6 @@ export async function PostPage({ section, slug }: { section: Section; slug: stri
                 <img src={post.thumbnail || ""} alt={post.main_heading || ""} className="w-100 border-radius-5px" />
               </div>
               <article className="blog-content auto-content" dangerouslySetInnerHTML={{ __html: articleHtml(post) }} />
-              <nav className="related-reading" aria-label="Related reading">
-                <h2>Keep reading</h2>
-                <ul>
-                  {related.posts.map((p) => (
-                    <li key={p.href}>
-                      <a href={p.href}>{p.title}</a>
-                    </li>
-                  ))}
-                </ul>
-                <p className="related-service">
-                  {`${related.service[1]}: `}
-                  <a href={related.service[0]}>learn how Basim works with you</a>
-                  {", or read "}
-                  <a href="/journal">more from the journal</a>
-                  .
-                </p>
-              </nav>
             </div>
             <div className="col-lg-4">
               <aside className="blog-sidebar ps-40px lg-ps-0 md-mt-30px sticky-sidebar-column">

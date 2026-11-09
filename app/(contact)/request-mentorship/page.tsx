@@ -5,14 +5,14 @@ import { Cta, CursorPageInner, Footer, Header, PageHero, ScrollTop, WhatsAppWidg
 
 export const metadata: Metadata = {
   "title": "Request Private Mentorship | Two Lives Theory",
-  "description": "Start with a confidential call. Share where you are, hear how the mentoring runs, and decide together whether it is the right fit for you.",
+  "description": "Start with a confidential call. Share where you are, hear how the mentoring runs and decide together whether it is the right fit for you.",
   "alternates": {
     "canonical": "/request-mentorship"
   },
   "openGraph": {
     "type": "website",
     "title": "Request Private Mentorship | Two Lives Theory",
-    "description": "Start with a confidential call. Share where you are, hear how the mentoring runs, and decide together whether it is the right fit for you.",
+    "description": "Start with a confidential call. Share where you are, hear how the mentoring runs and decide together whether it is the right fit for you.",
     "url": "/request-mentorship",
     "siteName": "Two Lives Theory",
     "images": [
@@ -27,7 +27,7 @@ export const metadata: Metadata = {
   "twitter": {
     "card": "summary_large_image",
     "title": "Request Private Mentorship | Two Lives Theory",
-    "description": "Start with a confidential call. Share where you are, hear how the mentoring runs, and decide together whether it is the right fit for you.",
+    "description": "Start with a confidential call. Share where you are, hear how the mentoring runs and decide together whether it is the right fit for you.",
     "images": [
       "/images/og-home-1.webp"
     ]
