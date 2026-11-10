@@ -83,6 +83,7 @@ export function ScrollHero({ fallback }: { fallback: ReactNode }) {
   const sectionRef = useRef<HTMLElement>(null);
   const canvasRef = useRef<HTMLCanvasElement>(null);
   const captionRefs = useRef<(HTMLDivElement | null)[]>([]);
+  const shadeRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) setReducedMotion(true);
@@ -206,6 +207,7 @@ export function ScrollHero({ fallback }: { fallback: ReactNode }) {
       }
 
       const at = progress * TOTAL_VH;
+      let strongest = 0;
       CAPTIONS.forEach((caption, i) => {
         const el = captionRefs.current[i];
         if (!el) return;
@@ -219,7 +221,9 @@ export function ScrollHero({ fallback }: { fallback: ReactNode }) {
         el.style.opacity = String(opacity);
         el.style.transform = `translateY(calc(-50% + ${(1 - opacity) * 14}px))`;
         el.style.visibility = opacity <= 0.01 ? "hidden" : "visible";
+        strongest = Math.max(strongest, opacity);
       });
+      if (shadeRef.current) shadeRef.current.style.opacity = String(strongest);
     };
 
     const resize = () => {
@@ -276,7 +280,7 @@ export function ScrollHero({ fallback }: { fallback: ReactNode }) {
           <img src={STILL("room")} alt="" aria-hidden="true" fetchPriority="high" decoding="async" style={{ position: "absolute", inset: 0, width: "100%", height: "100%", objectFit: "cover" }} />
         </picture>
         <canvas ref={canvasRef} aria-hidden="true" style={{ position: "absolute", inset: 0, width: "100%", height: "100%", display: "block" }} />
-        <div style={{ position: "absolute", inset: 0, pointerEvents: "none", background: "linear-gradient(to right, rgba(8,18,14,.74) 0%, rgba(8,18,14,.52) 32%, rgba(8,18,14,0) 58%)" }} />
+        <div ref={shadeRef} style={{ position: "absolute", inset: 0, pointerEvents: "none", background: "linear-gradient(to right, rgba(8,18,14,.88) 0%, rgba(8,18,14,.72) 30%, rgba(8,18,14,.34) 47%, rgba(8,18,14,0) 64%)" }} />
         <div style={{ position: "absolute", inset: "0 0 auto", height: 150, pointerEvents: "none", background: "linear-gradient(to bottom, rgba(8,18,14,.5), rgba(8,18,14,0))" }} />
         {CAPTIONS.map((caption, i) => (
           <div
